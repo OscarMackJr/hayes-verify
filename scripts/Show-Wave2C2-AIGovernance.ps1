@@ -1,0 +1,4 @@
+$root=(Resolve-Path (Join-Path $PSScriptRoot "..")).Path;$o="$root\generated\wave2c\ai-governance";$q=Get-Content "$o\qualification.json" -Raw|ConvertFrom-Json
+Write-Host "AI Governance qualification:";$q.controls|Select control_id,control_name,status,sufficiency,promotion_eligible,promotion_status,remediation_state,missing_assertions|Format-Table -Wrap -AutoSize
+Write-Host "`nAssertion evidence:";$e=Get-Content "$o\assertion_evidence.json" -Raw|ConvertFrom-Json;$e.assertions|Select control_id,assertion,record_count,qualifying_record_count,operating_evidence_sufficient,reason|Format-Table -Wrap -AutoSize
+Write-Host "`nRegister counts:";Get-ChildItem "$root\registers\wave2c\ai-governance" -Filter *.csv|%{[pscustomobject]@{Register=$_.Name;RecordCount=(Import-Csv $_.FullName).Count}}|Format-Table -AutoSize

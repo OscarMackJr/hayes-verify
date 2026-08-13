@@ -1,0 +1,62 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "wave2d_evaluation_request.schema.json",
+  "title": "Wave 2D Evaluation Request",
+  "type": "object",
+  "required": [
+    "contract_version",
+    "wave",
+    "request_id",
+    "control_id",
+    "target_id",
+    "repository_name",
+    "applicability_state",
+    "requested_at_utc"
+  ],
+  "properties": {
+    "contract_version": {
+      "const": "1.0"
+    },
+    "wave": {
+      "const": "2D"
+    },
+    "request_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "control_id": {
+      "type": "string",
+      "pattern": "^EMS-CTRL-[0-9]{3}$"
+    },
+    "target_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "repository_name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "applicability_state": {
+      "const": "APPLICABLE"
+    },
+    "requested_at_utc": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "control_definition_sha256": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{64}$"
+    },
+    "applicability_matrix_sha256": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{64}$"
+    },
+    "requested_evidence_types": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "additionalProperties": false
+}

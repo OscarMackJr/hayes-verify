@@ -1,0 +1,15 @@
+{
+  "component": "Hayes Verify",
+  "phase": "Default Branch Discovery & Branch-Targeted Evaluation Hotfix",
+  "version": "6.0",
+  "scope": "TEST_SUITE_RECONCILIATION_ONLY",
+  "changes": [
+    "Remove obsolete hard-coded-main regression expectations.",
+    "Retain gh api --repo regression coverage.",
+    "Retain default-branch discovery and URL-encoding coverage.",
+    "Do not modify collectors.",
+    "Do not modify evaluators.",
+    "Do not modify contracts.",
+    "Use deterministic repo-local pytest basetemp."
+  ]
+}

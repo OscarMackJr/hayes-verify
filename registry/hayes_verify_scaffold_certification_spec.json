@@ -1,0 +1,30 @@
+{
+  "component": "Hayes Verify",
+  "phase": "Windows Test Determinism & Scaffold Certification",
+  "expected_contract_count": 5,
+  "expected_test_count": 3,
+  "required_promotion_state": "NOT_PROMOTED",
+  "pytest_basetemp": ".pytest-temp",
+  "certification_output": "generated/scaffold-certification/scaffold_certification.json",
+  "validation_output": "generated/scaffold-certification/scaffold_certification_validation.json",
+  "contract_freeze": "contracts/contract_freeze.json",
+  "consumer_manifest": "contracts/consumer_manifest.json",
+  "files_to_hash": [
+    "pyproject.toml",
+    "README.md",
+    "contracts/contract_freeze.json",
+    "contracts/consumer_manifest.json",
+    "contracts/schemas/wave2d_evaluation_request.schema.json",
+    "contracts/schemas/wave2d_evidence_record.schema.json",
+    "contracts/schemas/wave2d_evaluation_result.schema.json",
+    "contracts/schemas/wave2d_provenance_envelope.schema.json",
+    "contracts/registry/evaluation_status_vocabulary.json",
+    "src/hayes_verify/contracts.py",
+    "src/hayes_verify/collectors.py",
+    "src/hayes_verify/evaluators.py",
+    "src/hayes_verify/orchestration.py",
+    "src/hayes_verify/cli.py",
+    "tests/test_contracts.py",
+    "tests/test_evaluation.py"
+  ]
+}

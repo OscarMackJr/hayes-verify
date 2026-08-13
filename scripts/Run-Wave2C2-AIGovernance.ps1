@@ -1,0 +1,5 @@
+$ErrorActionPreference="Stop";$root=(Resolve-Path (Join-Path $PSScriptRoot "..")).Path;$py=if(Test-Path "$root\.venv\Scripts\python.exe"){"$root\.venv\Scripts\python.exe"}else{(Get-Command python).Source}
+Write-Host "=== Wave 2C.2 Organization Evidence Framework & AI Governance Intake ==="; & $py "$PSScriptRoot\Build-Wave2C2AIGovernanceEvidence.py" --root $root;if($LASTEXITCODE){throw "Collection failed"}
+Write-Host "`n=== Qualify AI governance controls ===";& $py "$PSScriptRoot\Qualify-Wave2C2AIGovernance.py" --root $root;if($LASTEXITCODE){throw "Qualification failed"}
+Write-Host "`n=== Validate fail-closed intake ===";& $py "$PSScriptRoot\Validate-Wave2C2AIGovernance.py" --root $root;if($LASTEXITCODE){throw "Validation failed"}
+Write-Host "`nPASS: Wave 2C.2 intake complete. No evidence promoted."

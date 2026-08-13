@@ -1,0 +1,16 @@
+{
+  "component": "Hayes Verify",
+  "phase": "Evaluated-Branch Rationale Consistency Hotfix",
+  "version": "1.0",
+  "scope": "EVALUATOR_RATIONALE_ONLY",
+  "control": "EMS-CTRL-009",
+  "changes": [
+    "Replace hard-coded 'main' wording with observation.evaluated_branch.",
+    "Fail closed to generic 'evaluated branch' wording if evaluated_branch is unavailable.",
+    "Do not change collector behavior.",
+    "Do not change result semantics.",
+    "Do not change contracts.",
+    "Do not change promotion_state."
+  ],
+  "promotion_state": "NOT_PROMOTED"
+}

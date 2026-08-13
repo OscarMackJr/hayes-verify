@@ -1,0 +1,12 @@
+{
+  "component": "Hayes Verify",
+  "phase": "GitHub API Invocation Hotfix",
+  "version": "1.0",
+  "pilot_controls": [
+    "EMS-CTRL-009",
+    "EMS-CTRL-010",
+    "EMS-CTRL-018"
+  ],
+  "invariant": "gh api invocations must never append --repo",
+  "promotion_state": "NOT_PROMOTED"
+}

@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "wave2d_provenance_envelope.schema.json",
+  "title": "Wave 2D Provenance Envelope",
+  "type": "object",
+  "required": [
+    "collector",
+    "collector_version",
+    "repository_path_or_url",
+    "repository_commit_sha",
+    "collected_at_utc"
+  ],
+  "properties": {
+    "collector": {
+      "type": "string",
+      "minLength": 1
+    },
+    "collector_version": {
+      "type": "string",
+      "minLength": 1
+    },
+    "repository_path_or_url": {
+      "type": "string",
+      "minLength": 1
+    },
+    "repository_commit_sha": {
+      "type": "string",
+      "minLength": 7
+    },
+    "collected_at_utc": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "command_or_method": {
+      "type": "string"
+    },
+    "tool_versions": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "string"
+      }
+    },
+    "source_artifact_sha256": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{64}$"
+    }
+  },
+  "additionalProperties": false
+}

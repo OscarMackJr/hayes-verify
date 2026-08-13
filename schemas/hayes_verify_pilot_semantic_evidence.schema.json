@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "api_success",
+    "api_status",
+    "raw_summary"
+  ],
+  "properties": {
+    "api_success": {
+      "type": "boolean"
+    },
+    "api_status": {
+      "type": "string"
+    },
+    "raw_summary": {
+      "type": "object"
+    }
+  }
+}

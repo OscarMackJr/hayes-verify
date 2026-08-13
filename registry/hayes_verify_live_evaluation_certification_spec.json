@@ -1,0 +1,19 @@
+{
+  "component": "Hayes Verify",
+  "phase": "Pilot Live Evaluation Certification & EMS Return Envelope",
+  "version": "1.0",
+  "control_id": "EMS-CTRL-009",
+  "target_id": "REPO-001",
+  "expected_result_state": "PASS",
+  "expected_evaluation_state": "COMPLETE",
+  "expected_evidence_state": "SUFFICIENT",
+  "expected_promotion_state": "NOT_PROMOTED",
+  "expected_evaluated_branch": "implementation/bootstrap",
+  "live_evidence": "generated/pilot-evaluator/EMS-CTRL-009/REPO-001/evidence.json",
+  "live_result": "generated/pilot-evaluator/EMS-CTRL-009/REPO-001/result.json",
+  "contract_freeze": "contracts/contract_freeze.json",
+  "result_schema": "contracts/schemas/wave2d_evaluation_result.schema.json",
+  "certification_output": "generated/pilot-live-certification/EMS-CTRL-009/REPO-001/live_evaluation_certification.json",
+  "return_envelope_output": "generated/pilot-live-certification/EMS-CTRL-009/REPO-001/ems_return_envelope.json",
+  "return_envelope_validation_output": "generated/pilot-live-certification/EMS-CTRL-009/REPO-001/ems_return_envelope_validation.json"
+}

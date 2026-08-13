@@ -1,0 +1,39 @@
+{
+  "wave": "2D",
+  "contract_version": "1.0",
+  "applicability_states": [
+    "APPLICABLE",
+    "NOT_APPLICABLE"
+  ],
+  "evaluation_states": [
+    "NOT_STARTED",
+    "IN_PROGRESS",
+    "COMPLETE",
+    "BLOCKED"
+  ],
+  "evidence_states": [
+    "NOT_COLLECTED",
+    "COLLECTED",
+    "INSUFFICIENT",
+    "SUFFICIENT"
+  ],
+  "result_states": [
+    "NOT_EVALUATED",
+    "PASS",
+    "WARNING",
+    "FAIL",
+    "NOT_APPLICABLE"
+  ],
+  "promotion_states": [
+    "NOT_PROMOTED",
+    "QUALIFIED_NOT_PROMOTED",
+    "PROMOTED"
+  ],
+  "fail_closed_rules": [
+    "Missing required evidence prevents PASS.",
+    "Unknown or malformed result state is rejected.",
+    "Hayes Verify cannot change applicability.",
+    "Hayes Verify cannot promote evidence.",
+    "EMS remains authoritative for promotion and final acceptance."
+  ]
+}

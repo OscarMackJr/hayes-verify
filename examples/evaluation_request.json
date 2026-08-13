@@ -1,0 +1,15 @@
+{
+  "contract_version": "1.0",
+  "wave": "2D",
+  "request_id": "REQ-EXAMPLE-001",
+  "control_id": "EMS-CTRL-009",
+  "target_id": "REPO-001",
+  "repository_name": "C:/path/to/repository",
+  "applicability_state": "APPLICABLE",
+  "requested_at_utc": "2026-08-13T00:00:00+00:00",
+  "control_definition_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+  "applicability_matrix_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+  "requested_evidence_types": [
+    "REPOSITORY_FILE"
+  ]
+}

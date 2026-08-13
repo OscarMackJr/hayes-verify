@@ -1,0 +1,12 @@
+{
+  "wave": "2D",
+  "control_id": "EMS-CTRL-010",
+  "target_id": "REPO-001",
+  "live_evidence": "generated/pilot-evaluator/EMS-CTRL-010/REPO-001/evidence.json",
+  "live_result": "generated/pilot-evaluator/EMS-CTRL-010/REPO-001/result.json",
+  "contract_freeze": "contracts/contract_freeze.json",
+  "result_schema": "contracts/schemas/wave2d_evaluation_result.schema.json",
+  "certification_output": "generated/pilot-live-certification/EMS-CTRL-010/REPO-001/live_evaluation_certification.json",
+  "return_envelope_output": "generated/pilot-live-certification/EMS-CTRL-010/REPO-001/ems_return_envelope.json",
+  "return_envelope_validation_output": "generated/pilot-live-certification/EMS-CTRL-010/REPO-001/ems_return_envelope_validation.json"
+}

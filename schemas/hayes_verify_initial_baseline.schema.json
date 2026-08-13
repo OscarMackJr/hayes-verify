@@ -1,0 +1,44 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "baseline_version",
+    "component",
+    "status",
+    "baseline_state",
+    "repository_name",
+    "default_branch",
+    "commit_sha",
+    "manifest_sha256",
+    "authority"
+  ],
+  "properties": {
+    "baseline_version": {
+      "const": "1.0"
+    },
+    "component": {
+      "const": "Hayes Verify"
+    },
+    "status": {
+      "const": "PASS"
+    },
+    "baseline_state": {
+      "const": "AUTHORITATIVE"
+    },
+    "repository_name": {
+      "const": "hayes-verify"
+    },
+    "default_branch": {
+      "const": "main"
+    },
+    "commit_sha": {
+      "type": "string",
+      "minLength": 7
+    },
+    "manifest_sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    }
+  },
+  "additionalProperties": true
+}

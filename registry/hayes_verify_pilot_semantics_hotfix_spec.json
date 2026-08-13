@@ -1,0 +1,20 @@
+{
+  "component": "Hayes Verify",
+  "phase": "Pilot Evidence Semantics & Fail-Closed Evaluation Hotfix",
+  "version": "2.0",
+  "pilot_controls": [
+    "EMS-CTRL-009",
+    "EMS-CTRL-010",
+    "EMS-CTRL-018"
+  ],
+  "promotion_state": "NOT_PROMOTED",
+  "required_installed_files": [
+    "src/hayes_verify/pilots/github_collectors.py",
+    "src/hayes_verify/pilots/github_evaluators.py",
+    "tests/test_pilot_semantics.py",
+    "registry/hayes_verify_pilot_semantics_hotfix_spec.json",
+    "schemas/hayes_verify_pilot_semantic_evidence.schema.json",
+    "scripts/Test-HayesVerifyPilotSemanticsHotfix.ps1",
+    "scripts/Test-HayesVerifyPilotSemanticsInstall.ps1"
+  ]
+}

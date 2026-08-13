@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "component",
+    "phase",
+    "status",
+    "pilot_control_count",
+    "tests_status",
+    "ruff_status",
+    "promotion_state"
+  ],
+  "properties": {
+    "component": {
+      "const": "Hayes Verify"
+    },
+    "status": {
+      "const": "PASS"
+    },
+    "pilot_control_count": {
+      "const": 3
+    },
+    "tests_status": {
+      "const": "PASS"
+    },
+    "ruff_status": {
+      "const": "PASS"
+    },
+    "promotion_state": {
+      "const": "NOT_PROMOTED"
+    }
+  }
+}

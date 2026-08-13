@@ -1,0 +1,40 @@
+{
+  "wave": "2D",
+  "contract_version": "1.0",
+  "frozen_at_utc": "2026-08-13T16:21:50.945817+00:00",
+  "status": "PASS",
+  "authority": {
+    "control_catalog": "EMS",
+    "applicability": "EMS",
+    "evidence_collection": "Hayes Verify",
+    "evaluation_execution": "Hayes Verify",
+    "result_acceptance": "EMS",
+    "evidence_promotion": "EMS"
+  },
+  "applicability_freeze_sha256": "0019fdbf1c25eb103b44d2f5c7129fac91b21711e438ac3d2b9f4963e70aae94",
+  "contracts": {
+    "evaluation_request": {
+      "path": "schemas/contracts/wave2d_evaluation_request.schema.json",
+      "sha256": "194eb6032cc5f0495c544c424701e0cf66bca5d536d6b4b39e1b56f2e9c1be13"
+    },
+    "evidence_record": {
+      "path": "schemas/contracts/wave2d_evidence_record.schema.json",
+      "sha256": "6127a651b6d92f0d85a541f0f75e6c72d3ac96ac4fe0c27ac54766d3e9385d52"
+    },
+    "evaluation_result": {
+      "path": "schemas/contracts/wave2d_evaluation_result.schema.json",
+      "sha256": "8408950407bb1ee9cb5b75ef7f771fb0c239ebfafb36e4f842b386f85ad01950"
+    },
+    "provenance_envelope": {
+      "path": "schemas/contracts/wave2d_provenance_envelope.schema.json",
+      "sha256": "871fcb9ab2768e73fb1bbb58618542c261c69e51f1b899044f8c5322334318d6"
+    },
+    "status_vocabulary": {
+      "path": "registry/wave2d/evaluation_status_vocabulary.json",
+      "sha256": "7c9b6ec28db01fb5c8dfa6fe9a9a8e7eb5be367ee01dc0e6f6c4b384e304a2b3"
+    }
+  },
+  "evaluation_performed": false,
+  "promotion_performed": false,
+  "freeze_state": "CONTRACT_FROZEN"
+}

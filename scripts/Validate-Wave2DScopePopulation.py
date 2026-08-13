@@ -1,0 +1,20 @@
+import argparse,json
+from pathlib import Path
+ap=argparse.ArgumentParser()
+ap.add_argument("--root",required=True)
+ap.add_argument("--spec",required=True)
+a=ap.parse_args()
+root=Path(a.root).resolve()
+spec=json.loads(Path(a.spec).read_text(encoding="utf-8"))
+scope=json.loads((root/spec["scope_output"]).read_text(encoding="utf-8"))
+pop=json.loads((root/spec["population_output"]).read_text(encoding="utf-8"))
+summary=json.loads((root/spec["summary_output"]).read_text(encoding="utf-8"))
+errors=[]
+if scope.get("implicit_carry_forward_performed") is not False: errors.append("scope implicit carry-forward must be false")
+if pop.get("implicit_carry_forward_performed") is not False: errors.append("population implicit carry-forward must be false")
+if pop.get("evaluation_performed") is not False: errors.append("evaluation_performed must be false")
+if summary.get("promotion_performed") is not False: errors.append("promotion_performed must be false")
+if scope.get("scope_count")!=summary.get("included_control_count"): errors.append("scope count mismatch")
+if pop.get("population_count")!=summary.get("included_target_count"): errors.append("population count mismatch")
+print(json.dumps({"status":"PASS" if not errors else "FAIL","errors":errors,"scope_count":scope.get("scope_count"),"population_count":pop.get("population_count"),"undecided_control_count":summary.get("undecided_control_count"),"undecided_target_count":summary.get("undecided_target_count"),"evaluation_performed":False,"promotion_performed":False,"implicit_carry_forward_performed":False},indent=2))
+raise SystemExit(0 if not errors else 1)

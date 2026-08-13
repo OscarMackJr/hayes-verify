@@ -1,0 +1,41 @@
+{
+  "component": "Hayes Verify",
+  "phase": "GitHub Repository Bootstrap & Initial Controlled Baseline",
+  "version": "1.0",
+  "repository_name": "hayes-verify",
+  "github_repo_default": "OscarMackJr/hayes-verify",
+  "default_branch": "main",
+  "baseline_tag": "hayes-verify-v0.1.0",
+  "commit_message": "establish Hayes Verify initial controlled baseline",
+  "baseline_registration": "registry/release_baselines/hayes_verify_initial_baseline.json",
+  "baseline_manifest": "generated/bootstrap/hayes_verify_initial_baseline_manifest.json",
+  "baseline_certification": "generated/bootstrap/hayes_verify_initial_baseline_certification.json",
+  "required_checks": [
+    "contract_bundle_validation",
+    "ruff",
+    "pytest",
+    "secret_hygiene",
+    "repository_hygiene"
+  ],
+  "excluded_paths": [
+    ".venv/",
+    ".pytest-temp/",
+    ".pytest_cache/",
+    ".ruff_cache/",
+    "__pycache__/",
+    "generated/",
+    "evidence/",
+    ".env",
+    ".env.*",
+    "*.pyc",
+    "*.log"
+  ],
+  "authority": {
+    "control_catalog": "EMS",
+    "applicability": "EMS",
+    "evidence_collection": "Hayes Verify",
+    "evaluation_execution": "Hayes Verify",
+    "result_acceptance": "EMS",
+    "evidence_promotion": "EMS"
+  }
+}

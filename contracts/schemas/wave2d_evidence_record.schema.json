@@ -1,0 +1,70 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "wave2d_evidence_record.schema.json",
+  "title": "Wave 2D Evidence Record",
+  "type": "object",
+  "required": [
+    "contract_version",
+    "wave",
+    "evidence_id",
+    "request_id",
+    "control_id",
+    "target_id",
+    "evidence_type",
+    "source",
+    "collected_at_utc",
+    "sha256",
+    "provenance"
+  ],
+  "properties": {
+    "contract_version": {
+      "const": "1.0"
+    },
+    "wave": {
+      "const": "2D"
+    },
+    "evidence_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "request_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "control_id": {
+      "type": "string",
+      "pattern": "^EMS-CTRL-[0-9]{3}$"
+    },
+    "target_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "evidence_type": {
+      "type": "string",
+      "minLength": 1
+    },
+    "source": {
+      "type": "string",
+      "minLength": 1
+    },
+    "collected_at_utc": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "sha256": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{64}$"
+    },
+    "observation": {
+      "type": "string"
+    },
+    "provenance": {
+      "$ref": "wave2d_provenance_envelope.schema.json"
+    },
+    "sensitive": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "additionalProperties": false
+}

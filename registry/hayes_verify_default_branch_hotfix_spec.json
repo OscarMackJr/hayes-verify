@@ -1,0 +1,22 @@
+{
+  "component": "Hayes Verify",
+  "phase": "Default Branch Discovery & Branch-Targeted Evaluation Hotfix",
+  "version": "4.0",
+  "installation_policy": {
+    "python": "<HayesPath>/.venv/Scripts/python.exe",
+    "mechanical_lint_fix_scope": [
+      "src/hayes_verify/pilots/github_collectors.py",
+      "tests/test_default_branch_discovery.py"
+    ],
+    "unsafe_fixes": false,
+    "full_ruff_gate_after_fix": true,
+    "full_pytest_gate_after_fix": true
+  },
+  "semantic_invariants": [
+    "Default branch is discovered from GitHub repository metadata.",
+    "Branch names containing slash are URL encoded.",
+    "CTRL-009 and CTRL-010 target the discovered default branch.",
+    "Discovery/API failures remain fail-closed.",
+    "No evidence promotion occurs."
+  ]
+}

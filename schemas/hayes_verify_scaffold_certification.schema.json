@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "component",
+    "phase",
+    "status",
+    "contract_validation_status",
+    "pytest_status",
+    "ruff_status",
+    "test_count",
+    "contract_count",
+    "bootstrap_promotion_state",
+    "files"
+  ],
+  "properties": {
+    "component": {
+      "const": "Hayes Verify"
+    },
+    "status": {
+      "const": "PASS"
+    },
+    "contract_validation_status": {
+      "const": "PASS"
+    },
+    "pytest_status": {
+      "const": "PASS"
+    },
+    "ruff_status": {
+      "const": "PASS"
+    },
+    "test_count": {
+      "minimum": 3
+    },
+    "contract_count": {
+      "const": 5
+    },
+    "bootstrap_promotion_state": {
+      "const": "NOT_PROMOTED"
+    }
+  }
+}

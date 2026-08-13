@@ -1,0 +1,15 @@
+{
+  "component": "Hayes Verify",
+  "phase": "Default Branch Discovery & Branch-Targeted Evaluation Hotfix",
+  "version": "5.0",
+  "scope": "DETERMINISTIC_PYTEST_RUNNER_ONLY",
+  "changes": [
+    "Use Hayes Verify venv Python explicitly.",
+    "Use repo-local .pytest-temp explicitly for every pytest invocation.",
+    "Do not modify collectors.",
+    "Do not modify evaluators.",
+    "Do not modify tests.",
+    "Do not modify contract semantics."
+  ],
+  "pytest_basetemp": ".pytest-temp"
+}

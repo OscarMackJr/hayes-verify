@@ -1,0 +1,104 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "wave2d_evaluation_result.schema.json",
+  "title": "Wave 2D Evaluation Result",
+  "type": "object",
+  "required": [
+    "contract_version",
+    "wave",
+    "request_id",
+    "control_id",
+    "target_id",
+    "evaluation_state",
+    "evidence_state",
+    "result_state",
+    "evaluated_at_utc",
+    "evidence_ids",
+    "rationale"
+  ],
+  "properties": {
+    "contract_version": {
+      "const": "1.0"
+    },
+    "wave": {
+      "const": "2D"
+    },
+    "request_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "control_id": {
+      "type": "string",
+      "pattern": "^EMS-CTRL-[0-9]{3}$"
+    },
+    "target_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "evaluation_state": {
+      "enum": [
+        "COMPLETE",
+        "BLOCKED"
+      ]
+    },
+    "evidence_state": {
+      "enum": [
+        "INSUFFICIENT",
+        "SUFFICIENT"
+      ]
+    },
+    "result_state": {
+      "enum": [
+        "PASS",
+        "WARNING",
+        "FAIL"
+      ]
+    },
+    "evaluated_at_utc": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "evidence_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "rationale": {
+      "type": "string",
+      "minLength": 1
+    },
+    "assertions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "assertion_id",
+          "result"
+        ],
+        "properties": {
+          "assertion_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "result": {
+            "enum": [
+              "PASS",
+              "FAIL",
+              "WARNING"
+            ]
+          },
+          "detail": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "promotion_state": {
+      "const": "NOT_PROMOTED"
+    }
+  },
+  "additionalProperties": false
+}

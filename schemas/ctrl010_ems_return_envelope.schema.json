@@ -1,0 +1,54 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "envelope_version",
+    "source_system",
+    "destination_system",
+    "wave",
+    "control_id",
+    "target_id",
+    "request_id",
+    "evaluation_state",
+    "evidence_state",
+    "result_state",
+    "acceptance_state",
+    "promotion_state",
+    "evidence_sha256",
+    "result_sha256",
+    "certification_sha256"
+  ],
+  "properties": {
+    "envelope_version": {
+      "const": "1.0"
+    },
+    "source_system": {
+      "const": "Hayes Verify"
+    },
+    "destination_system": {
+      "const": "EMS"
+    },
+    "wave": {
+      "const": "2D"
+    },
+    "control_id": {
+      "const": "EMS-CTRL-010"
+    },
+    "target_id": {
+      "const": "REPO-001"
+    },
+    "evaluation_state": {
+      "const": "COMPLETE"
+    },
+    "evidence_state": {
+      "const": "SUFFICIENT"
+    },
+    "acceptance_state": {
+      "const": "PENDING_EMS_ACCEPTANCE"
+    },
+    "promotion_state": {
+      "const": "NOT_PROMOTED"
+    }
+  },
+  "additionalProperties": true
+}

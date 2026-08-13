@@ -1,0 +1,15 @@
+{
+  "contract_version": "1.0",
+  "wave": "2D",
+  "request_id": "PILOT-EMS-CTRL-010-REPO-001",
+  "control_id": "EMS-CTRL-010",
+  "target_id": "REPO-001",
+  "repository_name": "C:\\work\\bluto\\Enterprise_Starter_Kit_v2.0_Baselined",
+  "applicability_state": "APPLICABLE",
+  "requested_at_utc": "2026-08-13T22:28:03.3726790+00:00",
+  "control_definition_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+  "applicability_matrix_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+  "requested_evidence_types": [
+    "GITHUB_CONFIGURATION"
+  ]
+}

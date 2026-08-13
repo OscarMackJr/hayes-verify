@@ -1,0 +1,1919 @@
+{
+  "component": "Hayes Verify",
+  "created_at_utc": "2026-08-13T22:54:56.685414+00:00",
+  "file_count": 478,
+  "files": [
+    {
+      "path": ".github/workflows/ci.yml",
+      "sha256": "5a4add0b29456b440904564861be80ab253bc7076e9be06f68b54400e8188bbf"
+    },
+    {
+      "path": ".github/workflows/validate.yml",
+      "sha256": "11f6cba9bd5a11d8b241f4546722df90b4ef13823ba3f6d61d8ad4ce65cd068d"
+    },
+    {
+      "path": ".gitignore",
+      "sha256": "c74e1b36f80d6845ee5e9d6bca96cbe6b1970335bac4e5f919ea82118367233f"
+    },
+    {
+      "path": "AUTHORITY.md",
+      "sha256": "1a2e9cf3a045acf7b93997893038b669ed93a9142cd7b721c867e910ad1e0bb9"
+    },
+    {
+      "path": "README.md",
+      "sha256": "20a944b3941795383bb8c62eec7a9152bbb9b6e188fb692a086a7960e8c808a6"
+    },
+    {
+      "path": "contracts/consumer_manifest.json",
+      "sha256": "c4fd4fb4a1bc09b7b44ba2b46c183b545ab48bbad45b1255b44245d23f345762"
+    },
+    {
+      "path": "contracts/contract_freeze.json",
+      "sha256": "ab2423e5b198b3edaa69352bd69f5ff45dc1f2b00d1c940df8c64d1ed17cc1fa"
+    },
+    {
+      "path": "contracts/registry/evaluation_status_vocabulary.json",
+      "sha256": "7c9b6ec28db01fb5c8dfa6fe9a9a8e7eb5be367ee01dc0e6f6c4b384e304a2b3"
+    },
+    {
+      "path": "contracts/schemas/wave2d_evaluation_request.schema.json",
+      "sha256": "194eb6032cc5f0495c544c424701e0cf66bca5d536d6b4b39e1b56f2e9c1be13"
+    },
+    {
+      "path": "contracts/schemas/wave2d_evaluation_result.schema.json",
+      "sha256": "8408950407bb1ee9cb5b75ef7f771fb0c239ebfafb36e4f842b386f85ad01950"
+    },
+    {
+      "path": "contracts/schemas/wave2d_evidence_record.schema.json",
+      "sha256": "6127a651b6d92f0d85a541f0f75e6c72d3ac96ac4fe0c27ac54766d3e9385d52"
+    },
+    {
+      "path": "contracts/schemas/wave2d_provenance_envelope.schema.json",
+      "sha256": "871fcb9ab2768e73fb1bbb58618542c261c69e51f1b899044f8c5322334318d6"
+    },
+    {
+      "path": "examples/evaluation_request.json",
+      "sha256": "3bb42a4bda36016a80e4714d10c34928956db6a57721cf7000a37a974d3d2cec"
+    },
+    {
+      "path": "examples/pilot_request.json",
+      "sha256": "1e936dffd0063ade4ddad32bbc92dde25e65d64e79cd2d793b206b7feb14ccbd"
+    },
+    {
+      "path": "pyproject.toml",
+      "sha256": "4053f96e125b537db1a048578b0eef3a76aa32636311e8abb157add41b52f0c7"
+    },
+    {
+      "path": "registry/ctrl010_pilot_spec.json",
+      "sha256": "2676ed1ab623e39d67651cc120e8e96c3ccbb503df2532f5616993f2f437b768"
+    },
+    {
+      "path": "registry/hayes_verify_branch_rationale_hotfix_spec.json",
+      "sha256": "fe7031194460ac998deb46aeffc7a96a4cf78beb3f5c075875121eb42472bc6c"
+    },
+    {
+      "path": "registry/hayes_verify_default_branch_hotfix_spec.json",
+      "sha256": "e89366b8e82122168322bf0f5397a26dd67e6162563147be0fc353ea32ee22a8"
+    },
+    {
+      "path": "registry/hayes_verify_default_branch_hotfix_v5_spec.json",
+      "sha256": "583110d637f27eeb2a4ff2dfbb87c33613a15a6c908ca9f9d32a65985309dc83"
+    },
+    {
+      "path": "registry/hayes_verify_default_branch_hotfix_v6_spec.json",
+      "sha256": "1f22d13516a1e2fca2572bae89c48c764ebcf05d0c567d386c7c2249ac260195"
+    },
+    {
+      "path": "registry/hayes_verify_github_api_invocation_hotfix_spec.json",
+      "sha256": "b4d50702f65fe35eb8671800f9a6c384f367f85ccb2046a30131d1e1ca4f733c"
+    },
+    {
+      "path": "registry/hayes_verify_live_evaluation_certification_spec.json",
+      "sha256": "b144fc89e3e22e1a9aed6fe9f7f1996cdec02df0515505e9b573fab77414045a"
+    },
+    {
+      "path": "registry/hayes_verify_pilot_evaluator_spec.json",
+      "sha256": "e270f96bceeafbe3cbfcc322ce679446525b38209c0adfa71ba86feeb7986a3c"
+    },
+    {
+      "path": "registry/hayes_verify_pilot_semantics_hotfix_spec.json",
+      "sha256": "9006ae2d62a1890340fc5779f014987e4aa58a61dbc09365e9fdf9ba5bbc4631"
+    },
+    {
+      "path": "registry/hayes_verify_repository_bootstrap_spec.json",
+      "sha256": "a885605c19960e358d80d2a4db2fd059062226e9bc3a103b68f9f710865cdf57"
+    },
+    {
+      "path": "registry/hayes_verify_scaffold_certification_spec.json",
+      "sha256": "2bdbfee0234a800e26e8cd2d1e304c9fe8fa461a1c2f642ab470689984dc8253"
+    },
+    {
+      "path": "schemas/ctrl010_ems_return_envelope.schema.json",
+      "sha256": "8ad4744d2fff10d5585aae6102d65622857c2be72e34465d68cbc76ca645b659"
+    },
+    {
+      "path": "schemas/hayes_verify_ems_return_envelope.schema.json",
+      "sha256": "d2a04d6a0ddac3c1e318a5bd12d7d93291b6ceaf38d027784a4de3153c1a7c12"
+    },
+    {
+      "path": "schemas/hayes_verify_initial_baseline.schema.json",
+      "sha256": "f19515c46b4f294b9ec3f570f8c139f97c3a22478625643145ca3b7d76ced747"
+    },
+    {
+      "path": "schemas/hayes_verify_pilot_semantic_evidence.schema.json",
+      "sha256": "de6bc215ea2fd9d6c9351bdd7989f20627b6bc935534fa63335bb5a6aa29cf0f"
+    },
+    {
+      "path": "schemas/hayes_verify_pilot_summary.schema.json",
+      "sha256": "91cea1f4a4ba905550fb4b7036f25cba964d507c75803c8003bb83097cd29386"
+    },
+    {
+      "path": "schemas/hayes_verify_scaffold_certification.schema.json",
+      "sha256": "7133a6693947d6f9d91f6905926b9412b91a0d30ea7020460a0c920b5b58dc8a"
+    },
+    {
+      "path": "scripts/Add-AIPlatformRecord.ps1",
+      "sha256": "9e2a3170cdf44dfcb68397d590c12d78e3b02cdc991b68a5e8098986f1907945"
+    },
+    {
+      "path": "scripts/Add-AISecurityReviewRecord.ps1",
+      "sha256": "e1cedbc2a5bfeded0d129ad2d397422dbdf0e79e449aae45fbcabf3d55347aee"
+    },
+    {
+      "path": "scripts/Add-AnnualEMSReviewRecord.ps1",
+      "sha256": "3d3e8c6f3b7c59862ea0a14db8b00360d6238e88466198ef60f1126a1a30b64a"
+    },
+    {
+      "path": "scripts/Add-DataClassificationRecord.ps1",
+      "sha256": "b019a8c7bfefe447cf229ac1536b209a339665a0efebf6747131e5c6e669d1fe"
+    },
+    {
+      "path": "scripts/Add-DataRetentionRecord.ps1",
+      "sha256": "773ca476df810cd6bd7a99f5f0f85baa620393ce5de058d9d5cb9237ca925546"
+    },
+    {
+      "path": "scripts/Add-ProductionDataProtectionRecord.ps1",
+      "sha256": "c81c32d452db91da6a6b4ccab1eba05f7c91e216e703a7cf91e2332bf9a78d53"
+    },
+    {
+      "path": "scripts/Add-PromptDataClassificationRecord.ps1",
+      "sha256": "26d0ba42097040a5b0e699687ac322c7f97c865c5fccdd4547eb4ed57075b192"
+    },
+    {
+      "path": "scripts/Adjudicate-Wave2DApplicability.py",
+      "sha256": "133272fbf3b77f74fdc7a71a3c3ddd044e27a256386353c0f3de09e6522500ac"
+    },
+    {
+      "path": "scripts/Adjudicate-Wave2DControls.py",
+      "sha256": "b146f1e0dad23b29b6b4b9a7a962acd397cd296deb12d2cefc84d5ecaca2a9f5"
+    },
+    {
+      "path": "scripts/Adjudicate-Wave2DTargets.py",
+      "sha256": "88554f42da851ea36ae381d4e777aa8c7b584d37886e393549561a082f2b8b6a"
+    },
+    {
+      "path": "scripts/Apply-AuthoritativeScopeOverrides.py",
+      "sha256": "a9207edccda74f9eb5fe7477ef33df96fff10afec8f17bbb72b3cab4c501a529"
+    },
+    {
+      "path": "scripts/Apply-ControlDefinitionRecovery.ps1",
+      "sha256": "6c569a475cf316766f962b68f8e3b1dfc5d8c3104316e3e4b7f1ee4d0583aa70"
+    },
+    {
+      "path": "scripts/Apply-RecoveredControlDefinitions.py",
+      "sha256": "15c9b23e58624539b2b269c10e7d6309c6dd12ebe94381a093765d0f595d50f4"
+    },
+    {
+      "path": "scripts/Apply-Wave2B1-BaselineDiscoveryFix.ps1",
+      "sha256": "537b6d46db01f0060b16b03ada06ef801a40eb3f932eb2d8acad9de5c9c92cca"
+    },
+    {
+      "path": "scripts/Apply-Wave2B1-Pass45ParamFix.ps1",
+      "sha256": "7679bec6acfa179e84c75bdf1eb18fffab15c23ff11d24928c626fb2a3481241"
+    },
+    {
+      "path": "scripts/Apply-Wave2B21a-HSDocumentControlFix.ps1",
+      "sha256": "298ffa15360dd8defda0703cb6be5e976f5d6b40441a46744dda77d38851aed7"
+    },
+    {
+      "path": "scripts/Apply-Wave2B23a-CTRL075-EnvelopeKeyHotfix-v2.ps1",
+      "sha256": "9de0efd17aeba691faa9a6994c585eabc24ece5b2a9d8f9bc8165b3399bd07b7"
+    },
+    {
+      "path": "scripts/Apply-Wave2B23a-CTRL075-EnvelopeKeyHotfix.ps1",
+      "sha256": "ca7b85701c692e14a937729c03f415d0b3ac3e7b535729d76064e7a9ea2027bf"
+    },
+    {
+      "path": "scripts/Apply-Wave2B23a-CTRL075-Hotfix.ps1",
+      "sha256": "14968162144e1af46f2b654db789f3934ab397fb8f481829e5292fa1fee0a190"
+    },
+    {
+      "path": "scripts/Apply-Wave2B23a-CTRL075-StatusSemanticRepair.ps1",
+      "sha256": "3ab2004b644713b47c039db6104f74bd53aefc0edd51f8212087a04d6c413e37"
+    },
+    {
+      "path": "scripts/Apply-Wave2B23a-CTRL075Refinement.ps1",
+      "sha256": "e0e4384a497f69ea1d40b7362fb02c727eacdf268579b76dde3fcd6aa1fc8883"
+    },
+    {
+      "path": "scripts/Apply-Wave2DApplicability.py",
+      "sha256": "914428d23eb12698341e5fae0ed2c1be8263ae5bb25deff70a65a3bf515a47aa"
+    },
+    {
+      "path": "scripts/Apply-Wave2DHumanApplicabilityDecisions.py",
+      "sha256": "9a4192e758eca1ea4a32c6539091e79e5e2a9ef733c31fb6db4a64e28a7a7c6c"
+    },
+    {
+      "path": "scripts/Archive-Wave2CRelease.ps1",
+      "sha256": "0777a26a9fbe898a6e9a6b7eabb0564d4d14aeb3729d7b4848bed28e3bbad0ee"
+    },
+    {
+      "path": "scripts/Assess-Wave2DRepositoryContent-v2.py",
+      "sha256": "6247cbeec2ed8cfb5870340f75d1ab7c2b7bb3cab9dbde7106ba86ef93beca38"
+    },
+    {
+      "path": "scripts/Assess-Wave2DRepositoryContent.py",
+      "sha256": "5291d341854f94958d282a613bec044404c91dc7a9a400df87b03872f5df300c"
+    },
+    {
+      "path": "scripts/Bootstrap-HayesVerify.ps1",
+      "sha256": "b12dd6f6c69c9e77b2903505991b2ea85b1eb6d30bbf6d86a2147d88c2b6c26d"
+    },
+    {
+      "path": "scripts/Bootstrap-HayesVerifyGitHubRepository.ps1",
+      "sha256": "92ec9287dc33b10ffc85af2a1f1e0076e0c8beb9ca174d6a36acc63d6f4bec53"
+    },
+    {
+      "path": "scripts/Bootstrap-Wave2C.ps1",
+      "sha256": "fb98fee69d5455348209caf51abb811b7ae489009ef445741015dcf3e7ddc8cd"
+    },
+    {
+      "path": "scripts/Bootstrap-Wave2CBaselinePersistence.ps1",
+      "sha256": "ecd203ecde5dcc35ad64c0103bd814a56436ef08652f453c823dd15211b6a1f8"
+    },
+    {
+      "path": "scripts/Bootstrap-Wave2D.ps1",
+      "sha256": "980ea21878194088553ad109b1144b7892a0a13f99c1316543126c0cd5a95028"
+    },
+    {
+      "path": "scripts/Build-AIGovernanceAssertionEvidenceMatrix.py",
+      "sha256": "96100c85dc0f97ae0db89b74dd31c42f9f67d001557a01ae6a9e08ee4da11929"
+    },
+    {
+      "path": "scripts/Build-AIGovernanceGapRemediationQueue.py",
+      "sha256": "f53be5e4a96c4095af095a2aa0083f1f2c636e8ab5277f370fa4f392d7cf86c8"
+    },
+    {
+      "path": "scripts/Build-HSSecurityDataGovernanceMatrix.py",
+      "sha256": "38fd9f40e84bbafbb8b312b4afab48fdf6952da708e444a92311d57cfa846e08"
+    },
+    {
+      "path": "scripts/Build-HSSecurityDataGovernanceRemediation.py",
+      "sha256": "7a9f0fde231d417eb9ad6dbfd71ee6960b4609f081cf9e6d698c6a7422dad7db"
+    },
+    {
+      "path": "scripts/Build-HayesVerifyEMSReturnEnvelope.py",
+      "sha256": "596bf328730cabfcd825bcc1dac73f4f50fb999f79ac34ad90ff94563b0b06b6"
+    },
+    {
+      "path": "scripts/Build-HigherScopeEvidenceArchitecture.py",
+      "sha256": "22df4a04dba190d13aef256a8b0421205f9f50587f885db1fb124e59b771670e"
+    },
+    {
+      "path": "scripts/Build-Wave2C2AIGovernanceEvidence.py",
+      "sha256": "a1294414f89661acd2b9e0af128467001f37be4eb982df8694540d656e974c65"
+    },
+    {
+      "path": "scripts/Build-Wave2CRemediationQueue.py",
+      "sha256": "77ae6a6321afd7e1860c9e97b9d6486123245fd5638554f6835f78a66f326a06"
+    },
+    {
+      "path": "scripts/Build-Wave2DApplicabilityReviewQueue.py",
+      "sha256": "9f2a5313345994c5dcd26b478af6fb648ab1e322e4468c1f13f49a03b5f1eed4"
+    },
+    {
+      "path": "scripts/Build-Wave2DApplicabilityRules.py",
+      "sha256": "b1cca2ecd95d87ca54864f723a4bf58baad80450b8e87f433f69bdbe9a84db11"
+    },
+    {
+      "path": "scripts/Build-Wave2DEvaluationMatrix.py",
+      "sha256": "1d67b458ef7dc8c8d3df71319a498e83ae403e28cebcc8e79dc060ada43c3c9a"
+    },
+    {
+      "path": "scripts/Build-Wave2DScopePopulation.py",
+      "sha256": "e65a1d105b40254ae289df2ea155c5ed3ab874731f0a1574e78a7b78ec53049f"
+    },
+    {
+      "path": "scripts/Capture-AIGovernanceOperatingEvidence.py",
+      "sha256": "38e4f678c243d53096f6081a3512f323dedcc2afc187dd6a806fc011ea032c7d"
+    },
+    {
+      "path": "scripts/Capture-SDGRegisterEvidence.py",
+      "sha256": "e8d9e5e6587a681b0930e777ea7eec98650226d4a482b2c9c37d563ba7aed309"
+    },
+    {
+      "path": "scripts/Certify-HayesVerifyLiveEvaluation.py",
+      "sha256": "84e66d56a2c32a73ceb14e5706652722421abe28d0c54ce2117f3b0610dc92f6"
+    },
+    {
+      "path": "scripts/Certify-HayesVerifyPilot.py",
+      "sha256": "518a4636add0dc720ab102704fa72eea7af7b763e7c90e0fc59543a26edbaabe"
+    },
+    {
+      "path": "scripts/Certify-HayesVerifyScaffold.py",
+      "sha256": "4cc9608079874c6f38fc9071b01eb1220b311134acf6cce85965afad9050f9d5"
+    },
+    {
+      "path": "scripts/Certify-Wave2B.py",
+      "sha256": "8f228e18a562bd5a78e7b30e08bf554c66cdd28cf8f04686f27d9e8ececfb639"
+    },
+    {
+      "path": "scripts/Certify-Wave2CPostCloseoutBranch.py",
+      "sha256": "d3764d37841812cf6a6ea729d2859e30eab2d8b47e43b38b213219137652d047"
+    },
+    {
+      "path": "scripts/Certify-Wave2CPostMerge.py",
+      "sha256": "cca3c0139fab2478f30e8e50ae29b7e9d5b9f0f06b2e1efd3383b17d3757d024"
+    },
+    {
+      "path": "scripts/Classify-AIGovernanceEvidence.py",
+      "sha256": "7e1a76e70c6ec0f45d0a7af8b6fb7d9fbbef6e51273522ae06b3bbe07c32364c"
+    },
+    {
+      "path": "scripts/Classify-EvidenceSources.py",
+      "sha256": "800cdfb6825844e7139e2520dc3bb9e42c50a25433a91347fb32fb9fda79ffc3"
+    },
+    {
+      "path": "scripts/Classify-HSSecurityDataGovernanceEvidence.py",
+      "sha256": "c2c58ee9f42d9e178afd0927134b5b810d0b48ade4517a4e1f785d25ae85ca6e"
+    },
+    {
+      "path": "scripts/Cleanup-EMSSecretScanTransientScripts-v7.ps1",
+      "sha256": "b445dcf4e17e80042debfb1f331b3be1be79baac7f7918ab8652728338daef9e"
+    },
+    {
+      "path": "scripts/Cleanup-MainAfterWave2CBaselinePersistence.ps1",
+      "sha256": "5e64c6111d6954e27d2482e58cd4f910802895ec9e8d590a3cb9ef63b04cbacb"
+    },
+    {
+      "path": "scripts/Cleanup-Wave2C-SecretScanLegacyMaintenance.ps1",
+      "sha256": "8a5523f965bbb68e63280970860be1faa38dc355d3d68578a2971dfcc960db08"
+    },
+    {
+      "path": "scripts/Close-Wave2BBranch.ps1",
+      "sha256": "f0399eee1046dafda10af32a0c7d08d345f504f281e6de3cc60fe04a6ed29b27"
+    },
+    {
+      "path": "scripts/Closeout-Wave2C4.py",
+      "sha256": "562c59f487a7258ab29db5eafb955141cddf6f71e03b36f0ea6c417cf067f6c9"
+    },
+    {
+      "path": "scripts/Collect-Wave2C1-CTRL072.py",
+      "sha256": "90298936e1a639bbd2bf0761d4e806f8d6801aa48771bc4635c6cd51e7be9cc6"
+    },
+    {
+      "path": "scripts/CommitPush-Wave2C-SecretScanLegacyCleanup.ps1",
+      "sha256": "4b9c51751657b97ef213a6054ccf3e3b85c30d2e507b75ffe072cc8fb7b625d4"
+    },
+    {
+      "path": "scripts/CommitPush-Wave2C.ps1",
+      "sha256": "cf7a6b04def50267aa25fa3e722d35a88b536a5b5a31f1fb9a47c21952f31ee1"
+    },
+    {
+      "path": "scripts/CommitPush-Wave2CBaselinePersistence.ps1",
+      "sha256": "663d46e5e4d2904c711a9a5db66ec39b63a5cbd87abe3685a3ee9fa62273a18c"
+    },
+    {
+      "path": "scripts/CommitPush-Wave2DDefinitionPackage.ps1",
+      "sha256": "20759d80506510d116a747cd800c50e10516b1d1e69c754ef58386b86489f229"
+    },
+    {
+      "path": "scripts/CommitPush-Wave2DInitialization.ps1",
+      "sha256": "b2e1db37f5ae7a1bffc5b712bf6be084f29149fcbe3eda7ddf25b6c2a1e1183b"
+    },
+    {
+      "path": "scripts/Configure-HayesVerifyPytestBasetemp.py",
+      "sha256": "77b9e1d18b416878e97b700e76959d9dbcddc806747fdb196fa76efd475be06f"
+    },
+    {
+      "path": "scripts/Create-Wave2CBaselinePersistencePR.ps1",
+      "sha256": "974454a6af4e07c61be54eb9dcf726a36f7940016647ad54f16ecf17b91983f0"
+    },
+    {
+      "path": "scripts/Create-Wave2CPR.ps1",
+      "sha256": "22e692436c4df2bf7c3b673f1661aa9a27fe3e961aebd57c6d39d3d4f885b21a"
+    },
+    {
+      "path": "scripts/Create-Wave2DDefinitionPR.ps1",
+      "sha256": "96e343549e756173aedae75d0ef6b0384fbd5b9d65ca4f64f5198224e511b127"
+    },
+    {
+      "path": "scripts/Create-Wave2DInitializationPR.ps1",
+      "sha256": "c795dac0b5b08ec91c83cfda189b733a5f14537f1502a430756d2ce081eaf367"
+    },
+    {
+      "path": "scripts/Discover-ControlledDocumentSources.py",
+      "sha256": "aa711a79f5bcb66f237365a4461ec0a02e50e3c2b84af28198f302336e0d6566"
+    },
+    {
+      "path": "scripts/Discover-HigherScopeEvidence.py",
+      "sha256": "6dc0a5aaa9496e4d8ea0201aefe34387e9405daf3b620f502ecf5b72af0ad7cb"
+    },
+    {
+      "path": "scripts/Discover-Wave2DRepositoryPaths.py",
+      "sha256": "db0c5932935d8ac2937b0652845dd18aca384a7c7fcda66ace616b7c82f0df42"
+    },
+    {
+      "path": "scripts/Discover-Wave2DScopeCandidates.py",
+      "sha256": "6212b80910e373ac4c6acab6ec27e0beadbc461ee1570e3382cbef1c5365cda5"
+    },
+    {
+      "path": "scripts/Evaluate-EvidenceSufficiency.py",
+      "sha256": "5d216d597857bb206e8a7c5ab512fdd41c9d89207df18457a1b4c1c6bf26af39"
+    },
+    {
+      "path": "scripts/Evaluate-HigherScopeControls.py",
+      "sha256": "291c262b60bb0278ca9bdd4c84b7e0bd9a078a3039d55085371f6ffbdb866893"
+    },
+    {
+      "path": "scripts/Finalize-Wave2B.ps1",
+      "sha256": "91ef1ad975561df305250a386ec64363955ec28f55f68a3bb7e4addd676dc718"
+    },
+    {
+      "path": "scripts/Finalize-Wave2DAdjudication.py",
+      "sha256": "55a723c921122d1757f46044c64fc2a966e4b9f42522aa062373abd5170d8717"
+    },
+    {
+      "path": "scripts/Find-Wave1BaselineInputs.ps1",
+      "sha256": "7bcd0fc9c6ce0b6bd8799279215e0b97d101879c4fc68aca699c68ee982c12a7"
+    },
+    {
+      "path": "scripts/Freeze-Wave2BArtifacts.py",
+      "sha256": "d64bb1b2bfe58f304d3a5a92fb8f998810faaa88c8f4972d483266e82c408dbf"
+    },
+    {
+      "path": "scripts/Freeze-Wave2CPostCloseoutArtifacts.py",
+      "sha256": "71ca5adea9f6611da42c42e10b7bf199b20b945c82e197708e659ed9d2f86476"
+    },
+    {
+      "path": "scripts/Freeze-Wave2CPostMergeRelease.py",
+      "sha256": "44e248a05a40592c901ce6b1026d174f0d9aaefbab1018eae41d792be2315655"
+    },
+    {
+      "path": "scripts/Freeze-Wave2DApplicability.py",
+      "sha256": "95a661443f448c9cad5efb545b7d1e9cba01fb5c725617f2ef9c24c141756d45"
+    },
+    {
+      "path": "scripts/Freeze-Wave2DEvaluationContract.py",
+      "sha256": "fe57361be2ea897fdf69bfdd8b295de96fa4393cad7831a55d43fe445e98fff9"
+    },
+    {
+      "path": "scripts/Freeze-Wave2DScopePopulation.py",
+      "sha256": "4cae957d99910b55770ac8443fcb4665338ed1b7000485f0a71512e83dbbb8f2"
+    },
+    {
+      "path": "scripts/Generate-ControlledDocuments.py",
+      "sha256": "9e5d3f7ea8a9f7fddefd26ea0ff2ac83ec654e0c52ffc58e5c991fbb392de492"
+    },
+    {
+      "path": "scripts/Initialize-Wave2C.ps1",
+      "sha256": "ad69c38e8ec12f0767a1beb75bd1e0ca773997798d82ad1e333d5a4993f34211"
+    },
+    {
+      "path": "scripts/Initialize-Wave2C3DataGovernanceRegisters.py",
+      "sha256": "ec681f9fe281241772fa2ed034c17517b7f3dbef5394eaf2b9888c2fe6fa89b1"
+    },
+    {
+      "path": "scripts/Initialize-Wave2C4AnnualReview.py",
+      "sha256": "6208ffd7d091fe62ff429007b09f0fa6e8ffed42569c45da9112d3447fd5c24b"
+    },
+    {
+      "path": "scripts/Initialize-Wave2D.py",
+      "sha256": "e17358eca57ab33fe3b7f281a187d97da9422b513bef59064ff08664213b6b8d"
+    },
+    {
+      "path": "scripts/Initialize-Wave2DDecisions.py",
+      "sha256": "756384101590d7beb87eb18b103895a57589c06a12ab67aa9ffb54abfdb04de5"
+    },
+    {
+      "path": "scripts/Inspect-And-Merge-Wave2BPR-v2.ps1",
+      "sha256": "987788daf66a6665606390d115dc0a8fc1eee34dd0f7e6784f80a24044aca837"
+    },
+    {
+      "path": "scripts/Inspect-And-Merge-Wave2BPR-v3.ps1",
+      "sha256": "d6ed24c0a92d8c99fd056317d96015116c844b98e50c15aa8aff66bf3123e3f3"
+    },
+    {
+      "path": "scripts/Inspect-And-Merge-Wave2CBaselinePersistencePR.ps1",
+      "sha256": "35e37f8c4bdbdd184e9d0a1a1c8d14a24091c9e43d627577b383ff94425314d7"
+    },
+    {
+      "path": "scripts/Inspect-And-Merge-Wave2CPR.ps1",
+      "sha256": "a0a24db3f894dea195acc81026be3936cdc017c560daeb4e4440847f2a5a0a02"
+    },
+    {
+      "path": "scripts/Inspect-Wave2CStagedFiles.ps1",
+      "sha256": "c9d20ca2a9e6d50f1ae1443fa6444b285ba57be39b4d560a396f97dc9870d272"
+    },
+    {
+      "path": "scripts/Install-AuthoritativeScopeOverrides.ps1",
+      "sha256": "181fa7a79015e31c246d2284ac01272ca792958002358c1a0e3398147ab92037"
+    },
+    {
+      "path": "scripts/Install-ControlDefinitionRecovery.ps1",
+      "sha256": "7145f89e4180550ad141ef07fba21f245804ab3583de7da7f34556315770b4da"
+    },
+    {
+      "path": "scripts/Install-Finalize-Wave2B.ps1",
+      "sha256": "56fb1f9d6c60ffa80d0153e8c1b12f6806ad9d5526e14844f368a28519593d81"
+    },
+    {
+      "path": "scripts/Install-HayesVerifyPilotEvaluator.ps1",
+      "sha256": "119e7a5f56a78ecedadc8c2f6618e9da5d18101176c54263ed7605d4d2c23236"
+    },
+    {
+      "path": "scripts/Install-HayesVerifyScaffoldCertification.ps1",
+      "sha256": "4a5de838228f70e505bec0d42e32edcd665b48caba46e6b28a86f5e5571e8abb"
+    },
+    {
+      "path": "scripts/Install-Wave2B1-EvidenceDiscovery.ps1",
+      "sha256": "c552d15e4279059162fa0f41127b4639eb4a973eb00b2e85de980f71f94beabd"
+    },
+    {
+      "path": "scripts/Install-Wave2B1-EvidenceQualification.ps1",
+      "sha256": "ecfcc13610c7d61797bb6779e07b7a854178e89ed0b827ebc367fc17827cdd0c"
+    },
+    {
+      "path": "scripts/Install-Wave2B1-Inheritance.ps1",
+      "sha256": "707669c5ae575e456b2027d89c053cc8a6ee1d52c032ad418a1815219145d3e3"
+    },
+    {
+      "path": "scripts/Install-Wave2B2-HigherScopeCollectorArchitecture.ps1",
+      "sha256": "054b8cfa27999ca3621e3e322903d7b7df460c6b67ad6e28323fda5261654d21"
+    },
+    {
+      "path": "scripts/Install-Wave2B21-HSDocumentControl.ps1",
+      "sha256": "8b490ce9552a240265090c817e2d01d5c52eb7a4bd7bd4adc84c7057432734b1"
+    },
+    {
+      "path": "scripts/Install-Wave2B21a-HSDocumentControl.ps1",
+      "sha256": "fb4c8b865f41e492b6978853ad8d14e9cf48d20bb7ae28879686945b3132da2e"
+    },
+    {
+      "path": "scripts/Install-Wave2B22-HSEvidenceIntegrityRelease.ps1",
+      "sha256": "3a719420055959ade0d361a1f5d35f7c38040a1e78dcce818f8ef66c9bb60a54"
+    },
+    {
+      "path": "scripts/Install-Wave2B23-HSContinuousCompliance.ps1",
+      "sha256": "f0dfd5262ce92672bbb879c63d2ed22acc7372214d3e9e2811dac4d670ca0026"
+    },
+    {
+      "path": "scripts/Install-Wave2B23a-CTRL075-EnvelopeKeyHotfix-v2.ps1",
+      "sha256": "02b680d2434b02ca003cca6304da6dc64d17af7569c19b4f7ca64f56bacef95e"
+    },
+    {
+      "path": "scripts/Install-Wave2B23a-CTRL075-EnvelopeKeyHotfix.ps1",
+      "sha256": "e0a003782e0ae6ba809d22a653e1cc963529c517ebc5a0a1760f746c5eb7ec96"
+    },
+    {
+      "path": "scripts/Install-Wave2B23a-CTRL075-Hotfix.ps1",
+      "sha256": "f3d0cd7e149a16899dc7d3835f3a4612c5c31c3e1345f2bebfb8ae6eefa5dd23"
+    },
+    {
+      "path": "scripts/Install-Wave2B23a-CTRL075-StatusSemanticRepair.ps1",
+      "sha256": "29dbac91925bd7b63d2541f3addd78a26f37e9af0ae72761ba4a678902a7603f"
+    },
+    {
+      "path": "scripts/Install-Wave2B23a-CTRL075Refinement.ps1",
+      "sha256": "8ac29a0c87e200766ccccd6aba0ec12174e3f38aad700519992f56357c89b216"
+    },
+    {
+      "path": "scripts/Install-Wave2B24-HSManagementReview.ps1",
+      "sha256": "8d52e5765522ae840260536e81c0f18a68c82d9d5c949f6a30578eb6561f21d3"
+    },
+    {
+      "path": "scripts/Install-Wave2B25-HSAIGovernance.ps1",
+      "sha256": "d0ac19191438d253146e308c9bf80ead7295ce571e61edf36ce1653f72711461"
+    },
+    {
+      "path": "scripts/Install-Wave2B25a-AIGovernanceQualification.ps1",
+      "sha256": "7a12a9720bf8947a4d603aeb38729cabdacf01ed7505e8c1e91631c28c9d04a7"
+    },
+    {
+      "path": "scripts/Install-Wave2B25b-AIGovernanceGapRemediation.ps1",
+      "sha256": "5954aca2febc3e45d6885cabd149808c58d477626a1ab95b59dd4b32d6d4ad55"
+    },
+    {
+      "path": "scripts/Install-Wave2B25c-AIGovernanceOperatingRegisters.ps1",
+      "sha256": "aca2ecd2b3c62106e5bc61855a581b5dabd77826c10c8ce63eb55131343c66d9"
+    },
+    {
+      "path": "scripts/Install-Wave2B25c-ShowScriptHotfix.ps1",
+      "sha256": "8fce4423f59159df1fe5200cc8ccc2364bcacd111f5aa1f6be938b98cdc0fcfd"
+    },
+    {
+      "path": "scripts/Install-Wave2B26-HSSecurityDataGovernance.ps1",
+      "sha256": "af1211938b2ad4372dac85a7838387c3ffc8a31d0b79671541422323f97ef582"
+    },
+    {
+      "path": "scripts/Install-Wave2B26a-SDGOperatingRegisters.ps1",
+      "sha256": "248d8b0226d74fd9086ac989be1b4dfe87272a0bddcf7d289d8855730c9c5eef"
+    },
+    {
+      "path": "scripts/Install-Wave2B26b-SDGFamilyCloseout.ps1",
+      "sha256": "04181051e7e4fa5565a24c4a07b2e47062f4bcddb5ad0e93ffaa2d49ef02e756"
+    },
+    {
+      "path": "scripts/Install-Wave2BAuthoritativePopulationHotfix.ps1",
+      "sha256": "cc34540d476a3f898780126595209c138eb6b9045e00a5b69272cbf63da098cc"
+    },
+    {
+      "path": "scripts/Install-Wave2BAuthoritativePopulationRerunHotfix.ps1",
+      "sha256": "ee6531ed4d7113f2ab824d0cf6248c6d8f1c1ec616ab91ce565db7102975762e"
+    },
+    {
+      "path": "scripts/Install-Wave2BBranchCloseoutPatch.ps1",
+      "sha256": "d892ef40f002f5ae3e665cf0ef273510f6852bb1e084ccd02f20489a5b82cdd0"
+    },
+    {
+      "path": "scripts/Install-Wave2BCloseoutCertification.ps1",
+      "sha256": "df1617013882ad728bf2038d3a5501e23751b0d1856720b8097a4e7e4e766aad"
+    },
+    {
+      "path": "scripts/Install-Wave2BCloseoutSemanticReconciliationHotfix-v2.ps1",
+      "sha256": "3643d70fcc12be8a06185afe5bcf2eaab7de0324d7acf015092fcb7b71b8b1a9"
+    },
+    {
+      "path": "scripts/Install-Wave2BCloseoutSemanticReconciliationHotfix.ps1",
+      "sha256": "73f213fe5e145ad0a98fb85fc52945d48aa496101d4da5873acdb57349b8f33e"
+    },
+    {
+      "path": "scripts/Install-Wave2BPostMergeRelease.ps1",
+      "sha256": "040c4f22f49ce4644a7ca4345672b1a249c71cdec6284c292b8e3fff0df25925"
+    },
+    {
+      "path": "scripts/Install-Wave2C-MergeGatePostPushHotfix.ps1",
+      "sha256": "4ae60cdb5701731292d7e3a29e3cbdb57421f18d57dff08465565b754ffa516d"
+    },
+    {
+      "path": "scripts/Install-Wave2C-SecretScanLegacyCleanup.ps1",
+      "sha256": "4e6c8fdc92ec7b051ae975a85a6a6f32641949a766b6993ecec59b6e969af77d"
+    },
+    {
+      "path": "scripts/Install-Wave2C1-CTRL072.ps1",
+      "sha256": "ce0618983c13c9bb38d3cb3072705da57dd0bf2fb1a8fb219610055aaf9e11ef"
+    },
+    {
+      "path": "scripts/Install-Wave2C1a-DependencyExecutionHotfix.ps1",
+      "sha256": "1d3dcbae2319cac73a003b04061e3db373e09771dc82c624ea999ae72ba5cf88"
+    },
+    {
+      "path": "scripts/Install-Wave2C1a-DocumentGeneration.ps1",
+      "sha256": "e916023d64258c0cef8d414b039f05fef5e4769acf907eb18d126262de2e7c79"
+    },
+    {
+      "path": "scripts/Install-Wave2C1b-CTRL072.ps1",
+      "sha256": "79f8d1c2d0cb8c30b62d8d40fe0df07a44852a9b1aee10daf9049216527600ab"
+    },
+    {
+      "path": "scripts/Install-Wave2C1c-CTRL072.ps1",
+      "sha256": "0ce3583344e668f14a16a6e477585741bb810d58a448a2a045ae6f930ec7f4e4"
+    },
+    {
+      "path": "scripts/Install-Wave2C2-AIGovernance.ps1",
+      "sha256": "ac40fb00850f8e0b611fc600338f712cadfd7e843e952be5ea6c4559d8d38519"
+    },
+    {
+      "path": "scripts/Install-Wave2C2a-AIGovernanceEvidenceCapture.ps1",
+      "sha256": "7dfbab518dec84e41df48cfa6f49efa9a9bc24f3e7e14ec0534a966fc65b4c7c"
+    },
+    {
+      "path": "scripts/Install-Wave2C2b-AIGovernance.ps1",
+      "sha256": "cdc183765de909ca4b0efdd068cb7379ccb5da557c9b5ee3b11c82e84f6f5683"
+    },
+    {
+      "path": "scripts/Install-Wave2C2b-InheritanceBaselineHotfix-v2.ps1",
+      "sha256": "81e07ceb4d8572b22e50d9dab4ac1e8566ad5084f753a8274cfd59e5fe30a689"
+    },
+    {
+      "path": "scripts/Install-Wave2C2b-InheritanceBaselineHotfix.ps1",
+      "sha256": "f4f391c5ff993ee6b49f78d03bd0cecadf6b2f3f851955092361466f4a113600"
+    },
+    {
+      "path": "scripts/Install-Wave2C3-DataGovernance.ps1",
+      "sha256": "49f28917be0b72312d681f69b07bac535f7bf375ebddc9ac82c926fb03d8c90c"
+    },
+    {
+      "path": "scripts/Install-Wave2C3a-DataGovernance.ps1",
+      "sha256": "37c59609e1b246b0d704912d1be1e67067ee4ff4a7e27672b501ccf56003e0c2"
+    },
+    {
+      "path": "scripts/Install-Wave2C4-AlreadyPromotedResumeHotfix.ps1",
+      "sha256": "ac008a6839cbed4c92cc0d2234c8876b53ed8312b6e2a9ca77e3f7f521b1ea42"
+    },
+    {
+      "path": "scripts/Install-Wave2C4-AnnualReviewCloseout.ps1",
+      "sha256": "b9bbc2205e13ce567e357aec1f7e5420f70bfce18ef56d6f07c9b3c40b3ec819"
+    },
+    {
+      "path": "scripts/Install-Wave2C4-OrchestratorQualificationGateHotfix.ps1",
+      "sha256": "271f520ca1a0bf4e2521f451fa361d5ba8e16a939eee29a8a84232dcba376938"
+    },
+    {
+      "path": "scripts/Install-Wave2C4-ResumeLastExitCodeHotfix.ps1",
+      "sha256": "8ccea80093565ca91dfa07ce7522dbaa0d0f9fcc1fdc597eb37ddad8dcad5706"
+    },
+    {
+      "path": "scripts/Install-Wave2CBaselinePersistence.ps1",
+      "sha256": "0858e9cf6c89e9f9badb27fbde2944d4271a2e562d43e8679d83ffb6a1da31f9"
+    },
+    {
+      "path": "scripts/Install-Wave2CBootstrapFix.ps1",
+      "sha256": "d97b5d4b35a896ae2379f3752459209b01e04c030742cccc720a9cfbdffea611"
+    },
+    {
+      "path": "scripts/Install-Wave2CBranchFinalization.ps1",
+      "sha256": "6e5915fde7d547b136f33da637bb7c6b54ebd8cb3fc0926a075ca8184ab9e848"
+    },
+    {
+      "path": "scripts/Install-Wave2CCloseoutInheritanceStatusReconciliation.ps1",
+      "sha256": "63cb4786c140995de0d2f6f9af06dc72c17fb292409e4edf0ebc8ee9dd305544"
+    },
+    {
+      "path": "scripts/Install-Wave2CInitialization.ps1",
+      "sha256": "6c5d6f9415c1d6e73683e25f083874a628371d5feed2dfbd589b6c8abf595386"
+    },
+    {
+      "path": "scripts/Install-Wave2CPostCloseoutReleasePrep.ps1",
+      "sha256": "2179d95c5afc3f448a0795020189a317e6b114d08eef934d517006d903b14310"
+    },
+    {
+      "path": "scripts/Install-Wave2CPostMergeReleaseTag.ps1",
+      "sha256": "236edb1e1fe112ddf064c88b39ab5a7c318b258364a4362bc1f4a117a61a625b"
+    },
+    {
+      "path": "scripts/Install-Wave2CPostReleaseBaselineRegistration.ps1",
+      "sha256": "96641f47bb0a34f3a42b242b22605161154525f13ddc296b6252ad1a37b3a00b"
+    },
+    {
+      "path": "scripts/Install-Wave2DApplicabilityAdjudication.ps1",
+      "sha256": "4e0b0d669d01b510cb0a7d779b586dbee7d5efe451f21349b6bf23d4176ca398"
+    },
+    {
+      "path": "scripts/Install-Wave2DApplicabilityFreezePR.ps1",
+      "sha256": "f144bb718648d492b8b3284a3b1e315fa02e1f5c2ffc125499a457899fa99d4c"
+    },
+    {
+      "path": "scripts/Install-Wave2DApplicabilityHumanReview.ps1",
+      "sha256": "09219e07cc1f779bccd3e53a344395a1b18890046e96a23687590404b777f886"
+    },
+    {
+      "path": "scripts/Install-Wave2DHumanApplicabilityPopulator.ps1",
+      "sha256": "240638f221e98bee5d005afcd409a3c0a79aaed5f0ca1221c3307ef2bc5f7926"
+    },
+    {
+      "path": "scripts/Install-Wave2DInitialization.ps1",
+      "sha256": "de885bb82d8b74ba93fdaed5d49d1e57e445f7bd1d086fd5654e9e411432fdf3"
+    },
+    {
+      "path": "scripts/Install-Wave2DInitializationCommitPushPR.ps1",
+      "sha256": "d8ef15937f5cd76ed5427bbe6442b41efcbbe9cf724abb35136ec81a756c9725"
+    },
+    {
+      "path": "scripts/Install-Wave2DRepositoryContentAssessment-Hotfix.ps1",
+      "sha256": "acb2c6847bb2bfaba423b715fef044b226daba2391b6d35c83141648767d3b40"
+    },
+    {
+      "path": "scripts/Install-Wave2DRepositoryContentAssessment.ps1",
+      "sha256": "901c13dbdf2181d78012ffbf5a44f32e61e60fb8477395d57d488070b265f67e"
+    },
+    {
+      "path": "scripts/Install-Wave2DScopeAdjudication.ps1",
+      "sha256": "52d255576decc047f3d8834ac26a2327ce461c552ef3e0637d07da60eb4593ab"
+    },
+    {
+      "path": "scripts/Install-Wave2DScopeFreezeMatrix.ps1",
+      "sha256": "cfff4f1d116e85157917f9085f93d0e390faa736357e0596bb8a43719e65c818"
+    },
+    {
+      "path": "scripts/New-HigherScopeCollectorScaffolds.py",
+      "sha256": "515bc6053f20ec71be92a1ad8de9ba164a8f0b4389504a44ed58c9a9f922fa86"
+    },
+    {
+      "path": "scripts/Patch-FinalizeWave2B-BranchStaging.ps1",
+      "sha256": "824c64e73079aaa3f9bf898e52a463e648f527a17523cf78f9d65f2ba3dd482d"
+    },
+    {
+      "path": "scripts/Patch-StageEMSSecretScanCleanup-v7a.ps1",
+      "sha256": "5a2c437c5a6a7c755ab515840e28b71ec18855ccb1a1c2434a9e54c95d9d4008"
+    },
+    {
+      "path": "scripts/Patch-Wave2B1-InheritanceBaselinePath-v2.ps1",
+      "sha256": "6eb1c70db8c65c932e402c1dbcc6c751dd0f4c510f3d0da9591b588e42e3d667"
+    },
+    {
+      "path": "scripts/Patch-Wave2B1-InheritanceBaselinePath.ps1",
+      "sha256": "92ca8888465ad359b4eb30c5a8bd710c4e5f1c4493017c342cf4b6da68c23c46"
+    },
+    {
+      "path": "scripts/Patch-Wave2C-MergeGatePostPushReadiness.ps1",
+      "sha256": "ef4d5a1c7191b0bdc597f7b34efba85149fe643ef81f8dd52111ab859da85819"
+    },
+    {
+      "path": "scripts/Patch-Wave2C1a-GeneratorRuntime.ps1",
+      "sha256": "d59f989c86cb5296fa98c8c5956334076e7667f3463d8ec2f363d9e3f1415fa8"
+    },
+    {
+      "path": "scripts/Patch-Wave2C4-AlreadyPromotedResume.ps1",
+      "sha256": "2a447df1da3b97ee1a328bf0369c50959fe536a462f2025642dbce252da6f7ec"
+    },
+    {
+      "path": "scripts/Patch-Wave2C4-OrchestratorQualificationGate.ps1",
+      "sha256": "1a4c3d02a7354b7fb8e8fcef7064dfb8825a332f0187e7e04b0886188a60b59e"
+    },
+    {
+      "path": "scripts/Patch-Wave2C4-ResumeLastExitCode.ps1",
+      "sha256": "94a93b8150f6a73a02f0b41f38f120a26abfb076ee810df105ca2c2660caf9a8"
+    },
+    {
+      "path": "scripts/Populate-Wave2DHumanApplicabilityDecisions.ps1",
+      "sha256": "e86aff34ea5eed72ad6ba7bc16517d4ce2311ece40b72af83b079e29735a30de"
+    },
+    {
+      "path": "scripts/Prepare-Wave2BBranch.ps1",
+      "sha256": "efbfd36eddd925060da2dc0ab694a23f96ef18b5f903286471839cdcf02ff205"
+    },
+    {
+      "path": "scripts/Prepare-Wave2CPostCloseoutPR.ps1",
+      "sha256": "fbc50e12c7a878c605261f7ef73b352d5ce08c7da0f426d0098a7f0c69010777"
+    },
+    {
+      "path": "scripts/Prepare-Wave2CPostCloseoutRelease.ps1",
+      "sha256": "1746fefc2204f1fc04cd6bf2fa5b1002accc7aedeaa14762fd5fb22cdc9224b9"
+    },
+    {
+      "path": "scripts/Prepare-Wave2DAssistedHumanReview.py",
+      "sha256": "5e03459f1e73c26084c41f9906b4b2bcf9ce7cf42ad59e9dae07a32beb37261b"
+    },
+    {
+      "path": "scripts/Prepare-Wave2DEvaluationContract-External.ps1",
+      "sha256": "a08872570ff4fbc2d8d17d26266ed2cd4c42353bfeaee9fd527d00104514686d"
+    },
+    {
+      "path": "scripts/Prepare-Wave2DScopePopulation-External.ps1",
+      "sha256": "9334f5f2e3a0a45e6816a5ea22c7b77a476382b96c9e8af8b8edd2405f3fc7e5"
+    },
+    {
+      "path": "scripts/Promote-AIGovernanceGapEvidence.py",
+      "sha256": "b8ea016893552bd0d0ae84e617097625d7a09904da38bd4535d13ec92d4a0d23"
+    },
+    {
+      "path": "scripts/Promote-AIGovernanceOperatingEvidence.py",
+      "sha256": "d59c394f9af9b183a9f161c2738b457a01faa7d5cf15cbbfa321953a97506ffa"
+    },
+    {
+      "path": "scripts/Promote-AIGovernanceOperatingRegisterEvidence.py",
+      "sha256": "1810a0acdf5d488cff6caaa516abe50448a9ca56e10512b5d8b11c1a80f3987f"
+    },
+    {
+      "path": "scripts/Promote-HSAIGovernance.py",
+      "sha256": "aaf8dcbbd6ec816004c5770c02a1e1a4a13ebf3a5e37ef47041c1fcff2ebd813"
+    },
+    {
+      "path": "scripts/Promote-HSContinuousCompliance.py",
+      "sha256": "a41483c88dc2ed7f617076d121966459bf30e906a798b4fae52daa4468827191"
+    },
+    {
+      "path": "scripts/Promote-HSDocumentControlEvidence.py",
+      "sha256": "b2ff20adefc3fec5e4a413529d83c1d8ee9fb178b8e041aa0edd993266865d2b"
+    },
+    {
+      "path": "scripts/Promote-HSEvidenceIntegrityRelease.py",
+      "sha256": "d10bac9b4c64a7a212ccba1d75f4f6ab7ddf167efc10d63ed96ea21f0611ae25"
+    },
+    {
+      "path": "scripts/Promote-HSManagementReview.py",
+      "sha256": "e5960ec905d732febbc2433c20b4e1a48b41ee22927101ad111b9196e82f9b80"
+    },
+    {
+      "path": "scripts/Promote-HSSecurityDataGovernance-Requalified.py",
+      "sha256": "e0fdf35be8f88e886b490e2e6a2f80032a210af31c6610e8b17a1c5184031d40"
+    },
+    {
+      "path": "scripts/Promote-HSSecurityDataGovernance.py",
+      "sha256": "df183817fb7ef78c080d28dd7e5db5c89c9158d6dfac1c58f258ee45e231869c"
+    },
+    {
+      "path": "scripts/Promote-HigherScopeEvidence.py",
+      "sha256": "1d80e26ebcb553a989a4a052995f7293d5ac2fa669857fc086b358712403f582"
+    },
+    {
+      "path": "scripts/Promote-Wave2B1-Evidence.ps1",
+      "sha256": "ea731b93b3c109aa4bddf51054adcbf4c4c3826a6bb00fa420d6ab0800ccfef1"
+    },
+    {
+      "path": "scripts/Promote-Wave2C1c-CTRL072.py",
+      "sha256": "ebb5665b19923367fabf1d12e6a952f96733e6bccb9408ae34851b525f3b7ed6"
+    },
+    {
+      "path": "scripts/Promote-Wave2C2b-AIGovernance.py",
+      "sha256": "e056f461911c470688abd6612be51c21ee74f0e32d5deb7793964d5e70bd15f4"
+    },
+    {
+      "path": "scripts/Promote-Wave2C3a-DataGovernance.py",
+      "sha256": "7579286f5dc444aeaafbebebc41160b66121606b03ce14a4d69b60cdf0f5da53"
+    },
+    {
+      "path": "scripts/Protect-HayesVerifyDefaultBranch.ps1",
+      "sha256": "4615a5e9a3cbcb3edfb0dcb96a8cd23424814595b6377ebb73ddea8e6f8a539e"
+    },
+    {
+      "path": "scripts/Publish-HayesVerifyInitialBaseline.ps1",
+      "sha256": "d3e84cc61ddf2556aec7650f2b9c8272cc36959ec895aa5f70b679e4ec436b34"
+    },
+    {
+      "path": "scripts/Publish-Wave2BPostMergeRelease.ps1",
+      "sha256": "517807451f8fda9e4854d06a5cecca4b1785561effe07d22b3bc433df1dccd3a"
+    },
+    {
+      "path": "scripts/Publish-Wave2CPostMergeTag-External.ps1",
+      "sha256": "a0b86d3896dda896d1c3fd2017d60cf8ac2a66e39c2cba262b8fe889e6a78715"
+    },
+    {
+      "path": "scripts/Publish-Wave2CPostMergeTag.ps1",
+      "sha256": "a5282f0442b4b619060bb5d9551f3b7380b917c31ed98cb45c65a979a06a3f28"
+    },
+    {
+      "path": "scripts/Qualify-AIGovernanceOperatingEvidence.py",
+      "sha256": "62999ee2ed66c47146fb9bb6d71561def88f4cdb79560b8153dec8c034ba69f0"
+    },
+    {
+      "path": "scripts/Qualify-HSAIGovernance.py",
+      "sha256": "735321b2720f091c66fa00ff511402df97df2f94fc5ffc5403755b0587b9beee"
+    },
+    {
+      "path": "scripts/Qualify-HSContinuousCompliance.py",
+      "sha256": "b080af42e1c88f132a61244aec154889b9edcb58cb8e4cc3ea3bb4abb974fbde"
+    },
+    {
+      "path": "scripts/Qualify-HSDocumentControlEvidence.py",
+      "sha256": "fe44e237348969fad4e866752e2258b70f6bcc792cf61989b78072505ed3472a"
+    },
+    {
+      "path": "scripts/Qualify-HSEvidenceIntegrityRelease.py",
+      "sha256": "2ba06cc3628e03fca91edc06c1212ce163bee9669ad11cf89383b55ed97a24b4"
+    },
+    {
+      "path": "scripts/Qualify-HSManagementReview.py",
+      "sha256": "d0a89dcf7cddd00662052b4fee1aa6c2b7d176a8e820912f56958a9d3f8e4b2c"
+    },
+    {
+      "path": "scripts/Qualify-HSSecurityDataGovernance.py",
+      "sha256": "16fee5f7581a6a4e3cb1cfb4d1a785baf53130685e124815032986c4ccc4ce5a"
+    },
+    {
+      "path": "scripts/Qualify-Wave2C1-CTRL072.py",
+      "sha256": "a0d5cd6fac637b516c55afd6f01344de995e6f593da46ec0bc0ec317528fe26e"
+    },
+    {
+      "path": "scripts/Qualify-Wave2C2AIGovernance.py",
+      "sha256": "37ca0c05e20762c6725a74a5bbba7697ce548d463287e4c1015c1b1c2d99c082"
+    },
+    {
+      "path": "scripts/Qualify-Wave2C3DataGovernance.py",
+      "sha256": "953a2b170beda27adf33f1ec62f373f5ce55ffc52ba6d1fe81331b899e16afa9"
+    },
+    {
+      "path": "scripts/Qualify-Wave2C4AnnualReview.py",
+      "sha256": "ad13c2ed3f2f26b5d3d304d865c0e9cfa0fe3581ccc9a8a83f1bba6e13a03044"
+    },
+    {
+      "path": "scripts/Rebuild-HigherScopeCandidates.py",
+      "sha256": "b8ffa94cffededdf5bd7e5e8339ea316d9f7718a907eef1d5a3b915002fa5abf"
+    },
+    {
+      "path": "scripts/Reconcile-Wave2C1b-CTRL072.py",
+      "sha256": "65a748becbd79fb7ce786198059117cb14fb4f53759d0006075e53eab0f4a957"
+    },
+    {
+      "path": "scripts/Reconcile-Wave2CCloseoutInheritanceStatus.ps1",
+      "sha256": "955e2775b77228f28ece3d423fda133351cdcb4b3023eeb8b604157fe5e8f011"
+    },
+    {
+      "path": "scripts/Reconcile-Wave2DApplicabilityAfterHumanReview.py",
+      "sha256": "bd648d3e5e145bb144bbce36044a89c85199735ebabd470c508838ec8b8a4bb7"
+    },
+    {
+      "path": "scripts/Record-CTRL072-Remediation.ps1",
+      "sha256": "9a35b15872f32f57e41d04523486f010efa10b7b8926c708dc6f4707820d9dd5"
+    },
+    {
+      "path": "scripts/Recover-ControlDefinitions.py",
+      "sha256": "d753de24215262b958d5192cd570940ecb01648456053ee5ca90ce9c082175ba"
+    },
+    {
+      "path": "scripts/Register-Wave2CBaseline.py",
+      "sha256": "050c14c6c127e605b2777130e18dcb66b417837b5d23399f1c40dbb01d2d01f8"
+    },
+    {
+      "path": "scripts/Requalify-HSSecurityDataGovernance.py",
+      "sha256": "e35a18622b94e24655738ac7a5c068625bcbb08a5fda215ff61322d82953897d"
+    },
+    {
+      "path": "scripts/Rerun-Wave2B23a-CTRL075-EnvelopeKeyHotfix-v2.ps1",
+      "sha256": "a9d87dc34595bb9fe8843a1dea670a8c36c7110610b3d389e9b4e86fbb870639"
+    },
+    {
+      "path": "scripts/Rerun-Wave2B23a-CTRL075-EnvelopeKeyHotfix.ps1",
+      "sha256": "bb8b2608a9a2fe9e4784b9886a80bef97a47c3a3ce413f8cdaac4c2e1e76e177"
+    },
+    {
+      "path": "scripts/Rerun-Wave2B23a-CTRL075-StatusSemanticRepair.ps1",
+      "sha256": "2bbcf1bcd9f84b210393162ad6cfe811a97368c61bcdae0f392aa32f0e70fcf5"
+    },
+    {
+      "path": "scripts/Rerun-Wave2B23a-CTRL075.ps1",
+      "sha256": "75296a3e50fd37bf7620f6f4521308079b53b0d01c8443b7a5817ac46a727ba9"
+    },
+    {
+      "path": "scripts/Rerun-Wave2BAuthoritativePopulationHotfix.ps1",
+      "sha256": "fca13cb7ec71ebaa0d1e6b9192150362fb1115e6ca4ad2f297b76d371dda0f82"
+    },
+    {
+      "path": "scripts/Rerun-Wave2BCloseoutSemanticReconciliation.ps1",
+      "sha256": "5358615c2c22ee827755e4e4841861b4cae9956fd7f15e63127c03a410d17e4d"
+    },
+    {
+      "path": "scripts/Rerun-Wave2C2b-Inheritance.ps1",
+      "sha256": "6668a970f4259c0441e615b81596bf837a3e1359ed7c6556ce5a18a5886fe731"
+    },
+    {
+      "path": "scripts/Resolve-InheritedCompliance.py",
+      "sha256": "53ec7a53b1628458b76442c1097625cb25b1dc8d44cbdb026ebda1f240308800"
+    },
+    {
+      "path": "scripts/Resume-Wave2C4-Closeout.ps1",
+      "sha256": "63d55b68b4a3983be9e017be507abb8eb8226d414e6a566e91992a1aaaa71850"
+    },
+    {
+      "path": "scripts/Review-Wave2C2b-AIGovernance.py",
+      "sha256": "45575e75866a663c5f3ce14c6c993a8a30abc862c2bb6db7de094c3bf5b8f428"
+    },
+    {
+      "path": "scripts/Review-Wave2C3a-DataGovernance.py",
+      "sha256": "e3eed6df2e8468aa047b09dc1a52fbb0f3abc5b43a4b2ff19bfe7e4d731c9912"
+    },
+    {
+      "path": "scripts/Review-Wave2DAssistedApplicability.ps1",
+      "sha256": "0655679501063bca80a468e36ae9ee958ffbd06894a130a2eca8188009413275"
+    },
+    {
+      "path": "scripts/ReviewPromote-Wave2C4AnnualReview.py",
+      "sha256": "37c72141b4369916610e8fd9f5a9eb93eaab82a658b70c2a49f933016c24ad70"
+    },
+    {
+      "path": "scripts/Run-AuthoritativeScopeOverrides.ps1",
+      "sha256": "da3afb59b6bd8a633b02bfe0659db04ca41b8c4cdebefb51cf553b74b6959f5e"
+    },
+    {
+      "path": "scripts/Run-ControlDefinitionRecovery.ps1",
+      "sha256": "cc23cfdfabc39886e45bd4277501fbc8d345c706a4fbe7121b074bc95da7432f"
+    },
+    {
+      "path": "scripts/Run-HayesVerifyCTRL010LiveCertification.ps1",
+      "sha256": "72870243c01f6e5062ced312a2540ba1da67ff0b0fb07e665092fd7346a33745"
+    },
+    {
+      "path": "scripts/Run-HayesVerifyCTRL010Pilot.ps1",
+      "sha256": "f2ca472bdd48319310226ce1a6302441a1e233c0a4b90b3add16e22af566a891"
+    },
+    {
+      "path": "scripts/Run-HayesVerifyLiveEvaluationCertification.ps1",
+      "sha256": "2308c8b338a941a498d03c4e014a0c4c08e9d050d336f1bcea25a8915ba80091"
+    },
+    {
+      "path": "scripts/Run-HayesVerifyPilot.ps1",
+      "sha256": "4f4152c01f6f933eb9ee4dfe760a8133238697cfbd7c290a94451022adaa63eb"
+    },
+    {
+      "path": "scripts/Run-HayesVerifyPilot.py",
+      "sha256": "fa8eebd508b339b2b9be066d05996cf7373fe2783a5bc7c0c601cafbccb23171"
+    },
+    {
+      "path": "scripts/Run-HayesVerifyPilotCertification.ps1",
+      "sha256": "215df0fe7a04e7e1f499a9ac76f25da1eb5b0097a67240b427a77feec04d6e55"
+    },
+    {
+      "path": "scripts/Run-HayesVerifyPrePublicationCertification.ps1",
+      "sha256": "e9791ba533c85745b27d12e7b2792f244cb7c2dcac43fc0a690054beaedce8bb"
+    },
+    {
+      "path": "scripts/Run-HayesVerifyScaffoldCertification.ps1",
+      "sha256": "ba2b3e0e61586464a4b0708d53239c053dd8e4a56b3f28610ff27967f8672643"
+    },
+    {
+      "path": "scripts/Run-Wave2B1-EvidenceDiscovery.ps1",
+      "sha256": "6e518552e79d0d39b41809b4a9e8c808486c2e6d2d0be59125686ce8eb225f4e"
+    },
+    {
+      "path": "scripts/Run-Wave2B1-EvidenceQualification.ps1",
+      "sha256": "929a2ba4f51846bbe167c5b8d44b5269012c6fec6d55ed8a0588ed6307155561"
+    },
+    {
+      "path": "scripts/Run-Wave2B1-Inheritance.ps1",
+      "sha256": "9a9820c268a8e0e567fd440198806713791bac1e637216b4be98f3b3ea71ad35"
+    },
+    {
+      "path": "scripts/Run-Wave2B2-HigherScopeCollectorArchitecture.ps1",
+      "sha256": "31c0fad80aabd2bb02a94fd5b2c5b5a4374b6ca3bdd01b540a239b8250e18642"
+    },
+    {
+      "path": "scripts/Run-Wave2B21-HSDocumentControl.ps1",
+      "sha256": "566de0b35ade22f815ac8152965080b89981193d7228139748754c1f15cc8434"
+    },
+    {
+      "path": "scripts/Run-Wave2B21a-HSDocumentControl.ps1",
+      "sha256": "de53c07310dca3abba025e45ae9fc801b3cea3d25fe1e033638f67d92559d32d"
+    },
+    {
+      "path": "scripts/Run-Wave2B22-HSEvidenceIntegrityRelease.ps1",
+      "sha256": "1f3e514e361b7fabcc995d29ff5c98fd14739890057eeff69c7af68d8d64a11e"
+    },
+    {
+      "path": "scripts/Run-Wave2B23-HSContinuousCompliance.ps1",
+      "sha256": "b4b24f46c6b04eb5a92f8bd7421b6a90fef49f346b92be78a6e004a2a76111ab"
+    },
+    {
+      "path": "scripts/Run-Wave2B23a-CTRL075Refinement.ps1",
+      "sha256": "c4c0a3aa5fc052f5b5d55c171f879cc0a1667572f46447e2be249d47cd5544a4"
+    },
+    {
+      "path": "scripts/Run-Wave2B24-HSManagementReview.ps1",
+      "sha256": "30d4e194223e452b9cf2fa58c6a6e22c86755a3dd93eae292015586b7f11c59a"
+    },
+    {
+      "path": "scripts/Run-Wave2B25-HSAIGovernance.ps1",
+      "sha256": "be15afe83fc26a95f68012789be654b28622cebadd5debfabd4444e22376e33d"
+    },
+    {
+      "path": "scripts/Run-Wave2B25a-AIGovernanceQualification.ps1",
+      "sha256": "347a9c57c28f92bfd0ed927cf0033e89e0f2552eb37a0a411fb78610397141b4"
+    },
+    {
+      "path": "scripts/Run-Wave2B25b-AIGovernanceGapRemediation.ps1",
+      "sha256": "32a9be597b097abc6c650371430fc21929284af48bc0f5723c74710e7f3f0d66"
+    },
+    {
+      "path": "scripts/Run-Wave2B25c-AIGovernanceOperatingRegisters.ps1",
+      "sha256": "ff93b3b3dd2554458e31a1347b414c8feeec18c22e915821513d217433fe3621"
+    },
+    {
+      "path": "scripts/Run-Wave2B26-HSSecurityDataGovernance.ps1",
+      "sha256": "b8e926f52a7c428f6f58ffa69c71531dfe90d4d76df6953df3e816d762435c72"
+    },
+    {
+      "path": "scripts/Run-Wave2B26a-SDGOperatingRegisters.ps1",
+      "sha256": "f14ae7b1af2b1f25d632b8abf3513d130180d739530b56bb7fd3ad2437f94129"
+    },
+    {
+      "path": "scripts/Run-Wave2B26b-SDGFamilyCloseout.ps1",
+      "sha256": "d2d3cd1ca97bdb07c6b6b6f0ef0b5ceeb25d9c989154dae05ed7bf4bf2688866"
+    },
+    {
+      "path": "scripts/Run-Wave2BCloseoutCertification.ps1",
+      "sha256": "fbbf23080b3fedb403f9163aaab255bd4dabad8012d4d2a54b45396c525673ce"
+    },
+    {
+      "path": "scripts/Run-Wave2C-BranchFinalization.ps1",
+      "sha256": "a4d430f373da05d5bbda96d4ae9a5ef17c4c34ebc3d8e9ab1ee59aa6568dd94e"
+    },
+    {
+      "path": "scripts/Run-Wave2C1-CTRL072.ps1",
+      "sha256": "7072768c45def7f8bec824194d5d771d2e823b650eefe23b95e628866cb1c1df"
+    },
+    {
+      "path": "scripts/Run-Wave2C1a-DocumentGeneration-v2.ps1",
+      "sha256": "5ef850c130857c53fa88827e375d68f7468db044197df0007b6c95c1988f1aad"
+    },
+    {
+      "path": "scripts/Run-Wave2C1a-DocumentGeneration.ps1",
+      "sha256": "513a97e6291f4856028ba29813a0600e937c169ba8876618426b331c5f7370f7"
+    },
+    {
+      "path": "scripts/Run-Wave2C1b-CTRL072.ps1",
+      "sha256": "74ba9732b513d7406714c1413d6b5c711a444c343415d966dc460d5150c10906"
+    },
+    {
+      "path": "scripts/Run-Wave2C1c-CTRL072.ps1",
+      "sha256": "6f34f83067e021815c2ce07d7da6d4c5b87b8fe998b109a904b7a3f28d4dedc6"
+    },
+    {
+      "path": "scripts/Run-Wave2C2-AIGovernance.ps1",
+      "sha256": "126fdf5c122380c04a0a05cf4b54a527d7b8fb6905d1f4baa57150893cee4155"
+    },
+    {
+      "path": "scripts/Run-Wave2C2a-AIGovernanceEvidenceCapture.ps1",
+      "sha256": "b8be3e54452bad0eba37be98e1f6a65974456640605116694cbdbc56babe61da"
+    },
+    {
+      "path": "scripts/Run-Wave2C2b-AIGovernance.ps1",
+      "sha256": "73d5ae2e870623084d586c78d470d79d8f133bc66a81a97666a0417bba5ef704"
+    },
+    {
+      "path": "scripts/Run-Wave2C3-DataGovernance.ps1",
+      "sha256": "44da7d4ea7ef0bcf3a1c9fb3c133f809dc1a41129ea6840a30b76410a1a0fe4e"
+    },
+    {
+      "path": "scripts/Run-Wave2C3a-DataGovernance.ps1",
+      "sha256": "13d2fcbe079c6d1c48f3f0ece1ef7df68fd3676078e0d3d55ead53e8d2e5c502"
+    },
+    {
+      "path": "scripts/Run-Wave2C4-AnnualReviewCloseout.ps1",
+      "sha256": "174d283ac163a86a93ad98046f8ed154c3fc72882c378306c27d49fd8ace05e2"
+    },
+    {
+      "path": "scripts/Run-Wave2CPostMergeRelease-External.ps1",
+      "sha256": "5d1b677c6918002a3c796d54cf22452e936999d062b7eebe9b2a845016db2367"
+    },
+    {
+      "path": "scripts/Run-Wave2CPostMergeRelease.ps1",
+      "sha256": "59e00ee6644a1acce49bafc4d64f918c7ae0ed3de49a2afd4089966f3454ca10"
+    },
+    {
+      "path": "scripts/Run-Wave2CPostReleaseBaselineRegistration.ps1",
+      "sha256": "79e6071cf5165e30f52b73d8d752793de00775f396c08858bec71643c391fc59"
+    },
+    {
+      "path": "scripts/Run-Wave2DApplicabilityAdjudication.ps1",
+      "sha256": "ae2b48a009863524a8eacddb7450b44d5ba99fae09a664212df4c67d563a1ef2"
+    },
+    {
+      "path": "scripts/Run-Wave2DApplicabilityFreeze.ps1",
+      "sha256": "c20be1864953aa9360d51edc20eb5d2db91448fbda62079952b2b10655e9de14"
+    },
+    {
+      "path": "scripts/Run-Wave2DApplicabilityHumanReview.ps1",
+      "sha256": "ea75c2ddbddb615e4bf5461c575efa969e351072c290cd98fc23283cfc6766db"
+    },
+    {
+      "path": "scripts/Run-Wave2DDefinitionCommitPushPR.ps1",
+      "sha256": "096da35c5bc47923846810d6b8b218f267e846e4e43fdd8ca8605b76d88e4e29"
+    },
+    {
+      "path": "scripts/Run-Wave2DEvaluationContractFreeze.ps1",
+      "sha256": "b3a96ac092d74bf0b8141aeed361850dc89d5ed78c09a4932eb365d2e1028568"
+    },
+    {
+      "path": "scripts/Run-Wave2DInitialization-External.ps1",
+      "sha256": "5c7dd750605354f1e5a637cc7a240e08849a45f2ea2fb4fd3ba54c37f9a8b245"
+    },
+    {
+      "path": "scripts/Run-Wave2DInitializationCommitPushPR.ps1",
+      "sha256": "1b55f7db760f58d580839fd14d6f19605f0fb1d8ecdf4bf0107228b19d178bea"
+    },
+    {
+      "path": "scripts/Run-Wave2DRepositoryContentAssessment-v2.ps1",
+      "sha256": "cdd1c79bc852ae5fc2ffae701942b2fd60f2be35cb6a487f152b8b1fae6174fe"
+    },
+    {
+      "path": "scripts/Run-Wave2DRepositoryContentAssessment.ps1",
+      "sha256": "7a658010670689e29a6fe87bc1c2a4eaf228a188bbebc100643fe6b2e88df689"
+    },
+    {
+      "path": "scripts/Run-Wave2DScopeAdjudication.ps1",
+      "sha256": "767a269b56382a38696c896596e3bf50222e3caa961f52666671137326f5e4a6"
+    },
+    {
+      "path": "scripts/Run-Wave2DScopeFreezeMatrix.ps1",
+      "sha256": "39dae0d47f70394fed8f6db505ac55fdb35d99c7c676aba87d46b5a2d13d5d57"
+    },
+    {
+      "path": "scripts/Run-Wave2DScopePopulation.ps1",
+      "sha256": "700f3093049685f894dadb703c860a95024d9c171425e59da889f0c358959cb2"
+    },
+    {
+      "path": "scripts/Seed-HigherScopeEvidence.py",
+      "sha256": "d6d4da49b2d8d1e526dc79b8ba4be987fcc851067d15a7d3154d5e0c501f4269"
+    },
+    {
+      "path": "scripts/Show-AuthoritativeScopeOverrides.ps1",
+      "sha256": "18919408b8ba038ab527e12eaf1919eb9fac817f2eff5cc05d7928a550e2eff7"
+    },
+    {
+      "path": "scripts/Show-ControlDefinitionRecovery.ps1",
+      "sha256": "2427a3f354a0e16403e064c03314121ba8ee2557f2b2d2e8d61c9e66b6654865"
+    },
+    {
+      "path": "scripts/Show-HayesVerifyLiveEvaluationCertification.ps1",
+      "sha256": "494d913301842b03d4ba3d4f4482dea399888506d16faffc4b0c9cb920c89dbc"
+    },
+    {
+      "path": "scripts/Show-HayesVerifyScaffoldCertification.ps1",
+      "sha256": "51f7853a6c0a9fab9e67ed8830d0e2f38c2512f7dd990a5dd744cbb27df8670d"
+    },
+    {
+      "path": "scripts/Show-Wave2B1-BaselineConfig.ps1",
+      "sha256": "55b432d56a89bb5b649f237ddb4ec663055c1710e9bcd05ca4760021871e21c3"
+    },
+    {
+      "path": "scripts/Show-Wave2B1-EvidenceDiscovery.ps1",
+      "sha256": "35c7cdb2f201411890c5b593819556a197fa9a42e6a3389ad72939f15ba6a785"
+    },
+    {
+      "path": "scripts/Show-Wave2B1-EvidenceQualification.ps1",
+      "sha256": "a04d9e0dd69a0f53e796e4e243e609007097b7dc08311f6ced750b83e5b77dd4"
+    },
+    {
+      "path": "scripts/Show-Wave2B2-HigherScopeCollectorArchitecture.ps1",
+      "sha256": "d0f02a247e36d16f7e694aa65757954486c04cf0d4938d43e2762e916f028e95"
+    },
+    {
+      "path": "scripts/Show-Wave2B21-HSDocumentControl.ps1",
+      "sha256": "6bf2bc229aa73a01a0f4c7861506a09afe45b0fab1fc7213f340f1d017a3a0d7"
+    },
+    {
+      "path": "scripts/Show-Wave2B21a-HSDocumentControl.ps1",
+      "sha256": "d38d022dbe7f65b6e4ea3264e31aa627ada94deef8c26d06ba47a9de24dca142"
+    },
+    {
+      "path": "scripts/Show-Wave2B22-HSEvidenceIntegrityRelease.ps1",
+      "sha256": "bda4ccc4586668fc45b611e5a656af15e0b870c9f9aab8c18570e2d6490944c6"
+    },
+    {
+      "path": "scripts/Show-Wave2B23-HSContinuousCompliance.ps1",
+      "sha256": "ecd5eec3b591da3f733ce82bb42c3e0f6528bfa7da2b0b39f2fd0a97c18deb67"
+    },
+    {
+      "path": "scripts/Show-Wave2B23a-CTRL075-StatusContract.ps1",
+      "sha256": "fbd3762f9b57eebd694c6e4fa2a77585ef83f1bb5c07d596514eb4bcbcb0de04"
+    },
+    {
+      "path": "scripts/Show-Wave2B23a-CTRL075-StatusSemanticRepair.ps1",
+      "sha256": "dff162a1e4c9db5e844494fcb7d9c05dcfa5ea5d1a7ee9239365741297a5cb24"
+    },
+    {
+      "path": "scripts/Show-Wave2B23a-CTRL075Refinement.ps1",
+      "sha256": "83b740feaea9a26407c9196a3481cbc6342a5cb0731a2d6913e08b69c230fd5a"
+    },
+    {
+      "path": "scripts/Show-Wave2B24-HSManagementReview.ps1",
+      "sha256": "08b1b72b7ee80b3fecaef199fc7e5440b8c8b73df9ed02b0f1bb7ba909ed2d05"
+    },
+    {
+      "path": "scripts/Show-Wave2B25-HSAIGovernance.ps1",
+      "sha256": "4cc729cdd2b04f6f128c5f2fa08c1454ce3789ab7d6dcc2b254556dd7f78222e"
+    },
+    {
+      "path": "scripts/Show-Wave2B25a-AIGovernanceQualification.ps1",
+      "sha256": "db8c5d1ac25cea03d0db198aaab41a926f0fe3b5550559d9f14165280999ccd1"
+    },
+    {
+      "path": "scripts/Show-Wave2B25b-AIGovernanceGapRemediation.ps1",
+      "sha256": "b8a77236b53ee0ee7e51e2ff522d2b651c6767d693cc35d072c642a076967b60"
+    },
+    {
+      "path": "scripts/Show-Wave2B25c-AIGovernanceOperatingRegisters.ps1",
+      "sha256": "e4db8e7e43c2a25f0927b5feef15b355506d22454229592f4e4363a9880f025d"
+    },
+    {
+      "path": "scripts/Show-Wave2B26-HSSecurityDataGovernance.ps1",
+      "sha256": "256fa970b055244a66f03a5babe38b822b838b61eb788ef26f2829dd52954f6c"
+    },
+    {
+      "path": "scripts/Show-Wave2B26a-SDGOperatingRegisters.ps1",
+      "sha256": "fe4c2426b2c61d94201411d0e8fa02bee1d885824dfbbf09f52d29dfd9d16b32"
+    },
+    {
+      "path": "scripts/Show-Wave2B26b-SDGFamilyCloseout.ps1",
+      "sha256": "ef66390c594ccd34322d24015d2ef7d63a8e632bfc4a6db138dc9555316ad2b3"
+    },
+    {
+      "path": "scripts/Show-Wave2BCloseoutCertification.ps1",
+      "sha256": "4022e84bab7478727a9fc9f575eb65be2bfedb2dfd737aeab32bec3d8cdb8856"
+    },
+    {
+      "path": "scripts/Show-Wave2C1-CTRL072.ps1",
+      "sha256": "996ea182b9fb11aa49cd07a52f7241aa7a9ad13ed3b7a57fb3091f849b541f18"
+    },
+    {
+      "path": "scripts/Show-Wave2C1a-DocumentGeneration-v2.ps1",
+      "sha256": "d17e3727fbb16692e973aca49f108d573af3f469e9fe5ac355d351189460ff3d"
+    },
+    {
+      "path": "scripts/Show-Wave2C1a-DocumentGeneration.ps1",
+      "sha256": "c8e4a85dcd4d835099e958b1c408c3e4981c44859f2b280b39f01b92cd009a2e"
+    },
+    {
+      "path": "scripts/Show-Wave2C1b-CTRL072.ps1",
+      "sha256": "dcfe373eb1eb3d87540dfd133cf4ba95f70c716c229aeee046c243f00797c077"
+    },
+    {
+      "path": "scripts/Show-Wave2C1c-CTRL072.ps1",
+      "sha256": "475bd413a9046795688e2d0d20aeac651a8d752ecba258be516c04d6ae4f8741"
+    },
+    {
+      "path": "scripts/Show-Wave2C2-AIGovernance.ps1",
+      "sha256": "50274757ad37062531e1c0eb6002c8857c84e274cad72cdb19dc061c9f59610f"
+    },
+    {
+      "path": "scripts/Show-Wave2C2a-AIGovernanceEvidenceCapture.ps1",
+      "sha256": "9947362016547e08aee0e5c8fecf9f9b918df6b84946fb1ba6d0ac1b1e36ca80"
+    },
+    {
+      "path": "scripts/Show-Wave2C2b-AIGovernance.ps1",
+      "sha256": "fae6accb3d07bae98cb2203e0a396e2c3e030785bfa585fcfbb22bd966e9b254"
+    },
+    {
+      "path": "scripts/Show-Wave2C2b-Inheritance.ps1",
+      "sha256": "0d3c0180148ea0eb6005f53120b67eeeaba87d84a543a68d24cc4ae350935b4a"
+    },
+    {
+      "path": "scripts/Show-Wave2C3-DataGovernance.ps1",
+      "sha256": "d4fcfde51c74e2d015abdf0111d64db84410a8077ac9ed1c6458505d1aedd1a2"
+    },
+    {
+      "path": "scripts/Show-Wave2C3a-DataGovernance.ps1",
+      "sha256": "476aebeb4d8295b3b337374c1975db1cacb3453a5b0ce5078dd243459db63ba2"
+    },
+    {
+      "path": "scripts/Show-Wave2C4-AnnualReviewCloseout.ps1",
+      "sha256": "251d586665abdfde8b1a3f3f7eaa1e6f662edb2f0320ea3b7fe0dfba96f0915d"
+    },
+    {
+      "path": "scripts/Show-Wave2CPostCloseoutRelease.ps1",
+      "sha256": "4768c06184505b360217e02477a2a33905b4bd8ff632774710f393b6c946663d"
+    },
+    {
+      "path": "scripts/Show-Wave2CPostMergeRelease-External.ps1",
+      "sha256": "3ea8ab762af1e4e14aeff5f44b45132d55a92cefbcc6ed523af7b22267ba437b"
+    },
+    {
+      "path": "scripts/Show-Wave2CPostMergeRelease.ps1",
+      "sha256": "4c6a22df383e1c84cdf2728b686d00e86688bb16a1e7ef648b91b177d39acd7b"
+    },
+    {
+      "path": "scripts/Show-Wave2CPostReleaseBaseline.ps1",
+      "sha256": "0e7b29ce00edc802eef0b080cad120d3c2a316af3c3d92b3d6f24883b001bb5d"
+    },
+    {
+      "path": "scripts/Show-Wave2CRemediationQueue.ps1",
+      "sha256": "12f015e0ddaffd66e9ceacc95e69f49e724e59aceaa2f22669f58a9c89778a4c"
+    },
+    {
+      "path": "scripts/Show-Wave2DApplicabilityAdjudication.ps1",
+      "sha256": "16ddf668d93a263d0f68bdac6134f8fb570331573855022dc05b1ea8bf051110"
+    },
+    {
+      "path": "scripts/Show-Wave2DApplicabilityHumanReview.ps1",
+      "sha256": "189942c7af5b68602dd05148a6202e90f45772859f4f68c618ceeeec23ba5a48"
+    },
+    {
+      "path": "scripts/Show-Wave2DEvaluationContractFreeze.ps1",
+      "sha256": "7b812270a1b5ad9a70abc26850ef99022b016b1c8e606fe52923c6622e1f6dcf"
+    },
+    {
+      "path": "scripts/Show-Wave2DInitialization.ps1",
+      "sha256": "397295e7f7e2a0bcae465d5a2ee2334626ab56626409211b7b956284e2aae96b"
+    },
+    {
+      "path": "scripts/Show-Wave2DRepositoryContentAssessment.ps1",
+      "sha256": "82620fa4ca9aa9f1dbf28be5b80d84b0143b56ee4714c269566227ead31464c1"
+    },
+    {
+      "path": "scripts/Show-Wave2DScopeAdjudication.ps1",
+      "sha256": "fbc5abe4b4055f91b66cc6e9625b100983010cf061e51193ad74bbd5c19052f7"
+    },
+    {
+      "path": "scripts/Show-Wave2DScopeFreezeMatrix.ps1",
+      "sha256": "aeb8c3aadb4ea0d89e80230d7f49251ca6c810bfd116ed6b54ee86a99ee93fec"
+    },
+    {
+      "path": "scripts/Show-Wave2DScopePopulation.ps1",
+      "sha256": "7eeb9e8d2bd5f62bc4db8e22515192afb4cefdc877fc6f90ee42c58075d19cf0"
+    },
+    {
+      "path": "scripts/Stage-EMSSecretScanCleanup-v7.ps1",
+      "sha256": "0fc47523808f878ca7c1ee5125145386b4d3e09c51bce27aa89ba8087f21db3a"
+    },
+    {
+      "path": "scripts/Stage-Wave2C.ps1",
+      "sha256": "392a361bd2463addd503570e1499782067eb96a910f4d6b892b27e7cb1a34608"
+    },
+    {
+      "path": "scripts/Stage-Wave2CBaselinePersistence.ps1",
+      "sha256": "77b0fb2ecd5c7ac631a21fb3611273f91a4ada7879f3cb28dc8e1fef9b0a97c9"
+    },
+    {
+      "path": "scripts/Stage-Wave2DApplicabilityAdjudication.ps1",
+      "sha256": "041ac18981a93752f636c3d3c5938730bf2304ce40ed07a8d1f844aed7b4f415"
+    },
+    {
+      "path": "scripts/Stage-Wave2DApplicabilityHumanReview.ps1",
+      "sha256": "8f59993060fcda97fc5daf116ca47bc716df2b37e2efe0c5b5881d2ffb7cfd16"
+    },
+    {
+      "path": "scripts/Stage-Wave2DDefinitionPackage.ps1",
+      "sha256": "60cba728b7141c057216f2b7ab906ec9798acc9169a18b38c663e092b4adff39"
+    },
+    {
+      "path": "scripts/Stage-Wave2DEvaluationContractFreeze.ps1",
+      "sha256": "de6ddd38fb16aeef679bbc558231076086c0d177c3af3dc79ca9acef5276f2c2"
+    },
+    {
+      "path": "scripts/Stage-Wave2DInitialization.ps1",
+      "sha256": "8f6ad4bdf6f9ecefa8f4e1b5084a244a18d15cf275d14bfdb0624edf3f83c0ac"
+    },
+    {
+      "path": "scripts/Stage-Wave2DScopeAdjudication.ps1",
+      "sha256": "fc0d6a6ff769f488632e2bf4872b67d2307a5f4844dba6d66944aee65ad352bb"
+    },
+    {
+      "path": "scripts/Stage-Wave2DScopeFreezeMatrix.ps1",
+      "sha256": "7ae043f1c1cc32a3b10ae55cba7f697480f8b6210bc5493514828323a56ef19e"
+    },
+    {
+      "path": "scripts/Stage-Wave2DScopePopulation.ps1",
+      "sha256": "81862007bfc98e4206c7d523c2ee4e44cf5ad98711faef4fbbb992692ca77932"
+    },
+    {
+      "path": "scripts/Test-HayesVerifyBranchRationaleConsistency.ps1",
+      "sha256": "f6de8b102b798e033f431cd89a9019eda4cba52d5af0747334a3bdb415cc4319"
+    },
+    {
+      "path": "scripts/Test-HayesVerifyBranchRationaleConsistencyInstall.ps1",
+      "sha256": "ba2f7d71d6d71cd9033e09869e00846206d4df4fb3568437b91cbed5546b42a8"
+    },
+    {
+      "path": "scripts/Test-HayesVerifyDefaultBranchHotfix-v6.ps1",
+      "sha256": "6cc3a2d64776015c2ba8b42412738b55d199af101cd821d480ed3563080fb5b5"
+    },
+    {
+      "path": "scripts/Test-HayesVerifyDefaultBranchHotfix-v6Install.ps1",
+      "sha256": "dd22955505fe0016d9fea3f0ff40bc0e6b7a260206c2e861791deb3113f3e87d"
+    },
+    {
+      "path": "scripts/Test-HayesVerifyDefaultBranchHotfix.ps1",
+      "sha256": "f585411bdbcb68ca74e07441913855294eac591d27a227bd0e9eb767fb31ba4b"
+    },
+    {
+      "path": "scripts/Test-HayesVerifyDefaultBranchHotfixInstall.ps1",
+      "sha256": "afcb6988798f21826e7643904cc63113da425c80c2d99bf5f5e0d5c1a1d45da8"
+    },
+    {
+      "path": "scripts/Test-HayesVerifyGitHubApiInvocationHotfix.ps1",
+      "sha256": "c57a53520bf5d571242332ef0bf2a0aef6900e83a365f8711c424ebf1d28a40a"
+    },
+    {
+      "path": "scripts/Test-HayesVerifyGitHubApiInvocationInstall.ps1",
+      "sha256": "db64d08c1be9380009e084fb1b3c66438400dae30c6ea0add5b68549b3ccf23e"
+    },
+    {
+      "path": "scripts/Test-HayesVerifyLiveEvaluationCertificationInstall.ps1",
+      "sha256": "bed811991f5bafbe624813ee172c8a999ef48cca3b1d8f667f6fa2df3c9f70cd"
+    },
+    {
+      "path": "scripts/Test-HayesVerifyPilotSemanticsHotfix.ps1",
+      "sha256": "9bae841e958f4a0fb214e064dabcb6c0a201fadfdce2a54dabdeff3216f735ed"
+    },
+    {
+      "path": "scripts/Test-HayesVerifyPilotSemanticsInstall.ps1",
+      "sha256": "8359ac94fc8035a65c6f5ceab4c0a9bc34feac567b0ab2df377f83f8817e71c5"
+    },
+    {
+      "path": "scripts/Test-Wave2B1-BaselineDiscoveryFix.ps1",
+      "sha256": "001f5902f8bd17eef80624fec3a1f392ae2af1afc316878af636a138ec31f88f"
+    },
+    {
+      "path": "scripts/Test-Wave2B1-InheritanceBaselinePath-v2.ps1",
+      "sha256": "d79ea1f9bdca3779160971320ccd5a8a535e2edbe63ea209e8d9261fe4a57532"
+    },
+    {
+      "path": "scripts/Test-Wave2B1-Pass45ParamFix.ps1",
+      "sha256": "e6a67b6fcb537ba3ec9ed8e48956650a7a82cddad6e24e2a0581a4233f15c667"
+    },
+    {
+      "path": "scripts/Test-Wave2B21a-HSDocumentControlFix.ps1",
+      "sha256": "3d5b69e93b469d37abe1b02cb2d6f5f541d1b3c27d8115845c477a759ef8018c"
+    },
+    {
+      "path": "scripts/Test-Wave2B23a-CTRL075-EnvelopeKeyHotfix-v2.ps1",
+      "sha256": "342f300b3f14de7f37eb7c1f554b4d2ac45c8b907a34f201efaf118e8d763c6a"
+    },
+    {
+      "path": "scripts/Test-Wave2B23a-CTRL075-EnvelopeKeyHotfix.ps1",
+      "sha256": "4a776f6f120790debdafeeb40487f02e8ffc8c6be6bc03e0474bb3c09971d246"
+    },
+    {
+      "path": "scripts/Test-Wave2B23a-CTRL075-Hotfix.ps1",
+      "sha256": "1a6598d743f70e78e3093377ec46be2d736a81b8d9a369a650e24cf3c58335ac"
+    },
+    {
+      "path": "scripts/Test-Wave2B23a-CTRL075-StatusSemanticRepair.ps1",
+      "sha256": "4b9da1386a67fe5770800850f76db3c3101086af356eecb64eb0b103ff86f64f"
+    },
+    {
+      "path": "scripts/Test-Wave2B23a-CTRL075Refinement.ps1",
+      "sha256": "16e69708ed03a2b4c28e0e2a76956c946ebc53e1803122f2ddad2917e5115f18"
+    },
+    {
+      "path": "scripts/Test-Wave2BAuthoritativePopulationHotfix.ps1",
+      "sha256": "06853b8fe8d7e3acad5cc89dda0b825c8f519bbfc5da9916ecf23dcca494a7af"
+    },
+    {
+      "path": "scripts/Test-Wave2BCloseoutSemanticReconciliation.ps1",
+      "sha256": "4be250cd1563421ce7c9d2b47966dd52e873b4e486e5ea27dd0372c7b0c3b3a5"
+    },
+    {
+      "path": "scripts/Test-Wave2C-MergeGatePostPushReadiness.ps1",
+      "sha256": "feff0f6d29bead407db6c2347e0913249a47eb75e35c5c7106ffdb80ff8db8ee"
+    },
+    {
+      "path": "scripts/Test-Wave2C-PRReadiness.ps1",
+      "sha256": "693b3ec0df18532d7f02932d3941df1b2d3a912d972e633cce4fcd2eb18d80e2"
+    },
+    {
+      "path": "scripts/Test-Wave2C-PostPushReadiness.ps1",
+      "sha256": "a6a44d2cf95630860f8e73f3f7ec5d3c9390a8002692176e0bfc51e0e2015358"
+    },
+    {
+      "path": "scripts/Test-Wave2C-Scope.ps1",
+      "sha256": "15b7d2374adc69be3e0b57fb0f79f7d56baab296e9b9f8dd69276451602448a8"
+    },
+    {
+      "path": "scripts/Test-Wave2C-SecretScanLegacyCleanup.ps1",
+      "sha256": "a4732e22186ea356da7c8760b5b6dd0da0b79b74df79092cd8a570997cab50eb"
+    },
+    {
+      "path": "scripts/Test-Wave2C1a-Runtime.ps1",
+      "sha256": "4d99b9bb1c655835d387585722179e75947761d248493cfc228ac2fe0b58ba45"
+    },
+    {
+      "path": "scripts/Test-Wave2C4-AlreadyPromotedState.ps1",
+      "sha256": "e40d0d343aa93721ead16187d002b58cab01d740ce795688e1f7f2b620fd54f5"
+    },
+    {
+      "path": "scripts/Test-Wave2C4-OrchestratorQualificationGate.ps1",
+      "sha256": "a4a2c1e6b6ee00260cd5d7f5b8a34e718ac7aea8745acd5d352c12a9d4031ab9"
+    },
+    {
+      "path": "scripts/Test-Wave2C4-ResumeLastExitCode.ps1",
+      "sha256": "f6cfa6e6b38862237c5858a26d71cccaf71f56ee6a5bcc756f07f20a4e1b039b"
+    },
+    {
+      "path": "scripts/Test-Wave2CCloseoutInheritanceStatusReconciliation.ps1",
+      "sha256": "d033a5618642c00050e168fc467703e65eef76728809b5651f47af2622b198b6"
+    },
+    {
+      "path": "scripts/Test-Wave2DDefinitionPRReadiness.ps1",
+      "sha256": "a87f5c9c926b19db65fcc890e08726ba8da3896230890e28767d4ce4201846e7"
+    },
+    {
+      "path": "scripts/Test-Wave2DHumanApplicabilityDecisions.ps1",
+      "sha256": "83b4e8e5ef28a385a39ab94bae335cbb448aa7b74c30527c72c16959ccf97908"
+    },
+    {
+      "path": "scripts/Test-Wave2DInitializationPRReadiness.ps1",
+      "sha256": "3c425d6bc48133f05fd1b1ed419f4ba813ec536c364a44d9e0eeb1c92b5e7ac8"
+    },
+    {
+      "path": "scripts/Test-Wave2DProtectedBaseline.ps1",
+      "sha256": "14cfc90f005d429f59a75f6ed4696cb4a426006aad826fa163e023392f3b560d"
+    },
+    {
+      "path": "scripts/Update-Wave2C1b-QualifiedQueue.py",
+      "sha256": "423bdd81f29609746483e2e10ed1732ba21c48beb9685e49783ed12f5ba3bcb4"
+    },
+    {
+      "path": "scripts/Validate-AIGovernanceRegister.py",
+      "sha256": "abc098af9ae0e3f48f31e547977dc1526d4dca306fcc3420439eda8bc7759c5b"
+    },
+    {
+      "path": "scripts/Validate-ControlledDocumentOutputs.py",
+      "sha256": "0687f3a305dd8681594d83ac70b59284d894cffc6c6c756d1c561858005223ef"
+    },
+    {
+      "path": "scripts/Validate-EvidencePromotion.py",
+      "sha256": "9d079aada33caae12623c2f572027ed9ae925c778fc3dd941024d1f0ab578fcd"
+    },
+    {
+      "path": "scripts/Validate-HSAIGovernance.py",
+      "sha256": "8261cc2fa510300cd15fdd31ab70e394f23994e1b87736af42c6c5009bca2fa7"
+    },
+    {
+      "path": "scripts/Validate-HSContinuousCompliance.py",
+      "sha256": "53072153c9e8fad174256000d3bf21dcf80e3f97f51023f9d1072ee11a342666"
+    },
+    {
+      "path": "scripts/Validate-HSDocumentControlEvidence.py",
+      "sha256": "966730bbea2c3b182257529af160b8d68efb22259d7ae422d758113215475b70"
+    },
+    {
+      "path": "scripts/Validate-HSEvidenceIntegrityRelease.py",
+      "sha256": "b9f0263539ec4501911b977edb8929e8b18dc54b0255b6802275af88534be41a"
+    },
+    {
+      "path": "scripts/Validate-HSManagementReview.py",
+      "sha256": "c961b47b55b6143c6e7da32bd87f8f248b0225b78b5c0e10eda994a79a975c3a"
+    },
+    {
+      "path": "scripts/Validate-HayesVerifyEMSReturnEnvelope.py",
+      "sha256": "0f5a4cf5d55ea519279e2eb6b3d10651c30bd5db0a604e40d0890d45af601cdb"
+    },
+    {
+      "path": "scripts/Validate-HayesVerifyScaffoldCertification.py",
+      "sha256": "6577f7152bbe2b3e20d0a9c1e2c26906d1c5630f11374e4d9fefce451115f706"
+    },
+    {
+      "path": "scripts/Validate-HigherScopeEvidenceArchitecture.py",
+      "sha256": "8a9fd3f8c7c196c42fe9c0b92bb6bea167341a278e927e336fd43f5de3e71ac4"
+    },
+    {
+      "path": "scripts/Validate-HigherScopeEvidenceCandidates.py",
+      "sha256": "e3eb43e029b794d8d7cd39667cf0eeb72641ec83bd59db064ca1f0a7b62e5636"
+    },
+    {
+      "path": "scripts/Validate-Inheritance.py",
+      "sha256": "ca70bfa794a69c7525551731d22cecb8c02ef93ec8449ccb51299094928bd5a8"
+    },
+    {
+      "path": "scripts/Validate-SDGRegister.py",
+      "sha256": "57920f3928b7a04b3440553ffb6966e74502c485ed77ac4f3f5f21428b3c23d0"
+    },
+    {
+      "path": "scripts/Validate-Wave2C1-CTRL072.py",
+      "sha256": "1f0e44e4b756a2d4adcb877bfe53504cb3cbf330c87fe60734dfcfa03c7100f8"
+    },
+    {
+      "path": "scripts/Validate-Wave2C1b-CTRL072.py",
+      "sha256": "4a29b6b1b2e1d1ab15f5ad45e4748b8e620df7708294989ffaa0e3253547fc7f"
+    },
+    {
+      "path": "scripts/Validate-Wave2C1c-CTRL072.py",
+      "sha256": "eb0806e2d598c724dfe443925310c2aa54190761490b5991111f34cf0b89a865"
+    },
+    {
+      "path": "scripts/Validate-Wave2C2AIGovernance.py",
+      "sha256": "3fd2e6254f43c3e9d0eebd864b5ec71894874a58fd0b5114cdf2255465da684e"
+    },
+    {
+      "path": "scripts/Validate-Wave2C2a-AIGovernanceRegisters.py",
+      "sha256": "99c8ab2a15fdbf693ba12e9b55194b2b37011b4b5764f5e34efeee0d89a2b87c"
+    },
+    {
+      "path": "scripts/Validate-Wave2C2b-AIGovernance.py",
+      "sha256": "f33dbf10ffddb740da2ae1414a2d8822cff440c79ee3e0a228902233b220586d"
+    },
+    {
+      "path": "scripts/Validate-Wave2C3DataGovernanceRegisters.py",
+      "sha256": "0d5f68711a11b75a8ac256207533890ffc064386e5ba5637ca2de8c4cc32a3eb"
+    },
+    {
+      "path": "scripts/Validate-Wave2C3a-DataGovernance.py",
+      "sha256": "adfbbe0cc5f04ee59a2d4606b83816d795e660946b4c6d7237a8b40d654bc9ed"
+    },
+    {
+      "path": "scripts/Validate-Wave2C4AnnualReview.py",
+      "sha256": "9e635e26330d2e3c2b016cf593020f0aca413fbda7d1d5ef3a21827b4242c026"
+    },
+    {
+      "path": "scripts/Validate-Wave2CPostCloseoutScope.py",
+      "sha256": "fa979d20884371b91a00442da6a8b136dad0085f6317363b09cfe116fb0e8c77"
+    },
+    {
+      "path": "scripts/Validate-Wave2CRemediationQueue.py",
+      "sha256": "7216d429dc3522fa012a0037de44db2ca99a94874830663ca769850b99ecbc1b"
+    },
+    {
+      "path": "scripts/Validate-Wave2DApplicability.py",
+      "sha256": "8748363caa73a804aa2a0a43b5f9f2bc057cc019e339b96bbcb515f9fd4b2c3b"
+    },
+    {
+      "path": "scripts/Validate-Wave2DApplicabilityFreeze.py",
+      "sha256": "fc19a3f0836ad8258483eb14b6a88d9cd42dcc521efe80e0aa2d712efd03d3ba"
+    },
+    {
+      "path": "scripts/Validate-Wave2DEvaluationContract.py",
+      "sha256": "1c77b6b8f8ca0a22ce7aef8b98fe21162de431d640c0fbd7bb865f3b11821a95"
+    },
+    {
+      "path": "scripts/Validate-Wave2DEvaluationMatrix.py",
+      "sha256": "f30baaaf01c8c09dfbbbce492ef71c382f46cdbbe9a5359d6d100e033c8ca4c3"
+    },
+    {
+      "path": "scripts/Validate-Wave2DHumanApplicabilityDecisions.py",
+      "sha256": "960d071f6984316a6878e27bb7a5b4076ee42f773862b5bb1b7a90744f5cf9d0"
+    },
+    {
+      "path": "scripts/Validate-Wave2DScopePopulation.py",
+      "sha256": "68f0828301182b4e9a11e4950499e74cd2622caf486e69d704a3c1856cb652d1"
+    },
+    {
+      "path": "scripts/Verify-Wave2DBaseline.py",
+      "sha256": "9ecd5c8c8e80f7061ed76ea16bacf1f5815ed399f579dd48b19dd59e3850c494"
+    },
+    {
+      "path": "scripts/Write-AIGovernanceRejectedSources.py",
+      "sha256": "38eba1b8e76e766d5f41d06ee8b211b0ccdc057ba4ac17901a850d9cf6e27db7"
+    },
+    {
+      "path": "scripts/build_ctrl010_return_envelope.py",
+      "sha256": "36c45449649ad8d49a18a9faba49b489d3cdcd7b4b8a533258060cf9f1c206c7"
+    },
+    {
+      "path": "scripts/certify_ctrl010_live.py",
+      "sha256": "81c3add90dc737315adb2c95166f8be23b0f3966d1c7ea51004fe0e721013fb6"
+    },
+    {
+      "path": "scripts/certify_hayes_verify_initial_baseline.py",
+      "sha256": "d5d9f5cac557447c719a1aacbaae04e4f99872c3069030a2d8bb1df77a39aef2"
+    },
+    {
+      "path": "scripts/preflight_hayes_verify_repository.py",
+      "sha256": "2a2fc01ebb0ac5394b2a146fff713d6023fb2c27300127594e247276f84a835f"
+    },
+    {
+      "path": "scripts/validate_contract_bundle.py",
+      "sha256": "3fbdd26ef4ce5070443a437e14aac2e70804e3a87033cd8aded3ae7220182074"
+    },
+    {
+      "path": "scripts/validate_ctrl010_return_envelope.py",
+      "sha256": "16e10944127d6b7bf9a66af41bd0e6fb43545d7989b13c619f9d56ccdc3d5b58"
+    },
+    {
+      "path": "scripts/validate_hayes_verify_initial_baseline.py",
+      "sha256": "f3b6822251fcd54d36342958d9acf8966cce269633484f26e9deaa069059b5b7"
+    },
+    {
+      "path": "src/hayes_verify/__init__.py",
+      "sha256": "75ad4f4c2943325f88064ad2beae890b59674be2bf0404b30afc5584dc4de4bb"
+    },
+    {
+      "path": "src/hayes_verify/cli.py",
+      "sha256": "59e93a1e166921ab08591088c758fa86d298763788e0de5e24884e8899db9640"
+    },
+    {
+      "path": "src/hayes_verify/collectors.py",
+      "sha256": "ef047bb4fec017b8156fbb11355e880fb26c0b1381376739ab1c0a3199c1d9a3"
+    },
+    {
+      "path": "src/hayes_verify/contracts.py",
+      "sha256": "1f1b6ffad0a1854469118c1d1147f03c220cd9b8c5d7c180238e05c80a074ab2"
+    },
+    {
+      "path": "src/hayes_verify/evaluators.py",
+      "sha256": "073755e8f291a1e729d3bb5d1bb42ac302c84a31d285fc6497abfa2925d4c720"
+    },
+    {
+      "path": "src/hayes_verify/orchestration.py",
+      "sha256": "417989b0345b083c446cbf587910ecad1baee91e9e04d1dbc81eb341b1b81b69"
+    },
+    {
+      "path": "src/hayes_verify/pilots/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "src/hayes_verify/pilots/github_collectors.py",
+      "sha256": "09505b5c531d912515470b5c5d434bf9839607659c08b9a67b76805a414ac0c1"
+    },
+    {
+      "path": "src/hayes_verify/pilots/github_evaluators.py",
+      "sha256": "493ce67a59704f0656294e223b281f33be96b967cc3bb7a0f9bb744af5ba40dd"
+    },
+    {
+      "path": "src/hayes_verify/pilots/orchestration.py",
+      "sha256": "e2620a51b455c4ffd572834d8fbdfeac7b1b2f2329a74cab24b380a96dac52e6"
+    },
+    {
+      "path": "src/hayes_verify/provenance.py",
+      "sha256": "9e7d2c3f055ded305a3596da3b19372b3576fc6e01e3d066359b5316d25bb86f"
+    },
+    {
+      "path": "tests/test_branch_rationale_consistency.py",
+      "sha256": "a3124932273b8ae68b139b78919649ebb3f14f5fed11d386387f291b1f995214"
+    },
+    {
+      "path": "tests/test_contracts.py",
+      "sha256": "d1f7811734a9ea8320ca59e62ec561dd6acf451ca7336036d1e372c802523d8a"
+    },
+    {
+      "path": "tests/test_default_branch_discovery.py",
+      "sha256": "8c6a4270ab1da8182eeef2fcd4ec1d89c26ed1e0fbec13c21635e6580415bcb6"
+    },
+    {
+      "path": "tests/test_evaluation.py",
+      "sha256": "502977429b85dd301302c5c03e0f0b327048dec0582ea13acbf4dbaf78b70567"
+    },
+    {
+      "path": "tests/test_github_api_invocation.py",
+      "sha256": "50dcd583812819217f4ccb11dc6a6569e52b1f8fb6b9aa3635c09ab8440e7ed7"
+    },
+    {
+      "path": "tests/test_pilot_evaluators.py",
+      "sha256": "bf1d1967ab46bf934c540b3abb83ef2606904c134c1646ca3ee40bd5430125de"
+    },
+    {
+      "path": "tests/test_pilot_semantics.py",
+      "sha256": "eb838626a55ad6eb4dadc4c27e9339bc2203a9cdc7341f23507709c889b75a98"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "component": "Hayes Verify",
+  "phase": "Initial Controlled Baseline Certification",
+  "certified_at_utc": "2026-08-13T22:54:56.827568+00:00",
+  "status": "PASS",
+  "baseline_state": "AUTHORITATIVE",
+  "baseline_registration": "registry/release_baselines/hayes_verify_initial_baseline.json",
+  "baseline_registration_sha256": "a989c9139f95fc9bc0162469e27141029b94eac094530c7bd71837d9d4fbcca0",
+  "manifest_path": "generated/bootstrap/hayes_verify_initial_baseline_manifest.json",
+  "manifest_sha256": "0ec1e401db149c26c4a39196f9ca435bdadcce2945877f757a209128c07fb51c",
+  "commit_sha": "5bab325cd8a258fb12939f45e26a380d42400c05"
+}

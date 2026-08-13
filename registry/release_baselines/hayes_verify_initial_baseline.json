@@ -1,0 +1,19 @@
+{
+  "baseline_version": "1.0",
+  "component": "Hayes Verify",
+  "registered_at_utc": "2026-08-13T22:54:56.802458+00:00",
+  "status": "PASS",
+  "baseline_state": "AUTHORITATIVE",
+  "repository_name": "hayes-verify",
+  "default_branch": "main",
+  "commit_sha": "5bab325cd8a258fb12939f45e26a380d42400c05",
+  "manifest_sha256": "0ec1e401db149c26c4a39196f9ca435bdadcce2945877f757a209128c07fb51c",
+  "authority": {
+    "control_catalog": "EMS",
+    "applicability": "EMS",
+    "evidence_collection": "Hayes Verify",
+    "evaluation_execution": "Hayes Verify",
+    "result_acceptance": "EMS",
+    "evidence_promotion": "EMS"
+  }
+}

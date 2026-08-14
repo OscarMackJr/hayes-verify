@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "wave": "2D",
+  "priority": 2,
+  "source_registry_version": "1.5",
+  "original_priority2_control_count": 21,
+  "implemented_priority2_control_count": 4,
+  "remaining_priority2_control_count": 17,
+  "remaining_family_count": 3,
+  "family_counts": {
+    "documentation_governance": 7,
+    "release_integrity": 6,
+    "test_quality": 4
+  },
+  "first_family": "documentation_governance"
+}

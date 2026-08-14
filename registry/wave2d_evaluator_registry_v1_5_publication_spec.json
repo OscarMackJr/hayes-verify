@@ -1,0 +1,15 @@
+{
+  "version": "1.0",
+  "registry_version": "1.5",
+  "candidate_registry": "registry/wave2d_evaluator_registry_v1_5.json",
+  "certification": "generated/wave2d/evaluator-expansion/dependency_supply_chain_registry_v1_5_certification.json",
+  "verification_manifest": "generated/wave2d/evaluator-expansion/dependency-supply-chain-verification/verification_manifest.json",
+  "source_priority2_plan": "generated/wave2d/evaluator-expansion/priority2_family_expansion_plan.json",
+  "refreshed_backlog": "generated/wave2d/evaluator-expansion/priority2_remaining_implementation_backlog.json",
+  "refreshed_plan": "generated/wave2d/evaluator-expansion/priority2_remaining_family_plan.json",
+  "summary": "generated/wave2d/evaluator-expansion/priority2_remaining_summary.json",
+  "branch": "feature/wave2d-evaluator-registry-v1-5",
+  "verification_batch_id": "BATCH-20260814T170133.101265Z",
+  "expected_registry_sha256": "a36ba9820d80ee9206bf3cdc74f710e1311e0f848dfedfb00276550095c23e73",
+  "expected_verification_sha256": "34ced6eb7ce6cefe134642914be62fcbce86a888885feb95d0926247825051b2"
+}

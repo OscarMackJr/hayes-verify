@@ -1,0 +1,9 @@
+{
+  "version": "1.0",
+  "registry_path": "registry/wave2d_evaluator_registry_v1.json",
+  "certification_path": "generated/wave2d/evaluator-expansion/evaluator_registry_v1_certification.json",
+  "backlog_path": "generated/wave2d/evaluator-expansion/priority1_implementation_backlog.json",
+  "plan_path": "generated/wave2d/evaluator-expansion/priority1_family_plan.json",
+  "branch": "feature/wave2d-evaluator-registry-v1",
+  "pr_title": "Publish Wave 2D evaluator registry v1"
+}

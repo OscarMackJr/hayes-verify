@@ -1,0 +1,70 @@
+{
+  "status": "PASS",
+  "family": "dependency_supply_chain",
+  "control_count": 4,
+  "controls": [
+    {
+      "control_id": "EMS-CTRL-003",
+      "control_name": "Third-party dependency governance",
+      "description": "Third-party and open-source dependencies must be inventoried, scanned, reviewed, and remediated based on risk.",
+      "raw": {
+        "control_id": "EMS-CTRL-003",
+        "control_name": "Third-party dependency governance",
+        "scope": "ORGANIZATION",
+        "scope_owner": "Engineering Leadership",
+        "inheritance_allowed": true,
+        "evidence_authority": "Organizational evidence",
+        "rationale": "Wave 2A seed classification: ORGANIZATION-scoped based on the control's primary operating boundary.",
+        "classification_status": "PROVISIONAL",
+        "description": "Third-party and open-source dependencies must be inventoried, scanned, reviewed, and remediated based on risk.",
+        "definition_recovery_source": "C:\\temp\\standars\\Pass2\\registry\\control_registry.yaml",
+        "definition_recovery_confidence": 1.0
+      }
+    },
+    {
+      "control_id": "EMS-CTRL-019",
+      "control_name": "Dependency Vulnerability Scanning",
+      "description": "",
+      "raw": {
+        "control_id": "EMS-CTRL-019",
+        "control_name": "Dependency Vulnerability Scanning",
+        "scope": "REPOSITORY",
+        "scope_owner": "Software Development",
+        "inheritance_allowed": false,
+        "evidence_authority": "Repository evidence",
+        "rationale": "Wave 2A seed classification: REPOSITORY-scoped based on the control's primary operating boundary.",
+        "classification_status": "PROVISIONAL"
+      }
+    },
+    {
+      "control_id": "EMS-CTRL-042",
+      "control_name": "IaC Security Scanning",
+      "description": "",
+      "raw": {
+        "control_id": "EMS-CTRL-042",
+        "control_name": "IaC Security Scanning",
+        "scope": "PLATFORM",
+        "scope_owner": "Software Development / Platform",
+        "inheritance_allowed": true,
+        "evidence_authority": "Platform evidence",
+        "rationale": "Wave 2A seed classification: PLATFORM-scoped based on the control's primary operating boundary.",
+        "classification_status": "PROVISIONAL"
+      }
+    },
+    {
+      "control_id": "EMS-CTRL-075",
+      "control_name": "Continuous Compliance Scan",
+      "description": "",
+      "raw": {
+        "control_id": "EMS-CTRL-075",
+        "control_name": "Continuous Compliance Scan",
+        "scope": "EMS",
+        "scope_owner": "EMS Governance",
+        "inheritance_allowed": true,
+        "evidence_authority": "EMS evidence",
+        "rationale": "Wave 2A seed classification: EMS-scoped based on the control's primary operating boundary.",
+        "classification_status": "PROVISIONAL"
+      }
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "version": "1.0",
+  "family": "test_quality",
+  "rules": {
+    "EMS-CTRL-025": {
+      "name": "Unit Test Minimum",
+      "supported": true,
+      "evidence_type": "TEST_UNIT_COVERAGE",
+      "checks": [
+        {
+          "type": "repository_test_files_present",
+          "assertion_id": "unit_test_files_present"
+        }
+      ],
+      "pass_policy": "ALL",
+      "derived_control_id": "EMS-CTRL-025"
+    },
+    "EMS-CTRL-026": {
+      "name": "Integration Testing",
+      "supported": true,
+      "evidence_type": "TEST_INTEGRATION",
+      "checks": [
+        {
+          "type": "repository_integration_test_marker_present",
+          "assertion_id": "integration_test_marker_present"
+        }
+      ],
+      "pass_policy": "ALL",
+      "derived_control_id": "EMS-CTRL-026",
+      "derivation_basis": "authoritative_control_name"
+    },
+    "EMS-CTRL-032": {
+      "name": "Test Environment Isolation",
+      "supported": true,
+      "evidence_type": "TEST_ENVIRONMENT_ISOLATION",
+      "checks": [
+        {
+          "type": "test_environment_isolation_marker_present",
+          "assertion_id": "isolated_test_environment_marker_present"
+        }
+      ],
+      "pass_policy": "ALL",
+      "derived_control_id": "EMS-CTRL-032",
+      "derivation_basis": "authoritative_control_name"
+    },
+    "EMS-CTRL-060": {
+      "name": "Zero Trust Integration Testing",
+      "supported": true,
+      "evidence_type": "TEST_ZERO_TRUST_INTEGRATION",
+      "checks": [
+        {
+          "type": "zero_trust_integration_test_marker_present",
+          "assertion_id": "zero_trust_integration_test_marker_present"
+        }
+      ],
+      "pass_policy": "ALL",
+      "derived_control_id": "EMS-CTRL-060",
+      "derivation_basis": "authoritative_control_name_and_description"
+    }
+  }
+}

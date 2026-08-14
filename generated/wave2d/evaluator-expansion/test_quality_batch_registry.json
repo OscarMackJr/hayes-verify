@@ -1,0 +1,54 @@
+{
+  "registry_version": "1.6-batch-verification",
+  "wave": "2D",
+  "default_behavior": "BLOCKED_UNSUPPORTED",
+  "verification_scope": {
+    "family": "test_quality",
+    "control_ids": [
+      "EMS-CTRL-025",
+      "EMS-CTRL-026",
+      "EMS-CTRL-032",
+      "EMS-CTRL-060"
+    ]
+  },
+  "families": {
+    "test_quality": {
+      "description": "Priority-2 test-quality verification runtime registry.",
+      "implementation": "hayes_verify.evaluator_families.test_quality",
+      "controls": {
+        "EMS-CTRL-025": {
+          "collector": "repository_and_workflow",
+          "evaluator": "test_quality",
+          "evidence_type": "TEST_UNIT_COVERAGE",
+          "scope": "repository",
+          "supported": true,
+          "implementation_state": "IMPLEMENTED_PENDING_BATCH_VERIFICATION"
+        },
+        "EMS-CTRL-026": {
+          "collector": "repository_and_workflow",
+          "evaluator": "test_quality",
+          "evidence_type": "TEST_INTEGRATION",
+          "scope": "repository",
+          "supported": true,
+          "implementation_state": "IMPLEMENTED_PENDING_BATCH_VERIFICATION"
+        },
+        "EMS-CTRL-032": {
+          "collector": "repository_and_workflow",
+          "evaluator": "test_quality",
+          "evidence_type": "TEST_ENVIRONMENT_ISOLATION",
+          "scope": "repository",
+          "supported": true,
+          "implementation_state": "IMPLEMENTED_PENDING_BATCH_VERIFICATION"
+        },
+        "EMS-CTRL-060": {
+          "collector": "repository_and_workflow",
+          "evaluator": "test_quality",
+          "evidence_type": "TEST_ZERO_TRUST_INTEGRATION",
+          "scope": "repository",
+          "supported": true,
+          "implementation_state": "IMPLEMENTED_PENDING_BATCH_VERIFICATION"
+        }
+      }
+    }
+  }
+}

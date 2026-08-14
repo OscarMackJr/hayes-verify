@@ -1,0 +1,242 @@
+{
+  "status": "PASS",
+  "wave": "2D",
+  "priority": 2,
+  "source_registry_version": "1.4",
+  "generated_at_utc": "2026-08-14T16:47:37.138730+00:00",
+  "remaining_control_count": 21,
+  "family_count": 4,
+  "items": [
+    {
+      "control_id": "EMS-CTRL-003",
+      "control_name": "Third-party dependency governance",
+      "family": "dependency_supply_chain",
+      "implementation_state": "PLANNED_AUTOMATED",
+      "supported": false,
+      "classification_priority": 2,
+      "classification_automation_level": "MEDIUM_HIGH",
+      "classification_implementation_state": "UNREGISTERED",
+      "decision_source": "coverage_classification"
+    },
+    {
+      "control_id": "EMS-CTRL-019",
+      "control_name": "Dependency Vulnerability Scanning",
+      "family": "dependency_supply_chain",
+      "implementation_state": "PLANNED_AUTOMATED",
+      "supported": false,
+      "classification_priority": 2,
+      "classification_automation_level": "MEDIUM_HIGH",
+      "classification_implementation_state": "UNREGISTERED",
+      "decision_source": "coverage_classification"
+    },
+    {
+      "control_id": "EMS-CTRL-042",
+      "control_name": "IaC Security Scanning",
+      "family": "dependency_supply_chain",
+      "implementation_state": "PLANNED_AUTOMATED",
+      "supported": false,
+      "classification_priority": 2,
+      "classification_automation_level": "MEDIUM_HIGH",
+      "classification_implementation_state": "UNREGISTERED",
+      "decision_source": "coverage_classification"
+    },
+    {
+      "control_id": "EMS-CTRL-075",
+      "control_name": "Continuous Compliance Scan",
+      "family": "dependency_supply_chain",
+      "implementation_state": "PLANNED_AUTOMATED",
+      "supported": false,
+      "classification_priority": 2,
+      "classification_automation_level": "MEDIUM_HIGH",
+      "classification_implementation_state": "UNREGISTERED",
+      "decision_source": "coverage_classification"
+    },
+    {
+      "control_id": "EMS-CTRL-025",
+      "control_name": "Unit Test Minimum",
+      "family": "test_quality",
+      "implementation_state": "PLANNED_AUTOMATED",
+      "supported": false,
+      "classification_priority": 2,
+      "classification_automation_level": "MEDIUM_HIGH",
+      "classification_implementation_state": "UNREGISTERED",
+      "decision_source": "coverage_classification"
+    },
+    {
+      "control_id": "EMS-CTRL-026",
+      "control_name": "Integration Testing",
+      "family": "test_quality",
+      "implementation_state": "PLANNED_AUTOMATED",
+      "supported": false,
+      "classification_priority": 2,
+      "classification_automation_level": "MEDIUM_HIGH",
+      "classification_implementation_state": "UNREGISTERED",
+      "decision_source": "coverage_classification"
+    },
+    {
+      "control_id": "EMS-CTRL-032",
+      "control_name": "Test Environment Isolation",
+      "family": "test_quality",
+      "implementation_state": "PLANNED_AUTOMATED",
+      "supported": false,
+      "classification_priority": 2,
+      "classification_automation_level": "MEDIUM_HIGH",
+      "classification_implementation_state": "UNREGISTERED",
+      "decision_source": "coverage_classification"
+    },
+    {
+      "control_id": "EMS-CTRL-060",
+      "control_name": "Zero Trust Integration Testing",
+      "family": "test_quality",
+      "implementation_state": "PLANNED_AUTOMATED",
+      "supported": false,
+      "classification_priority": 2,
+      "classification_automation_level": "MEDIUM_HIGH",
+      "classification_implementation_state": "UNREGISTERED",
+      "decision_source": "coverage_classification"
+    },
+    {
+      "control_id": "EMS-CTRL-034",
+      "control_name": "Release Manifest Generation",
+      "family": "release_integrity",
+      "implementation_state": "PLANNED_AUTOMATED",
+      "supported": false,
+      "classification_priority": 2,
+      "classification_automation_level": "MEDIUM_HIGH",
+      "classification_implementation_state": "UNREGISTERED",
+      "decision_source": "coverage_classification"
+    },
+    {
+      "control_id": "EMS-CTRL-035",
+      "control_name": "SHA-256 Integrity Verification",
+      "family": "release_integrity",
+      "implementation_state": "PLANNED_AUTOMATED",
+      "supported": false,
+      "classification_priority": 2,
+      "classification_automation_level": "MEDIUM_HIGH",
+      "classification_implementation_state": "UNREGISTERED",
+      "decision_source": "coverage_classification"
+    },
+    {
+      "control_id": "EMS-CTRL-036",
+      "control_name": "Release Signing",
+      "family": "release_integrity",
+      "implementation_state": "PLANNED_AUTOMATED",
+      "supported": false,
+      "classification_priority": 2,
+      "classification_automation_level": "MEDIUM_HIGH",
+      "classification_implementation_state": "UNREGISTERED",
+      "decision_source": "coverage_classification"
+    },
+    {
+      "control_id": "EMS-CTRL-037",
+      "control_name": "Build Artifact Retention",
+      "family": "release_integrity",
+      "implementation_state": "PLANNED_AUTOMATED",
+      "supported": false,
+      "classification_priority": 2,
+      "classification_automation_level": "MEDIUM_HIGH",
+      "classification_implementation_state": "UNREGISTERED",
+      "decision_source": "coverage_classification"
+    },
+    {
+      "control_id": "EMS-CTRL-038",
+      "control_name": "Version Number Governance",
+      "family": "release_integrity",
+      "implementation_state": "PLANNED_AUTOMATED",
+      "supported": false,
+      "classification_priority": 2,
+      "classification_automation_level": "MEDIUM_HIGH",
+      "classification_implementation_state": "UNREGISTERED",
+      "decision_source": "coverage_classification"
+    },
+    {
+      "control_id": "EMS-CTRL-040",
+      "control_name": "Rollback Procedure",
+      "family": "release_integrity",
+      "implementation_state": "PLANNED_AUTOMATED",
+      "supported": false,
+      "classification_priority": 2,
+      "classification_automation_level": "MEDIUM_HIGH",
+      "classification_implementation_state": "UNREGISTERED",
+      "decision_source": "coverage_classification"
+    },
+    {
+      "control_id": "EMS-CTRL-002",
+      "control_name": "Controlled Document Management",
+      "family": "documentation_governance",
+      "implementation_state": "PLANNED_AUTOMATED",
+      "supported": false,
+      "classification_priority": 2,
+      "classification_automation_level": "MEDIUM_HIGH",
+      "classification_implementation_state": "UNREGISTERED",
+      "decision_source": "coverage_classification"
+    },
+    {
+      "control_id": "EMS-CTRL-008",
+      "control_name": "Controlled documentation and evidence",
+      "family": "documentation_governance",
+      "implementation_state": "PLANNED_AUTOMATED",
+      "supported": false,
+      "classification_priority": 2,
+      "classification_automation_level": "MEDIUM_HIGH",
+      "classification_implementation_state": "UNREGISTERED",
+      "decision_source": "coverage_classification"
+    },
+    {
+      "control_id": "EMS-CTRL-067",
+      "control_name": "Controlled Document Metadata",
+      "family": "documentation_governance",
+      "implementation_state": "PLANNED_AUTOMATED",
+      "supported": false,
+      "classification_priority": 2,
+      "classification_automation_level": "MEDIUM_HIGH",
+      "classification_implementation_state": "UNREGISTERED",
+      "decision_source": "coverage_classification"
+    },
+    {
+      "control_id": "EMS-CTRL-068",
+      "control_name": "Cross-Reference Validation",
+      "family": "documentation_governance",
+      "implementation_state": "PLANNED_AUTOMATED",
+      "supported": false,
+      "classification_priority": 2,
+      "classification_automation_level": "MEDIUM_HIGH",
+      "classification_implementation_state": "UNREGISTERED",
+      "decision_source": "coverage_classification"
+    },
+    {
+      "control_id": "EMS-CTRL-069",
+      "control_name": "Requirements Traceability",
+      "family": "documentation_governance",
+      "implementation_state": "PLANNED_AUTOMATED",
+      "supported": false,
+      "classification_priority": 2,
+      "classification_automation_level": "MEDIUM_HIGH",
+      "classification_implementation_state": "UNREGISTERED",
+      "decision_source": "coverage_classification"
+    },
+    {
+      "control_id": "EMS-CTRL-070",
+      "control_name": "Revision History",
+      "family": "documentation_governance",
+      "implementation_state": "PLANNED_AUTOMATED",
+      "supported": false,
+      "classification_priority": 2,
+      "classification_automation_level": "MEDIUM_HIGH",
+      "classification_implementation_state": "UNREGISTERED",
+      "decision_source": "coverage_classification"
+    },
+    {
+      "control_id": "EMS-CTRL-072",
+      "control_name": "PDF/DOCX Generation Validation",
+      "family": "documentation_governance",
+      "implementation_state": "PLANNED_AUTOMATED",
+      "supported": false,
+      "classification_priority": 2,
+      "classification_automation_level": "MEDIUM_HIGH",
+      "classification_implementation_state": "UNREGISTERED",
+      "decision_source": "coverage_classification"
+    }
+  ]
+}

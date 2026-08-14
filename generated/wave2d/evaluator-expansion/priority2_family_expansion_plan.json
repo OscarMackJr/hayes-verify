@@ -1,0 +1,76 @@
+{
+  "status": "PASS",
+  "wave": "2D",
+  "priority": 2,
+  "source_registry_version": "1.4",
+  "family_count": 4,
+  "families": [
+    {
+      "sequence": 1,
+      "family": "dependency_supply_chain",
+      "control_count": 4,
+      "planned_automated_count": 4,
+      "planned_hybrid_count": 0,
+      "control_ids": [
+        "EMS-CTRL-003",
+        "EMS-CTRL-019",
+        "EMS-CTRL-042",
+        "EMS-CTRL-075"
+      ],
+      "implementation_gate": "IMPLEMENT_FAMILY -> UNIT_TEST -> COVERAGE_100_PERCENT -> IMMUTABLE_BATCH_VERIFY -> REGISTRY_PROMOTION"
+    },
+    {
+      "sequence": 2,
+      "family": "test_quality",
+      "control_count": 4,
+      "planned_automated_count": 4,
+      "planned_hybrid_count": 0,
+      "control_ids": [
+        "EMS-CTRL-025",
+        "EMS-CTRL-026",
+        "EMS-CTRL-032",
+        "EMS-CTRL-060"
+      ],
+      "implementation_gate": "IMPLEMENT_FAMILY -> UNIT_TEST -> COVERAGE_100_PERCENT -> IMMUTABLE_BATCH_VERIFY -> REGISTRY_PROMOTION"
+    },
+    {
+      "sequence": 3,
+      "family": "release_integrity",
+      "control_count": 6,
+      "planned_automated_count": 6,
+      "planned_hybrid_count": 0,
+      "control_ids": [
+        "EMS-CTRL-034",
+        "EMS-CTRL-035",
+        "EMS-CTRL-036",
+        "EMS-CTRL-037",
+        "EMS-CTRL-038",
+        "EMS-CTRL-040"
+      ],
+      "implementation_gate": "IMPLEMENT_FAMILY -> UNIT_TEST -> COVERAGE_100_PERCENT -> IMMUTABLE_BATCH_VERIFY -> REGISTRY_PROMOTION"
+    },
+    {
+      "sequence": 4,
+      "family": "documentation_governance",
+      "control_count": 7,
+      "planned_automated_count": 7,
+      "planned_hybrid_count": 0,
+      "control_ids": [
+        "EMS-CTRL-002",
+        "EMS-CTRL-008",
+        "EMS-CTRL-067",
+        "EMS-CTRL-068",
+        "EMS-CTRL-069",
+        "EMS-CTRL-070",
+        "EMS-CTRL-072"
+      ],
+      "implementation_gate": "IMPLEMENT_FAMILY -> UNIT_TEST -> COVERAGE_100_PERCENT -> IMMUTABLE_BATCH_VERIFY -> REGISTRY_PROMOTION"
+    }
+  ],
+  "rules": [
+    "No Priority-2 control becomes IMPLEMENTED without immutable batch verification.",
+    "Repository-level FAIL is a compliance outcome and does not by itself invalidate evaluator implementation.",
+    "Blocked or incomplete applicable targets prevent registry promotion.",
+    "Hybrid controls may automate evidence collection while preserving EMS human acceptance authority."
+  ]
+}

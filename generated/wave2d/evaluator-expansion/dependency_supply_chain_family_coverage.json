@@ -1,0 +1,37 @@
+{
+  "status": "PASS",
+  "family": "dependency_supply_chain",
+  "backlog_control_count": 4,
+  "implementable_count": 4,
+  "blocked_count": 0,
+  "rows": [
+    {
+      "control_id": "EMS-CTRL-003",
+      "control_name": "Third-party dependency governance",
+      "rule_registered": true,
+      "rule_supported": true,
+      "coverage_state": "IMPLEMENTABLE"
+    },
+    {
+      "control_id": "EMS-CTRL-019",
+      "control_name": "Dependency Vulnerability Scanning",
+      "rule_registered": true,
+      "rule_supported": true,
+      "coverage_state": "IMPLEMENTABLE"
+    },
+    {
+      "control_id": "EMS-CTRL-042",
+      "control_name": "IaC Security Scanning",
+      "rule_registered": true,
+      "rule_supported": true,
+      "coverage_state": "IMPLEMENTABLE"
+    },
+    {
+      "control_id": "EMS-CTRL-075",
+      "control_name": "Continuous Compliance Scan",
+      "rule_registered": true,
+      "rule_supported": true,
+      "coverage_state": "IMPLEMENTABLE"
+    }
+  ]
+}

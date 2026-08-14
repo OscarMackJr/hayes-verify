@@ -1,0 +1,95 @@
+{
+  "registry_version": "1.8-batch-verification",
+  "wave": "2D",
+  "default_behavior": "BLOCKED_UNSUPPORTED",
+  "verification_scope": {
+    "family": "documentation_governance",
+    "control_ids": [
+      "EMS-CTRL-002",
+      "EMS-CTRL-008",
+      "EMS-CTRL-067",
+      "EMS-CTRL-068",
+      "EMS-CTRL-069",
+      "EMS-CTRL-070",
+      "EMS-CTRL-072"
+    ]
+  },
+  "families": {
+    "documentation_governance": {
+      "description": "Priority-2 Documentation Governance verification runtime registry.",
+      "implementation": "hayes_verify.evaluator_families.documentation_governance",
+      "controls": {
+        "EMS-CTRL-002": {
+          "collector": "repository_documentation_evidence",
+          "evaluator": "documentation_governance",
+          "evidence_type": "EMS_DOCUMENT_CONTROL",
+          "scope": "ems_or_organization",
+          "supported": true,
+          "implementation_state": "IMPLEMENTED_PENDING_BATCH_VERIFICATION",
+          "ems_requirement_source": "registry/hs_document_control_spec.json#/controls/EMS-CTRL-002",
+          "evidence_authority": "Organizational evidence"
+        },
+        "EMS-CTRL-008": {
+          "collector": "repository_documentation_evidence",
+          "evaluator": "documentation_governance",
+          "evidence_type": "EMS_EVIDENCE_CONTROL",
+          "scope": "ems_or_organization",
+          "supported": true,
+          "implementation_state": "IMPLEMENTED_PENDING_BATCH_VERIFICATION",
+          "ems_requirement_source": "registry/hs_document_control_spec.json#/controls/EMS-CTRL-008",
+          "evidence_authority": "Organizational evidence"
+        },
+        "EMS-CTRL-067": {
+          "collector": "repository_documentation_evidence",
+          "evaluator": "documentation_governance",
+          "evidence_type": "EMS_DOCUMENT_METADATA",
+          "scope": "ems_or_organization",
+          "supported": true,
+          "implementation_state": "IMPLEMENTED_PENDING_BATCH_VERIFICATION",
+          "ems_requirement_source": "registry/hs_document_control_spec.json#/controls/EMS-CTRL-067",
+          "evidence_authority": "EMS evidence"
+        },
+        "EMS-CTRL-068": {
+          "collector": "repository_documentation_evidence",
+          "evaluator": "documentation_governance",
+          "evidence_type": "EMS_CROSS_REFERENCE",
+          "scope": "ems_or_organization",
+          "supported": true,
+          "implementation_state": "IMPLEMENTED_PENDING_BATCH_VERIFICATION",
+          "ems_requirement_source": "registry/hs_document_control_spec.json#/controls/EMS-CTRL-068",
+          "evidence_authority": "EMS evidence"
+        },
+        "EMS-CTRL-069": {
+          "collector": "repository_documentation_evidence",
+          "evaluator": "documentation_governance",
+          "evidence_type": "EMS_REQUIREMENTS_TRACEABILITY",
+          "scope": "ems_or_organization",
+          "supported": true,
+          "implementation_state": "IMPLEMENTED_PENDING_BATCH_VERIFICATION",
+          "ems_requirement_source": "registry/hs_document_control_spec.json#/controls/EMS-CTRL-069",
+          "evidence_authority": "EMS evidence"
+        },
+        "EMS-CTRL-070": {
+          "collector": "repository_documentation_evidence",
+          "evaluator": "documentation_governance",
+          "evidence_type": "EMS_REVISION_HISTORY",
+          "scope": "ems_or_organization",
+          "supported": true,
+          "implementation_state": "IMPLEMENTED_PENDING_BATCH_VERIFICATION",
+          "ems_requirement_source": "registry/hs_document_control_spec.json#/controls/EMS-CTRL-070",
+          "evidence_authority": "EMS evidence"
+        },
+        "EMS-CTRL-072": {
+          "collector": "repository_documentation_evidence",
+          "evaluator": "documentation_governance",
+          "evidence_type": "EMS_DOCUMENT_GENERATION",
+          "scope": "ems_or_organization",
+          "supported": true,
+          "implementation_state": "IMPLEMENTED_PENDING_BATCH_VERIFICATION",
+          "ems_requirement_source": "registry/wave2c1a_document_generation_spec.json",
+          "evidence_authority": "EMS evidence"
+        }
+      }
+    }
+  }
+}

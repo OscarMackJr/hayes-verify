@@ -1,0 +1,24 @@
+{
+  "status": "PASS",
+  "priority": 1,
+  "remaining_family_count": 2,
+  "families": [
+    {
+      "family": "github_branch_policy",
+      "control_count": 2,
+      "controls": [
+        "EMS-CTRL-012",
+        "EMS-CTRL-013"
+      ],
+      "implementation_strategy": "IMPLEMENT_TEST_BATCH_VERIFY"
+    },
+    {
+      "family": "github_security_monitoring",
+      "control_count": 1,
+      "controls": [
+        "EMS-CTRL-022"
+      ],
+      "implementation_strategy": "IMPLEMENT_TEST_BATCH_VERIFY"
+    }
+  ]
+}

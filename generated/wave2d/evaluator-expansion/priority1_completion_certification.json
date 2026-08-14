@@ -1,0 +1,24 @@
+{
+  "component": "Hayes Verify",
+  "phase": "Wave 2D Priority-1 Evaluator Completion Certification",
+  "certified_at_utc": "2026-08-14T16:41:53.296622+00:00",
+  "status": "PASS",
+  "wave": "2D",
+  "priority": 1,
+  "completion_state": "COMPLETE",
+  "registry_version": "1.4",
+  "verification_batch_id": "BATCH-20260814T163543.574829Z",
+  "implemented_priority1_control_count": 20,
+  "remaining_priority1_control_count": 0,
+  "registry_sha256": "3b29cfde6959fd23f6552fc1b78b52140cecde45508d31a02598cf36291d451a",
+  "verification_sha256": "4686bbbcc16b8bb3cfb704f42ae66147fd5fddb417ea6726227d87ccf95195be",
+  "source_certification_sha256": "edc3dbd4fdd6e23b2de874ff6952f9c870a2d31048b72b89e83477487405852b",
+  "zero_backlog_sha256": "c412653dcd056a2c0ea8ef2d5e1e24736b1b9eb825f4ba2d53f4edf0fe1ede58",
+  "implementation_state_counts": {
+    "HUMAN_EVIDENCE_REQUIRED": 5,
+    "PLANNED_AUTOMATED": 28,
+    "PLANNED_HYBRID": 27,
+    "IMPLEMENTED": 20
+  },
+  "errors": []
+}

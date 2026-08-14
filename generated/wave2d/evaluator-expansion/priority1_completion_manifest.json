@@ -1,0 +1,31 @@
+{
+  "component": "Hayes Verify",
+  "phase": "Wave 2D Priority-1 Completion Manifest",
+  "created_at_utc": "2026-08-14T16:41:53.322420+00:00",
+  "status": "PASS",
+  "registry_version": "1.4",
+  "priority1_completion_state": "COMPLETE",
+  "verification_batch_id": "BATCH-20260814T163543.574829Z",
+  "artifacts": [
+    {
+      "path": "C:\\temp\\standars\\hayes-verify\\registry\\wave2d_evaluator_registry_v1_4.json",
+      "sha256": "3b29cfde6959fd23f6552fc1b78b52140cecde45508d31a02598cf36291d451a"
+    },
+    {
+      "path": "C:\\temp\\standars\\hayes-verify\\generated\\wave2d\\evaluator-expansion\\github_security_monitoring_registry_v1_4_certification.json",
+      "sha256": "edc3dbd4fdd6e23b2de874ff6952f9c870a2d31048b72b89e83477487405852b"
+    },
+    {
+      "path": "C:\\temp\\standars\\hayes-verify\\generated\\wave2d\\evaluator-expansion\\github-security-monitoring-verification\\verification_manifest.json",
+      "sha256": "4686bbbcc16b8bb3cfb704f42ae66147fd5fddb417ea6726227d87ccf95195be"
+    },
+    {
+      "path": "C:\\temp\\standars\\hayes-verify\\generated\\wave2d\\evaluator-expansion\\priority1_completion_backlog.json",
+      "sha256": "c412653dcd056a2c0ea8ef2d5e1e24736b1b9eb825f4ba2d53f4edf0fe1ede58"
+    },
+    {
+      "path": "C:\\temp\\standars\\hayes-verify\\generated\\wave2d\\evaluator-expansion\\priority1_completion_certification.json",
+      "sha256": "1829841e02064d3d41c99c5a3daf5bb5a15f20ef816db13f9cc9617615cbe3f6"
+    }
+  ]
+}

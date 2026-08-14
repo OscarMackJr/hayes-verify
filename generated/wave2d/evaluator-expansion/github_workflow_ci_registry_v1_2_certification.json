@@ -1,0 +1,27 @@
+{
+  "component": "Hayes Verify",
+  "phase": "Wave 2D Evaluator Registry v1.2 GitHub Workflow CI Promotion",
+  "certified_at_utc": "2026-08-14T15:17:38.919584+00:00",
+  "status": "PASS",
+  "registry_state": "CANDIDATE_FROZEN",
+  "registry_version": "1.2",
+  "verification_batch_id": "BATCH-20260814T151718.053583Z",
+  "promoted_control_count": 6,
+  "promoted_controls": [
+    "EMS-CTRL-014",
+    "EMS-CTRL-030",
+    "EMS-CTRL-033",
+    "EMS-CTRL-039",
+    "EMS-CTRL-055",
+    "EMS-CTRL-058"
+  ],
+  "registry_sha256": "0940e2a7293b47afcda0c10998357f8510819f22db7958fca4cd2e46093118f5",
+  "verification_sha256": "d6226324b8790fdaf0c1e10806931f58b267ed50aa8a703f978abf1393b9987c",
+  "implementation_state_counts": {
+    "HUMAN_EVIDENCE_REQUIRED": 5,
+    "PLANNED_AUTOMATED": 31,
+    "PLANNED_HYBRID": 27,
+    "IMPLEMENTED": 17
+  },
+  "errors": []
+}

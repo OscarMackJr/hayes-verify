@@ -1,0 +1,36 @@
+{
+  "status": "PASS",
+  "source_registry_version": "1.2",
+  "source_registry_state": "CANDIDATE_FROZEN",
+  "priority": 1,
+  "remaining_control_count": 3,
+  "items": [
+    {
+      "control_id": "EMS-CTRL-012",
+      "control_name": "Signed Commits",
+      "family": "github_branch_policy",
+      "implementation_state": "PLANNED_AUTOMATED",
+      "supported": false,
+      "decision_source": "human_judgment_review",
+      "implementation_priority": 1
+    },
+    {
+      "control_id": "EMS-CTRL-013",
+      "control_name": "Protected Release Tags",
+      "family": "github_branch_policy",
+      "implementation_state": "PLANNED_AUTOMATED",
+      "supported": false,
+      "decision_source": "human_judgment_review",
+      "implementation_priority": 1
+    },
+    {
+      "control_id": "EMS-CTRL-022",
+      "control_name": "Security Advisory Monitoring",
+      "family": "github_security_monitoring",
+      "implementation_state": "PLANNED_AUTOMATED",
+      "supported": false,
+      "decision_source": "coverage_classification",
+      "implementation_priority": 1
+    }
+  ]
+}

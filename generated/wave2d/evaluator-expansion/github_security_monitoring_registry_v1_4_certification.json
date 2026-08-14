@@ -1,0 +1,23 @@
+{
+  "component": "Hayes Verify",
+  "phase": "Wave 2D Evaluator Registry v1.4 GitHub Security Monitoring Promotion",
+  "certified_at_utc": "2026-08-14T16:36:05.975783+00:00",
+  "status": "PASS",
+  "registry_state": "CANDIDATE_FROZEN",
+  "registry_version": "1.4",
+  "verification_batch_id": "BATCH-20260814T163543.574829Z",
+  "promoted_control_count": 1,
+  "promoted_controls": [
+    "EMS-CTRL-022"
+  ],
+  "priority1_completion_state": "COMPLETE",
+  "registry_sha256": "3b29cfde6959fd23f6552fc1b78b52140cecde45508d31a02598cf36291d451a",
+  "verification_sha256": "4686bbbcc16b8bb3cfb704f42ae66147fd5fddb417ea6726227d87ccf95195be",
+  "implementation_state_counts": {
+    "HUMAN_EVIDENCE_REQUIRED": 5,
+    "PLANNED_AUTOMATED": 28,
+    "PLANNED_HYBRID": 27,
+    "IMPLEMENTED": 20
+  },
+  "errors": []
+}

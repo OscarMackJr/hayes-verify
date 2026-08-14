@@ -1,0 +1,116 @@
+{
+  "component": "Hayes Verify",
+  "phase": "GitHub Security Monitoring Final Priority-1 Batch Verification",
+  "verified_at_utc": "2026-08-14T16:36:05.667307+00:00",
+  "status": "PASS",
+  "batch_id": "BATCH-20260814T163543.574829Z",
+  "family": "github_security_monitoring",
+  "scope_control_count": 1,
+  "verified_control_count": 1,
+  "pending_control_count": 0,
+  "priority1_completion_state": "COMPLETE",
+  "controls": [
+    {
+      "control_id": "EMS-CTRL-022",
+      "applicable_target_count": 7,
+      "complete_target_count": 7,
+      "blocked_target_count": 0,
+      "pass_target_count": 0,
+      "fail_target_count": 7,
+      "verification_state": "VERIFIED_IMPLEMENTATION",
+      "targets": [
+        {
+          "batch_id": "BATCH-20260814T163543.574829Z",
+          "control_id": "EMS-CTRL-022",
+          "target_id": "REPO-001",
+          "execution_state": "COMPLETE",
+          "family": "github_security_monitoring",
+          "evaluation_state": "COMPLETE",
+          "evidence_state": "SUFFICIENT",
+          "result_state": "FAIL",
+          "promotion_state": "NOT_PROMOTED",
+          "evidence_sha256": "49454e189dab2fb7493d69f7097e1f9435fc84218f3ddb8245942ef12dbe9ed1",
+          "result_sha256": "00acd0902f3d9ead018aee14f09b1bb2a76218ccfef1716c4848edd599db8b08"
+        },
+        {
+          "batch_id": "BATCH-20260814T163543.574829Z",
+          "control_id": "EMS-CTRL-022",
+          "target_id": "REPO-002",
+          "execution_state": "COMPLETE",
+          "family": "github_security_monitoring",
+          "evaluation_state": "COMPLETE",
+          "evidence_state": "SUFFICIENT",
+          "result_state": "FAIL",
+          "promotion_state": "NOT_PROMOTED",
+          "evidence_sha256": "339d3084108bcfb7065cecfae161de1e8bda928566e3cf95b4fac1e2d60a619f",
+          "result_sha256": "499a69c92d9ffb66baf8ab242f146c7b61c9432c11f54e4cd78ef2dea60cc53a"
+        },
+        {
+          "batch_id": "BATCH-20260814T163543.574829Z",
+          "control_id": "EMS-CTRL-022",
+          "target_id": "REPO-003",
+          "execution_state": "COMPLETE",
+          "family": "github_security_monitoring",
+          "evaluation_state": "COMPLETE",
+          "evidence_state": "SUFFICIENT",
+          "result_state": "FAIL",
+          "promotion_state": "NOT_PROMOTED",
+          "evidence_sha256": "1c6ef1e488d33c744734a5eb3546336983c0cd05ede8fe2e23da6cf61e545362",
+          "result_sha256": "3af37065f41d164daae9b19092e1c170886de8c1a2a8b0ac476cb6f784c1e52e"
+        },
+        {
+          "batch_id": "BATCH-20260814T163543.574829Z",
+          "control_id": "EMS-CTRL-022",
+          "target_id": "REPO-004",
+          "execution_state": "COMPLETE",
+          "family": "github_security_monitoring",
+          "evaluation_state": "COMPLETE",
+          "evidence_state": "SUFFICIENT",
+          "result_state": "FAIL",
+          "promotion_state": "NOT_PROMOTED",
+          "evidence_sha256": "85e5e9ab5cdd3ef6d008636fd41196a15c58d50172b55426194189a2ec1e0bb6",
+          "result_sha256": "f29fae94ed4b0124c4b8d1c7a181e8b76f9cedb55c58a0a71b113cab3c6788c4"
+        },
+        {
+          "batch_id": "BATCH-20260814T163543.574829Z",
+          "control_id": "EMS-CTRL-022",
+          "target_id": "REPO-005",
+          "execution_state": "COMPLETE",
+          "family": "github_security_monitoring",
+          "evaluation_state": "COMPLETE",
+          "evidence_state": "SUFFICIENT",
+          "result_state": "FAIL",
+          "promotion_state": "NOT_PROMOTED",
+          "evidence_sha256": "343699e4fa5d9495f8ffa144405f34bbfc1538df8e969e6d808ac49bd0eb5e6f",
+          "result_sha256": "1dbdf25a7e221e743e6e4bdfc354206382a3b6dd7fe7fdf94672f875056d20c4"
+        },
+        {
+          "batch_id": "BATCH-20260814T163543.574829Z",
+          "control_id": "EMS-CTRL-022",
+          "target_id": "REPO-006",
+          "execution_state": "COMPLETE",
+          "family": "github_security_monitoring",
+          "evaluation_state": "COMPLETE",
+          "evidence_state": "SUFFICIENT",
+          "result_state": "FAIL",
+          "promotion_state": "NOT_PROMOTED",
+          "evidence_sha256": "690e1f8c54187ff402b2e155241041ad855aed0a5248f028984c19698e28c880",
+          "result_sha256": "395f6a5745876a250db40e3dacebaedb9c8af36ee16cc769d0f8ce38c17ab218"
+        },
+        {
+          "batch_id": "BATCH-20260814T163543.574829Z",
+          "control_id": "EMS-CTRL-022",
+          "target_id": "REPO-EMS",
+          "execution_state": "COMPLETE",
+          "family": "github_security_monitoring",
+          "evaluation_state": "COMPLETE",
+          "evidence_state": "SUFFICIENT",
+          "result_state": "FAIL",
+          "promotion_state": "NOT_PROMOTED",
+          "evidence_sha256": "d62edb18b1cb9f6a6d8dec2a362b70e02e3d71c4e0f1f2e980ca117af4c50c47",
+          "result_sha256": "0b25c4e74603300fa726f65cd5147f09dffc6e3a7de7dc9a0f2763bab2dac47f"
+        }
+      ]
+    }
+  ]
+}

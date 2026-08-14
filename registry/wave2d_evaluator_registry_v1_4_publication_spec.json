@@ -1,0 +1,14 @@
+{
+  "version": "1.0",
+  "registry_version": "1.4",
+  "candidate_registry": "registry/wave2d_evaluator_registry_v1_4.json",
+  "certification": "generated/wave2d/evaluator-expansion/github_security_monitoring_registry_v1_4_certification.json",
+  "verification_manifest": "generated/wave2d/evaluator-expansion/github-security-monitoring-verification/verification_manifest.json",
+  "priority1_backlog": "generated/wave2d/evaluator-expansion/priority1_completion_backlog.json",
+  "priority1_completion_certification": "generated/wave2d/evaluator-expansion/priority1_completion_certification.json",
+  "priority1_completion_manifest": "generated/wave2d/evaluator-expansion/priority1_completion_manifest.json",
+  "branch": "feature/wave2d-evaluator-registry-v1-4-priority1-complete",
+  "verification_batch_id": "BATCH-20260814T163543.574829Z",
+  "expected_registry_sha256": "3b29cfde6959fd23f6552fc1b78b52140cecde45508d31a02598cf36291d451a",
+  "expected_verification_sha256": "4686bbbcc16b8bb3cfb704f42ae66147fd5fddb417ea6726227d87ccf95195be"
+}

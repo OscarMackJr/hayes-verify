@@ -1,0 +1,33 @@
+{
+  "component": "Hayes Verify",
+  "phase": "Wave 2D Evaluator Registry Freeze",
+  "certified_at_utc": "2026-08-14T12:43:25.699326+00:00",
+  "status": "PASS",
+  "registry_state": "FROZEN",
+  "control_count": 80,
+  "registry_sha256": "4c9d2770cf5e320f3a780e038a43d5e07ef1344a0a8a9ca6814dddd32de81210",
+  "classification_sha256": "e434cbdfb08b6bf06c75011da11e00d425f742efcf1a8be0116f333dffd7b9fc",
+  "review_sha256": "a18d4adb395e4fcf08642be3e1a76b3d893596443f4ecaad9ace79dea5d5b4d3",
+  "validation_sha256": "10a96ec208506a6747094d1a64c9a55afdab56c340b02d8d48e026afe0377d5d",
+  "implementation_state_counts": {
+    "HUMAN_EVIDENCE_REQUIRED": 5,
+    "PLANNED_AUTOMATED": 44,
+    "PLANNED_HYBRID": 28,
+    "IMPLEMENTED": 3
+  },
+  "family_counts": {
+    "human_judgment": 5,
+    "documentation_governance": 13,
+    "dependency_supply_chain": 5,
+    "infrastructure_cloud": 13,
+    "github_branch_policy": 4,
+    "repository_filesystem": 8,
+    "github_workflow_ci": 6,
+    "github_security_configuration": 1,
+    "github_security_monitoring": 1,
+    "test_quality": 8,
+    "release_integrity": 6,
+    "management_operational": 10
+  },
+  "errors": []
+}

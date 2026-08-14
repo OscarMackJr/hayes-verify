@@ -1,0 +1,52 @@
+{
+  "status": "PASS",
+  "priority": 1,
+  "family_count": 4,
+  "families": [
+    {
+      "family": "github_branch_policy",
+      "control_count": 2,
+      "controls": [
+        "EMS-CTRL-012",
+        "EMS-CTRL-013"
+      ],
+      "implementation_strategy": "IMPLEMENT_AND_TEST_FAMILY_ADAPTER_THEN_ENABLE_CONTROLS"
+    },
+    {
+      "family": "github_security_monitoring",
+      "control_count": 1,
+      "controls": [
+        "EMS-CTRL-022"
+      ],
+      "implementation_strategy": "IMPLEMENT_AND_TEST_FAMILY_ADAPTER_THEN_ENABLE_CONTROLS"
+    },
+    {
+      "family": "github_workflow_ci",
+      "control_count": 6,
+      "controls": [
+        "EMS-CTRL-014",
+        "EMS-CTRL-030",
+        "EMS-CTRL-033",
+        "EMS-CTRL-039",
+        "EMS-CTRL-055",
+        "EMS-CTRL-058"
+      ],
+      "implementation_strategy": "IMPLEMENT_AND_TEST_FAMILY_ADAPTER_THEN_ENABLE_CONTROLS"
+    },
+    {
+      "family": "repository_filesystem",
+      "control_count": 8,
+      "controls": [
+        "EMS-CTRL-011",
+        "EMS-CTRL-015",
+        "EMS-CTRL-017",
+        "EMS-CTRL-020",
+        "EMS-CTRL-021",
+        "EMS-CTRL-052",
+        "EMS-CTRL-062",
+        "EMS-CTRL-079"
+      ],
+      "implementation_strategy": "IMPLEMENT_AND_TEST_FAMILY_ADAPTER_THEN_ENABLE_CONTROLS"
+    }
+  ]
+}

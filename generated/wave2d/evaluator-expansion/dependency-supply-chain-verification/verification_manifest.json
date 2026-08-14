@@ -1,0 +1,267 @@
+{
+  "component": "Hayes Verify",
+  "phase": "Priority-2 Dependency Supply Chain Family Batch Verification",
+  "verified_at_utc": "2026-08-14T17:01:45.476977+00:00",
+  "status": "PASS",
+  "batch_id": "BATCH-20260814T170133.101265Z",
+  "wave": "2D",
+  "priority": 2,
+  "family": "dependency_supply_chain",
+  "scope_control_count": 4,
+  "verified_control_count": 4,
+  "pending_control_count": 0,
+  "controls": [
+    {
+      "control_id": "EMS-CTRL-003",
+      "applicable_target_count": 1,
+      "complete_target_count": 1,
+      "blocked_target_count": 0,
+      "pass_target_count": 0,
+      "fail_target_count": 1,
+      "verification_state": "VERIFIED_IMPLEMENTATION",
+      "targets": [
+        {
+          "batch_id": "BATCH-20260814T170133.101265Z",
+          "control_id": "EMS-CTRL-003",
+          "target_id": "REPO-EMS",
+          "execution_state": "COMPLETE",
+          "family": "dependency_supply_chain",
+          "evaluation_state": "COMPLETE",
+          "evidence_state": "SUFFICIENT",
+          "result_state": "FAIL",
+          "promotion_state": "NOT_PROMOTED",
+          "evidence_sha256": "89f989e41150e18774f241ddb4fa39113bb6e21ef7e45c74b79b75b12dc86ce1",
+          "result_sha256": "0fc08e7dd296473d7fabbcd2f3a4edfddf637b4151ac05dd9d530b588632d18f"
+        }
+      ]
+    },
+    {
+      "control_id": "EMS-CTRL-019",
+      "applicable_target_count": 7,
+      "complete_target_count": 7,
+      "blocked_target_count": 0,
+      "pass_target_count": 1,
+      "fail_target_count": 6,
+      "verification_state": "VERIFIED_IMPLEMENTATION",
+      "targets": [
+        {
+          "batch_id": "BATCH-20260814T170133.101265Z",
+          "control_id": "EMS-CTRL-019",
+          "target_id": "REPO-001",
+          "execution_state": "COMPLETE",
+          "family": "dependency_supply_chain",
+          "evaluation_state": "COMPLETE",
+          "evidence_state": "SUFFICIENT",
+          "result_state": "PASS",
+          "promotion_state": "NOT_PROMOTED",
+          "evidence_sha256": "d4e7a4a9f8104a91914b6c3c093a27420e34f45c93bade01c154df2dcadfa1c9",
+          "result_sha256": "155dd3678f6c7eeaee3b42bc6d933e524cbb20b935d47d26ce9b03eb509ece4d"
+        },
+        {
+          "batch_id": "BATCH-20260814T170133.101265Z",
+          "control_id": "EMS-CTRL-019",
+          "target_id": "REPO-002",
+          "execution_state": "COMPLETE",
+          "family": "dependency_supply_chain",
+          "evaluation_state": "COMPLETE",
+          "evidence_state": "SUFFICIENT",
+          "result_state": "FAIL",
+          "promotion_state": "NOT_PROMOTED",
+          "evidence_sha256": "a7cd8fc462a6e268d62398e2d1135727c6ccec8c62c0b2e5a0aa10ebe8e8a826",
+          "result_sha256": "475182ed137a9ea6f1dababf4a1b27edf27035ee4fddf07d8032affaa9950c02"
+        },
+        {
+          "batch_id": "BATCH-20260814T170133.101265Z",
+          "control_id": "EMS-CTRL-019",
+          "target_id": "REPO-003",
+          "execution_state": "COMPLETE",
+          "family": "dependency_supply_chain",
+          "evaluation_state": "COMPLETE",
+          "evidence_state": "SUFFICIENT",
+          "result_state": "FAIL",
+          "promotion_state": "NOT_PROMOTED",
+          "evidence_sha256": "274e734fdf91cc1e1838ddb1be607551ae78c42d403acde87e06200a6ddeb3c7",
+          "result_sha256": "6fd344496db06fbdfd6916b23ae817c6afe2b0070eaf5f826d07a6fcab4c3fe6"
+        },
+        {
+          "batch_id": "BATCH-20260814T170133.101265Z",
+          "control_id": "EMS-CTRL-019",
+          "target_id": "REPO-004",
+          "execution_state": "COMPLETE",
+          "family": "dependency_supply_chain",
+          "evaluation_state": "COMPLETE",
+          "evidence_state": "SUFFICIENT",
+          "result_state": "FAIL",
+          "promotion_state": "NOT_PROMOTED",
+          "evidence_sha256": "89e95c2dbaf3f85291b2bf7aecee50bf311cc0ebcd65c375a83611e0ba3b4610",
+          "result_sha256": "9fc1fb9965c1156c6f95387afef045c16b77425ed75efb2f65bd194df1bf85be"
+        },
+        {
+          "batch_id": "BATCH-20260814T170133.101265Z",
+          "control_id": "EMS-CTRL-019",
+          "target_id": "REPO-005",
+          "execution_state": "COMPLETE",
+          "family": "dependency_supply_chain",
+          "evaluation_state": "COMPLETE",
+          "evidence_state": "SUFFICIENT",
+          "result_state": "FAIL",
+          "promotion_state": "NOT_PROMOTED",
+          "evidence_sha256": "fa6ac139f6cbc8ef4609a784e217bdd17501af1565147c10448b4c9f3c9d71ec",
+          "result_sha256": "e08291cf206111639ce4c1e2c65fa4c3ead2dbfa464ec27f61aab7ee128e68cb"
+        },
+        {
+          "batch_id": "BATCH-20260814T170133.101265Z",
+          "control_id": "EMS-CTRL-019",
+          "target_id": "REPO-006",
+          "execution_state": "COMPLETE",
+          "family": "dependency_supply_chain",
+          "evaluation_state": "COMPLETE",
+          "evidence_state": "SUFFICIENT",
+          "result_state": "FAIL",
+          "promotion_state": "NOT_PROMOTED",
+          "evidence_sha256": "5f8c03464aa21a6bb5c55fd3eaaf616def1772a64bed86c11c67c7c34f62a0eb",
+          "result_sha256": "414cd043cd4237149db77c5a2dcbdf58906231e55b86dd341f7f602d6b4890ce"
+        },
+        {
+          "batch_id": "BATCH-20260814T170133.101265Z",
+          "control_id": "EMS-CTRL-019",
+          "target_id": "REPO-EMS",
+          "execution_state": "COMPLETE",
+          "family": "dependency_supply_chain",
+          "evaluation_state": "COMPLETE",
+          "evidence_state": "SUFFICIENT",
+          "result_state": "FAIL",
+          "promotion_state": "NOT_PROMOTED",
+          "evidence_sha256": "1840549edec5bb0ba2bdb92d6fd3509c5e860b2a4f8fd12eac1cd5855df8b82a",
+          "result_sha256": "942c460b957af5a0d01337300434604df8ca7b2b208357169682ef0f22930f0a"
+        }
+      ]
+    },
+    {
+      "control_id": "EMS-CTRL-042",
+      "applicable_target_count": 7,
+      "complete_target_count": 7,
+      "blocked_target_count": 0,
+      "pass_target_count": 1,
+      "fail_target_count": 6,
+      "verification_state": "VERIFIED_IMPLEMENTATION",
+      "targets": [
+        {
+          "batch_id": "BATCH-20260814T170133.101265Z",
+          "control_id": "EMS-CTRL-042",
+          "target_id": "REPO-001",
+          "execution_state": "COMPLETE",
+          "family": "dependency_supply_chain",
+          "evaluation_state": "COMPLETE",
+          "evidence_state": "SUFFICIENT",
+          "result_state": "PASS",
+          "promotion_state": "NOT_PROMOTED",
+          "evidence_sha256": "cd2b94f99e239863c2f93916d4b3d955fee3a79506cd09377b9671a789ab5951",
+          "result_sha256": "8e2da50de2f417ce929ea6aa4e31be267ad648472147c758728e68bdab9951b0"
+        },
+        {
+          "batch_id": "BATCH-20260814T170133.101265Z",
+          "control_id": "EMS-CTRL-042",
+          "target_id": "REPO-002",
+          "execution_state": "COMPLETE",
+          "family": "dependency_supply_chain",
+          "evaluation_state": "COMPLETE",
+          "evidence_state": "SUFFICIENT",
+          "result_state": "FAIL",
+          "promotion_state": "NOT_PROMOTED",
+          "evidence_sha256": "6ac47dbcd969e7b60a82efa45eb43b75f548b5466b738a8a7de03d4b149c6df2",
+          "result_sha256": "8ab5d97bbf10c8c37e77294d81cdb7c205cf5ce6f6bfa7a288a027bb69774c7d"
+        },
+        {
+          "batch_id": "BATCH-20260814T170133.101265Z",
+          "control_id": "EMS-CTRL-042",
+          "target_id": "REPO-003",
+          "execution_state": "COMPLETE",
+          "family": "dependency_supply_chain",
+          "evaluation_state": "COMPLETE",
+          "evidence_state": "SUFFICIENT",
+          "result_state": "FAIL",
+          "promotion_state": "NOT_PROMOTED",
+          "evidence_sha256": "ad612e9a83eceae80b21ea93c3cc28d3652cb9ab613a9522502241d738cc2a57",
+          "result_sha256": "b75bc4512355a587b0a8a9fe4e1da4800c7e15541a92b7c0b5d79c3477c3056c"
+        },
+        {
+          "batch_id": "BATCH-20260814T170133.101265Z",
+          "control_id": "EMS-CTRL-042",
+          "target_id": "REPO-004",
+          "execution_state": "COMPLETE",
+          "family": "dependency_supply_chain",
+          "evaluation_state": "COMPLETE",
+          "evidence_state": "SUFFICIENT",
+          "result_state": "FAIL",
+          "promotion_state": "NOT_PROMOTED",
+          "evidence_sha256": "4e68df8aa3ca7bf1a0d3621382d764e3d974985847372187987ab4e4f07d449e",
+          "result_sha256": "a6fca39d1de6a624e9c2997364df5bdbf448b04429b4933bdd4ad830f37d02a8"
+        },
+        {
+          "batch_id": "BATCH-20260814T170133.101265Z",
+          "control_id": "EMS-CTRL-042",
+          "target_id": "REPO-005",
+          "execution_state": "COMPLETE",
+          "family": "dependency_supply_chain",
+          "evaluation_state": "COMPLETE",
+          "evidence_state": "SUFFICIENT",
+          "result_state": "FAIL",
+          "promotion_state": "NOT_PROMOTED",
+          "evidence_sha256": "d85b309cdf993defd4535e36ba1fb87daadad888de4d4b0dd8ebcfaa38704b03",
+          "result_sha256": "ab159e8968b0b9e51fdb87988c334513d7bd9a8db752227d0cef7c014dd5ad71"
+        },
+        {
+          "batch_id": "BATCH-20260814T170133.101265Z",
+          "control_id": "EMS-CTRL-042",
+          "target_id": "REPO-006",
+          "execution_state": "COMPLETE",
+          "family": "dependency_supply_chain",
+          "evaluation_state": "COMPLETE",
+          "evidence_state": "SUFFICIENT",
+          "result_state": "FAIL",
+          "promotion_state": "NOT_PROMOTED",
+          "evidence_sha256": "e797d80038408ee1432faa2e27600005265fe97e10f3cda8c6ee9d88b71d948d",
+          "result_sha256": "6152dd21a41e74a92b45be86716ce827f1d6e7b6047d721b6110816b96ff006c"
+        },
+        {
+          "batch_id": "BATCH-20260814T170133.101265Z",
+          "control_id": "EMS-CTRL-042",
+          "target_id": "REPO-EMS",
+          "execution_state": "COMPLETE",
+          "family": "dependency_supply_chain",
+          "evaluation_state": "COMPLETE",
+          "evidence_state": "SUFFICIENT",
+          "result_state": "FAIL",
+          "promotion_state": "NOT_PROMOTED",
+          "evidence_sha256": "2ad964da75fc2f4069c0d8990aae457f23ad10c20cff5b9015c26ba05148dcd1",
+          "result_sha256": "ba4d6584d2a0fb507ed8606a8d27efa4fab6f9fb75896b12e2310793fef5e611"
+        }
+      ]
+    },
+    {
+      "control_id": "EMS-CTRL-075",
+      "applicable_target_count": 1,
+      "complete_target_count": 1,
+      "blocked_target_count": 0,
+      "pass_target_count": 0,
+      "fail_target_count": 1,
+      "verification_state": "VERIFIED_IMPLEMENTATION",
+      "targets": [
+        {
+          "batch_id": "BATCH-20260814T170133.101265Z",
+          "control_id": "EMS-CTRL-075",
+          "target_id": "REPO-EMS",
+          "execution_state": "COMPLETE",
+          "family": "dependency_supply_chain",
+          "evaluation_state": "COMPLETE",
+          "evidence_state": "SUFFICIENT",
+          "result_state": "FAIL",
+          "promotion_state": "NOT_PROMOTED",
+          "evidence_sha256": "9f795dd4d453e2a7ceb35c340b54a772b95a551469c4743aeb8b8f6f80d204f1",
+          "result_sha256": "dc134c8d27307f0c1e2ce0bd97a14c31bf0a35afc03b1b2c87dd49f81e0d0c43"
+        }
+      ]
+    }
+  ]
+}

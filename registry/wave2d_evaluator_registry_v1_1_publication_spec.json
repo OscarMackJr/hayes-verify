@@ -1,0 +1,11 @@
+{
+  "version": "1.0",
+  "registry": "registry/wave2d_evaluator_registry_v1_1.json",
+  "certification": "generated/wave2d/evaluator-expansion/repository_filesystem_registry_v1_1_certification.json",
+  "verification": "generated/wave2d/evaluator-expansion/repository-filesystem-verification/verification_manifest.json",
+  "remaining_backlog": "generated/wave2d/evaluator-expansion/priority1_remaining_implementation_backlog.json",
+  "remaining_plan": "generated/wave2d/evaluator-expansion/priority1_remaining_family_plan.json",
+  "verification_batch_id": "BATCH-20260814T143950.926644Z",
+  "registry_sha256": "bb1c80f03c10627e351743a5947a9d18ac5e123ed451c9e0e02e95947be9a429",
+  "verification_sha256": "b7d0e87fa707c086c393400bd37e2fe603818020d18a1ad0490b1ae83a9c6394"
+}

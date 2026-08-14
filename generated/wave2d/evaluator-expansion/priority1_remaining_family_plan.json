@@ -1,0 +1,33 @@
+{
+  "status": "PASS",
+  "remaining_family_count": 3,
+  "families": [
+    {
+      "family": "github_branch_policy",
+      "control_count": 2,
+      "controls": [
+        "EMS-CTRL-012",
+        "EMS-CTRL-013"
+      ]
+    },
+    {
+      "family": "github_security_monitoring",
+      "control_count": 1,
+      "controls": [
+        "EMS-CTRL-022"
+      ]
+    },
+    {
+      "family": "github_workflow_ci",
+      "control_count": 6,
+      "controls": [
+        "EMS-CTRL-014",
+        "EMS-CTRL-030",
+        "EMS-CTRL-033",
+        "EMS-CTRL-039",
+        "EMS-CTRL-055",
+        "EMS-CTRL-058"
+      ]
+    }
+  ]
+}

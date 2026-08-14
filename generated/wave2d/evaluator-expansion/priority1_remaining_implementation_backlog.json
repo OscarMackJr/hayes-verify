@@ -1,0 +1,80 @@
+{
+  "status": "PASS",
+  "source_registry_version": "1.1",
+  "priority": 1,
+  "remaining_control_count": 9,
+  "items": [
+    {
+      "control_id": "EMS-CTRL-012",
+      "control_name": "Signed Commits",
+      "family": "github_branch_policy",
+      "implementation_state": "PLANNED_AUTOMATED",
+      "supported": false,
+      "implementation_priority": 1
+    },
+    {
+      "control_id": "EMS-CTRL-013",
+      "control_name": "Protected Release Tags",
+      "family": "github_branch_policy",
+      "implementation_state": "PLANNED_AUTOMATED",
+      "supported": false,
+      "implementation_priority": 1
+    },
+    {
+      "control_id": "EMS-CTRL-022",
+      "control_name": "Security Advisory Monitoring",
+      "family": "github_security_monitoring",
+      "implementation_state": "PLANNED_AUTOMATED",
+      "supported": false,
+      "implementation_priority": 1
+    },
+    {
+      "control_id": "EMS-CTRL-014",
+      "control_name": "Mandatory Issue Linkage",
+      "family": "github_workflow_ci",
+      "implementation_state": "PLANNED_AUTOMATED",
+      "supported": false,
+      "implementation_priority": 1
+    },
+    {
+      "control_id": "EMS-CTRL-030",
+      "control_name": "Disaster Recovery Testing",
+      "family": "github_workflow_ci",
+      "implementation_state": "PLANNED_AUTOMATED",
+      "supported": false,
+      "implementation_priority": 1
+    },
+    {
+      "control_id": "EMS-CTRL-033",
+      "control_name": "Reproducible Builds",
+      "family": "github_workflow_ci",
+      "implementation_state": "PLANNED_AUTOMATED",
+      "supported": false,
+      "implementation_priority": 1
+    },
+    {
+      "control_id": "EMS-CTRL-039",
+      "control_name": "Release Approval Workflow",
+      "family": "github_workflow_ci",
+      "implementation_state": "PLANNED_AUTOMATED",
+      "supported": false,
+      "implementation_priority": 1
+    },
+    {
+      "control_id": "EMS-CTRL-055",
+      "control_name": "Policy Before Execution",
+      "family": "github_workflow_ci",
+      "implementation_state": "PLANNED_HYBRID",
+      "supported": false,
+      "implementation_priority": 1
+    },
+    {
+      "control_id": "EMS-CTRL-058",
+      "control_name": "Fail-Closed Authorization",
+      "family": "github_workflow_ci",
+      "implementation_state": "PLANNED_AUTOMATED",
+      "supported": false,
+      "implementation_priority": 1
+    }
+  ]
+}

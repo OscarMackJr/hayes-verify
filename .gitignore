@@ -13,3 +13,6 @@ evidence/
 
 # Execution-local Wave 2D repository paths
 registry/wave2d_repository_path_overrides.json
+
+# Execution-local Wave 2D organization evidence providers
+registry/wave2d_organization_evidence_overrides.json

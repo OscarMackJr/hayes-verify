@@ -1,0 +1,16 @@
+{
+  "version": "1.0",
+  "purpose": "Additive Wave 2D runtime execution composition; does not replace historical EMS applicability.",
+  "organization_authoritative_controls": [
+    {
+      "control_id": "EMS-CTRL-023",
+      "organization_target_ids": [
+        "ORG-001"
+      ],
+      "authoritative_target_count": 1
+    }
+  ],
+  "repository_projection_controls": [
+    "EMS-CTRL-023"
+  ]
+}

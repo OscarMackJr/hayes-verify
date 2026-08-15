@@ -1,0 +1,9 @@
+{
+  "description": "Execution-local example only. Copy to wave2d_organization_evidence_overrides.json and provide no secrets.",
+  "ORG-001": {
+    "evidence_provider_type": "FILE",
+    "evidence_provider_reference": "C:/path/to/organization-evidence.json",
+    "evidence_authority": "organizational evidence authority",
+    "evidence_timestamp": "2026-01-01T00:00:00Z"
+  }
+}

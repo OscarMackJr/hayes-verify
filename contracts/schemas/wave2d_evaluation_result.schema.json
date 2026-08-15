@@ -98,6 +98,29 @@
     },
     "promotion_state": {
       "const": "NOT_PROMOTED"
+    },
+    "target_type": {
+      "type": "string",
+      "enum": [
+        "REPOSITORY",
+        "ORGANIZATION"
+      ]
+    },
+    "evaluation_role": {
+      "type": "string",
+      "enum": [
+        "AUTHORITATIVE_EVALUATION",
+        "PROJECTION"
+      ]
+    },
+    "authoritative_compliance": {
+      "type": "boolean"
+    },
+    "repository_projection_only": {
+      "type": "boolean"
+    },
+    "organization_level": {
+      "type": "boolean"
     }
   },
   "additionalProperties": false

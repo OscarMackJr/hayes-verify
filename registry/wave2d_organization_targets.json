@@ -1,0 +1,1 @@
+{ "version": "1.0", "organization_targets": [{"target_id":"ORG-001","target_type":"ORGANIZATION","organization_id":"HAYES-ORG-001","organization_name":"Hayes Verify Organization","evidence_authority_type":"ORGANIZATIONAL","controls":["EMS-CTRL-023"]}] }

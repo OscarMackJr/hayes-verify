@@ -1,0 +1,55 @@
+{
+  "component": "Hayes Verify",
+  "capability": "Wave 2D Organization-Level Immutable Batch Execution",
+  "status": "PASS",
+  "runtime_state": "BASELINE_CANDIDATE",
+  "certified_at_utc": "2026-08-15T13:26:14.8000206Z",
+  "supported_target_types": [
+    "REPOSITORY",
+    "ORGANIZATION"
+  ],
+  "supported_evaluation_roles": [
+    "AUTHORITATIVE_EVALUATION",
+    "PROJECTION"
+  ],
+  "target_contract_version": "1.0",
+  "runtime_file_hash_method": "SHA256_UTF8_LF_NORMALIZED",
+  "runtime_files": {
+    "registry/wave2d_organization_targets.json": "aad1d19db26291b9f1db4a561fe17eb1c4e4045a9057f3d88e8e087d35069dec",
+    "contracts/schemas/wave2d_evaluation_result.schema.json": "09f5fff346a1ca3f2c3419aa0e6ab2adc7ce1d6c08ad1cc42c3b381f2db4be92",
+    "scripts/Run-Wave2DImmutableBatch.ps1": "dc073e78d72581eec1c096eeb53878acbd5dd3bad7d77b7b423521580007651e",
+    "scripts/run_registry_evaluator.py": "6d934305f3b537340f3182b95bb504d5c7a55ac2314c059e83d1e7e1bff41a65",
+    "scripts/run_wave2d_batch_registry_scoped.py": "1a58e899786141c2fbd4195772ffb30e478a0e6338927e9f24081f9ad990b9fd",
+    "contracts/schemas/wave2d_evaluation_request.schema.json": "6165cda1b37442015b3ba520edee2a0d083e621b211c6175432b82b6c6e37c5d",
+    "scripts/build_wave2d_batch_requests_scoped.py": "d826e645db0381ad3a373a29e638e478e961fb17e0159ffb69835304f1404e2e",
+    "src/hayes_verify/wave2d_targets.py": "33a1f95efcdc7b2b8c515153f5c2214a9d616d3c5b96c225a10d2d6fe7047c72",
+    "registry/wave2d_organization_runtime_applicability.json": "5466ff556650de7750e5a0b4ed4e5ae719c10fd5e20c5d37ee6c7c935a4859a7",
+    "registry/wave2d_organization_evidence_overrides.example.json": "fda0ae6ccf05227d9581b6ffd661cb448f65fad23a323ac22d87cfe4da98b875"
+  },
+  "evidence_provider_contract": {
+    "provider_type": "FILE",
+    "behavior": "JSON object payload with retained provenance; missing or invalid files return unavailable evidence context"
+  },
+  "validated_contract": "generic organization evaluator execution",
+  "request_builder_result": "PASS",
+  "evaluator_launcher_result": "PASS",
+  "projection_invariant_result": "PASS",
+  "repository_backward_compatibility_result": "PASS",
+  "ctrl_023_compatibility": "RUNTIME CONTRACT READY",
+  "ctrl_023_immutable_verification": "NOT_RUN",
+  "ruff": {
+    "status": "PASS"
+  },
+  "generic_targeted_tests": {
+    "status": "PASS",
+    "passed": 13
+  },
+  "clean_publication_validation": {
+    "status": "PASS",
+    "full_pytest_passed": 74,
+    "full_pytest_failed": 0
+  },
+  "gap_analysis_path": "generated/wave2d/batch-runtime/organization_target_runtime_gap_analysis.json",
+  "gap_analysis_sha256": "adec29c2c12c33fef422d91cb3065d659b85fb0ef20d2d918d0493a5aa235885",
+  "errors": []
+}

@@ -5,6 +5,9 @@ param(
     [string]$EMSPath = "C:\temp\standars\ems",
     [string]$HayesPath = (Split-Path -Parent $PSScriptRoot),
     [string]$RepositoryMap,
+    [string]$OrganizationTargets,
+    [string]$RuntimeApplicability,
+    [string]$OrganizationEvidenceOverrides,
     [string]$PythonPath
 )
 $ErrorActionPreference = "Stop"
@@ -27,9 +30,13 @@ function Resolve-HayesPython {
 $root = (Resolve-Path $HayesPath).Path
 $ems = (Resolve-Path $EMSPath).Path
 if (-not $RepositoryMap) { $RepositoryMap = Join-Path $root "registry\wave2d_repository_map.json" }
+if (-not $OrganizationTargets) { $OrganizationTargets = Join-Path $root "registry\wave2d_organization_targets.json" }
+if (-not $RuntimeApplicability) { $RuntimeApplicability = Join-Path $root "registry\wave2d_organization_runtime_applicability.json" }
 $scoped = (Resolve-Path $ScopedRegistry).Path
 $overrides = (Resolve-Path $RepositoryPathOverrides).Path
 $map = (Resolve-Path $RepositoryMap).Path
+$organizationTargets = (Resolve-Path $OrganizationTargets).Path
+$runtimeApplicability = (Resolve-Path $RuntimeApplicability).Path
 $spec = Join-Path $root "registry\wave2d_batch_run_identity_spec.json"
 $latest = Join-Path $root "generated\wave2d\batch\latest_run.json"
 $active = Join-Path $root "generated\wave2d\batch\active_runtime_registry.json"
@@ -42,7 +49,9 @@ try {
     Copy-Item -LiteralPath $scoped -Destination $active -Force
     & $python "$root\scripts\create_wave2d_batch_run.py" --root $root --spec $spec
     if ($LASTEXITCODE) { Fail "batch identity creation failed" }
-    & $python "$root\scripts\build_wave2d_batch_requests_scoped.py" --ems-root $ems --run-identity $latest --repository-map $map --repository-path-overrides $overrides
+    $builderArgs = @("$root\scripts\build_wave2d_batch_requests_scoped.py", "--ems-root", $ems, "--run-identity", $latest, "--repository-map", $map, "--repository-path-overrides", $overrides, "--organization-targets", $organizationTargets, "--runtime-applicability", $runtimeApplicability)
+    if ($OrganizationEvidenceOverrides) { $builderArgs += @("--organization-evidence-overrides", $OrganizationEvidenceOverrides) }
+    & $python @builderArgs
     if ($LASTEXITCODE) { Fail "request build failed" }
     & $python "$root\scripts\run_wave2d_batch_registry_scoped.py" --root $root --run-identity $latest --registry $active --runner "$root\scripts\run_registry_evaluator.py"
     if ($LASTEXITCODE) { Fail "batch evaluation failed" }

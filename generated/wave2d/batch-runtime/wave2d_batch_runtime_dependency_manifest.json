@@ -1,0 +1,55 @@
+{
+  "component": "Hayes Verify",
+  "entrypoint": "scripts/Run-Wave2DImmutableBatch.ps1",
+  "dependencies": [
+    {
+      "path": "scripts/Run-Wave2DImmutableBatch.ps1",
+      "classification": "REQUIRED_RUNTIME"
+    },
+    {
+      "path": "scripts/create_wave2d_batch_run.py",
+      "classification": "REQUIRED_RUNTIME"
+    },
+    {
+      "path": "scripts/build_wave2d_batch_requests_scoped.py",
+      "classification": "REQUIRED_RUNTIME"
+    },
+    {
+      "path": "scripts/run_wave2d_batch_registry_scoped.py",
+      "classification": "REQUIRED_RUNTIME"
+    },
+    {
+      "path": "scripts/run_registry_evaluator.py",
+      "classification": "REQUIRED_RUNTIME"
+    },
+    {
+      "path": "registry/wave2d_batch_run_identity_spec.json",
+      "classification": "REQUIRED_RUNTIME"
+    },
+    {
+      "path": "registry/wave2d_repository_map.json",
+      "classification": "REQUIRED_RUNTIME"
+    },
+    {
+      "path": "local repository path overrides supplied at execution",
+      "classification": "REQUIRED_RUNTIME"
+    },
+    {
+      "path": "src/hayes_verify/contracts.py",
+      "classification": "REQUIRED_RUNTIME"
+    },
+    {
+      "path": "src/hayes_verify/evaluator_registry.py",
+      "classification": "REQUIRED_RUNTIME"
+    },
+    {
+      "path": "hayes_verify and jsonschema Python packages",
+      "classification": "REQUIRED_RUNTIME"
+    },
+    {
+      "path": "registry/wave2d_evaluator_registry.json",
+      "classification": "UNRELATED"
+    }
+  ],
+  "active_registry_disposition": "EPHEMERAL_GENERATED_RUNTIME_ONLY; not committed or authoritative"
+}

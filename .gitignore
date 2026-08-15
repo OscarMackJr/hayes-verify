@@ -10,3 +10,6 @@ build/
 
 generated/
 evidence/
+
+# Execution-local Wave 2D repository paths
+registry/wave2d_repository_path_overrides.json

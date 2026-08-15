@@ -1,0 +1,62 @@
+{
+  "version": "1.0",
+  "family": "dependency_supply_chain",
+  "rules": {
+    "EMS-CTRL-003": {
+      "name": "Third-party dependency governance",
+      "supported": true,
+      "evidence_type": "DEPENDENCY_SCA_AUTOMATION",
+      "checks": [
+        {
+          "type": "workflow_regex_any",
+          "regex": "(?is)(dependabot|dependency[-_ ]check|snyk|trivy|grype|osv|pip-audit|npm audit|dotnet list .*vulnerable)",
+          "assertion_id": "sca_or_dependency_scan_observed"
+        }
+      ],
+      "pass_policy": "ALL",
+      "derived_control_id": "EMS-CTRL-003"
+    },
+    "EMS-CTRL-019": {
+      "name": "Dependency Vulnerability Scanning",
+      "supported": true,
+      "evidence_type": "DEPENDENCY_SCA_AUTOMATION",
+      "checks": [
+        {
+          "type": "workflow_regex_any",
+          "regex": "(?is)(dependabot|dependency[-_ ]check|snyk|trivy|grype|osv|pip-audit|npm audit|dotnet list .*vulnerable)",
+          "assertion_id": "sca_or_dependency_scan_observed"
+        }
+      ],
+      "pass_policy": "ALL",
+      "derived_control_id": "EMS-CTRL-019"
+    },
+    "EMS-CTRL-042": {
+      "name": "IaC Security Scanning",
+      "supported": true,
+      "evidence_type": "DEPENDENCY_SCA_AUTOMATION",
+      "checks": [
+        {
+          "type": "workflow_regex_any",
+          "regex": "(?is)(dependabot|dependency[-_ ]check|snyk|trivy|grype|osv|pip-audit|npm audit|dotnet list .*vulnerable)",
+          "assertion_id": "sca_or_dependency_scan_observed"
+        }
+      ],
+      "pass_policy": "ALL",
+      "derived_control_id": "EMS-CTRL-042"
+    },
+    "EMS-CTRL-075": {
+      "name": "Continuous Compliance Scan",
+      "supported": true,
+      "evidence_type": "DEPENDENCY_SCA_AUTOMATION",
+      "checks": [
+        {
+          "type": "workflow_regex_any",
+          "regex": "(?is)(dependabot|dependency[-_ ]check|snyk|trivy|grype|osv|pip-audit|npm audit|dotnet list .*vulnerable)",
+          "assertion_id": "sca_or_dependency_scan_observed"
+        }
+      ],
+      "pass_policy": "ALL",
+      "derived_control_id": "EMS-CTRL-075"
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "component": "Hayes Verify",
+  "phase": "Wave 2D Evaluator Registry v1.6 Priority-2 Test Quality Promotion",
+  "certified_at_utc": "2026-08-14T17:27:13.390382+00:00",
+  "status": "PASS",
+  "registry_state": "CANDIDATE_FROZEN",
+  "registry_version": "1.6",
+  "verification_batch_id": "BATCH-20260814T172639.027038Z",
+  "promoted_control_count": 4,
+  "promoted_controls": [
+    "EMS-CTRL-025",
+    "EMS-CTRL-026",
+    "EMS-CTRL-032",
+    "EMS-CTRL-060"
+  ],
+  "registry_sha256": "3f229cecae2e8164b74804714942d5280f23f4262300fc59dbb4b079baab0d34",
+  "verification_sha256": "4a5536a9acb36b08e341c0b2537f09d7b62f41aa5a6b9af902c6b651a63a9e84",
+  "implementation_state_counts": {
+    "HUMAN_EVIDENCE_REQUIRED": 5,
+    "PLANNED_AUTOMATED": 20,
+    "IMPLEMENTED": 28,
+    "PLANNED_HYBRID": 27
+  },
+  "errors": []
+}

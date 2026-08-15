@@ -1,0 +1,192 @@
+{
+  "component": "Hayes Verify",
+  "phase": "Priority-2 Documentation Governance Batch Verification",
+  "verified_at_utc": "2026-08-14T21:38:46.916037+00:00",
+  "status": "PASS",
+  "batch_id": "BATCH-20260814T213844.838953Z",
+  "family": "documentation_governance",
+  "verified_control_count": 7,
+  "pending_control_count": 0,
+  "complete_target_count": 7,
+  "blocked_target_count": 0,
+  "result_counts": {
+    "WARNING": 7
+  },
+  "controls": [
+    {
+      "control_id": "EMS-CTRL-002",
+      "applicable_target_count": 1,
+      "complete_target_count": 1,
+      "blocked_target_count": 0,
+      "terminal_result_counts": {
+        "WARNING": 1
+      },
+      "verification_state": "VERIFIED_IMPLEMENTATION",
+      "targets": [
+        {
+          "batch_id": "BATCH-20260814T213844.838953Z",
+          "control_id": "EMS-CTRL-002",
+          "target_id": "REPO-EMS",
+          "execution_state": "COMPLETE",
+          "family": "documentation_governance",
+          "evaluation_state": "COMPLETE",
+          "evidence_state": "INSUFFICIENT",
+          "result_state": "WARNING",
+          "promotion_state": "NOT_PROMOTED",
+          "evidence_sha256": "ab4d73284056dc419fb6b0c2d2e255bdf3d042d6e915a3cbab7d700069977ff1",
+          "result_sha256": "bd715683b1f0516b5c470f4f40a6e9aaaee05d058c8fc2055b754dadcdc4fc6e"
+        }
+      ]
+    },
+    {
+      "control_id": "EMS-CTRL-008",
+      "applicable_target_count": 1,
+      "complete_target_count": 1,
+      "blocked_target_count": 0,
+      "terminal_result_counts": {
+        "WARNING": 1
+      },
+      "verification_state": "VERIFIED_IMPLEMENTATION",
+      "targets": [
+        {
+          "batch_id": "BATCH-20260814T213844.838953Z",
+          "control_id": "EMS-CTRL-008",
+          "target_id": "REPO-EMS",
+          "execution_state": "COMPLETE",
+          "family": "documentation_governance",
+          "evaluation_state": "COMPLETE",
+          "evidence_state": "INSUFFICIENT",
+          "result_state": "WARNING",
+          "promotion_state": "NOT_PROMOTED",
+          "evidence_sha256": "ee046b5d9a19530cd2bb0d8d743ebf4cd9c4712f9f61002b675660c004a14139",
+          "result_sha256": "778b11183a6c78f7be9566980400d0cafb36a901b4ff258cdc741f5ee52da77f"
+        }
+      ]
+    },
+    {
+      "control_id": "EMS-CTRL-067",
+      "applicable_target_count": 1,
+      "complete_target_count": 1,
+      "blocked_target_count": 0,
+      "terminal_result_counts": {
+        "WARNING": 1
+      },
+      "verification_state": "VERIFIED_IMPLEMENTATION",
+      "targets": [
+        {
+          "batch_id": "BATCH-20260814T213844.838953Z",
+          "control_id": "EMS-CTRL-067",
+          "target_id": "REPO-EMS",
+          "execution_state": "COMPLETE",
+          "family": "documentation_governance",
+          "evaluation_state": "COMPLETE",
+          "evidence_state": "INSUFFICIENT",
+          "result_state": "WARNING",
+          "promotion_state": "NOT_PROMOTED",
+          "evidence_sha256": "1eafcbfb7fbacb1363c5d1f70a5a5b1e588a3a12e0083bf1f95c25bb80405156",
+          "result_sha256": "29b4fc09a652d56dac0001bfa10a757146ee9c5076c87cc6fe2a1721ce81c839"
+        }
+      ]
+    },
+    {
+      "control_id": "EMS-CTRL-068",
+      "applicable_target_count": 1,
+      "complete_target_count": 1,
+      "blocked_target_count": 0,
+      "terminal_result_counts": {
+        "WARNING": 1
+      },
+      "verification_state": "VERIFIED_IMPLEMENTATION",
+      "targets": [
+        {
+          "batch_id": "BATCH-20260814T213844.838953Z",
+          "control_id": "EMS-CTRL-068",
+          "target_id": "REPO-EMS",
+          "execution_state": "COMPLETE",
+          "family": "documentation_governance",
+          "evaluation_state": "COMPLETE",
+          "evidence_state": "INSUFFICIENT",
+          "result_state": "WARNING",
+          "promotion_state": "NOT_PROMOTED",
+          "evidence_sha256": "7c58b892a0a92d365088be4018764a965fcc016431e29a2d0272ca12dd1bf93b",
+          "result_sha256": "431add58c79b57e3a34ce0ebd1b22cd46a02062b6704612d4c8fe6f8c366a737"
+        }
+      ]
+    },
+    {
+      "control_id": "EMS-CTRL-069",
+      "applicable_target_count": 1,
+      "complete_target_count": 1,
+      "blocked_target_count": 0,
+      "terminal_result_counts": {
+        "WARNING": 1
+      },
+      "verification_state": "VERIFIED_IMPLEMENTATION",
+      "targets": [
+        {
+          "batch_id": "BATCH-20260814T213844.838953Z",
+          "control_id": "EMS-CTRL-069",
+          "target_id": "REPO-EMS",
+          "execution_state": "COMPLETE",
+          "family": "documentation_governance",
+          "evaluation_state": "COMPLETE",
+          "evidence_state": "INSUFFICIENT",
+          "result_state": "WARNING",
+          "promotion_state": "NOT_PROMOTED",
+          "evidence_sha256": "65e0ac8f3e90016b06fc3a073ca430cc81f1f47d43110e3e1da597fef7bdfb66",
+          "result_sha256": "c75c9426cfcadd8b1a4ddd1c2a21b7f41506063a47a38a15cd4d179449cc2253"
+        }
+      ]
+    },
+    {
+      "control_id": "EMS-CTRL-070",
+      "applicable_target_count": 1,
+      "complete_target_count": 1,
+      "blocked_target_count": 0,
+      "terminal_result_counts": {
+        "WARNING": 1
+      },
+      "verification_state": "VERIFIED_IMPLEMENTATION",
+      "targets": [
+        {
+          "batch_id": "BATCH-20260814T213844.838953Z",
+          "control_id": "EMS-CTRL-070",
+          "target_id": "REPO-EMS",
+          "execution_state": "COMPLETE",
+          "family": "documentation_governance",
+          "evaluation_state": "COMPLETE",
+          "evidence_state": "INSUFFICIENT",
+          "result_state": "WARNING",
+          "promotion_state": "NOT_PROMOTED",
+          "evidence_sha256": "e504a4934f9096ac361fe7a58f00783a8d4f28dff88010bd54c32fc6503207f2",
+          "result_sha256": "7f0ce74a1fa39c2cb6e82725c6b8798c0e42ce393afe0a83d7ac3c83966824df"
+        }
+      ]
+    },
+    {
+      "control_id": "EMS-CTRL-072",
+      "applicable_target_count": 1,
+      "complete_target_count": 1,
+      "blocked_target_count": 0,
+      "terminal_result_counts": {
+        "WARNING": 1
+      },
+      "verification_state": "VERIFIED_IMPLEMENTATION",
+      "targets": [
+        {
+          "batch_id": "BATCH-20260814T213844.838953Z",
+          "control_id": "EMS-CTRL-072",
+          "target_id": "REPO-EMS",
+          "execution_state": "COMPLETE",
+          "family": "documentation_governance",
+          "evaluation_state": "COMPLETE",
+          "evidence_state": "INSUFFICIENT",
+          "result_state": "WARNING",
+          "promotion_state": "NOT_PROMOTED",
+          "evidence_sha256": "ab536a7d0d58ba9ad5d721b282890f5b712f436ed9db27cee836803ae3fa245b",
+          "result_sha256": "3d8f32e016a81cfce46f84096b88b7ef51665e4e6ff9739e284f1d627ffdc45d"
+        }
+      ]
+    }
+  ]
+}

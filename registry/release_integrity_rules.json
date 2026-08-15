@@ -1,0 +1,55 @@
+{
+  "version": "1.0",
+  "family": "release_integrity",
+  "ems_requirements_authority": "C:/temp/standars/ems/registry/release_integrity_control_requirements.json",
+  "rules": {
+    "EMS-CTRL-034": {
+      "name": "Release Manifest Generation",
+      "supported": true,
+      "evidence_type": "RELEASE_MANIFEST_EVIDENCE",
+      "evidence_authority": "Authoritative release manifest and release approval evidence.",
+      "decision_ids": ["RI-034-01", "RI-034-02", "RI-034-03", "RI-034-04"],
+      "automation_boundary": "HYBRID"
+    },
+    "EMS-CTRL-035": {
+      "name": "SHA-256 Integrity Verification",
+      "supported": true,
+      "evidence_type": "RELEASE_SHA256_EVIDENCE",
+      "evidence_authority": "SHA-256 verification record bound to release manifest.",
+      "decision_ids": ["RI-035-01", "RI-035-02", "RI-035-03", "RI-035-04"],
+      "automation_boundary": "HYBRID"
+    },
+    "EMS-CTRL-036": {
+      "name": "Release Signing",
+      "supported": true,
+      "evidence_type": "RELEASE_SIGNING_EVIDENCE",
+      "evidence_authority": "Immutable signing/attestation verification record and authorization reference.",
+      "decision_ids": ["RI-036-01", "RI-036-02", "RI-036-03", "RI-036-04", "RI-036-05"],
+      "automation_boundary": "HYBRID"
+    },
+    "EMS-CTRL-037": {
+      "name": "Build Artifact Retention",
+      "supported": true,
+      "evidence_type": "RELEASE_RETENTION_EVIDENCE",
+      "evidence_authority": "Retention-capable release-evidence store and retention/hold evidence.",
+      "decision_ids": ["RI-037-01", "RI-037-02", "RI-037-03", "RI-037-04", "RI-037-05"],
+      "automation_boundary": "HUMAN_EVIDENCE_REQUIRED"
+    },
+    "EMS-CTRL-038": {
+      "name": "Version Number Governance",
+      "supported": true,
+      "evidence_type": "RELEASE_VERSION_GOVERNANCE_EVIDENCE",
+      "evidence_authority": "Formal release tags, approved convention, and controlled exception evidence.",
+      "decision_ids": ["RI-038-01", "RI-038-02", "RI-038-03", "RI-038-04", "RI-038-05"],
+      "automation_boundary": "HYBRID"
+    },
+    "EMS-CTRL-040": {
+      "name": "Rollback Procedure",
+      "supported": true,
+      "evidence_type": "SERVICE_ROLLBACK_EVIDENCE",
+      "evidence_authority": "Controlled EMS service registry evidence reference and authoritative operational rollback evidence; repository evidence is supporting only.",
+      "decision_ids": ["RI-040-01", "RI-040-02", "RI-040-03", "RI-040-04", "RI-040-05", "RI-040-06", "RI-040-07"],
+      "automation_boundary": "HUMAN_EVIDENCE_REQUIRED"
+    }
+  }
+}

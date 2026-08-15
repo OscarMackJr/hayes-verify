@@ -1,0 +1,126 @@
+{
+  "registry_version": "1.7-batch-verification",
+  "wave": "2D",
+  "default_behavior": "BLOCKED_UNSUPPORTED",
+  "verification_scope": {
+    "family": "release_integrity",
+    "control_ids": [
+      "EMS-CTRL-034",
+      "EMS-CTRL-035",
+      "EMS-CTRL-036",
+      "EMS-CTRL-037",
+      "EMS-CTRL-038",
+      "EMS-CTRL-040"
+    ]
+  },
+  "families": {
+    "release_integrity": {
+      "description": "Priority-2 Release Integrity verification runtime registry.",
+      "implementation": "hayes_verify.evaluator_families.release_integrity",
+      "controls": {
+        "EMS-CTRL-034": {
+          "collector": "repository_release_evidence",
+          "evaluator": "release_integrity",
+          "evidence_type": "RELEASE_MANIFEST_EVIDENCE",
+          "scope": "repository",
+          "supported": true,
+          "implementation_state": "IMPLEMENTED_PENDING_BATCH_VERIFICATION",
+          "decision_ids": [
+            "RI-034-01",
+            "RI-034-02",
+            "RI-034-03",
+            "RI-034-04"
+          ],
+          "evidence_authority": "Authoritative release manifest and release approval evidence.",
+          "automation_boundary": "HYBRID"
+        },
+        "EMS-CTRL-035": {
+          "collector": "repository_release_evidence",
+          "evaluator": "release_integrity",
+          "evidence_type": "RELEASE_SHA256_EVIDENCE",
+          "scope": "repository",
+          "supported": true,
+          "implementation_state": "IMPLEMENTED_PENDING_BATCH_VERIFICATION",
+          "decision_ids": [
+            "RI-035-01",
+            "RI-035-02",
+            "RI-035-03",
+            "RI-035-04"
+          ],
+          "evidence_authority": "SHA-256 verification record bound to release manifest.",
+          "automation_boundary": "HYBRID"
+        },
+        "EMS-CTRL-036": {
+          "collector": "repository_release_evidence",
+          "evaluator": "release_integrity",
+          "evidence_type": "RELEASE_SIGNING_EVIDENCE",
+          "scope": "repository",
+          "supported": true,
+          "implementation_state": "IMPLEMENTED_PENDING_BATCH_VERIFICATION",
+          "decision_ids": [
+            "RI-036-01",
+            "RI-036-02",
+            "RI-036-03",
+            "RI-036-04",
+            "RI-036-05"
+          ],
+          "evidence_authority": "Immutable signing/attestation verification record and authorization reference.",
+          "automation_boundary": "HYBRID"
+        },
+        "EMS-CTRL-037": {
+          "collector": "repository_release_evidence",
+          "evaluator": "release_integrity",
+          "evidence_type": "RELEASE_RETENTION_EVIDENCE",
+          "scope": "repository",
+          "supported": true,
+          "implementation_state": "IMPLEMENTED_PENDING_BATCH_VERIFICATION",
+          "decision_ids": [
+            "RI-037-01",
+            "RI-037-02",
+            "RI-037-03",
+            "RI-037-04",
+            "RI-037-05"
+          ],
+          "evidence_authority": "Retention-capable release-evidence store and retention/hold evidence.",
+          "automation_boundary": "HUMAN_EVIDENCE_REQUIRED"
+        },
+        "EMS-CTRL-038": {
+          "collector": "repository_release_evidence",
+          "evaluator": "release_integrity",
+          "evidence_type": "RELEASE_VERSION_GOVERNANCE_EVIDENCE",
+          "scope": "repository",
+          "supported": true,
+          "implementation_state": "IMPLEMENTED_PENDING_BATCH_VERIFICATION",
+          "decision_ids": [
+            "RI-038-01",
+            "RI-038-02",
+            "RI-038-03",
+            "RI-038-04",
+            "RI-038-05"
+          ],
+          "evidence_authority": "Formal release tags, approved convention, and controlled exception evidence.",
+          "automation_boundary": "HYBRID"
+        },
+        "EMS-CTRL-040": {
+          "collector": "repository_release_evidence",
+          "evaluator": "release_integrity",
+          "evidence_type": "SERVICE_ROLLBACK_EVIDENCE",
+          "scope": "service",
+          "supported": true,
+          "implementation_state": "IMPLEMENTED_PENDING_BATCH_VERIFICATION",
+          "decision_ids": [
+            "RI-040-01",
+            "RI-040-02",
+            "RI-040-03",
+            "RI-040-04",
+            "RI-040-05",
+            "RI-040-06",
+            "RI-040-07"
+          ],
+          "evidence_authority": "Controlled EMS service registry evidence reference and authoritative operational rollback evidence; repository evidence is supporting only.",
+          "automation_boundary": "HUMAN_EVIDENCE_REQUIRED"
+        }
+      }
+    }
+  }
+}

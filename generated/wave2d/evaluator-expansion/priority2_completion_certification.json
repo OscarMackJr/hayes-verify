@@ -1,0 +1,110 @@
+{
+  "component": "Hayes Verify",
+  "phase": "Wave 2D Priority-2 Evaluator Family Expansion Completion",
+  "wave": "2D",
+  "priority": 2,
+  "certified_at_utc": "2026-08-14T22:01:32.250677+00:00",
+  "status": "PASS",
+  "completion_state": "COMPLETE",
+  "registry_version": "1.8",
+  "registry_state": "CANDIDATE_FROZEN",
+  "registry_sha256": "49175ae4062541de8a2a9b4a5d74ede7f838f8b6f88385080da363885afd8ad8",
+  "original_control_count": 21,
+  "implemented_control_count": 21,
+  "remaining_control_count": 0,
+  "original_family_count": 4,
+  "completed_family_count": 4,
+  "remaining_family_count": 0,
+  "completed_families": [
+    "dependency_supply_chain",
+    "test_quality",
+    "release_integrity",
+    "documentation_governance"
+  ],
+  "completion_manifest_path": "generated/wave2d/evaluator-expansion/priority2_completion_manifest.json",
+  "completion_manifest_sha256": "e6204aee1786cb1dc54b64bce6e4292b4f41684cb36ad79fb4823bb376ce3c52",
+  "backlog_path": "generated/wave2d/evaluator-expansion/priority2_remaining_implementation_backlog.json",
+  "backlog_sha256": "cd147180b48b3cb06258c99508a7e8384ca337f0fc292ea1ca4b950c7b12aaaf",
+  "family_plan_path": "generated/wave2d/evaluator-expansion/priority2_remaining_family_plan.json",
+  "family_plan_sha256": "d66cb7a082758275114d53e436c65f0d310bcb5c89e8440eead59329a6a90d46",
+  "family_verification_references": [
+    {
+      "family": "dependency_supply_chain",
+      "control_ids": [
+        "EMS-CTRL-003",
+        "EMS-CTRL-019",
+        "EMS-CTRL-042",
+        "EMS-CTRL-075"
+      ],
+      "control_count": 4,
+      "promotion_registry_version": "1.5",
+      "verification_batch_id": "BATCH-20260814T170133.101265Z",
+      "verification_manifest_path": "generated/wave2d/evaluator-expansion/dependency-supply-chain-verification/verification_manifest.json",
+      "verification_manifest_sha256": "34ced6eb7ce6cefe134642914be62fcbce86a888885feb95d0926247825051b2",
+      "family_certification_path": "generated/wave2d/evaluator-expansion/dependency_supply_chain_registry_v1_5_certification.json",
+      "promoted_control_count": 4,
+      "pending_control_count": 0,
+      "verification_state": "VERIFIED_IMPLEMENTATION"
+    },
+    {
+      "family": "test_quality",
+      "control_ids": [
+        "EMS-CTRL-025",
+        "EMS-CTRL-026",
+        "EMS-CTRL-032",
+        "EMS-CTRL-060"
+      ],
+      "control_count": 4,
+      "promotion_registry_version": "1.6",
+      "verification_batch_id": "BATCH-20260814T172639.027038Z",
+      "verification_manifest_path": "generated/wave2d/evaluator-expansion/test-quality-verification/verification_manifest.json",
+      "verification_manifest_sha256": "4a5536a9acb36b08e341c0b2537f09d7b62f41aa5a6b9af902c6b651a63a9e84",
+      "family_certification_path": "generated/wave2d/evaluator-expansion/test_quality_registry_v1_6_certification.json",
+      "promoted_control_count": 4,
+      "pending_control_count": 0,
+      "verification_state": "VERIFIED_IMPLEMENTATION"
+    },
+    {
+      "family": "release_integrity",
+      "control_ids": [
+        "EMS-CTRL-034",
+        "EMS-CTRL-035",
+        "EMS-CTRL-036",
+        "EMS-CTRL-037",
+        "EMS-CTRL-038",
+        "EMS-CTRL-040"
+      ],
+      "control_count": 6,
+      "promotion_registry_version": "1.7",
+      "verification_batch_id": "BATCH-20260814T211701.004300Z",
+      "verification_manifest_path": "generated/wave2d/evaluator-expansion/release-integrity-verification/verification_manifest.json",
+      "verification_manifest_sha256": "0e147fcd0d1654c02e80e84bd69298dec23791023354fef137a25f742b7ebf74",
+      "family_certification_path": "generated/wave2d/evaluator-expansion/release_integrity_registry_v1_7_certification.json",
+      "promoted_control_count": 6,
+      "pending_control_count": 0,
+      "verification_state": "VERIFIED_IMPLEMENTATION"
+    },
+    {
+      "family": "documentation_governance",
+      "control_ids": [
+        "EMS-CTRL-002",
+        "EMS-CTRL-008",
+        "EMS-CTRL-067",
+        "EMS-CTRL-068",
+        "EMS-CTRL-069",
+        "EMS-CTRL-070",
+        "EMS-CTRL-072"
+      ],
+      "control_count": 7,
+      "promotion_registry_version": "1.8",
+      "verification_batch_id": "BATCH-20260814T213844.838953Z",
+      "verification_manifest_path": "generated/wave2d/evaluator-expansion/documentation-governance-verification/verification_manifest.json",
+      "verification_manifest_sha256": "7db2c2f9a6300b6de19530f5a010f1ab19b0635ef150a6583bab9a5c92701b8d",
+      "family_certification_path": "generated/wave2d/evaluator-expansion/documentation_governance_registry_v1_8_certification.json",
+      "promoted_control_count": 7,
+      "pending_control_count": 0,
+      "verification_state": "VERIFIED_IMPLEMENTATION"
+    }
+  ],
+  "errors": []
+}

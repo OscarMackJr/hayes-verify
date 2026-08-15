@@ -1,0 +1,774 @@
+{
+  "registry_version": "1.5",
+  "wave": "2D",
+  "frozen_at_utc": "2026-08-14T12:43:25.695939+00:00",
+  "status": "CANDIDATE_FROZEN",
+  "control_count": 80,
+  "implementation_state_counts": {
+    "HUMAN_EVIDENCE_REQUIRED": 5,
+    "PLANNED_AUTOMATED": 44,
+    "PLANNED_HYBRID": 28,
+    "IMPLEMENTED": 3
+  },
+  "family_counts": {
+    "human_judgment": 5,
+    "documentation_governance": 13,
+    "dependency_supply_chain": 5,
+    "infrastructure_cloud": 13,
+    "github_branch_policy": 4,
+    "repository_filesystem": 8,
+    "github_workflow_ci": 6,
+    "github_security_configuration": 1,
+    "github_security_monitoring": 1,
+    "test_quality": 8,
+    "release_integrity": 6,
+    "management_operational": 10
+  },
+  "controls": {
+    "EMS-CTRL-001": {
+      "control_id": "EMS-CTRL-001",
+      "control_name": "Engineering Governance Policy",
+      "family": "human_judgment",
+      "implementation_state": "HUMAN_EVIDENCE_REQUIRED",
+      "supported": false,
+      "decision_source": "human_judgment_review",
+      "decision_owner": "Oscar Mack",
+      "decision_rationale": "Accepted proposed evaluator-family classification after review of the Wave 2D control title and intended evidence source."
+    },
+    "EMS-CTRL-002": {
+      "control_id": "EMS-CTRL-002",
+      "control_name": "Controlled Document Management",
+      "family": "documentation_governance",
+      "implementation_state": "PLANNED_AUTOMATED",
+      "supported": false,
+      "decision_source": "coverage_classification"
+    },
+    "EMS-CTRL-003": {
+      "control_id": "EMS-CTRL-003",
+      "control_name": "Third-party dependency governance",
+      "family": "dependency_supply_chain",
+      "implementation_state": "IMPLEMENTED",
+      "supported": true,
+      "decision_source": "priority2_dependency_supply_chain_batch_verification",
+      "priority2_expansion_state": "IMPLEMENTED",
+      "verification_batch_id": "BATCH-20260814T170133.101265Z"
+    },
+    "EMS-CTRL-004": {
+      "control_id": "EMS-CTRL-004",
+      "control_name": "Secrets and identity protection",
+      "family": "infrastructure_cloud",
+      "implementation_state": "PLANNED_HYBRID",
+      "supported": false,
+      "decision_source": "human_judgment_review",
+      "decision_owner": "Oscar Mack",
+      "decision_rationale": "Accepted proposed evaluator-family classification after review of the Wave 2D control title and intended evidence source."
+    },
+    "EMS-CTRL-005": {
+      "control_id": "EMS-CTRL-005",
+      "control_name": "Repository Classification",
+      "family": "documentation_governance",
+      "implementation_state": "PLANNED_HYBRID",
+      "supported": false,
+      "decision_source": "human_judgment_review",
+      "decision_owner": "Oscar Mack",
+      "decision_rationale": "Accepted proposed evaluator-family classification after review of the Wave 2D control title and intended evidence source."
+    },
+    "EMS-CTRL-006": {
+      "control_id": "EMS-CTRL-006",
+      "control_name": "Recovery readiness",
+      "family": "infrastructure_cloud",
+      "implementation_state": "PLANNED_HYBRID",
+      "supported": false,
+      "decision_source": "human_judgment_review",
+      "decision_owner": "Oscar Mack",
+      "decision_rationale": "Accepted proposed evaluator-family classification after review of the Wave 2D control title and intended evidence source."
+    },
+    "EMS-CTRL-007": {
+      "control_id": "EMS-CTRL-007",
+      "control_name": "AI-assisted development governance",
+      "family": "human_judgment",
+      "implementation_state": "HUMAN_EVIDENCE_REQUIRED",
+      "supported": false,
+      "decision_source": "human_judgment_review",
+      "decision_owner": "Oscar Mack",
+      "decision_rationale": "Accepted proposed evaluator-family classification after review of the Wave 2D control title and intended evidence source."
+    },
+    "EMS-CTRL-008": {
+      "control_id": "EMS-CTRL-008",
+      "control_name": "Controlled documentation and evidence",
+      "family": "documentation_governance",
+      "implementation_state": "PLANNED_AUTOMATED",
+      "supported": false,
+      "decision_source": "coverage_classification"
+    },
+    "EMS-CTRL-009": {
+      "control_id": "EMS-CTRL-009",
+      "control_name": "Branch Protection Required",
+      "family": "github_branch_policy",
+      "implementation_state": "IMPLEMENTED",
+      "supported": true,
+      "decision_source": "existing_evaluator_registry"
+    },
+    "EMS-CTRL-010": {
+      "control_id": "EMS-CTRL-010",
+      "control_name": "Pull Request Review",
+      "family": "github_branch_policy",
+      "implementation_state": "IMPLEMENTED",
+      "supported": true,
+      "decision_source": "existing_evaluator_registry"
+    },
+    "EMS-CTRL-011": {
+      "control_id": "EMS-CTRL-011",
+      "control_name": "CODEOWNERS Enforcement",
+      "family": "repository_filesystem",
+      "implementation_state": "IMPLEMENTED",
+      "supported": true,
+      "decision_source": "repository_filesystem_batch_verification",
+      "verification_batch_id": "BATCH-20260814T143950.926644Z"
+    },
+    "EMS-CTRL-012": {
+      "control_id": "EMS-CTRL-012",
+      "control_name": "Signed Commits",
+      "family": "github_branch_policy",
+      "implementation_state": "IMPLEMENTED",
+      "supported": true,
+      "decision_source": "github_branch_policy_batch_verification",
+      "decision_owner": "Oscar Mack",
+      "decision_rationale": "Accepted proposed evaluator-family classification after review of the Wave 2D control title and intended evidence source.",
+      "verification_batch_id": "BATCH-20260814T153610.218083Z"
+    },
+    "EMS-CTRL-013": {
+      "control_id": "EMS-CTRL-013",
+      "control_name": "Protected Release Tags",
+      "family": "github_branch_policy",
+      "implementation_state": "IMPLEMENTED",
+      "supported": true,
+      "decision_source": "github_branch_policy_batch_verification",
+      "decision_owner": "Oscar Mack",
+      "decision_rationale": "Accepted proposed evaluator-family classification after review of the Wave 2D control title and intended evidence source.",
+      "verification_batch_id": "BATCH-20260814T153610.218083Z"
+    },
+    "EMS-CTRL-014": {
+      "control_id": "EMS-CTRL-014",
+      "control_name": "Mandatory Issue Linkage",
+      "family": "github_workflow_ci",
+      "implementation_state": "IMPLEMENTED",
+      "supported": true,
+      "decision_source": "github_workflow_ci_batch_verification",
+      "decision_owner": "Oscar Mack",
+      "decision_rationale": "Accepted proposed evaluator-family classification after review of the Wave 2D control title and intended evidence source.",
+      "verification_batch_id": "BATCH-20260814T151718.053583Z"
+    },
+    "EMS-CTRL-015": {
+      "control_id": "EMS-CTRL-015",
+      "control_name": "Repository Template Compliance",
+      "family": "repository_filesystem",
+      "implementation_state": "IMPLEMENTED",
+      "supported": true,
+      "decision_source": "repository_filesystem_batch_verification",
+      "decision_owner": "Oscar Mack",
+      "decision_rationale": "Accepted proposed evaluator-family classification after review of the Wave 2D control title and intended evidence source.",
+      "verification_batch_id": "BATCH-20260814T143950.926644Z"
+    },
+    "EMS-CTRL-016": {
+      "control_id": "EMS-CTRL-016",
+      "control_name": "Evidence integrity and retention",
+      "family": "documentation_governance",
+      "implementation_state": "PLANNED_AUTOMATED",
+      "supported": false,
+      "decision_source": "human_judgment_review",
+      "decision_owner": "Oscar Mack",
+      "decision_rationale": "Accepted proposed evaluator-family classification after review of the Wave 2D control title and intended evidence source."
+    },
+    "EMS-CTRL-017": {
+      "control_id": "EMS-CTRL-017",
+      "control_name": "Secure Coding Standard",
+      "family": "repository_filesystem",
+      "implementation_state": "IMPLEMENTED",
+      "supported": true,
+      "decision_source": "repository_filesystem_batch_verification",
+      "verification_batch_id": "BATCH-20260814T143950.926644Z"
+    },
+    "EMS-CTRL-018": {
+      "control_id": "EMS-CTRL-018",
+      "control_name": "Secret Scanning",
+      "family": "github_security_configuration",
+      "implementation_state": "IMPLEMENTED",
+      "supported": true,
+      "decision_source": "existing_evaluator_registry"
+    },
+    "EMS-CTRL-019": {
+      "control_id": "EMS-CTRL-019",
+      "control_name": "Dependency Vulnerability Scanning",
+      "family": "dependency_supply_chain",
+      "implementation_state": "IMPLEMENTED",
+      "supported": true,
+      "decision_source": "priority2_dependency_supply_chain_batch_verification",
+      "priority2_expansion_state": "IMPLEMENTED",
+      "verification_batch_id": "BATCH-20260814T170133.101265Z"
+    },
+    "EMS-CTRL-020": {
+      "control_id": "EMS-CTRL-020",
+      "control_name": "License Compliance",
+      "family": "repository_filesystem",
+      "implementation_state": "IMPLEMENTED",
+      "supported": true,
+      "decision_source": "repository_filesystem_batch_verification",
+      "verification_batch_id": "BATCH-20260814T143950.926644Z"
+    },
+    "EMS-CTRL-021": {
+      "control_id": "EMS-CTRL-021",
+      "control_name": "SBOM Generation",
+      "family": "repository_filesystem",
+      "implementation_state": "IMPLEMENTED",
+      "supported": true,
+      "decision_source": "repository_filesystem_batch_verification",
+      "verification_batch_id": "BATCH-20260814T143950.926644Z"
+    },
+    "EMS-CTRL-022": {
+      "control_id": "EMS-CTRL-022",
+      "control_name": "Security Advisory Monitoring",
+      "family": "github_security_monitoring",
+      "implementation_state": "IMPLEMENTED",
+      "supported": true,
+      "decision_source": "github_security_monitoring_batch_verification",
+      "verification_batch_id": "BATCH-20260814T163543.574829Z"
+    },
+    "EMS-CTRL-023": {
+      "control_id": "EMS-CTRL-023",
+      "control_name": "Vulnerability Remediation Targets",
+      "family": "dependency_supply_chain",
+      "implementation_state": "PLANNED_HYBRID",
+      "supported": false,
+      "decision_source": "human_judgment_review",
+      "decision_owner": "Oscar Mack",
+      "decision_rationale": "Accepted proposed evaluator-family classification after review of the Wave 2D control title and intended evidence source."
+    },
+    "EMS-CTRL-024": {
+      "control_id": "EMS-CTRL-024",
+      "control_name": "Security Exception Approval",
+      "family": "human_judgment",
+      "implementation_state": "HUMAN_EVIDENCE_REQUIRED",
+      "supported": false,
+      "decision_source": "human_judgment_review",
+      "decision_owner": "Oscar Mack",
+      "decision_rationale": "Accepted proposed evaluator-family classification after review of the Wave 2D control title and intended evidence source."
+    },
+    "EMS-CTRL-025": {
+      "control_id": "EMS-CTRL-025",
+      "control_name": "Unit Test Minimum",
+      "family": "test_quality",
+      "implementation_state": "PLANNED_AUTOMATED",
+      "supported": false,
+      "decision_source": "coverage_classification"
+    },
+    "EMS-CTRL-026": {
+      "control_id": "EMS-CTRL-026",
+      "control_name": "Integration Testing",
+      "family": "test_quality",
+      "implementation_state": "PLANNED_AUTOMATED",
+      "supported": false,
+      "decision_source": "coverage_classification"
+    },
+    "EMS-CTRL-027": {
+      "control_id": "EMS-CTRL-027",
+      "control_name": "Regression Testing",
+      "family": "test_quality",
+      "implementation_state": "PLANNED_AUTOMATED",
+      "supported": false,
+      "decision_source": "human_judgment_review",
+      "decision_owner": "Oscar Mack",
+      "decision_rationale": "Accepted proposed evaluator-family classification after review of the Wave 2D control title and intended evidence source."
+    },
+    "EMS-CTRL-028": {
+      "control_id": "EMS-CTRL-028",
+      "control_name": "Contract/API Testing",
+      "family": "test_quality",
+      "implementation_state": "PLANNED_AUTOMATED",
+      "supported": false,
+      "decision_source": "human_judgment_review",
+      "decision_owner": "Oscar Mack",
+      "decision_rationale": "Accepted proposed evaluator-family classification after review of the Wave 2D control title and intended evidence source."
+    },
+    "EMS-CTRL-029": {
+      "control_id": "EMS-CTRL-029",
+      "control_name": "Performance Testing",
+      "family": "test_quality",
+      "implementation_state": "PLANNED_AUTOMATED",
+      "supported": false,
+      "decision_source": "human_judgment_review",
+      "decision_owner": "Oscar Mack",
+      "decision_rationale": "Accepted proposed evaluator-family classification after review of the Wave 2D control title and intended evidence source."
+    },
+    "EMS-CTRL-030": {
+      "control_id": "EMS-CTRL-030",
+      "control_name": "Disaster Recovery Testing",
+      "family": "github_workflow_ci",
+      "implementation_state": "IMPLEMENTED",
+      "supported": true,
+      "decision_source": "github_workflow_ci_batch_verification",
+      "verification_batch_id": "BATCH-20260814T151718.053583Z"
+    },
+    "EMS-CTRL-031": {
+      "control_id": "EMS-CTRL-031",
+      "control_name": "Test Evidence Retention",
+      "family": "test_quality",
+      "implementation_state": "PLANNED_AUTOMATED",
+      "supported": false,
+      "decision_source": "human_judgment_review",
+      "decision_owner": "Oscar Mack",
+      "decision_rationale": "Accepted proposed evaluator-family classification after review of the Wave 2D control title and intended evidence source."
+    },
+    "EMS-CTRL-032": {
+      "control_id": "EMS-CTRL-032",
+      "control_name": "Test Environment Isolation",
+      "family": "test_quality",
+      "implementation_state": "PLANNED_AUTOMATED",
+      "supported": false,
+      "decision_source": "coverage_classification"
+    },
+    "EMS-CTRL-033": {
+      "control_id": "EMS-CTRL-033",
+      "control_name": "Reproducible Builds",
+      "family": "github_workflow_ci",
+      "implementation_state": "IMPLEMENTED",
+      "supported": true,
+      "decision_source": "github_workflow_ci_batch_verification",
+      "decision_owner": "Oscar Mack",
+      "decision_rationale": "Accepted proposed evaluator-family classification after review of the Wave 2D control title and intended evidence source.",
+      "verification_batch_id": "BATCH-20260814T151718.053583Z"
+    },
+    "EMS-CTRL-034": {
+      "control_id": "EMS-CTRL-034",
+      "control_name": "Release Manifest Generation",
+      "family": "release_integrity",
+      "implementation_state": "PLANNED_AUTOMATED",
+      "supported": false,
+      "decision_source": "coverage_classification"
+    },
+    "EMS-CTRL-035": {
+      "control_id": "EMS-CTRL-035",
+      "control_name": "SHA-256 Integrity Verification",
+      "family": "release_integrity",
+      "implementation_state": "PLANNED_AUTOMATED",
+      "supported": false,
+      "decision_source": "coverage_classification"
+    },
+    "EMS-CTRL-036": {
+      "control_id": "EMS-CTRL-036",
+      "control_name": "Release Signing",
+      "family": "release_integrity",
+      "implementation_state": "PLANNED_AUTOMATED",
+      "supported": false,
+      "decision_source": "coverage_classification"
+    },
+    "EMS-CTRL-037": {
+      "control_id": "EMS-CTRL-037",
+      "control_name": "Build Artifact Retention",
+      "family": "release_integrity",
+      "implementation_state": "PLANNED_AUTOMATED",
+      "supported": false,
+      "decision_source": "coverage_classification"
+    },
+    "EMS-CTRL-038": {
+      "control_id": "EMS-CTRL-038",
+      "control_name": "Version Number Governance",
+      "family": "release_integrity",
+      "implementation_state": "PLANNED_AUTOMATED",
+      "supported": false,
+      "decision_source": "coverage_classification"
+    },
+    "EMS-CTRL-039": {
+      "control_id": "EMS-CTRL-039",
+      "control_name": "Release Approval Workflow",
+      "family": "github_workflow_ci",
+      "implementation_state": "IMPLEMENTED",
+      "supported": true,
+      "decision_source": "github_workflow_ci_batch_verification",
+      "verification_batch_id": "BATCH-20260814T151718.053583Z"
+    },
+    "EMS-CTRL-040": {
+      "control_id": "EMS-CTRL-040",
+      "control_name": "Rollback Procedure",
+      "family": "release_integrity",
+      "implementation_state": "PLANNED_AUTOMATED",
+      "supported": false,
+      "decision_source": "coverage_classification"
+    },
+    "EMS-CTRL-041": {
+      "control_id": "EMS-CTRL-041",
+      "control_name": "Infrastructure as Code Required",
+      "family": "infrastructure_cloud",
+      "implementation_state": "PLANNED_HYBRID",
+      "supported": false,
+      "decision_source": "coverage_classification"
+    },
+    "EMS-CTRL-042": {
+      "control_id": "EMS-CTRL-042",
+      "control_name": "IaC Security Scanning",
+      "family": "dependency_supply_chain",
+      "implementation_state": "IMPLEMENTED",
+      "supported": true,
+      "decision_source": "priority2_dependency_supply_chain_batch_verification",
+      "priority2_expansion_state": "IMPLEMENTED",
+      "verification_batch_id": "BATCH-20260814T170133.101265Z"
+    },
+    "EMS-CTRL-043": {
+      "control_id": "EMS-CTRL-043",
+      "control_name": "Least Privilege IAM",
+      "family": "infrastructure_cloud",
+      "implementation_state": "PLANNED_HYBRID",
+      "supported": false,
+      "decision_source": "human_judgment_review",
+      "decision_owner": "Oscar Mack",
+      "decision_rationale": "Accepted proposed evaluator-family classification after review of the Wave 2D control title and intended evidence source."
+    },
+    "EMS-CTRL-044": {
+      "control_id": "EMS-CTRL-044",
+      "control_name": "Secrets Management",
+      "family": "infrastructure_cloud",
+      "implementation_state": "PLANNED_HYBRID",
+      "supported": false,
+      "decision_source": "human_judgment_review",
+      "decision_owner": "Oscar Mack",
+      "decision_rationale": "Accepted proposed evaluator-family classification after review of the Wave 2D control title and intended evidence source."
+    },
+    "EMS-CTRL-045": {
+      "control_id": "EMS-CTRL-045",
+      "control_name": "Cloud Resource Tagging",
+      "family": "infrastructure_cloud",
+      "implementation_state": "PLANNED_HYBRID",
+      "supported": false,
+      "decision_source": "coverage_classification"
+    },
+    "EMS-CTRL-046": {
+      "control_id": "EMS-CTRL-046",
+      "control_name": "Backup Verification",
+      "family": "infrastructure_cloud",
+      "implementation_state": "PLANNED_HYBRID",
+      "supported": false,
+      "decision_source": "coverage_classification"
+    },
+    "EMS-CTRL-047": {
+      "control_id": "EMS-CTRL-047",
+      "control_name": "Restore Validation",
+      "family": "infrastructure_cloud",
+      "implementation_state": "PLANNED_HYBRID",
+      "supported": false,
+      "decision_source": "human_judgment_review",
+      "decision_owner": "Oscar Mack",
+      "decision_rationale": "Accepted proposed evaluator-family classification after review of the Wave 2D control title and intended evidence source."
+    },
+    "EMS-CTRL-048": {
+      "control_id": "EMS-CTRL-048",
+      "control_name": "Environment Separation",
+      "family": "infrastructure_cloud",
+      "implementation_state": "PLANNED_HYBRID",
+      "supported": false,
+      "decision_source": "human_judgment_review",
+      "decision_owner": "Oscar Mack",
+      "decision_rationale": "Accepted proposed evaluator-family classification after review of the Wave 2D control title and intended evidence source."
+    },
+    "EMS-CTRL-049": {
+      "control_id": "EMS-CTRL-049",
+      "control_name": "Approved AI Platforms",
+      "family": "management_operational",
+      "implementation_state": "PLANNED_HYBRID",
+      "supported": false,
+      "decision_source": "human_judgment_review",
+      "decision_owner": "Oscar Mack",
+      "decision_rationale": "Accepted proposed evaluator-family classification after review of the Wave 2D control title and intended evidence source."
+    },
+    "EMS-CTRL-050": {
+      "control_id": "EMS-CTRL-050",
+      "control_name": "Prompt Data Classification",
+      "family": "management_operational",
+      "implementation_state": "PLANNED_HYBRID",
+      "supported": false,
+      "decision_source": "human_judgment_review",
+      "decision_owner": "Oscar Mack",
+      "decision_rationale": "Accepted proposed evaluator-family classification after review of the Wave 2D control title and intended evidence source."
+    },
+    "EMS-CTRL-051": {
+      "control_id": "EMS-CTRL-051",
+      "control_name": "Human Review of AI Code",
+      "family": "human_judgment",
+      "implementation_state": "HUMAN_EVIDENCE_REQUIRED",
+      "supported": false,
+      "decision_source": "human_judgment_review",
+      "decision_owner": "Oscar Mack",
+      "decision_rationale": "Accepted proposed evaluator-family classification after review of the Wave 2D control title and intended evidence source."
+    },
+    "EMS-CTRL-052": {
+      "control_id": "EMS-CTRL-052",
+      "control_name": "AI Attribution",
+      "family": "repository_filesystem",
+      "implementation_state": "IMPLEMENTED",
+      "supported": true,
+      "decision_source": "repository_filesystem_batch_verification",
+      "decision_owner": "Oscar Mack",
+      "decision_rationale": "Accepted proposed evaluator-family classification after review of the Wave 2D control title and intended evidence source.",
+      "verification_batch_id": "BATCH-20260814T143950.926644Z"
+    },
+    "EMS-CTRL-053": {
+      "control_id": "EMS-CTRL-053",
+      "control_name": "AI Security Review",
+      "family": "management_operational",
+      "implementation_state": "PLANNED_HYBRID",
+      "supported": false,
+      "decision_source": "human_judgment_review",
+      "decision_owner": "Oscar Mack",
+      "decision_rationale": "Accepted proposed evaluator-family classification after review of the Wave 2D control title and intended evidence source."
+    },
+    "EMS-CTRL-054": {
+      "control_id": "EMS-CTRL-054",
+      "control_name": "AI Model Risk Review",
+      "family": "human_judgment",
+      "implementation_state": "HUMAN_EVIDENCE_REQUIRED",
+      "supported": false,
+      "decision_source": "human_judgment_review",
+      "decision_owner": "Oscar Mack",
+      "decision_rationale": "Accepted proposed evaluator-family classification after review of the Wave 2D control title and intended evidence source."
+    },
+    "EMS-CTRL-055": {
+      "control_id": "EMS-CTRL-055",
+      "control_name": "Policy Before Execution",
+      "family": "github_workflow_ci",
+      "implementation_state": "IMPLEMENTED",
+      "supported": true,
+      "decision_source": "github_workflow_ci_batch_verification",
+      "decision_owner": "Oscar Mack",
+      "decision_rationale": "Accepted proposed evaluator-family classification after review of the Wave 2D control title and intended evidence source.",
+      "verification_batch_id": "BATCH-20260814T151718.053583Z"
+    },
+    "EMS-CTRL-056": {
+      "control_id": "EMS-CTRL-056",
+      "control_name": "Agent Identity Verification",
+      "family": "infrastructure_cloud",
+      "implementation_state": "PLANNED_HYBRID",
+      "supported": false,
+      "decision_source": "human_judgment_review",
+      "decision_owner": "Oscar Mack",
+      "decision_rationale": "Accepted proposed evaluator-family classification after review of the Wave 2D control title and intended evidence source."
+    },
+    "EMS-CTRL-057": {
+      "control_id": "EMS-CTRL-057",
+      "control_name": "Audit Envelope Generation",
+      "family": "documentation_governance",
+      "implementation_state": "PLANNED_AUTOMATED",
+      "supported": false,
+      "decision_source": "human_judgment_review",
+      "decision_owner": "Oscar Mack",
+      "decision_rationale": "Accepted proposed evaluator-family classification after review of the Wave 2D control title and intended evidence source."
+    },
+    "EMS-CTRL-058": {
+      "control_id": "EMS-CTRL-058",
+      "control_name": "Fail-Closed Authorization",
+      "family": "github_workflow_ci",
+      "implementation_state": "IMPLEMENTED",
+      "supported": true,
+      "decision_source": "github_workflow_ci_batch_verification",
+      "decision_owner": "Oscar Mack",
+      "decision_rationale": "Accepted proposed evaluator-family classification after review of the Wave 2D control title and intended evidence source.",
+      "verification_batch_id": "BATCH-20260814T151718.053583Z"
+    },
+    "EMS-CTRL-059": {
+      "control_id": "EMS-CTRL-059",
+      "control_name": "Execution Isolation Validation",
+      "family": "infrastructure_cloud",
+      "implementation_state": "PLANNED_AUTOMATED",
+      "supported": false,
+      "decision_source": "human_judgment_review",
+      "decision_owner": "Oscar Mack",
+      "decision_rationale": "Accepted proposed evaluator-family classification after review of the Wave 2D control title and intended evidence source."
+    },
+    "EMS-CTRL-060": {
+      "control_id": "EMS-CTRL-060",
+      "control_name": "Zero Trust Integration Testing",
+      "family": "test_quality",
+      "implementation_state": "PLANNED_AUTOMATED",
+      "supported": false,
+      "decision_source": "coverage_classification"
+    },
+    "EMS-CTRL-061": {
+      "control_id": "EMS-CTRL-061",
+      "control_name": "Database Migration Review",
+      "family": "documentation_governance",
+      "implementation_state": "PLANNED_HYBRID",
+      "supported": false,
+      "decision_source": "human_judgment_review",
+      "decision_owner": "Oscar Mack",
+      "decision_rationale": "Accepted proposed evaluator-family classification after review of the Wave 2D control title and intended evidence source."
+    },
+    "EMS-CTRL-062": {
+      "control_id": "EMS-CTRL-062",
+      "control_name": "Schema Version Control",
+      "family": "repository_filesystem",
+      "implementation_state": "IMPLEMENTED",
+      "supported": true,
+      "decision_source": "repository_filesystem_batch_verification",
+      "decision_owner": "Oscar Mack",
+      "decision_rationale": "Accepted proposed evaluator-family classification after review of the Wave 2D control title and intended evidence source.",
+      "verification_batch_id": "BATCH-20260814T143950.926644Z"
+    },
+    "EMS-CTRL-063": {
+      "control_id": "EMS-CTRL-063",
+      "control_name": "Data Classification",
+      "family": "documentation_governance",
+      "implementation_state": "PLANNED_HYBRID",
+      "supported": false,
+      "decision_source": "human_judgment_review",
+      "decision_owner": "Oscar Mack",
+      "decision_rationale": "Accepted proposed evaluator-family classification after review of the Wave 2D control title and intended evidence source."
+    },
+    "EMS-CTRL-064": {
+      "control_id": "EMS-CTRL-064",
+      "control_name": "Database Backup Validation",
+      "family": "infrastructure_cloud",
+      "implementation_state": "PLANNED_HYBRID",
+      "supported": false,
+      "decision_source": "coverage_classification"
+    },
+    "EMS-CTRL-065": {
+      "control_id": "EMS-CTRL-065",
+      "control_name": "Data Retention Compliance",
+      "family": "management_operational",
+      "implementation_state": "PLANNED_HYBRID",
+      "supported": false,
+      "decision_source": "human_judgment_review",
+      "decision_owner": "Oscar Mack",
+      "decision_rationale": "Accepted proposed evaluator-family classification after review of the Wave 2D control title and intended evidence source."
+    },
+    "EMS-CTRL-066": {
+      "control_id": "EMS-CTRL-066",
+      "control_name": "Production Data Protection",
+      "family": "infrastructure_cloud",
+      "implementation_state": "PLANNED_HYBRID",
+      "supported": false,
+      "decision_source": "human_judgment_review",
+      "decision_owner": "Oscar Mack",
+      "decision_rationale": "Accepted proposed evaluator-family classification after review of the Wave 2D control title and intended evidence source."
+    },
+    "EMS-CTRL-067": {
+      "control_id": "EMS-CTRL-067",
+      "control_name": "Controlled Document Metadata",
+      "family": "documentation_governance",
+      "implementation_state": "PLANNED_AUTOMATED",
+      "supported": false,
+      "decision_source": "coverage_classification"
+    },
+    "EMS-CTRL-068": {
+      "control_id": "EMS-CTRL-068",
+      "control_name": "Cross-Reference Validation",
+      "family": "documentation_governance",
+      "implementation_state": "PLANNED_AUTOMATED",
+      "supported": false,
+      "decision_source": "coverage_classification"
+    },
+    "EMS-CTRL-069": {
+      "control_id": "EMS-CTRL-069",
+      "control_name": "Requirements Traceability",
+      "family": "documentation_governance",
+      "implementation_state": "PLANNED_AUTOMATED",
+      "supported": false,
+      "decision_source": "coverage_classification"
+    },
+    "EMS-CTRL-070": {
+      "control_id": "EMS-CTRL-070",
+      "control_name": "Revision History",
+      "family": "documentation_governance",
+      "implementation_state": "PLANNED_AUTOMATED",
+      "supported": false,
+      "decision_source": "coverage_classification"
+    },
+    "EMS-CTRL-071": {
+      "control_id": "EMS-CTRL-071",
+      "control_name": "Executive Release Validation",
+      "family": "documentation_governance",
+      "implementation_state": "PLANNED_HYBRID",
+      "supported": false,
+      "decision_source": "human_judgment_review",
+      "decision_owner": "Oscar Mack",
+      "decision_rationale": "Accepted proposed evaluator-family classification after review of the Wave 2D control title and intended evidence source."
+    },
+    "EMS-CTRL-072": {
+      "control_id": "EMS-CTRL-072",
+      "control_name": "PDF/DOCX Generation Validation",
+      "family": "documentation_governance",
+      "implementation_state": "PLANNED_AUTOMATED",
+      "supported": false,
+      "decision_source": "coverage_classification"
+    },
+    "EMS-CTRL-073": {
+      "control_id": "EMS-CTRL-073",
+      "control_name": "Engineering KPI Review",
+      "family": "management_operational",
+      "implementation_state": "PLANNED_HYBRID",
+      "supported": false,
+      "decision_source": "coverage_classification"
+    },
+    "EMS-CTRL-074": {
+      "control_id": "EMS-CTRL-074",
+      "control_name": "Quarterly Management Review",
+      "family": "management_operational",
+      "implementation_state": "PLANNED_HYBRID",
+      "supported": false,
+      "decision_source": "coverage_classification"
+    },
+    "EMS-CTRL-075": {
+      "control_id": "EMS-CTRL-075",
+      "control_name": "Continuous Compliance Scan",
+      "family": "dependency_supply_chain",
+      "implementation_state": "IMPLEMENTED",
+      "supported": true,
+      "decision_source": "priority2_dependency_supply_chain_batch_verification",
+      "priority2_expansion_state": "IMPLEMENTED",
+      "verification_batch_id": "BATCH-20260814T170133.101265Z"
+    },
+    "EMS-CTRL-076": {
+      "control_id": "EMS-CTRL-076",
+      "control_name": "Corrective Action Tracking",
+      "family": "management_operational",
+      "implementation_state": "PLANNED_HYBRID",
+      "supported": false,
+      "decision_source": "coverage_classification"
+    },
+    "EMS-CTRL-077": {
+      "control_id": "EMS-CTRL-077",
+      "control_name": "Technical Debt Register",
+      "family": "management_operational",
+      "implementation_state": "PLANNED_HYBRID",
+      "supported": false,
+      "decision_source": "coverage_classification"
+    },
+    "EMS-CTRL-078": {
+      "control_id": "EMS-CTRL-078",
+      "control_name": "Lessons Learned Review",
+      "family": "management_operational",
+      "implementation_state": "PLANNED_HYBRID",
+      "supported": false,
+      "decision_source": "coverage_classification"
+    },
+    "EMS-CTRL-079": {
+      "control_id": "EMS-CTRL-079",
+      "control_name": "Repository Health Review",
+      "family": "repository_filesystem",
+      "implementation_state": "IMPLEMENTED",
+      "supported": true,
+      "decision_source": "repository_filesystem_batch_verification",
+      "decision_owner": "Oscar Mack",
+      "decision_rationale": "Accepted proposed evaluator-family classification after review of the Wave 2D control title and intended evidence source.",
+      "verification_batch_id": "BATCH-20260814T143950.926644Z"
+    },
+    "EMS-CTRL-080": {
+      "control_id": "EMS-CTRL-080",
+      "control_name": "Annual EMS Review",
+      "family": "management_operational",
+      "implementation_state": "PLANNED_HYBRID",
+      "supported": false,
+      "decision_source": "coverage_classification"
+    }
+  },
+  "derived_from_registry_version": "1.4",
+  "updated_at_utc": "2026-08-14T17:01:48.256996+00:00"
+}

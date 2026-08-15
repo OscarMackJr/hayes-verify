@@ -1,0 +1,57 @@
+{
+  "status": "PASS",
+  "family": "release_integrity",
+  "backlog_control_count": 6,
+  "implementable_count": 6,
+  "blocked_count": 0,
+  "rows": [
+    {
+      "control_id": "EMS-CTRL-034",
+      "control_name": "Release Manifest Generation",
+      "rule_registered": true,
+      "rule_supported": true,
+      "automation_boundary": "HYBRID",
+      "coverage_state": "IMPLEMENTABLE"
+    },
+    {
+      "control_id": "EMS-CTRL-035",
+      "control_name": "SHA-256 Integrity Verification",
+      "rule_registered": true,
+      "rule_supported": true,
+      "automation_boundary": "HYBRID",
+      "coverage_state": "IMPLEMENTABLE"
+    },
+    {
+      "control_id": "EMS-CTRL-036",
+      "control_name": "Release Signing",
+      "rule_registered": true,
+      "rule_supported": true,
+      "automation_boundary": "HYBRID",
+      "coverage_state": "IMPLEMENTABLE"
+    },
+    {
+      "control_id": "EMS-CTRL-037",
+      "control_name": "Build Artifact Retention",
+      "rule_registered": true,
+      "rule_supported": true,
+      "automation_boundary": "HUMAN_EVIDENCE_REQUIRED",
+      "coverage_state": "IMPLEMENTABLE"
+    },
+    {
+      "control_id": "EMS-CTRL-038",
+      "control_name": "Version Number Governance",
+      "rule_registered": true,
+      "rule_supported": true,
+      "automation_boundary": "HYBRID",
+      "coverage_state": "IMPLEMENTABLE"
+    },
+    {
+      "control_id": "EMS-CTRL-040",
+      "control_name": "Rollback Procedure",
+      "rule_registered": true,
+      "rule_supported": true,
+      "automation_boundary": "HUMAN_EVIDENCE_REQUIRED",
+      "coverage_state": "IMPLEMENTABLE"
+    }
+  ]
+}

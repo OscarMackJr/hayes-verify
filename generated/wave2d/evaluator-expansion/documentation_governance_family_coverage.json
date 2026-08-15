@@ -1,0 +1,65 @@
+{
+  "status": "PASS",
+  "family": "documentation_governance",
+  "backlog_control_count": 7,
+  "implementable_count": 7,
+  "blocked_count": 0,
+  "rows": [
+    {
+      "control_id": "EMS-CTRL-002",
+      "control_name": "Controlled Document Management",
+      "rule_registered": true,
+      "rule_supported": true,
+      "coverage_state": "IMPLEMENTABLE",
+      "automation_boundary": "HUMAN_EVIDENCE_REQUIRED"
+    },
+    {
+      "control_id": "EMS-CTRL-008",
+      "control_name": "Controlled documentation and evidence",
+      "rule_registered": true,
+      "rule_supported": true,
+      "coverage_state": "IMPLEMENTABLE",
+      "automation_boundary": "HUMAN_EVIDENCE_REQUIRED"
+    },
+    {
+      "control_id": "EMS-CTRL-067",
+      "control_name": "Controlled Document Metadata",
+      "rule_registered": true,
+      "rule_supported": true,
+      "coverage_state": "IMPLEMENTABLE",
+      "automation_boundary": "HUMAN_EVIDENCE_REQUIRED"
+    },
+    {
+      "control_id": "EMS-CTRL-068",
+      "control_name": "Cross-Reference Validation",
+      "rule_registered": true,
+      "rule_supported": true,
+      "coverage_state": "IMPLEMENTABLE",
+      "automation_boundary": "HUMAN_EVIDENCE_REQUIRED"
+    },
+    {
+      "control_id": "EMS-CTRL-069",
+      "control_name": "Requirements Traceability",
+      "rule_registered": true,
+      "rule_supported": true,
+      "coverage_state": "IMPLEMENTABLE",
+      "automation_boundary": "HUMAN_EVIDENCE_REQUIRED"
+    },
+    {
+      "control_id": "EMS-CTRL-070",
+      "control_name": "Revision History",
+      "rule_registered": true,
+      "rule_supported": true,
+      "coverage_state": "IMPLEMENTABLE",
+      "automation_boundary": "HUMAN_EVIDENCE_REQUIRED"
+    },
+    {
+      "control_id": "EMS-CTRL-072",
+      "control_name": "PDF/DOCX Generation Validation",
+      "rule_registered": true,
+      "rule_supported": true,
+      "coverage_state": "IMPLEMENTABLE",
+      "automation_boundary": "HUMAN_EVIDENCE_REQUIRED"
+    }
+  ]
+}

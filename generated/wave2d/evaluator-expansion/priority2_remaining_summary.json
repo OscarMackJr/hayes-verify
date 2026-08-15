@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "wave": "2D",
+  "priority": 2,
+  "source_registry_version": "1.8",
+  "original_priority2_control_count": 21,
+  "implemented_priority2_control_count": 21,
+  "remaining_priority2_control_count": 0,
+  "remaining_family_count": 0,
+  "family_counts": {},
+  "first_family": null
+}

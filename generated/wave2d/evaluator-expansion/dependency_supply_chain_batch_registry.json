@@ -1,0 +1,54 @@
+{
+  "registry_version": "1.5-batch-verification",
+  "wave": "2D",
+  "default_behavior": "BLOCKED_UNSUPPORTED",
+  "verification_scope": {
+    "family": "dependency_supply_chain",
+    "control_ids": [
+      "EMS-CTRL-003",
+      "EMS-CTRL-019",
+      "EMS-CTRL-042",
+      "EMS-CTRL-075"
+    ]
+  },
+  "families": {
+    "dependency_supply_chain": {
+      "description": "Priority-2 dependency supply-chain verification runtime registry.",
+      "implementation": "hayes_verify.evaluator_families.dependency_supply_chain",
+      "controls": {
+        "EMS-CTRL-003": {
+          "collector": "repository_and_workflow",
+          "evaluator": "dependency_supply_chain",
+          "evidence_type": "DEPENDENCY_SCA_AUTOMATION",
+          "scope": "repository",
+          "supported": true,
+          "implementation_state": "IMPLEMENTED_PENDING_BATCH_VERIFICATION"
+        },
+        "EMS-CTRL-019": {
+          "collector": "repository_and_workflow",
+          "evaluator": "dependency_supply_chain",
+          "evidence_type": "DEPENDENCY_SCA_AUTOMATION",
+          "scope": "repository",
+          "supported": true,
+          "implementation_state": "IMPLEMENTED_PENDING_BATCH_VERIFICATION"
+        },
+        "EMS-CTRL-042": {
+          "collector": "repository_and_workflow",
+          "evaluator": "dependency_supply_chain",
+          "evidence_type": "DEPENDENCY_SCA_AUTOMATION",
+          "scope": "repository",
+          "supported": true,
+          "implementation_state": "IMPLEMENTED_PENDING_BATCH_VERIFICATION"
+        },
+        "EMS-CTRL-075": {
+          "collector": "repository_and_workflow",
+          "evaluator": "dependency_supply_chain",
+          "evidence_type": "DEPENDENCY_SCA_AUTOMATION",
+          "scope": "repository",
+          "supported": true,
+          "implementation_state": "IMPLEMENTED_PENDING_BATCH_VERIFICATION"
+        }
+      }
+    }
+  }
+}

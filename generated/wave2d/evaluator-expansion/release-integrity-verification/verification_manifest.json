@@ -1,0 +1,599 @@
+{
+  "component": "Hayes Verify",
+  "phase": "Priority-2 Release Integrity Family Batch Verification",
+  "verified_at_utc": "2026-08-14T21:17:11.633572+00:00",
+  "status": "PASS",
+  "batch_id": "BATCH-20260814T211701.004300Z",
+  "wave": "2D",
+  "priority": 2,
+  "family": "release_integrity",
+  "scope_control_count": 6,
+  "verified_control_count": 6,
+  "pending_control_count": 0,
+  "complete_target_count": 39,
+  "blocked_target_count": 0,
+  "result_counts": {
+    "WARNING": 39
+  },
+  "controls": [
+    {
+      "control_id": "EMS-CTRL-034",
+      "applicable_target_count": 7,
+      "complete_target_count": 7,
+      "blocked_target_count": 0,
+      "result_counts": {
+        "WARNING": 7
+      },
+      "verification_state": "VERIFIED_IMPLEMENTATION",
+      "targets": [
+        {
+          "batch_id": "BATCH-20260814T211701.004300Z",
+          "control_id": "EMS-CTRL-034",
+          "target_id": "REPO-001",
+          "execution_state": "COMPLETE",
+          "family": "release_integrity",
+          "evaluation_state": "COMPLETE",
+          "evidence_state": "INSUFFICIENT",
+          "result_state": "WARNING",
+          "promotion_state": "NOT_PROMOTED",
+          "evidence_sha256": "c5ba8c23b47da24806dd4bcaf6125e946cc83e46f958a67ae83d019ee65dc7c0",
+          "result_sha256": "a9682626a38a026cb796594d45c98e694077219462803705c4f6400d53ca6636"
+        },
+        {
+          "batch_id": "BATCH-20260814T211701.004300Z",
+          "control_id": "EMS-CTRL-034",
+          "target_id": "REPO-002",
+          "execution_state": "COMPLETE",
+          "family": "release_integrity",
+          "evaluation_state": "COMPLETE",
+          "evidence_state": "INSUFFICIENT",
+          "result_state": "WARNING",
+          "promotion_state": "NOT_PROMOTED",
+          "evidence_sha256": "ea28fe187232e1931bee2f285f028f2d3cbfc2811e66f68e8e1a4a9ffeddc4cb",
+          "result_sha256": "a60ba20afc2ace908c985c321f3cf6bf409cc4b3b72c99740443b456e321fead"
+        },
+        {
+          "batch_id": "BATCH-20260814T211701.004300Z",
+          "control_id": "EMS-CTRL-034",
+          "target_id": "REPO-003",
+          "execution_state": "COMPLETE",
+          "family": "release_integrity",
+          "evaluation_state": "COMPLETE",
+          "evidence_state": "INSUFFICIENT",
+          "result_state": "WARNING",
+          "promotion_state": "NOT_PROMOTED",
+          "evidence_sha256": "4d08bc089e69213b9164a660f857132391af30ca7d0b3233186c94159e172c05",
+          "result_sha256": "8e50083618316ac1ae0b2c5bf02df676490b7b9013156a7dee40bff2349f9ca3"
+        },
+        {
+          "batch_id": "BATCH-20260814T211701.004300Z",
+          "control_id": "EMS-CTRL-034",
+          "target_id": "REPO-004",
+          "execution_state": "COMPLETE",
+          "family": "release_integrity",
+          "evaluation_state": "COMPLETE",
+          "evidence_state": "INSUFFICIENT",
+          "result_state": "WARNING",
+          "promotion_state": "NOT_PROMOTED",
+          "evidence_sha256": "4b33a0cc6ca5d505992805620f6cf6e1b3d74ce518ef32043fac0559116991b1",
+          "result_sha256": "910bffe3b2645029bc1bd8399cc2bdc01479a71e621b349b0c53be714a4d6331"
+        },
+        {
+          "batch_id": "BATCH-20260814T211701.004300Z",
+          "control_id": "EMS-CTRL-034",
+          "target_id": "REPO-005",
+          "execution_state": "COMPLETE",
+          "family": "release_integrity",
+          "evaluation_state": "COMPLETE",
+          "evidence_state": "INSUFFICIENT",
+          "result_state": "WARNING",
+          "promotion_state": "NOT_PROMOTED",
+          "evidence_sha256": "bf4749096d6c877b723c2ce46b86deb56c0bf6ce29fe0fab00df64c726cea737",
+          "result_sha256": "594cdf782d5d92ff82f47d7375bb51e17934b79fd6427ee5c7ee8c9040fa0102"
+        },
+        {
+          "batch_id": "BATCH-20260814T211701.004300Z",
+          "control_id": "EMS-CTRL-034",
+          "target_id": "REPO-006",
+          "execution_state": "COMPLETE",
+          "family": "release_integrity",
+          "evaluation_state": "COMPLETE",
+          "evidence_state": "INSUFFICIENT",
+          "result_state": "WARNING",
+          "promotion_state": "NOT_PROMOTED",
+          "evidence_sha256": "833c841477cd509e1aa6b250e3e97f5988ffea13c8cede26cf7263530af548b8",
+          "result_sha256": "d9cf0889545639f6bf44106d46e5291867ef420d83ce5a29c0ab34765d134398"
+        },
+        {
+          "batch_id": "BATCH-20260814T211701.004300Z",
+          "control_id": "EMS-CTRL-034",
+          "target_id": "REPO-EMS",
+          "execution_state": "COMPLETE",
+          "family": "release_integrity",
+          "evaluation_state": "COMPLETE",
+          "evidence_state": "INSUFFICIENT",
+          "result_state": "WARNING",
+          "promotion_state": "NOT_PROMOTED",
+          "evidence_sha256": "24d6b2badaf6c52b1570079bb9154bc2dd34ed23ebb93e88e4e3d07c41cebdfc",
+          "result_sha256": "7063090522ba32d4e066123a3dbe9dbecd4d95048d8b2d0a9c3559ee1bd4d16a"
+        }
+      ]
+    },
+    {
+      "control_id": "EMS-CTRL-035",
+      "applicable_target_count": 7,
+      "complete_target_count": 7,
+      "blocked_target_count": 0,
+      "result_counts": {
+        "WARNING": 7
+      },
+      "verification_state": "VERIFIED_IMPLEMENTATION",
+      "targets": [
+        {
+          "batch_id": "BATCH-20260814T211701.004300Z",
+          "control_id": "EMS-CTRL-035",
+          "target_id": "REPO-001",
+          "execution_state": "COMPLETE",
+          "family": "release_integrity",
+          "evaluation_state": "COMPLETE",
+          "evidence_state": "INSUFFICIENT",
+          "result_state": "WARNING",
+          "promotion_state": "NOT_PROMOTED",
+          "evidence_sha256": "6442f9070ac61002cc262fd6faba769c85c815b6c9715acbd4d81b48e036eaf4",
+          "result_sha256": "b8e3a7e5acf7451f404ab4942dc17ba3a6ef43f3043a83b6b9bfa562b3c03fe9"
+        },
+        {
+          "batch_id": "BATCH-20260814T211701.004300Z",
+          "control_id": "EMS-CTRL-035",
+          "target_id": "REPO-002",
+          "execution_state": "COMPLETE",
+          "family": "release_integrity",
+          "evaluation_state": "COMPLETE",
+          "evidence_state": "INSUFFICIENT",
+          "result_state": "WARNING",
+          "promotion_state": "NOT_PROMOTED",
+          "evidence_sha256": "1ef28f62e1b63cb61ae00c6d7cec88e63edbbcdb0597c844087dc9a15f0ab879",
+          "result_sha256": "2c4bc8a27ee713f245e9e59d27327cf0e1685356f0f161bea35d511c744de89a"
+        },
+        {
+          "batch_id": "BATCH-20260814T211701.004300Z",
+          "control_id": "EMS-CTRL-035",
+          "target_id": "REPO-003",
+          "execution_state": "COMPLETE",
+          "family": "release_integrity",
+          "evaluation_state": "COMPLETE",
+          "evidence_state": "INSUFFICIENT",
+          "result_state": "WARNING",
+          "promotion_state": "NOT_PROMOTED",
+          "evidence_sha256": "c4a856edc163d497c76c1d2e0a6935577eb630da7aa8b34936b1b65fb3e387e1",
+          "result_sha256": "6c371029e86e89ca2c33ab5b9a331ad330ddcc7571b9f65f98aed0ad087b6624"
+        },
+        {
+          "batch_id": "BATCH-20260814T211701.004300Z",
+          "control_id": "EMS-CTRL-035",
+          "target_id": "REPO-004",
+          "execution_state": "COMPLETE",
+          "family": "release_integrity",
+          "evaluation_state": "COMPLETE",
+          "evidence_state": "INSUFFICIENT",
+          "result_state": "WARNING",
+          "promotion_state": "NOT_PROMOTED",
+          "evidence_sha256": "4e5b5ef1bc49d0cabe2b8c820ebcb2b1b36a6e60d9717aa567c6b30b33838f24",
+          "result_sha256": "531a03323bfac5d9213b3684c0c98438a0d51fc50d88749d0c45b663b8fde14d"
+        },
+        {
+          "batch_id": "BATCH-20260814T211701.004300Z",
+          "control_id": "EMS-CTRL-035",
+          "target_id": "REPO-005",
+          "execution_state": "COMPLETE",
+          "family": "release_integrity",
+          "evaluation_state": "COMPLETE",
+          "evidence_state": "INSUFFICIENT",
+          "result_state": "WARNING",
+          "promotion_state": "NOT_PROMOTED",
+          "evidence_sha256": "f2cd966034b4d973fd2aed86dee50d1fb61c5d81f6e5a0cb602a98e7cc4b5fb9",
+          "result_sha256": "48ee9805ff3ae4d2f492231d09287003834a63ea234cb0969233fe2dbf6a355f"
+        },
+        {
+          "batch_id": "BATCH-20260814T211701.004300Z",
+          "control_id": "EMS-CTRL-035",
+          "target_id": "REPO-006",
+          "execution_state": "COMPLETE",
+          "family": "release_integrity",
+          "evaluation_state": "COMPLETE",
+          "evidence_state": "INSUFFICIENT",
+          "result_state": "WARNING",
+          "promotion_state": "NOT_PROMOTED",
+          "evidence_sha256": "639c8964ac54bc432acd72ac7a2a1566554e4af537955c0d6c33deeddeb31048",
+          "result_sha256": "7f9dd5d93c73376a65eee95077cbc2933c13454d02f074142ea3ce398bc63dc8"
+        },
+        {
+          "batch_id": "BATCH-20260814T211701.004300Z",
+          "control_id": "EMS-CTRL-035",
+          "target_id": "REPO-EMS",
+          "execution_state": "COMPLETE",
+          "family": "release_integrity",
+          "evaluation_state": "COMPLETE",
+          "evidence_state": "INSUFFICIENT",
+          "result_state": "WARNING",
+          "promotion_state": "NOT_PROMOTED",
+          "evidence_sha256": "b34aa845388eb13d4abd13bbe1a7ecac122c59a2c5b5d6add79092ed6391dd2a",
+          "result_sha256": "aba157200c0ddc446e35e52969fb51876eef68a261f3eed7b584bbe7d9e0f999"
+        }
+      ]
+    },
+    {
+      "control_id": "EMS-CTRL-036",
+      "applicable_target_count": 7,
+      "complete_target_count": 7,
+      "blocked_target_count": 0,
+      "result_counts": {
+        "WARNING": 7
+      },
+      "verification_state": "VERIFIED_IMPLEMENTATION",
+      "targets": [
+        {
+          "batch_id": "BATCH-20260814T211701.004300Z",
+          "control_id": "EMS-CTRL-036",
+          "target_id": "REPO-001",
+          "execution_state": "COMPLETE",
+          "family": "release_integrity",
+          "evaluation_state": "COMPLETE",
+          "evidence_state": "INSUFFICIENT",
+          "result_state": "WARNING",
+          "promotion_state": "NOT_PROMOTED",
+          "evidence_sha256": "1c43c858add24f80c1bbdeb2c82df1115140cb4dc8e0b056d43df7c088825e8a",
+          "result_sha256": "9fb2a0a536ac16b4aa9ba2bb84d64cf9a34b3e67389c46aade1fa2b3da9f5e55"
+        },
+        {
+          "batch_id": "BATCH-20260814T211701.004300Z",
+          "control_id": "EMS-CTRL-036",
+          "target_id": "REPO-002",
+          "execution_state": "COMPLETE",
+          "family": "release_integrity",
+          "evaluation_state": "COMPLETE",
+          "evidence_state": "INSUFFICIENT",
+          "result_state": "WARNING",
+          "promotion_state": "NOT_PROMOTED",
+          "evidence_sha256": "c0d7c859bf75fe350ab49799b6eb018e9a715c22d882ebba7667d12cc061fbf9",
+          "result_sha256": "8b6a14491ca94d4e1be143b593a6362b76a0922ec2c297a352f0a78090409237"
+        },
+        {
+          "batch_id": "BATCH-20260814T211701.004300Z",
+          "control_id": "EMS-CTRL-036",
+          "target_id": "REPO-003",
+          "execution_state": "COMPLETE",
+          "family": "release_integrity",
+          "evaluation_state": "COMPLETE",
+          "evidence_state": "INSUFFICIENT",
+          "result_state": "WARNING",
+          "promotion_state": "NOT_PROMOTED",
+          "evidence_sha256": "bc533dc6ec8d9670d4af294ebe3f4ce80d59cd82f52b2c72d0d0c25804d6b43f",
+          "result_sha256": "2620dcb8cebcf1ccb13c6d73379ca6b3e558b23bacd671d643fdb2df4d4ed544"
+        },
+        {
+          "batch_id": "BATCH-20260814T211701.004300Z",
+          "control_id": "EMS-CTRL-036",
+          "target_id": "REPO-004",
+          "execution_state": "COMPLETE",
+          "family": "release_integrity",
+          "evaluation_state": "COMPLETE",
+          "evidence_state": "INSUFFICIENT",
+          "result_state": "WARNING",
+          "promotion_state": "NOT_PROMOTED",
+          "evidence_sha256": "e1b54bf19a1a6cdaba36f72056778a6ba23c663cc6ebc63854a7fd25ea618220",
+          "result_sha256": "3ef2ff77a5e516354ee9981b90c337aca8ac3154b5372a46f4b7150782740bd4"
+        },
+        {
+          "batch_id": "BATCH-20260814T211701.004300Z",
+          "control_id": "EMS-CTRL-036",
+          "target_id": "REPO-005",
+          "execution_state": "COMPLETE",
+          "family": "release_integrity",
+          "evaluation_state": "COMPLETE",
+          "evidence_state": "INSUFFICIENT",
+          "result_state": "WARNING",
+          "promotion_state": "NOT_PROMOTED",
+          "evidence_sha256": "44f31329ab292313dc7fe3e24689e0de7f6b07baa5393b35a515301a599e205f",
+          "result_sha256": "a534d50f4b9b51f0106142fc09565365b8f59e04a76b834b29ee38691f9128cf"
+        },
+        {
+          "batch_id": "BATCH-20260814T211701.004300Z",
+          "control_id": "EMS-CTRL-036",
+          "target_id": "REPO-006",
+          "execution_state": "COMPLETE",
+          "family": "release_integrity",
+          "evaluation_state": "COMPLETE",
+          "evidence_state": "INSUFFICIENT",
+          "result_state": "WARNING",
+          "promotion_state": "NOT_PROMOTED",
+          "evidence_sha256": "25cafe4f189abd182998e1520665c698af6c39192302bd067b834ebcffb0c4c5",
+          "result_sha256": "db6128d7d4e976c4682b0cd56ded6f1aa96ce1c901198cde4e6f416573902ed4"
+        },
+        {
+          "batch_id": "BATCH-20260814T211701.004300Z",
+          "control_id": "EMS-CTRL-036",
+          "target_id": "REPO-EMS",
+          "execution_state": "COMPLETE",
+          "family": "release_integrity",
+          "evaluation_state": "COMPLETE",
+          "evidence_state": "INSUFFICIENT",
+          "result_state": "WARNING",
+          "promotion_state": "NOT_PROMOTED",
+          "evidence_sha256": "0330dc2b907590180de7b78d85be95ef370811c163d2bbcc1ece11f66beb0613",
+          "result_sha256": "ae8af28e75a42d85ae11d2f896f00579ed556c61cc4f8b4c460c05c3a5c34ef1"
+        }
+      ]
+    },
+    {
+      "control_id": "EMS-CTRL-037",
+      "applicable_target_count": 7,
+      "complete_target_count": 7,
+      "blocked_target_count": 0,
+      "result_counts": {
+        "WARNING": 7
+      },
+      "verification_state": "VERIFIED_IMPLEMENTATION",
+      "targets": [
+        {
+          "batch_id": "BATCH-20260814T211701.004300Z",
+          "control_id": "EMS-CTRL-037",
+          "target_id": "REPO-001",
+          "execution_state": "COMPLETE",
+          "family": "release_integrity",
+          "evaluation_state": "COMPLETE",
+          "evidence_state": "INSUFFICIENT",
+          "result_state": "WARNING",
+          "promotion_state": "NOT_PROMOTED",
+          "evidence_sha256": "893377a7f9b7ae5620faed8ba33544a57e508f4ae40ce63dbf18eefb9e79e29e",
+          "result_sha256": "6ae4a11cbff68fcb53f2d660d80d100dd7347c6b0b79910d6bdd00bf74e81972"
+        },
+        {
+          "batch_id": "BATCH-20260814T211701.004300Z",
+          "control_id": "EMS-CTRL-037",
+          "target_id": "REPO-002",
+          "execution_state": "COMPLETE",
+          "family": "release_integrity",
+          "evaluation_state": "COMPLETE",
+          "evidence_state": "INSUFFICIENT",
+          "result_state": "WARNING",
+          "promotion_state": "NOT_PROMOTED",
+          "evidence_sha256": "1ae1eb24657cbebdca3131d5dd23a7a3678ba99a041344927cde840a90831526",
+          "result_sha256": "8b4b891a533e811b33c6417728318120ddb75c6cb45395d0d8c44a8d61592bc9"
+        },
+        {
+          "batch_id": "BATCH-20260814T211701.004300Z",
+          "control_id": "EMS-CTRL-037",
+          "target_id": "REPO-003",
+          "execution_state": "COMPLETE",
+          "family": "release_integrity",
+          "evaluation_state": "COMPLETE",
+          "evidence_state": "INSUFFICIENT",
+          "result_state": "WARNING",
+          "promotion_state": "NOT_PROMOTED",
+          "evidence_sha256": "439b48678199e8ac52b5869daca6dbcd5644ffe85ab2938872f7bae83ab98fc1",
+          "result_sha256": "316b3a9f412b2eeb517e7bd9285f44502a9a04710e99cb3e31be80ce240c98f9"
+        },
+        {
+          "batch_id": "BATCH-20260814T211701.004300Z",
+          "control_id": "EMS-CTRL-037",
+          "target_id": "REPO-004",
+          "execution_state": "COMPLETE",
+          "family": "release_integrity",
+          "evaluation_state": "COMPLETE",
+          "evidence_state": "INSUFFICIENT",
+          "result_state": "WARNING",
+          "promotion_state": "NOT_PROMOTED",
+          "evidence_sha256": "d607bb9f411facf988c7755fef0ab83c1e2be7c7a6061351bae458fff230f058",
+          "result_sha256": "e89c86dab0449750b583f8f54e1abfde5dd9766179984a949d85cd2bcf72b25a"
+        },
+        {
+          "batch_id": "BATCH-20260814T211701.004300Z",
+          "control_id": "EMS-CTRL-037",
+          "target_id": "REPO-005",
+          "execution_state": "COMPLETE",
+          "family": "release_integrity",
+          "evaluation_state": "COMPLETE",
+          "evidence_state": "INSUFFICIENT",
+          "result_state": "WARNING",
+          "promotion_state": "NOT_PROMOTED",
+          "evidence_sha256": "816c613c247a5ee12ae816651f470c27e6f3021397cedd8a0212df58184d7cd2",
+          "result_sha256": "69bb963d7a109dd58e00469395abf5e101e20d8d92629465023d10de2b82e1da"
+        },
+        {
+          "batch_id": "BATCH-20260814T211701.004300Z",
+          "control_id": "EMS-CTRL-037",
+          "target_id": "REPO-006",
+          "execution_state": "COMPLETE",
+          "family": "release_integrity",
+          "evaluation_state": "COMPLETE",
+          "evidence_state": "INSUFFICIENT",
+          "result_state": "WARNING",
+          "promotion_state": "NOT_PROMOTED",
+          "evidence_sha256": "dba3efdb2cb71f504c0d151442f1e98f37f65bc2d574c9cdbf816e1d8c545854",
+          "result_sha256": "25c8a236722950bd9f3e8a1d71d2b08ccd461b6b65a7505c089d13dae2d3ae09"
+        },
+        {
+          "batch_id": "BATCH-20260814T211701.004300Z",
+          "control_id": "EMS-CTRL-037",
+          "target_id": "REPO-EMS",
+          "execution_state": "COMPLETE",
+          "family": "release_integrity",
+          "evaluation_state": "COMPLETE",
+          "evidence_state": "INSUFFICIENT",
+          "result_state": "WARNING",
+          "promotion_state": "NOT_PROMOTED",
+          "evidence_sha256": "6ee423ef9fe614c20dd9e49ebd7ac0910ce11008cf80adb2f98e40d0f60a2f02",
+          "result_sha256": "3643d9fde8bc73b3521fd12e26f4202815e14cd7169b9182b2f8d1987f2b9ed9"
+        }
+      ]
+    },
+    {
+      "control_id": "EMS-CTRL-038",
+      "applicable_target_count": 7,
+      "complete_target_count": 7,
+      "blocked_target_count": 0,
+      "result_counts": {
+        "WARNING": 7
+      },
+      "verification_state": "VERIFIED_IMPLEMENTATION",
+      "targets": [
+        {
+          "batch_id": "BATCH-20260814T211701.004300Z",
+          "control_id": "EMS-CTRL-038",
+          "target_id": "REPO-001",
+          "execution_state": "COMPLETE",
+          "family": "release_integrity",
+          "evaluation_state": "COMPLETE",
+          "evidence_state": "INSUFFICIENT",
+          "result_state": "WARNING",
+          "promotion_state": "NOT_PROMOTED",
+          "evidence_sha256": "56a1b8caa03916e9b0392393b3d3e1671edda9ae79b4279a3b6389f4a1626c1b",
+          "result_sha256": "e53af1cafe5108ad102e489f51aa3027526129f1dc0862aa10572230c5ebc06b"
+        },
+        {
+          "batch_id": "BATCH-20260814T211701.004300Z",
+          "control_id": "EMS-CTRL-038",
+          "target_id": "REPO-002",
+          "execution_state": "COMPLETE",
+          "family": "release_integrity",
+          "evaluation_state": "COMPLETE",
+          "evidence_state": "INSUFFICIENT",
+          "result_state": "WARNING",
+          "promotion_state": "NOT_PROMOTED",
+          "evidence_sha256": "e0b15abe399bfdc012a74c05c1ce6cb37ac209ba93857d15e3be05cde3d93497",
+          "result_sha256": "da69861aacda4229ab9cea6a9762ccdb949ea5bbe7a92a4a7eaea48d8be732ef"
+        },
+        {
+          "batch_id": "BATCH-20260814T211701.004300Z",
+          "control_id": "EMS-CTRL-038",
+          "target_id": "REPO-003",
+          "execution_state": "COMPLETE",
+          "family": "release_integrity",
+          "evaluation_state": "COMPLETE",
+          "evidence_state": "INSUFFICIENT",
+          "result_state": "WARNING",
+          "promotion_state": "NOT_PROMOTED",
+          "evidence_sha256": "40e28177dbede0995cd066a8b8e31f36c0b04b652abaee4cecb8b237d2a7310f",
+          "result_sha256": "53c69cf0319a3349ffba350fdf73bacbbfb3adac3a98972e70a638c767d4fc9b"
+        },
+        {
+          "batch_id": "BATCH-20260814T211701.004300Z",
+          "control_id": "EMS-CTRL-038",
+          "target_id": "REPO-004",
+          "execution_state": "COMPLETE",
+          "family": "release_integrity",
+          "evaluation_state": "COMPLETE",
+          "evidence_state": "INSUFFICIENT",
+          "result_state": "WARNING",
+          "promotion_state": "NOT_PROMOTED",
+          "evidence_sha256": "1937c1edbe47f210a31f11637b4006eda59842a687ca06ac2c8b713ae1a90a2d",
+          "result_sha256": "200e8b1240b272e6c69315f0e8b35ba5f4f1e40a037064aa3b0229d3692bc5cb"
+        },
+        {
+          "batch_id": "BATCH-20260814T211701.004300Z",
+          "control_id": "EMS-CTRL-038",
+          "target_id": "REPO-005",
+          "execution_state": "COMPLETE",
+          "family": "release_integrity",
+          "evaluation_state": "COMPLETE",
+          "evidence_state": "INSUFFICIENT",
+          "result_state": "WARNING",
+          "promotion_state": "NOT_PROMOTED",
+          "evidence_sha256": "33edda7310f2630654ed6e2fb83628bf703529d1289f07ba7e2b140567b9c662",
+          "result_sha256": "f48e1b37f29061e088c1b5d6d88bde11c9701456acf9838ba67a66521be30ca5"
+        },
+        {
+          "batch_id": "BATCH-20260814T211701.004300Z",
+          "control_id": "EMS-CTRL-038",
+          "target_id": "REPO-006",
+          "execution_state": "COMPLETE",
+          "family": "release_integrity",
+          "evaluation_state": "COMPLETE",
+          "evidence_state": "INSUFFICIENT",
+          "result_state": "WARNING",
+          "promotion_state": "NOT_PROMOTED",
+          "evidence_sha256": "e9c764d054bc6bda9d8fa4f6717af5c7a58f36f81b761417ba90735ec24b7912",
+          "result_sha256": "4d4c89eb40f151083fe198c0f0e87bc279993028c5c473deb30ed4557d90dc01"
+        },
+        {
+          "batch_id": "BATCH-20260814T211701.004300Z",
+          "control_id": "EMS-CTRL-038",
+          "target_id": "REPO-EMS",
+          "execution_state": "COMPLETE",
+          "family": "release_integrity",
+          "evaluation_state": "COMPLETE",
+          "evidence_state": "INSUFFICIENT",
+          "result_state": "WARNING",
+          "promotion_state": "NOT_PROMOTED",
+          "evidence_sha256": "9c1b06088a0f81faa76c2a55021a29d68804e6373c10f0cbbdce9be9a958afe6",
+          "result_sha256": "4eeeda53e06f2f67933caf802c51b575fb941bba1c3d972caf191e165f295cc8"
+        }
+      ]
+    },
+    {
+      "control_id": "EMS-CTRL-040",
+      "applicable_target_count": 4,
+      "complete_target_count": 4,
+      "blocked_target_count": 0,
+      "result_counts": {
+        "WARNING": 4
+      },
+      "verification_state": "VERIFIED_IMPLEMENTATION",
+      "targets": [
+        {
+          "batch_id": "BATCH-20260814T211701.004300Z",
+          "control_id": "EMS-CTRL-040",
+          "target_id": "REPO-003",
+          "execution_state": "COMPLETE",
+          "family": "release_integrity",
+          "evaluation_state": "COMPLETE",
+          "evidence_state": "INSUFFICIENT",
+          "result_state": "WARNING",
+          "promotion_state": "NOT_PROMOTED",
+          "evidence_sha256": "05a5775eba0472e906cd04dc3f54e2b16f37626c074c4dc086d1052d4657f545",
+          "result_sha256": "cd1480f5199c85103cf12d0a45d341126d23a713d40f02404c62ab6e9454c136"
+        },
+        {
+          "batch_id": "BATCH-20260814T211701.004300Z",
+          "control_id": "EMS-CTRL-040",
+          "target_id": "REPO-005",
+          "execution_state": "COMPLETE",
+          "family": "release_integrity",
+          "evaluation_state": "COMPLETE",
+          "evidence_state": "INSUFFICIENT",
+          "result_state": "WARNING",
+          "promotion_state": "NOT_PROMOTED",
+          "evidence_sha256": "34d25b1901672e1914f024d96ced80109f7c22ff1d72822fd38f9b4bd1f9603e",
+          "result_sha256": "480b83fbe76b93cfbb25965bd368875606dccf7bad68b28fdc01cd7fdedfa6a0"
+        },
+        {
+          "batch_id": "BATCH-20260814T211701.004300Z",
+          "control_id": "EMS-CTRL-040",
+          "target_id": "REPO-006",
+          "execution_state": "COMPLETE",
+          "family": "release_integrity",
+          "evaluation_state": "COMPLETE",
+          "evidence_state": "INSUFFICIENT",
+          "result_state": "WARNING",
+          "promotion_state": "NOT_PROMOTED",
+          "evidence_sha256": "b157e1be8e314346fd62a9626c369dc16adcd975b61c01c46fa548dbc34aef61",
+          "result_sha256": "1fd44408b8ca0dab69957d13c3b2a3d420e3d8de7da61a0ba4186bc0c2c587b7"
+        },
+        {
+          "batch_id": "BATCH-20260814T211701.004300Z",
+          "control_id": "EMS-CTRL-040",
+          "target_id": "REPO-EMS",
+          "execution_state": "COMPLETE",
+          "family": "release_integrity",
+          "evaluation_state": "COMPLETE",
+          "evidence_state": "INSUFFICIENT",
+          "result_state": "WARNING",
+          "promotion_state": "NOT_PROMOTED",
+          "evidence_sha256": "a38c039fc4e77a6b06132ce4e8ca043b3535040976466619e2a7d9e5e2687083",
+          "result_sha256": "b54fe6593dde3a9ee8d012ea0223d947eb586f2d5dacda9c7fb9b8665872e332"
+        }
+      ]
+    }
+  ]
+}

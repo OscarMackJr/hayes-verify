@@ -1,0 +1,70 @@
+{
+  "status": "PASS",
+  "family": "test_quality",
+  "control_count": 4,
+  "controls": [
+    {
+      "control_id": "EMS-CTRL-025",
+      "control_name": "Unit Test Minimum",
+      "description": "",
+      "raw": {
+        "control_id": "EMS-CTRL-025",
+        "control_name": "Unit Test Minimum",
+        "scope": "REPOSITORY",
+        "scope_owner": "Software Development",
+        "inheritance_allowed": false,
+        "evidence_authority": "Repository evidence",
+        "rationale": "Wave 2A seed classification: REPOSITORY-scoped based on the control's primary operating boundary.",
+        "classification_status": "PROVISIONAL"
+      }
+    },
+    {
+      "control_id": "EMS-CTRL-026",
+      "control_name": "Integration Testing",
+      "description": "",
+      "raw": {
+        "control_id": "EMS-CTRL-026",
+        "control_name": "Integration Testing",
+        "scope": "REPOSITORY",
+        "scope_owner": "Software Development",
+        "inheritance_allowed": false,
+        "evidence_authority": "Repository evidence",
+        "rationale": "Wave 2A seed classification: REPOSITORY-scoped based on the control's primary operating boundary.",
+        "classification_status": "PROVISIONAL"
+      }
+    },
+    {
+      "control_id": "EMS-CTRL-032",
+      "control_name": "Test Environment Isolation",
+      "description": "",
+      "raw": {
+        "control_id": "EMS-CTRL-032",
+        "control_name": "Test Environment Isolation",
+        "scope": "PLATFORM",
+        "scope_owner": "Software Development / Platform",
+        "inheritance_allowed": true,
+        "evidence_authority": "Platform evidence",
+        "rationale": "Wave 2A seed classification: PLATFORM-scoped based on the control's primary operating boundary.",
+        "classification_status": "PROVISIONAL"
+      }
+    },
+    {
+      "control_id": "EMS-CTRL-060",
+      "control_name": "Zero Trust Integration Testing",
+      "description": "Establish and maintain the zero trust integration testing control as part of the Engineering Management System.",
+      "raw": {
+        "control_id": "EMS-CTRL-060",
+        "control_name": "Zero Trust Integration Testing",
+        "scope": "ORGANIZATION",
+        "scope_owner": "Engineering Leadership",
+        "inheritance_allowed": true,
+        "evidence_authority": "Organizational evidence",
+        "rationale": "Wave 2A seed classification: ORGANIZATION-scoped based on the control's primary operating boundary.",
+        "classification_status": "PROVISIONAL",
+        "description": "Establish and maintain the zero trust integration testing control as part of the Engineering Management System.",
+        "definition_recovery_source": "C:\\temp\\standars\\Pass4_1\\registry\\control_catalog.yaml",
+        "definition_recovery_confidence": 1.0
+      }
+    }
+  ]
+}

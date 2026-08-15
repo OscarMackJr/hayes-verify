@@ -1,0 +1,28 @@
+{
+  "status": "PASS",
+  "ems_requirements_sha256": "08271a749f3fde6958ef57ef7c10480b7456f98a9f3f04fff4c0b328338bbf28",
+  "ems_certification_sha256": "fb7f1c8739df41d1485390b9ada4ed6f7657ace453919cba63110bf1d06b622e",
+  "selected_controls": 4,
+  "ems_decisions": 21,
+  "matrix_decisions": 21,
+  "rule_decisions": 21,
+  "missing_decision_ids": [],
+  "orphaned_decision_ids": [],
+  "coverage": {
+    "selected": 4,
+    "implementable": 4,
+    "blocked": 0
+  },
+  "draft_implementation_state_counts": {
+    "HUMAN_EVIDENCE_REQUIRED": 5,
+    "IMPLEMENTED": 41,
+    "IMPLEMENTED_PENDING_BATCH_VERIFICATION": 4,
+    "PLANNED_AUTOMATED": 3,
+    "PLANNED_HYBRID": 27
+  },
+  "critical_negative_invariants": {
+    "ctrl029_repository_only_evidence_never_passes": "PASS",
+    "ctrl031_repository_artifact_only_never_passes": "PASS"
+  },
+  "errors": []
+}

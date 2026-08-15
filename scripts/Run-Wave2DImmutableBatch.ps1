@@ -35,6 +35,7 @@ $latest = Join-Path $root "generated\wave2d\batch\latest_run.json"
 $active = Join-Path $root "generated\wave2d\batch\active_runtime_registry.json"
 $backup = "$active.backup"
 $python = Resolve-HayesPython -Requested $PythonPath -Root $root
+[System.IO.Directory]::CreateDirectory([System.IO.Path]::GetDirectoryName($active)) | Out-Null
 Write-Host "Wave 2D batch Python interpreter: $python"
 if (Test-Path -LiteralPath $active) { Copy-Item -LiteralPath $active -Destination $backup -Force }
 try {

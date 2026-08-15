@@ -1,0 +1,26 @@
+{
+  "component": "Hayes Verify",
+  "phase": "Wave 2D Evaluator Registry v1.9 Publication",
+  "status": "PASS",
+  "generated_at_utc": "2026-08-15T03:27:56.816878+00:00",
+  "registry_sha256": "4336fa4a7391d68fc45dc8fe9051ccfbbdbc9f06e9d75c19630b3111524dae97",
+  "verification_sha256": "47479400121e86f8860b57974928b4fe53c561124169c08ef244d289a951878a",
+  "certification_sha256": "8cb91343b69f3c99915659f3a8d6ec7faca43be41b68e4fe30060f52cf2d1808",
+  "ems_authority_hashes": {
+    "requirements": "08271a749f3fde6958ef57ef7c10480b7456f98a9f3f04fff4c0b328338bbf28",
+    "publication_certification": "fb7f1c8739df41d1485390b9ada4ed6f7657ace453919cba63110bf1d06b622e"
+  },
+  "promoted_controls": [
+    "EMS-CTRL-027",
+    "EMS-CTRL-028",
+    "EMS-CTRL-029",
+    "EMS-CTRL-031"
+  ],
+  "verification_batch_id": "BATCH-20260815T032250.193794Z",
+  "ruff": "PASS",
+  "pytest": "66 passed, 0 failed",
+  "semantic_boundaries": {
+    "EMS-CTRL-029": "HYBRID; service evidence authoritative; repository-only PASS prohibited",
+    "EMS-CTRL-031": "HYBRID; retention store authoritative; repository-only PASS prohibited"
+  }
+}

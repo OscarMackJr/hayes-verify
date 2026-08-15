@@ -1,0 +1,13 @@
+{
+  "configuration_type": "CONTROLLED_REPOSITORY_IDENTITY_MAP",
+  "local_path_overrides_required": true,
+  "repositories": {
+    "REPO-001": {"repository_name": "bluto", "github_repo": "OscarMackJr/bluto"},
+    "REPO-002": {"repository_name": "fiskroad", "github_repo": "OscarMackJr/fiskroad"},
+    "REPO-003": {"repository_name": "hometown", "github_repo": "OscarMackJr/hometown"},
+    "REPO-004": {"repository_name": "nono", "github_repo": "OscarMackJr/nono"},
+    "REPO-005": {"repository_name": "olive", "github_repo": "OscarMackJr/olive"},
+    "REPO-006": {"repository_name": "popeye", "github_repo": "OscarMackJr/popeye"},
+    "REPO-EMS": {"repository_name": "ems", "github_repo": "OscarMackJr/ems"}
+  }
+}

@@ -1,0 +1,89 @@
+{
+  "component": "Hayes Verify",
+  "phase": "Wave 2D Immutable Batch Runtime Provenance Audit",
+  "generated_at_utc": "2026-08-15T02:38:10.237570+00:00",
+  "historical_batches": [
+    "BATCH-20260814T211701.004300Z",
+    "BATCH-20260814T213844.838953Z"
+  ],
+  "files": [
+    {
+      "path": "scripts/Run-Wave2DImmutableBatch.ps1",
+      "sha256": "543106914c15dc96be7d13ff04d5775c691692a221bc39366b7cfbc28b85add3",
+      "git_state": "UNTRACKED",
+      "first_known_usage": "Recorded Wave 2D immutable batch artifacts use the compatible run identity, request JSONL, result layout, and summary contract.",
+      "scripts_called": [],
+      "provenance_state": "PROVEN_SUCCESSFUL_BATCH_RUNTIME"
+    },
+    {
+      "path": "scripts/create_wave2d_batch_run.py",
+      "sha256": "a6cac520b0ccf6071aef5fda76be220c86fe82b9dddd37736e7093efa6e84822",
+      "git_state": "UNTRACKED",
+      "first_known_usage": "Recorded Wave 2D immutable batch artifacts use the compatible run identity, request JSONL, result layout, and summary contract.",
+      "scripts_called": [
+        "Run-Wave2DImmutableBatch.ps1"
+      ],
+      "provenance_state": "PROVEN_SUCCESSFUL_BATCH_RUNTIME"
+    },
+    {
+      "path": "scripts/build_wave2d_batch_requests_scoped.py",
+      "sha256": "183c38a66de5c06cb3b8743cd629dad03671c7754b4c720791c45f49356359ca",
+      "git_state": "UNTRACKED",
+      "first_known_usage": "Recorded Wave 2D immutable batch artifacts use the compatible run identity, request JSONL, result layout, and summary contract.",
+      "scripts_called": [
+        "Run-Wave2DImmutableBatch.ps1"
+      ],
+      "provenance_state": "PROVEN_SUCCESSFUL_BATCH_RUNTIME"
+    },
+    {
+      "path": "scripts/run_wave2d_batch_registry_scoped.py",
+      "sha256": "07b4bea4d94290826fed437bafcac9ca99f5ec3cfc926721fea9a73d9605bd6b",
+      "git_state": "UNTRACKED",
+      "first_known_usage": "Recorded Wave 2D immutable batch artifacts use the compatible run identity, request JSONL, result layout, and summary contract.",
+      "scripts_called": [
+        "Run-Wave2DImmutableBatch.ps1"
+      ],
+      "provenance_state": "PROVEN_SUCCESSFUL_BATCH_RUNTIME"
+    },
+    {
+      "path": "scripts/run_registry_evaluator.py",
+      "sha256": "b1b330626cb7c41932b6eb3d3cc49ef2c6e9f9765e434aac5fe0627076cd4940",
+      "git_state": "UNTRACKED",
+      "first_known_usage": "Recorded Wave 2D immutable batch artifacts use the compatible run identity, request JSONL, result layout, and summary contract.",
+      "scripts_called": [
+        "Run-Wave2DImmutableBatch.ps1"
+      ],
+      "provenance_state": "PROVEN_SUCCESSFUL_BATCH_RUNTIME"
+    },
+    {
+      "path": "registry/wave2d_batch_run_identity_spec.json",
+      "sha256": "794912ceafcd7a9eaffe6b76feefa9f6f8c2c9d31d348c80b7a9c6685ef79453",
+      "git_state": "UNTRACKED",
+      "first_known_usage": "Recorded Wave 2D immutable batch artifacts use the compatible run identity, request JSONL, result layout, and summary contract.",
+      "scripts_called": [
+        "Run-Wave2DImmutableBatch.ps1"
+      ],
+      "provenance_state": "PROVEN_SUCCESSFUL_BATCH_RUNTIME"
+    },
+    {
+      "path": "registry/wave2d_repository_map.json",
+      "sha256": "6746e16db54d559fd5e2ca17c003e261df82758afce5c431880d7d853d3dd6c6",
+      "git_state": "UNTRACKED",
+      "first_known_usage": "Recorded Wave 2D immutable batch artifacts use the compatible run identity, request JSONL, result layout, and summary contract.",
+      "scripts_called": [
+        "Run-Wave2DImmutableBatch.ps1"
+      ],
+      "provenance_state": "REPLACED_FOR_SAFE_BASELINE"
+    },
+    {
+      "path": "registry/wave2d_evaluator_registry.json",
+      "sha256": "fc2bc83dc79dcad3853cf5b5c4bdeed11cdec0e439ef2a1cd82858af9af25715",
+      "git_state": "UNTRACKED",
+      "first_known_usage": "Recorded Wave 2D immutable batch artifacts use the compatible run identity, request JSONL, result layout, and summary contract.",
+      "scripts_called": [
+        "Run-Wave2DImmutableBatch.ps1"
+      ],
+      "provenance_state": "REPLACED_FOR_SAFE_BASELINE"
+    }
+  ]
+}

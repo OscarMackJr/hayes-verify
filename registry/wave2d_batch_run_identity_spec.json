@@ -1,0 +1,8 @@
+{
+  "wave": "2D",
+  "run_root": "generated\\wave2d\\batch\\runs",
+  "latest_pointer": "generated\\wave2d\\batch\\latest_run.json",
+  "request_filename": "wave2d_batch_requests.jsonl",
+  "summary_filename": "hayes_batch_summary.json",
+  "results_dirname": "results"
+}

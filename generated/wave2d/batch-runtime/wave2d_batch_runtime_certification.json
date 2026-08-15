@@ -1,0 +1,48 @@
+{
+  "component": "Hayes Verify",
+  "capability": "Wave 2D Immutable Batch Runtime",
+  "status": "PASS",
+  "runtime_state": "BASELINE_CANDIDATE",
+  "certified_at_utc": "2026-08-15T02:38:10.237570+00:00",
+  "runtime_files": [
+    {
+      "path": "scripts/Run-Wave2DImmutableBatch.ps1",
+      "sha256": "9fa290bf31167af4d71895f4a04ecf595c4e4470cb772f0009b2a25668d7a344"
+    },
+    {
+      "path": "scripts/create_wave2d_batch_run.py",
+      "sha256": "8ff4badf5b52407010a1455cb3e9bdddd361c3bad624acc42b26875a2e7166a0"
+    },
+    {
+      "path": "scripts/build_wave2d_batch_requests_scoped.py",
+      "sha256": "9eb510297ce1720a5557338634b3d54720959d509a554ece23e9e9ad70414f88"
+    },
+    {
+      "path": "scripts/run_wave2d_batch_registry_scoped.py",
+      "sha256": "0402622d8cc355a773b984dc4e2dbe25a70cd2c2935b873e2a47e0c2331a5a27"
+    },
+    {
+      "path": "scripts/run_registry_evaluator.py",
+      "sha256": "6c7a1f68f23254fa2bc1514d9d689f3c810e97ae430514a656a267a653f4d0a7"
+    },
+    {
+      "path": "registry/wave2d_batch_run_identity_spec.json",
+      "sha256": "794912ceafcd7a9eaffe6b76feefa9f6f8c2c9d31d348c80b7a9c6685ef79453"
+    },
+    {
+      "path": "registry/wave2d_repository_map.json",
+      "sha256": "d534028026dd3e5c70c67508b27c665d9f56a398f61aa523484087b1c9f32d8c"
+    },
+    {
+      "path": "tests/test_wave2d_batch_runtime.py",
+      "sha256": "56feb4d5e5371cde23d789ce1345561d3225cd2df7a22e51bcc80c2f292ece53"
+    }
+  ],
+  "dependency_manifest_sha256": "4c2e8cbe492a8a5b53dd6b013dc062db5fc66eb32d41d135ae6a643fe334649e",
+  "repository_map_validation": "PASS: controlled identities contain no local paths; execution requires explicit local path overrides.",
+  "python_resolution": "explicit -PythonPath, active virtual environment, PATH python, repository .venv, then fail closed after dependency import check.",
+  "active_registry_safety": "PASS: supplied scoped registry is copied only to generated ephemeral state and restored or removed in finally.",
+  "targeted_test_result": "5 passed",
+  "historical_contract_compatibility": "PASS: run identity, request JSONL, results layout, and summary fields match recorded Wave 2D batch artifacts.",
+  "errors": []
+}

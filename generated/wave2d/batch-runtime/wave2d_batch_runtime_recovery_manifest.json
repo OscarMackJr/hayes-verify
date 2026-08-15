@@ -1,0 +1,73 @@
+{
+  "component": "Hayes Verify",
+  "source_worktree": "C:\\temp\\standars\\hayes-verify",
+  "destination_worktree": "C:\\temp\\standars\\hayes-verify-baseline",
+  "copied_files": [
+    {
+      "source_path": "C:\\temp\\standars\\hayes-verify\\scripts\\Run-Wave2DImmutableBatch.ps1",
+      "destination_path": "C:\\temp\\standars\\hayes-verify-baseline\\scripts\\Run-Wave2DImmutableBatch.ps1",
+      "source_sha256": "543106914c15dc96be7d13ff04d5775c691692a221bc39366b7cfbc28b85add3",
+      "destination_sha256": "9fa290bf31167af4d71895f4a04ecf595c4e4470cb772f0009b2a25668d7a344",
+      "provenance_classification": "RECOVERED_AND_HARDENED",
+      "hardening_note": "Python formatting or safety hardening changed the published copy; the source SHA remains the provenance anchor."
+    },
+    {
+      "source_path": "C:\\temp\\standars\\hayes-verify\\scripts\\create_wave2d_batch_run.py",
+      "destination_path": "C:\\temp\\standars\\hayes-verify-baseline\\scripts\\create_wave2d_batch_run.py",
+      "source_sha256": "a6cac520b0ccf6071aef5fda76be220c86fe82b9dddd37736e7093efa6e84822",
+      "destination_sha256": "8ff4badf5b52407010a1455cb3e9bdddd361c3bad624acc42b26875a2e7166a0",
+      "provenance_classification": "RECOVERED_AND_HARDENED",
+      "hardening_note": "Python formatting or safety hardening changed the published copy; the source SHA remains the provenance anchor."
+    },
+    {
+      "source_path": "C:\\temp\\standars\\hayes-verify\\scripts\\build_wave2d_batch_requests_scoped.py",
+      "destination_path": "C:\\temp\\standars\\hayes-verify-baseline\\scripts\\build_wave2d_batch_requests_scoped.py",
+      "source_sha256": "183c38a66de5c06cb3b8743cd629dad03671c7754b4c720791c45f49356359ca",
+      "destination_sha256": "9eb510297ce1720a5557338634b3d54720959d509a554ece23e9e9ad70414f88",
+      "provenance_classification": "RECOVERED_AND_HARDENED",
+      "hardening_note": "Python formatting or safety hardening changed the published copy; the source SHA remains the provenance anchor."
+    },
+    {
+      "source_path": "C:\\temp\\standars\\hayes-verify\\scripts\\run_wave2d_batch_registry_scoped.py",
+      "destination_path": "C:\\temp\\standars\\hayes-verify-baseline\\scripts\\run_wave2d_batch_registry_scoped.py",
+      "source_sha256": "07b4bea4d94290826fed437bafcac9ca99f5ec3cfc926721fea9a73d9605bd6b",
+      "destination_sha256": "0402622d8cc355a773b984dc4e2dbe25a70cd2c2935b873e2a47e0c2331a5a27",
+      "provenance_classification": "RECOVERED_AND_HARDENED",
+      "hardening_note": "Python formatting or safety hardening changed the published copy; the source SHA remains the provenance anchor."
+    },
+    {
+      "source_path": "C:\\temp\\standars\\hayes-verify\\scripts\\run_registry_evaluator.py",
+      "destination_path": "C:\\temp\\standars\\hayes-verify-baseline\\scripts\\run_registry_evaluator.py",
+      "source_sha256": "b1b330626cb7c41932b6eb3d3cc49ef2c6e9f9765e434aac5fe0627076cd4940",
+      "destination_sha256": "6c7a1f68f23254fa2bc1514d9d689f3c810e97ae430514a656a267a653f4d0a7",
+      "provenance_classification": "RECOVERED_AND_HARDENED",
+      "hardening_note": "Python formatting or safety hardening changed the published copy; the source SHA remains the provenance anchor."
+    },
+    {
+      "source_path": "C:\\temp\\standars\\hayes-verify\\registry\\wave2d_batch_run_identity_spec.json",
+      "destination_path": "C:\\temp\\standars\\hayes-verify-baseline\\registry\\wave2d_batch_run_identity_spec.json",
+      "source_sha256": "794912ceafcd7a9eaffe6b76feefa9f6f8c2c9d31d348c80b7a9c6685ef79453",
+      "destination_sha256": "794912ceafcd7a9eaffe6b76feefa9f6f8c2c9d31d348c80b7a9c6685ef79453",
+      "provenance_classification": "RECOVERED_EXACT",
+      "hardening_note": "Exact source recovery."
+    }
+  ],
+  "reimplemented_safety_files": [
+    "registry/wave2d_repository_map.json",
+    "registry/wave2d_repository_path_overrides.example.json"
+  ],
+  "excluded_files": [
+    {
+      "path": "registry/wave2d_evaluator_registry.json",
+      "reason": "stale temporary runtime state; versioned registries are authoritative"
+    },
+    {
+      "path": "examples/pilot_request.json",
+      "reason": "unrelated local change"
+    },
+    {
+      "path": "scripts/Protect-HayesVerifyDefaultBranch.ps1",
+      "reason": "unrelated local change"
+    }
+  ]
+}

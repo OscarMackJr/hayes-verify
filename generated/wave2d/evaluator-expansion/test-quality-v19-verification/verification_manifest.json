@@ -1,0 +1,60 @@
+{
+  "component": "Hayes Verify",
+  "phase": "Wave 2D Test Quality v1.9 Immutable Verification",
+  "batch_id": "BATCH-20260815T032250.193794Z",
+  "controls": [
+    {
+      "control_id": "EMS-CTRL-027",
+      "applicable_target_count": 7,
+      "complete_target_count": 7,
+      "blocked_target_count": 0,
+      "terminal_result_counts": {
+        "WARNING": 7
+      },
+      "batch_id": "BATCH-20260815T032250.193794Z",
+      "verification_state": "VERIFIED"
+    },
+    {
+      "control_id": "EMS-CTRL-028",
+      "applicable_target_count": 7,
+      "complete_target_count": 7,
+      "blocked_target_count": 0,
+      "terminal_result_counts": {
+        "WARNING": 7
+      },
+      "batch_id": "BATCH-20260815T032250.193794Z",
+      "verification_state": "VERIFIED"
+    },
+    {
+      "control_id": "EMS-CTRL-029",
+      "applicable_target_count": 4,
+      "complete_target_count": 4,
+      "blocked_target_count": 0,
+      "terminal_result_counts": {
+        "WARNING": 4
+      },
+      "batch_id": "BATCH-20260815T032250.193794Z",
+      "verification_state": "VERIFIED"
+    },
+    {
+      "control_id": "EMS-CTRL-031",
+      "applicable_target_count": 7,
+      "complete_target_count": 7,
+      "blocked_target_count": 0,
+      "terminal_result_counts": {
+        "WARNING": 7
+      },
+      "batch_id": "BATCH-20260815T032250.193794Z",
+      "verification_state": "VERIFIED"
+    }
+  ],
+  "verified_control_count": 4,
+  "pending_control_count": 0,
+  "scoped_result_counts": {
+    "WARNING": 25
+  },
+  "hard_invariants": {
+    "ctrl029_repository_only_evidence_never_passes": "PASS",
+    "ctrl031_repository_artifact_only_never_passes": "PASS"
+  }
+}

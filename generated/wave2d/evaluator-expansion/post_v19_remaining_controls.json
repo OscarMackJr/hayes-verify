@@ -1,0 +1,138 @@
+{
+  "component": "Hayes Verify",
+  "phase": "Post-v1.9 Wave 2D Remaining Assessment",
+  "generated_at_utc": "2026-08-15T03:27:56.810879+00:00",
+  "source_registry": "registry/wave2d_evaluator_registry_v1_9.json",
+  "source_registry_sha256": "4336fa4a7391d68fc45dc8fe9051ccfbbdbc9f06e9d75c19630b3111524dae97",
+  "remaining_control_count": 35,
+  "remaining_implementation_states": {
+    "HUMAN_EVIDENCE_REQUIRED": 5,
+    "PLANNED_AUTOMATED": 3,
+    "PLANNED_HYBRID": 27
+  },
+  "families": [
+    {
+      "family": "dependency_supply_chain",
+      "control_ids": [
+        "EMS-CTRL-023"
+      ],
+      "implementation_states": {
+        "PLANNED_HYBRID": 1
+      },
+      "automation_classifications": [
+        "PLANNED_HYBRID"
+      ],
+      "evidence_authorities": [
+        "human_judgment_review"
+      ],
+      "semantic_readiness": "GOVERNANCE_RECOVERY_REQUIRED",
+      "expected_governance_work": "Recover controlled EMS normative and evidence authority before evaluator implementation."
+    },
+    {
+      "family": "documentation_governance",
+      "control_ids": [
+        "EMS-CTRL-005",
+        "EMS-CTRL-016",
+        "EMS-CTRL-057",
+        "EMS-CTRL-061",
+        "EMS-CTRL-063",
+        "EMS-CTRL-071"
+      ],
+      "implementation_states": {
+        "PLANNED_HYBRID": 4,
+        "PLANNED_AUTOMATED": 2
+      },
+      "automation_classifications": [
+        "PLANNED_AUTOMATED",
+        "PLANNED_HYBRID"
+      ],
+      "evidence_authorities": [
+        "human_judgment_review"
+      ],
+      "semantic_readiness": "GOVERNANCE_RECOVERY_REQUIRED",
+      "expected_governance_work": "Recover controlled EMS normative and evidence authority before evaluator implementation."
+    },
+    {
+      "family": "human_judgment",
+      "control_ids": [
+        "EMS-CTRL-001",
+        "EMS-CTRL-007",
+        "EMS-CTRL-024",
+        "EMS-CTRL-051",
+        "EMS-CTRL-054"
+      ],
+      "implementation_states": {
+        "HUMAN_EVIDENCE_REQUIRED": 5
+      },
+      "automation_classifications": [
+        "HUMAN_EVIDENCE_REQUIRED"
+      ],
+      "evidence_authorities": [
+        "human_judgment_review"
+      ],
+      "semantic_readiness": "GOVERNANCE_RECOVERY_REQUIRED",
+      "expected_governance_work": "Recover controlled EMS normative and evidence authority before evaluator implementation."
+    },
+    {
+      "family": "infrastructure_cloud",
+      "control_ids": [
+        "EMS-CTRL-004",
+        "EMS-CTRL-006",
+        "EMS-CTRL-041",
+        "EMS-CTRL-043",
+        "EMS-CTRL-044",
+        "EMS-CTRL-045",
+        "EMS-CTRL-046",
+        "EMS-CTRL-047",
+        "EMS-CTRL-048",
+        "EMS-CTRL-056",
+        "EMS-CTRL-059",
+        "EMS-CTRL-064",
+        "EMS-CTRL-066"
+      ],
+      "implementation_states": {
+        "PLANNED_HYBRID": 12,
+        "PLANNED_AUTOMATED": 1
+      },
+      "automation_classifications": [
+        "PLANNED_AUTOMATED",
+        "PLANNED_HYBRID"
+      ],
+      "evidence_authorities": [
+        "coverage_classification",
+        "human_judgment_review"
+      ],
+      "semantic_readiness": "GOVERNANCE_RECOVERY_REQUIRED",
+      "expected_governance_work": "Recover controlled EMS normative and evidence authority before evaluator implementation."
+    },
+    {
+      "family": "management_operational",
+      "control_ids": [
+        "EMS-CTRL-049",
+        "EMS-CTRL-050",
+        "EMS-CTRL-053",
+        "EMS-CTRL-065",
+        "EMS-CTRL-073",
+        "EMS-CTRL-074",
+        "EMS-CTRL-076",
+        "EMS-CTRL-077",
+        "EMS-CTRL-078",
+        "EMS-CTRL-080"
+      ],
+      "implementation_states": {
+        "PLANNED_HYBRID": 10
+      },
+      "automation_classifications": [
+        "PLANNED_HYBRID"
+      ],
+      "evidence_authorities": [
+        "coverage_classification",
+        "human_judgment_review"
+      ],
+      "semantic_readiness": "GOVERNANCE_RECOVERY_REQUIRED",
+      "expected_governance_work": "Recover controlled EMS normative and evidence authority before evaluator implementation."
+    }
+  ],
+  "recommended_next_family": "dependency_supply_chain",
+  "recommendation_rationale": "It has one remaining control, reusable family architecture, and the lowest execution surface; it still requires authority preflight before implementation."
+}

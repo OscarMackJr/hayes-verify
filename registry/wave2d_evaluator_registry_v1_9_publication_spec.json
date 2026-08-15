@@ -1,0 +1,39 @@
+{
+  "registry_version": "1.9",
+  "registry_path": "registry/wave2d_evaluator_registry_v1_9.json",
+  "registry_sha256": "4336fa4a7391d68fc45dc8fe9051ccfbbdbc9f06e9d75c19630b3111524dae97",
+  "candidate_state": "CANDIDATE_FROZEN",
+  "verification_path": "generated/wave2d/evaluator-expansion/test-quality-v19-verification/verification_manifest.json",
+  "verification_sha256": "47479400121e86f8860b57974928b4fe53c561124169c08ef244d289a951878a",
+  "certification_path": "generated/wave2d/evaluator-expansion/test_quality_registry_v1_9_certification.json",
+  "certification_sha256": "8cb91343b69f3c99915659f3a8d6ec7faca43be41b68e4fe30060f52cf2d1808",
+  "verification_batch_id": "BATCH-20260815T032250.193794Z",
+  "promoted_controls": [
+    "EMS-CTRL-027",
+    "EMS-CTRL-028",
+    "EMS-CTRL-029",
+    "EMS-CTRL-031"
+  ],
+  "implementation_state_counts": {
+    "HUMAN_EVIDENCE_REQUIRED": 5,
+    "IMPLEMENTED": 45,
+    "PLANNED_AUTOMATED": 3,
+    "PLANNED_HYBRID": 27
+  },
+  "publication_branch": "feature/wave2d-evaluator-registry-v1-9-test-quality",
+  "commit_message": "publish Wave 2D evaluator registry v1.9 and Test Quality verification",
+  "publication_allowlist": [
+    "registry/wave2d_evaluator_registry_v1_9.json",
+    "registry/wave2d_evaluator_registry_v1_9_publication_spec.json",
+    "registry/test_quality_rules.json",
+    "src/hayes_verify/evaluator_families/test_quality.py",
+    "tests/test_test_quality_v19.py",
+    "scripts/build_test_quality_v19_artifacts.py",
+    "scripts/build_test_quality_v19_authority_preflight.py",
+    "scripts/validate_test_quality_v19_prebatch.py",
+    "scripts/build_test_quality_batch_registry.py",
+    "scripts/promote_test_quality_v19_batch.py",
+    "scripts/build_wave2d_v19_publication_artifacts.py",
+    "scripts/Run-Wave2DImmutableBatch.ps1"
+  ]
+}

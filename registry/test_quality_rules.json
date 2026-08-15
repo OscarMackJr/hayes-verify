@@ -56,6 +56,241 @@
       "pass_policy": "ALL",
       "derived_control_id": "EMS-CTRL-060",
       "derivation_basis": "authoritative_control_name_and_description"
+    },
+    "EMS-CTRL-029": {
+      "name": "Performance Testing",
+      "supported": true,
+      "evaluation_mode": "test_quality_v19",
+      "evidence_type": "TEST_PERFORMANCE_SERVICE",
+      "evidence_authority": "Approved service-performance evidence store referenced by the EMS service registry; repository evidence is supporting only.",
+      "effective_applicability_source": "registry/wave2d/test_quality_effective_applicability.yaml",
+      "ems_authority": "C:/temp/standars/ems/registry/test_quality_control_requirements.json",
+      "decision_ids": [
+        "TQ-029-01",
+        "TQ-029-02",
+        "TQ-029-03",
+        "TQ-029-04",
+        "TQ-029-05",
+        "TQ-029-06"
+      ],
+      "assertions": [
+        {
+          "decision_id": "TQ-029-01",
+          "assertion_id": "TQ-029-01-RULE",
+          "automation_classification": "HYBRID",
+          "ems_requirement": "Apply to production services at initial production release and after a material change to workload, capacity, data access, interface, or scaling behavior."
+        },
+        {
+          "decision_id": "TQ-029-02",
+          "assertion_id": "TQ-029-02-RULE",
+          "automation_classification": "HUMAN_EVIDENCE_REQUIRED",
+          "ems_requirement": "Require an approved service-specific workload profile representing expected use and relevant peak or failure behavior."
+        },
+        {
+          "decision_id": "TQ-029-03",
+          "assertion_id": "TQ-029-03-RULE",
+          "automation_classification": "HUMAN_EVIDENCE_REQUIRED",
+          "ems_requirement": "Require service-specific approved performance objectives/baselines in the service registry or linked controlled evidence; no universal numeric threshold is established by this control."
+        },
+        {
+          "decision_id": "TQ-029-04",
+          "assertion_id": "TQ-029-04-RULE",
+          "automation_classification": "HYBRID",
+          "ems_requirement": "Use an approved service-performance evidence store referenced by the EMS service registry, containing environment, workload profile, revision, results, timestamp, and validating actor/workflow."
+        },
+        {
+          "decision_id": "TQ-029-05",
+          "assertion_id": "TQ-029-05-RULE",
+          "automation_classification": "HYBRID",
+          "ems_requirement": "PASS only when authoritative service evidence proves the approved service-specific objective; FAIL only when authoritative evidence proves violation; missing/inaccessible/ambiguous evidence routes to HUMAN_REVIEW."
+        },
+        {
+          "decision_id": "TQ-029-06",
+          "assertion_id": "TQ-029-06-RULE",
+          "automation_classification": "HUMAN_EVIDENCE_REQUIRED",
+          "ems_requirement": "Use a time-bounded service exception with objective gap, risk, compensating controls, service owner, operational approver, expiry, and remediation plan."
+        }
+      ],
+      "checks": [
+        {
+          "type": "v19_performance",
+          "assertion_id": "ems-ctrl-029_authoritative_evidence"
+        }
+      ],
+      "pass_policy": "ALL",
+      "automation_boundary": "HYBRID",
+      "repository_only_pass_permitted": false
+    },
+    "EMS-CTRL-027": {
+      "name": "Regression Testing",
+      "supported": true,
+      "evaluation_mode": "test_quality_v19",
+      "evidence_type": "TEST_REGRESSION_CI",
+      "evidence_authority": "Approved CI/CD execution evidence bound to the repository and revision; controlled exception evidence where applicable.",
+      "effective_applicability_source": "registry/wave2d/test_quality_effective_applicability.yaml",
+      "ems_authority": "C:/temp/standars/ems/registry/test_quality_control_requirements.json",
+      "decision_ids": [
+        "TQ-027-01",
+        "TQ-027-02",
+        "TQ-027-03",
+        "TQ-027-04"
+      ],
+      "assertions": [
+        {
+          "decision_id": "TQ-027-01",
+          "assertion_id": "TQ-027-01-RULE",
+          "automation_classification": "HYBRID",
+          "ems_requirement": "Require regression testing for changes classified in a controlled test-impact assessment as affecting supported behavior; documentation-only changes are excluded."
+        },
+        {
+          "decision_id": "TQ-027-02",
+          "assertion_id": "TQ-027-02-RULE",
+          "automation_classification": "AUTOMATABLE",
+          "ems_requirement": "Require CI/CD execution record with repository, revision, selected regression suite, result, timestamp, and workflow identity."
+        },
+        {
+          "decision_id": "TQ-027-03",
+          "assertion_id": "TQ-027-03-RULE",
+          "automation_classification": "HYBRID",
+          "ems_requirement": "A failed required regression test blocks change acceptance or release unless an approved exception is active."
+        },
+        {
+          "decision_id": "TQ-027-04",
+          "assertion_id": "TQ-027-04-RULE",
+          "automation_classification": "HUMAN_EVIDENCE_REQUIRED",
+          "ems_requirement": "Permit a time-bounded exception with affected change, risk rationale, compensating controls, accountable owner, approving authority, expiry, and remediation plan."
+        }
+      ],
+      "checks": [
+        {
+          "type": "v19_regression",
+          "assertion_id": "ems-ctrl-027_authoritative_evidence"
+        }
+      ],
+      "pass_policy": "ALL",
+      "automation_boundary": "MIXED_AUTOMATABLE_HYBRID_HUMAN_EVIDENCE_REQUIRED",
+      "repository_only_pass_permitted": true
+    },
+    "EMS-CTRL-028": {
+      "name": "Contract/API Testing",
+      "supported": true,
+      "evaluation_mode": "test_quality_v19",
+      "evidence_type": "TEST_CONTRACT_API_CI",
+      "evidence_authority": "Approved CI/CD contract/API execution evidence bound to repository, revision, interface/version, result, timestamp, and workflow identity.",
+      "effective_applicability_source": "registry/wave2d/test_quality_effective_applicability.yaml",
+      "ems_authority": "C:/temp/standars/ems/registry/test_quality_control_requirements.json",
+      "decision_ids": [
+        "TQ-028-01",
+        "TQ-028-02",
+        "TQ-028-03",
+        "TQ-028-04",
+        "TQ-028-05"
+      ],
+      "assertions": [
+        {
+          "decision_id": "TQ-028-01",
+          "assertion_id": "TQ-028-01-RULE",
+          "automation_classification": "HYBRID",
+          "ems_requirement": "Apply when a repository publishes, consumes, or changes a versioned API, event schema, or external integration interface."
+        },
+        {
+          "decision_id": "TQ-028-02",
+          "assertion_id": "TQ-028-02-RULE",
+          "automation_classification": "HYBRID",
+          "ems_requirement": "Require positive, negative/error, and compatibility/breaking-change coverage for each applicable changed interface."
+        },
+        {
+          "decision_id": "TQ-028-03",
+          "assertion_id": "TQ-028-03-RULE",
+          "automation_classification": "AUTOMATABLE",
+          "ems_requirement": "Require CI/CD execution evidence bound to repository, revision, interface/version, test result, timestamp, and workflow identity."
+        },
+        {
+          "decision_id": "TQ-028-04",
+          "assertion_id": "TQ-028-04-RULE",
+          "automation_classification": "HYBRID",
+          "ems_requirement": "A failed required contract/API test blocks change acceptance or release unless an approved exception is active."
+        },
+        {
+          "decision_id": "TQ-028-05",
+          "assertion_id": "TQ-028-05-RULE",
+          "automation_classification": "HUMAN_EVIDENCE_REQUIRED",
+          "ems_requirement": "Require a compatibility-deprecation record with consumer notification, migration window, owner, approval, expiry, and rollback plan."
+        }
+      ],
+      "checks": [
+        {
+          "type": "v19_contract_api",
+          "assertion_id": "ems-ctrl-028_authoritative_evidence"
+        }
+      ],
+      "pass_policy": "ALL",
+      "automation_boundary": "HYBRID",
+      "repository_only_pass_permitted": true
+    },
+    "EMS-CTRL-031": {
+      "name": "Test Evidence Retention",
+      "supported": true,
+      "evaluation_mode": "test_quality_v19",
+      "evidence_type": "TEST_EVIDENCE_RETENTION_STORE",
+      "evidence_authority": "Approved controlled CI/CD artifact store or evidence repository with access control, retention configuration, and tamper-evident or immutable retention capability; repository artifact presence alone is supporting evidence only.",
+      "effective_applicability_source": "registry/wave2d/test_quality_effective_applicability.yaml",
+      "ems_authority": "C:/temp/standars/ems/registry/test_quality_control_requirements.json",
+      "decision_ids": [
+        "TQ-031-01",
+        "TQ-031-02",
+        "TQ-031-03",
+        "TQ-031-04",
+        "TQ-031-05",
+        "TQ-031-06"
+      ],
+      "assertions": [
+        {
+          "decision_id": "TQ-031-01",
+          "assertion_id": "TQ-031-01-RULE",
+          "automation_classification": "HYBRID",
+          "ems_requirement": "Retain required test execution result, revision/build identifier, test configuration or suite identity, relevant logs/reports, and approval/exception record where applicable."
+        },
+        {
+          "decision_id": "TQ-031-02",
+          "assertion_id": "TQ-031-02-RULE",
+          "automation_classification": "HYBRID",
+          "ems_requirement": "Retain required test evidence for three years."
+        },
+        {
+          "decision_id": "TQ-031-03",
+          "assertion_id": "TQ-031-03-RULE",
+          "automation_classification": "HYBRID",
+          "ems_requirement": "Use an approved controlled CI/CD artifact store or evidence repository with access control, retention configuration, and tamper-evident or immutable retention capability."
+        },
+        {
+          "decision_id": "TQ-031-04",
+          "assertion_id": "TQ-031-04-RULE",
+          "automation_classification": "AUTOMATABLE",
+          "ems_requirement": "Bind retained evidence to repository, source revision, build or workflow run, test suite, result, timestamp, and related change/release when applicable."
+        },
+        {
+          "decision_id": "TQ-031-05",
+          "assertion_id": "TQ-031-05-RULE",
+          "automation_classification": "HUMAN_EVIDENCE_REQUIRED",
+          "ems_requirement": "Legal, regulatory, contractual, audit, or active-investigation holds override deletion; other deviations require a time-bounded controlled exception."
+        },
+        {
+          "decision_id": "TQ-031-06",
+          "assertion_id": "TQ-031-06-RULE",
+          "automation_classification": "HYBRID",
+          "ems_requirement": "PASS only when authoritative store configuration and required retained evidence satisfy policy; FAIL when authoritative evidence proves early deletion or insufficient configured retention; inaccessible or ambiguous authority routes to HUMAN_REVIEW."
+        }
+      ],
+      "checks": [
+        {
+          "type": "v19_retention",
+          "assertion_id": "ems-ctrl-031_authoritative_evidence"
+        }
+      ],
+      "pass_policy": "ALL",
+      "automation_boundary": "HYBRID",
+      "repository_only_pass_permitted": false
     }
   }
 }

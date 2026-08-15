@@ -1,0 +1,66 @@
+{
+  "family": "test_quality",
+  "selected_control_count": 4,
+  "backlog_control_count": 4,
+  "implementable_count": 4,
+  "blocked_count": 0,
+  "controls": [
+    {
+      "control_id": "EMS-CTRL-027",
+      "rule_registered": true,
+      "rule_supported": true,
+      "ems_authority_traceability": [
+        "TQ-027-01",
+        "TQ-027-02",
+        "TQ-027-03",
+        "TQ-027-04"
+      ],
+      "evidence_authority": "Approved CI/CD execution evidence bound to the repository and revision; controlled exception evidence where applicable.",
+      "implementation_state": "IMPLEMENTED_PENDING_BATCH_VERIFICATION"
+    },
+    {
+      "control_id": "EMS-CTRL-028",
+      "rule_registered": true,
+      "rule_supported": true,
+      "ems_authority_traceability": [
+        "TQ-028-01",
+        "TQ-028-02",
+        "TQ-028-03",
+        "TQ-028-04",
+        "TQ-028-05"
+      ],
+      "evidence_authority": "Approved CI/CD contract/API execution evidence bound to repository, revision, interface/version, result, timestamp, and workflow identity.",
+      "implementation_state": "IMPLEMENTED_PENDING_BATCH_VERIFICATION"
+    },
+    {
+      "control_id": "EMS-CTRL-029",
+      "rule_registered": true,
+      "rule_supported": true,
+      "ems_authority_traceability": [
+        "TQ-029-01",
+        "TQ-029-02",
+        "TQ-029-03",
+        "TQ-029-04",
+        "TQ-029-05",
+        "TQ-029-06"
+      ],
+      "evidence_authority": "Approved service-performance evidence store referenced by the EMS service registry; repository evidence is supporting only.",
+      "implementation_state": "IMPLEMENTED_PENDING_BATCH_VERIFICATION"
+    },
+    {
+      "control_id": "EMS-CTRL-031",
+      "rule_registered": true,
+      "rule_supported": true,
+      "ems_authority_traceability": [
+        "TQ-031-01",
+        "TQ-031-02",
+        "TQ-031-03",
+        "TQ-031-04",
+        "TQ-031-05",
+        "TQ-031-06"
+      ],
+      "evidence_authority": "Approved controlled CI/CD artifact store or evidence repository with access control, retention configuration, and tamper-evident or immutable retention capability; repository artifact presence alone is supporting evidence only.",
+      "implementation_state": "IMPLEMENTED_PENDING_BATCH_VERIFICATION"
+    }
+  ]
+}

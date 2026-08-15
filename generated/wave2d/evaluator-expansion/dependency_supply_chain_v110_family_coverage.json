@@ -1,0 +1,17 @@
+{
+  "family": "dependency_supply_chain",
+  "selected_controls": 1,
+  "implementable": 1,
+  "blocked": 0,
+  "controls": [
+    {
+      "control_id": "EMS-CTRL-023",
+      "rule_registered": true,
+      "rule_supported_by_implementation": true,
+      "EMS_traceability": "complete",
+      "evidence_authority": "ORGANIZATIONAL",
+      "automation_boundary": "HYBRID",
+      "implementation_state": "IMPLEMENTED_PENDING_BATCH_VERIFICATION"
+    }
+  ]
+}

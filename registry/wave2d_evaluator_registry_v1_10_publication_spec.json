@@ -1,0 +1,28 @@
+{
+  "registry_version": "1.10",
+  "registry_path": "registry/wave2d_evaluator_registry_v1_10.json",
+  "registry_sha256": "c69093e5068b5285bbfb551123cae933e92af71870c86f2868504c6017b692c2",
+  "candidate_state": "CANDIDATE_FROZEN",
+  "verification_manifest": "generated/wave2d/evaluator-expansion/dependency-supply-chain-v110-verification/verification_manifest.json",
+  "verification_manifest_sha256": "ab0762d1d17f50f9747a0814072427155d707e2d4a4ef7bb41a31f1bc99f2cf3",
+  "candidate_certification": "generated/wave2d/evaluator-expansion/dependency_supply_chain_registry_v1_10_certification.json",
+  "dependency_supply_chain_closure": "generated/wave2d/evaluator-expansion/dependency_supply_chain_v1_10_closure.json",
+  "post_v1_10_assessment": "generated/wave2d/evaluator-expansion/post_v1_10_baseline_assessment.json",
+  "publication_manifest": "generated/wave2d/evaluator-expansion/wave2d_v1_10_publication_manifest.json",
+  "ems_authorities": {
+    "requirements_sha256": "2a7086160b6344e6957f6d8043534e1fb131d28487dbfb51d0a9aa1f2cf9f53c",
+    "publication_certification_sha256": "2aa68f4777916e49b0f2db3682e8cd72bf22f7b4c1b3c0663898b29df265e120",
+    "historical_freeze_sha256": "79adb6c003e9a61e2fd36131b1a37d3387973f72d206102985a78a3271bc5b35"
+  },
+  "publication_branch": "feature/wave2d-evaluator-registry-v1-10-dependency-supply-chain",
+  "commit_message": "publish Wave 2D evaluator registry v1.10 and close dependency supply chain",
+  "publication_prerequisites": [
+    "immutable candidate hash validation",
+    "EMS authority hash validation",
+    "contract bundle validation",
+    "workflow Ruff scope",
+    "full pytest",
+    "explicit staging allowlist"
+  ],
+  "publication_artifact_allowlist": "registry/wave2d_evaluator_registry_v1_10_publication_allowlist.txt"
+}

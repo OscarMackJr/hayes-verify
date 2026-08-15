@@ -1,0 +1,27 @@
+{
+  "phase": "Dependency Supply Chain v1.10 Pre-Batch Validation",
+  "status": "PASS",
+  "EMS_authority_hashes": {
+    "requirements": "2A7086160B6344E6957F6D8043534E1FB131D28487DBFB51D0A9AA1F2CF9F53C",
+    "publication_certification": "2AA68F4777916E49B0F2DB3682E8CD72BF22F7B4C1B3C0663898B29DF265E120"
+  },
+  "selected_control": "EMS-CTRL-023",
+  "EMS_decisions": 13,
+  "implementation_matrix_assertions": 13,
+  "rule_assertions": 13,
+  "missing_decision_ids": 0,
+  "orphaned_decision_ids": 0,
+  "coverage": {
+    "selected": 1,
+    "implementable": 1,
+    "blocked": 0
+  },
+  "ruff": "PASS",
+  "targeted_pytest": "PASS — 15 passed",
+  "full_pytest": "PASS — 77 passed, 0 failed",
+  "hard_negative_invariants": "PASS",
+  "registry_v110_draft": "PASS",
+  "immutable_batch_executed": false,
+  "registry_promoted": false,
+  "errors": []
+}

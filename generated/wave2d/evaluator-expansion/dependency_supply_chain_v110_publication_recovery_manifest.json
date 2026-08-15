@@ -1,0 +1,74 @@
+{
+  "component": "Hayes Verify",
+  "operation": "v1.10 publication lineage recovery",
+  "source_worktree": "C:\\temp\\standars\\hayes-verify-v110-batch",
+  "destination_worktree": "C:\\temp\\standars\\hayes-verify-v110-publish",
+  "files": [
+    {
+      "path": "src/hayes_verify/evaluator_families/dependency_supply_chain.py",
+      "source_sha256": "a064c020ca817c86f572f67bbebd314163b263526a8d08f48ad116adf4f4ff86",
+      "destination_sha256": "a064c020ca817c86f572f67bbebd314163b263526a8d08f48ad116adf4f4ff86",
+      "provenance": "VERIFIED_CTRL023_V110_CANDIDATE_LINEAGE"
+    },
+    {
+      "path": "registry/dependency_supply_chain_rules.json",
+      "source_sha256": "7aeb2f634adc4dd9e9980b117ce4d0fc2a045f96b5454b257f84e290a9cd903f",
+      "destination_sha256": "7aeb2f634adc4dd9e9980b117ce4d0fc2a045f96b5454b257f84e290a9cd903f",
+      "provenance": "VERIFIED_CTRL023_V110_CANDIDATE_LINEAGE"
+    },
+    {
+      "path": "tests/test_dependency_supply_chain_v110.py",
+      "source_sha256": "a1153398efd50dc493328883277f4cc6b500d043ba1a29d9a0fda50094fb8883",
+      "destination_sha256": "a1153398efd50dc493328883277f4cc6b500d043ba1a29d9a0fda50094fb8883",
+      "provenance": "VERIFIED_CTRL023_V110_CANDIDATE_LINEAGE"
+    },
+    {
+      "path": "generated/wave2d/evaluator-expansion/dependency_supply_chain_v110_authority_preflight.json",
+      "source_sha256": "9dd7c84940763a108e905c884e54dcfc54b7fd7d3427af461e99bb1cff1bb31d",
+      "destination_sha256": "9dd7c84940763a108e905c884e54dcfc54b7fd7d3427af461e99bb1cff1bb31d",
+      "provenance": "VERIFIED_CTRL023_V110_CANDIDATE_LINEAGE"
+    },
+    {
+      "path": "generated/wave2d/evaluator-expansion/DEPENDENCY_SUPPLY_CHAIN_V110_AUTHORITY_PREFLIGHT.md",
+      "source_sha256": "880259bfdae2d5b4749891882299ecac0903306d75cc8308bb3739b3bb614706",
+      "destination_sha256": "14a9b54d4334d1a0fed8a55dc5f5ed34eec42088df99469f24ae05f2650e7339",
+      "provenance": "VERIFIED_CTRL023_V110_CANDIDATE_LINEAGE_WHITESPACE_NORMALIZED"
+    },
+    {
+      "path": "generated/wave2d/evaluator-expansion/dependency_supply_chain_v110_implementation_matrix.json",
+      "source_sha256": "96c254461575fd153ce54440417cdb5c1087be845ee7ca9b43179fafd242e79e",
+      "destination_sha256": "96c254461575fd153ce54440417cdb5c1087be845ee7ca9b43179fafd242e79e",
+      "provenance": "VERIFIED_CTRL023_V110_CANDIDATE_LINEAGE"
+    },
+    {
+      "path": "generated/wave2d/evaluator-expansion/dependency_supply_chain_v110_family_coverage.json",
+      "source_sha256": "a1310486309a4365ed4a21f4dcfcc63027b9f45e974a1d655136691f2056d5f0",
+      "destination_sha256": "a1310486309a4365ed4a21f4dcfcc63027b9f45e974a1d655136691f2056d5f0",
+      "provenance": "VERIFIED_CTRL023_V110_CANDIDATE_LINEAGE"
+    },
+    {
+      "path": "generated/wave2d/evaluator-expansion/dependency_supply_chain_v110_prebatch_validation.json",
+      "source_sha256": "b358166dfa3e3df83453d63d90d002d68a7ec804b0fbd904ca5f3f0c1887aa6c",
+      "destination_sha256": "b358166dfa3e3df83453d63d90d002d68a7ec804b0fbd904ca5f3f0c1887aa6c",
+      "provenance": "VERIFIED_CTRL023_V110_CANDIDATE_LINEAGE"
+    },
+    {
+      "path": "generated/wave2d/evaluator-expansion/dependency-supply-chain-v110-verification/verification_manifest.json",
+      "source_sha256": "ab0762d1d17f50f9747a0814072427155d707e2d4a4ef7bb41a31f1bc99f2cf3",
+      "destination_sha256": "ab0762d1d17f50f9747a0814072427155d707e2d4a4ef7bb41a31f1bc99f2cf3",
+      "provenance": "VERIFIED_CTRL023_V110_CANDIDATE_LINEAGE"
+    },
+    {
+      "path": "registry/wave2d_evaluator_registry_v1_10.json",
+      "source_sha256": "c69093e5068b5285bbfb551123cae933e92af71870c86f2868504c6017b692c2",
+      "destination_sha256": "c69093e5068b5285bbfb551123cae933e92af71870c86f2868504c6017b692c2",
+      "provenance": "VERIFIED_CTRL023_V110_CANDIDATE_LINEAGE"
+    },
+    {
+      "path": "generated/wave2d/evaluator-expansion/dependency_supply_chain_registry_v1_10_certification.json",
+      "source_sha256": "f7c71c4874132df90c5b3192e520fbc94a189c9e533ef7c60e959c5fe2ef7f40",
+      "destination_sha256": "f7c71c4874132df90c5b3192e520fbc94a189c9e533ef7c60e959c5fe2ef7f40",
+      "provenance": "VERIFIED_CTRL023_V110_CANDIDATE_LINEAGE"
+    }
+  ]
+}

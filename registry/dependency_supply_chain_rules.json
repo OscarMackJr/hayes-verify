@@ -57,6 +57,120 @@
       ],
       "pass_policy": "ALL",
       "derived_control_id": "EMS-CTRL-075"
+    },
+    "EMS-CTRL-023": {
+      "name": "Vulnerability Remediation Targets",
+      "supported": true,
+      "evaluation_mode": "dependency_supply_chain_v110",
+      "evidence_type": "VULNERABILITY_REMEDIATION_ORGANIZATIONAL",
+      "evidence_authority": "Approved organizational vulnerability-management platform with controlled security-ticket integration where remediation work is tracked.",
+      "effective_applicability_source": "registry/wave2d/dependency_supply_chain_effective_applicability.yaml",
+      "ems_authority": "C:/temp/standars/ems/registry/dependency_supply_chain_control_requirements.json",
+      "decision_ids": [
+        "DSC-023-01",
+        "DSC-023-02",
+        "DSC-023-03",
+        "DSC-023-04",
+        "DSC-023-05",
+        "DSC-023-06",
+        "DSC-023-07",
+        "DSC-023-08",
+        "DSC-023-09",
+        "DSC-023-10",
+        "DSC-023-11",
+        "DSC-023-12",
+        "DSC-023-13"
+      ],
+      "assertions": [
+        {
+          "decision_id": "DSC-023-01",
+          "assertion_id": "DSC-023-01-RULE",
+          "automation_classification": "HYBRID",
+          "ems_requirement": "Use the severity rating issued by an approved vulnerability scanner as the remediation class."
+        },
+        {
+          "decision_id": "DSC-023-02",
+          "assertion_id": "DSC-023-02-RULE",
+          "automation_classification": "AUTOMATABLE",
+          "ems_requirement": "Critical: 7 calendar days; High: 30 calendar days; Medium: 90 calendar days; Low: 180 calendar days or documented risk-managed disposition."
+        },
+        {
+          "decision_id": "DSC-023-03",
+          "assertion_id": "DSC-023-03-RULE",
+          "automation_classification": "HYBRID",
+          "ems_requirement": "Start aging at the first validated detection timestamp recorded by the authoritative vulnerability evidence system."
+        },
+        {
+          "decision_id": "DSC-023-04",
+          "assertion_id": "DSC-023-04-RULE",
+          "automation_classification": "HYBRID",
+          "ems_requirement": "Use an approved vulnerability-management platform as the authoritative system of record, with a controlled integration to an approved security ticketing workflow where remediation work is tracked."
+        },
+        {
+          "decision_id": "DSC-023-05",
+          "assertion_id": "DSC-023-05-RULE",
+          "automation_classification": "HYBRID",
+          "ems_requirement": "Require finding ID, affected asset/repository/service, scanner severity/class, detection timestamp, remediation target date, status, accountable owner, evidence-source ID and timestamp, closure timestamp, and exception/risk-acceptance reference when applicable."
+        },
+        {
+          "decision_id": "DSC-023-06",
+          "assertion_id": "DSC-023-06-RULE",
+          "automation_classification": "HYBRID",
+          "ems_requirement": "Stop the remediation clock only upon verified remediation, approved false-positive closure, or an active approved risk acceptance or compensating-control exception."
+        },
+        {
+          "decision_id": "DSC-023-07",
+          "assertion_id": "DSC-023-07-RULE",
+          "automation_classification": "AUTOMATABLE",
+          "ems_requirement": "Evidence is current when the authoritative system was refreshed within the preceding 24 hours for open Critical or High findings and within the preceding 7 calendar days for other findings."
+        },
+        {
+          "decision_id": "DSC-023-08",
+          "assertion_id": "DSC-023-08-RULE",
+          "automation_classification": "HYBRID",
+          "ems_requirement": "PASS only when authoritative current evidence shows every applicable finding is within its remediation target or has a valid active approved closure, false-positive, or exception disposition."
+        },
+        {
+          "decision_id": "DSC-023-09",
+          "assertion_id": "DSC-023-09-RULE",
+          "automation_classification": "HYBRID",
+          "ems_requirement": "FAIL when current authoritative evidence proves an applicable finding is overdue without an active approved exception, lacks a required owner or target date, or has an expired exception."
+        },
+        {
+          "decision_id": "DSC-023-10",
+          "assertion_id": "DSC-023-10-RULE",
+          "automation_classification": "HYBRID",
+          "ems_requirement": "Route to HUMAN_REVIEW when authoritative evidence is unavailable, inaccessible, incomplete, conflicting, stale, or insufficient to calculate a target or verify an exception."
+        },
+        {
+          "decision_id": "DSC-023-11",
+          "assertion_id": "DSC-023-11-RULE",
+          "automation_classification": "HYBRID",
+          "ems_requirement": "Require Security Authority approval, business justification, compensating controls, accountable owner, approval timestamp, expiration/review date no later than 90 calendar days, renewal before expiry, and closure evidence; expired exceptions are noncompliant."
+        },
+        {
+          "decision_id": "DSC-023-12",
+          "assertion_id": "DSC-023-12-RULE",
+          "automation_classification": "HYBRID",
+          "ems_requirement": "Preserve FROZEN_APPLICABLE rows; evaluate EMS-CTRL-023 once per organization from authoritative organizational evidence, and expose repository rows only as projections with no repository-only PASS."
+        },
+        {
+          "decision_id": "DSC-023-13",
+          "assertion_id": "DSC-023-13-RULE",
+          "automation_classification": "HYBRID",
+          "ems_requirement": "Retain remediation finding, status, closure, and exception history in the authoritative evidence system for three years after closure or expiration."
+        }
+      ],
+      "checks": [
+        {
+          "type": "v110_vulnerability_remediation",
+          "assertion_id": "ems-ctrl-023_authoritative_organizational_evidence"
+        }
+      ],
+      "pass_policy": "ALL",
+      "automation_boundary": "HYBRID",
+      "repository_only_pass_permitted": false,
+      "organization_level": true
     }
   }
 }

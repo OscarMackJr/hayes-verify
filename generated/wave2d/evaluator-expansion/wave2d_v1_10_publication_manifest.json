@@ -1,0 +1,45 @@
+{
+  "component": "Hayes Verify",
+  "publication": "Wave 2D Evaluator Registry v1.10",
+  "registry_version": "1.10",
+  "registry_state": "CANDIDATE_FROZEN",
+  "publication_state": "PUBLISHED_FOR_REVIEW",
+  "registry_path": "registry/wave2d_evaluator_registry_v1_10.json",
+  "registry_sha256": "c69093e5068b5285bbfb551123cae933e92af71870c86f2868504c6017b692c2",
+  "verification_manifest_path": "generated/wave2d/evaluator-expansion/dependency-supply-chain-v110-verification/verification_manifest.json",
+  "verification_manifest_sha256": "ab0762d1d17f50f9747a0814072427155d707e2d4a4ef7bb41a31f1bc99f2cf3",
+  "candidate_certification_path": "generated/wave2d/evaluator-expansion/dependency_supply_chain_registry_v1_10_certification.json",
+  "candidate_certification_sha256": "f7c71c4874132df90c5b3192e520fbc94a189c9e533ef7c60e959c5fe2ef7f40",
+  "dependency_supply_chain_closure_path": "generated/wave2d/evaluator-expansion/dependency_supply_chain_v1_10_closure.json",
+  "dependency_supply_chain_closure_sha256": "c790a2baba5d7f05fef1388d2ada27eed5c463725968fc60fa73855eb1b30dbc",
+  "post_v1_10_assessment_path": "generated/wave2d/evaluator-expansion/post_v1_10_baseline_assessment.json",
+  "post_v1_10_assessment_sha256": "93233ba9db75528dee39f0d2576856eedb4a9f29377ea8fd6f7821b39ae9a367",
+  "immutable_batch_id": "BATCH-20260815T145134.823491Z",
+  "promoted_controls": [
+    "EMS-CTRL-023"
+  ],
+  "implementation_state_counts": {
+    "HUMAN_EVIDENCE_REQUIRED": 5,
+    "IMPLEMENTED": 46,
+    "PLANNED_AUTOMATED": 3,
+    "PLANNED_HYBRID": 26
+  },
+  "remaining_control_count": 34,
+  "remaining_family_counts": {
+    "documentation_governance": 6,
+    "human_judgment": 5,
+    "infrastructure_cloud": 13,
+    "management_operational": 10
+  },
+  "ems_requirements_sha256": "2a7086160b6344e6957f6d8043534e1fb131d28487dbfb51d0a9aa1f2cf9f53c",
+  "ems_publication_certification_sha256": "2aa68f4777916e49b0f2db3682e8cd72bf22f7b4c1b3c0663898b29df265e120",
+  "historical_freeze_sha256": "79adb6c003e9a61e2fd36131b1a37d3387973f72d206102985a78a3271bc5b35",
+  "organization_target_runtime_lineage": [
+    "e97eca00f1a52e019a963b5d79d42d90ea530026",
+    "75739f875ad43256c8073ac1d95ad9c2ed621e6c"
+  ],
+  "contract_bundle_validation_state": "PASS",
+  "test_results": "86 passed",
+  "ruff_result": "PASS: workflow scope src tests scripts/validate_contract_bundle.py",
+  "errors": []
+}

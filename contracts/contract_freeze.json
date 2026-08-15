@@ -15,7 +15,7 @@
   "contracts": {
     "evaluation_request": {
       "path": "schemas/contracts/wave2d_evaluation_request.schema.json",
-      "sha256": "194eb6032cc5f0495c544c424701e0cf66bca5d536d6b4b39e1b56f2e9c1be13"
+      "sha256": "6165cda1b37442015b3ba520edee2a0d083e621b211c6175432b82b6c6e37c5d"
     },
     "evidence_record": {
       "path": "schemas/contracts/wave2d_evidence_record.schema.json",
@@ -23,7 +23,7 @@
     },
     "evaluation_result": {
       "path": "schemas/contracts/wave2d_evaluation_result.schema.json",
-      "sha256": "8408950407bb1ee9cb5b75ef7f771fb0c239ebfafb36e4f842b386f85ad01950"
+      "sha256": "09f5fff346a1ca3f2c3419aa0e6ab2adc7ce1d6c08ad1cc42c3b381f2db4be92"
     },
     "provenance_envelope": {
       "path": "schemas/contracts/wave2d_provenance_envelope.schema.json",
@@ -36,5 +36,6 @@
   },
   "evaluation_performed": false,
   "promotion_performed": false,
-  "freeze_state": "CONTRACT_FROZEN"
+  "freeze_state": "CONTRACT_FROZEN",
+  "bundle_reconciled_at_utc": "2026-08-15T13:46:41.224820+00:00"
 }

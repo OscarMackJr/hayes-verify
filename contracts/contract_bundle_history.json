@@ -1,0 +1,25 @@
+{
+  "component": "Hayes Verify",
+  "contract_bundle": "Wave 2D",
+  "entries": [
+    {
+      "recorded_at_utc": "2026-08-15T13:46:41.224820+00:00",
+      "reason": "organization-target runtime contract extension",
+      "contract_version": "1.0",
+      "compatibility": "BACKWARD_COMPATIBLE_ADDITIVE_EXTENSION",
+      "changed_contracts": [
+        {
+          "name": "evaluation_request",
+          "previous_sha256": "194eb6032cc5f0495c544c424701e0cf66bca5d536d6b4b39e1b56f2e9c1be13",
+          "new_sha256": "6165cda1b37442015b3ba520edee2a0d083e621b211c6175432b82b6c6e37c5d"
+        },
+        {
+          "name": "evaluation_result",
+          "previous_sha256": "8408950407bb1ee9cb5b75ef7f771fb0c239ebfafb36e4f842b386f85ad01950",
+          "new_sha256": "09f5fff346a1ca3f2c3419aa0e6ab2adc7ce1d6c08ad1cc42c3b381f2db4be92"
+        }
+      ],
+      "ems_modified": false
+    }
+  ]
+}

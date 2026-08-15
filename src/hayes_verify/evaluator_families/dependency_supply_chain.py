@@ -222,7 +222,7 @@ def evaluate_rule(
     return evidence, result
 
 
-def run(
+def _base_run(
     bundle,
     request: dict[str, Any],
     repository_path: Path,
@@ -254,5 +254,107 @@ def run(
     result["control_id"] = request["control_id"]
     result["target_id"] = request["target_id"]
 
+    bundle.validate_result(result)
+    return evidence, result
+
+_base_evaluate_rule = evaluate_rule
+
+
+def _v110_time(value: Any) -> datetime | None:
+    if not isinstance(value, str) or not value:
+        return None
+    try:
+        parsed = datetime.fromisoformat(value)
+    except ValueError:
+        return None
+    return parsed if parsed.tzinfo else parsed.replace(tzinfo=UTC)
+
+
+def _v110_outcome(authority: dict[str, Any] | None) -> tuple[str, dict[str, Any]]:
+    required = ("authority_type", "source_identity", "evidence_timestamp", "reference_timestamp", "findings")
+    if not isinstance(authority, dict) or not all(authority.get(key) not in (None, "") for key in required):
+        return "WARNING", {"reason": "authoritative organizational vulnerability evidence unavailable or incomplete"}
+    if authority.get("authority_type") != "vulnerability_management" or authority.get("accessible") is False or authority.get("ambiguous") is True or authority.get("conflicting") is True:
+        return "WARNING", {"reason": "authoritative organizational evidence inaccessible, ambiguous, or conflicting"}
+    evidence_at = _v110_time(authority["evidence_timestamp"])
+    reference_at = _v110_time(authority["reference_timestamp"])
+    if evidence_at is None or reference_at is None or not isinstance(authority["findings"], list):
+        return "WARNING", {"reason": "authoritative evidence contract invalid"}
+    failures: list[dict[str, Any]] = []
+    for finding in authority["findings"]:
+        if not isinstance(finding, dict):
+            return "WARNING", {"reason": "authoritative finding record invalid"}
+        severity = finding.get("severity")
+        detected = _v110_time(finding.get("first_validated_detection_timestamp"))
+        if severity not in {"Critical", "High", "Medium", "Low"} or detected is None or not finding.get("finding_id"):
+            return "WARNING", {"reason": "finding classification/detection evidence incomplete"}
+        freshness = 24 if severity in {"Critical", "High"} and finding.get("status") == "OPEN" else 24 * 7
+        if (reference_at - evidence_at).total_seconds() > freshness * 3600:
+            return "WARNING", {"reason": "authoritative evidence stale", "severity": severity}
+        status = finding.get("status")
+        if status == "VERIFIED_REMEDIATED":
+            if _v110_time(finding.get("closure_timestamp")) is None:
+                return "WARNING", {"reason": "remediation closure evidence incomplete"}
+            continue
+        if status == "APPROVED_FALSE_POSITIVE":
+            if finding.get("false_positive_approved") is not True:
+                return "WARNING", {"reason": "false-positive authority incomplete"}
+            continue
+        if not finding.get("owner"):
+            failures.append({"finding_id": finding["finding_id"], "reason": "missing required owner"})
+            continue
+        target = _v110_time(finding.get("remediation_target_date"))
+        if target is None:
+            failures.append({"finding_id": finding["finding_id"], "reason": "missing remediation target"})
+            continue
+        exception = finding.get("exception")
+        if isinstance(exception, dict):
+            approval = _v110_time(exception.get("approval_timestamp"))
+            expiry = _v110_time(exception.get("expiration_timestamp"))
+            valid = (exception.get("approving_authority") == "Security Authority" and bool(exception.get("justification")) and bool(exception.get("compensating_controls")) and bool(exception.get("owner")) and approval is not None and expiry is not None and expiry > reference_at and (expiry - approval).total_seconds() <= 90 * 86400)
+            if valid:
+                continue
+            if expiry is not None and expiry <= reference_at:
+                failures.append({"finding_id": finding["finding_id"], "reason": "expired exception"})
+                continue
+            return "WARNING", {"reason": "exception evidence incomplete or ambiguous"}
+        if severity == "Low" and finding.get("risk_managed_disposition") is True:
+            continue
+        if target < reference_at:
+            failures.append({"finding_id": finding["finding_id"], "reason": "overdue finding"})
+    if failures:
+        return "FAIL", {"noncompliant_findings": failures}
+    return "PASS", {"finding_count": len(authority["findings"]), "source_identity": authority["source_identity"]}
+
+
+def evaluate_rule(control_id: str, repository_path: Path, rule_registry_path: Path, authoritative_evidence: dict[str, Any] | None = None) -> tuple[list[dict[str, Any]], dict[str, Any]]:
+    if control_id != "EMS-CTRL-023":
+        return _base_evaluate_rule(control_id, repository_path, rule_registry_path)
+    registry = json.loads(rule_registry_path.read_text(encoding="utf-8-sig"))
+    rule = registry.get("rules", {}).get(control_id)
+    if rule is None or not rule.get("supported"):
+        raise ValueError("dependency_supply_chain rule not implemented for EMS-CTRL-023")
+    outcome, detail = _v110_outcome(authoritative_evidence)
+    now = datetime.now(UTC).isoformat()
+    observation = {"control_id": control_id, "organization_level": True, "repository_projection": str(repository_path), "outcome": outcome, "detail": detail}
+    text = json.dumps(observation, sort_keys=True)
+    evidence_id = f"SUPPLY-{control_id}-{_sha256_text(text)[:16]}"
+    evidence = [{"contract_version": "1.0", "wave": "2D", "evidence_id": evidence_id, "control_id": control_id, "evidence_type": rule["evidence_type"], "source": "organizational:vulnerability_management" if authoritative_evidence else f"repository:{repository_path}", "collected_at_utc": now, "sha256": _sha256_text(text), "observation": text, "provenance": {"collector": "hayes-verify", "collector_version": "0.1.0", "repository_path_or_url": str(repository_path), "collected_at_utc": now, "command_or_method": "organizational vulnerability evidence contract evaluation", "tool_versions": {}}, "sensitive": False}]
+    result = {"contract_version": "1.0", "wave": "2D", "evaluation_state": "COMPLETE", "evidence_state": "INSUFFICIENT" if outcome == "WARNING" else "SUFFICIENT", "result_state": outcome, "evaluated_at_utc": now, "evidence_ids": [evidence_id], "rationale": detail.get("reason", "Authoritative organizational vulnerability evidence evaluated."), "assertions": [{"assertion_id": item["assertion_id"], "result": outcome, "detail": json.dumps(detail, sort_keys=True)} for item in rule["assertions"]], "promotion_state": "NOT_PROMOTED", "organization_level": True, "repository_projection_only": False}
+    return evidence, result
+
+
+def run(bundle, request: dict[str, Any], repository_path: Path, github_repo: str) -> tuple[list[dict[str, Any]], dict[str, Any]]:
+    del github_repo
+    root = getattr(bundle, "root", None) or Path.cwd()
+    evidence, result = evaluate_rule(request["control_id"], repository_path, Path(root) / "registry" / "dependency_supply_chain_rules.json", request.get("evidence_payload") or request.get("authoritative_evidence"))
+    if request["control_id"] == "EMS-CTRL-023" and str(request.get("target_id", "")).startswith("REPO-") and result["result_state"] == "PASS":
+        result["result_state"] = "WARNING"
+        result["evidence_state"] = "INSUFFICIENT"
+        result["rationale"] = "HUMAN_REVIEW: repository target is an organizational-evidence projection and cannot independently establish PASS."
+    for item in evidence:
+        item["request_id"] = request["request_id"]
+        item["target_id"] = request["target_id"]
+    result.update({"request_id": request["request_id"], "control_id": request["control_id"], "target_id": request["target_id"], "repository_projection_only": request.get("evaluation_role") == "PROJECTION"})
     bundle.validate_result(result)
     return evidence, result

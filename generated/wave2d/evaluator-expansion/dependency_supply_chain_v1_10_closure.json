@@ -1,0 +1,33 @@
+{
+  "component": "Hayes Verify",
+  "phase": "Wave 2D Dependency Supply Chain v1.10 Closure",
+  "registry_version": "1.10",
+  "registry_sha256": "c69093e5068b5285bbfb551123cae933e92af71870c86f2868504c6017b692c2",
+  "family": "dependency_supply_chain",
+  "family_state": "COMPLETE",
+  "promoted_control": "EMS-CTRL-023",
+  "verified_control_count": 1,
+  "remaining_family_control_count": 0,
+  "verification_batch_id": "BATCH-20260815T145134.823491Z",
+  "verification_manifest_sha256": "ab0762d1d17f50f9747a0814072427155d707e2d4a4ef7bb41a31f1bc99f2cf3",
+  "certification_sha256": "f7c71c4874132df90c5b3192e520fbc94a189c9e533ef7c60e959c5fe2ef7f40",
+  "ems_requirements_sha256": "2a7086160b6344e6957f6d8043534e1fb131d28487dbfb51d0a9aa1f2cf9f53c",
+  "ems_publication_certification_sha256": "2aa68f4777916e49b0f2db3682e8cd72bf22f7b4c1b3c0663898b29df265e120",
+  "historical_freeze_sha256": "79adb6c003e9a61e2fd36131b1a37d3387973f72d206102985a78a3271bc5b35",
+  "organization_authoritative_result_count": 1,
+  "repository_projection_count": 7,
+  "repository_projection_independent_pass_count": 0,
+  "negative_invariant_summary": {
+    "REPOSITORY_ONLY_EVIDENCE_NE_PASS": "PASS",
+    "MISSING_AUTHORITY_NE_PASS": "PASS",
+    "INACCESSIBLE_AUTHORITY_NE_PASS": "PASS",
+    "STALE_AUTHORITY_NE_PASS": "PASS",
+    "AMBIGUOUS_AUTHORITY_NE_PASS": "PASS",
+    "CONFLICTING_AUTHORITY_NE_PASS": "PASS",
+    "EXPIRED_EXCEPTION_NE_PASS": "PASS",
+    "PROJECTION_NE_AUTHORITATIVE_COMPLIANCE_PASS": "PASS",
+    "REPOSITORY_PROJECTION_INDEPENDENT_PASS_COUNT": "PASS",
+    "HISTORICAL_FREEZE_UNCHANGED": "PASS"
+  },
+  "errors": []
+}

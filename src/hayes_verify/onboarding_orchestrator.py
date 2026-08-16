@@ -48,7 +48,7 @@ def _validate_executed_result(bundle: ContractBundle, result: dict[str, Any]) ->
     if result.get("result_state") not in {"PASS", "FAIL", "WARNING"}:
         raise FailClosedException("FAIL_CLOSED_EXCEPTION: evaluator result has an unknown disposition")
     try:
-        _validate_executed_result(bundle, result)
+        bundle.validate_result(result)
     except Exception as exc:
         raise FailClosedException("FAIL_CLOSED_EXCEPTION: evaluator result violates the result contract") from exc
 

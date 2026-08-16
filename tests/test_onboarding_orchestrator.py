@@ -3,8 +3,12 @@ from pathlib import Path
 
 import pytest
 
+from hayes_verify.contracts import ContractBundle
 from hayes_verify.onboarding_orchestrator import (
     AuthoritySource,
+    FailClosedException,
+    _validate_executed_result,
+    assert_non_production_pilot_boundary,
     inventory_tree,
     run_synthetic_pilot,
 )
@@ -90,3 +94,22 @@ def test_no_hard_coded_windows_authority_path():
     assert "C:/temp" not in source
     assert "C:\\temp" not in source
     assert "standars\\ems" not in source
+
+
+def test_hometown_execution_is_fail_closed_before_ws1():
+    with pytest.raises(FailClosedException, match="FAIL_CLOSED_EXCEPTION"):
+        assert_non_production_pilot_boundary(
+            "REPO-003", pilot_execution_authorized=False, production_authorized=False
+        )
+
+
+def test_hometown_production_enablement_is_fail_closed():
+    with pytest.raises(FailClosedException, match="FAIL_CLOSED_EXCEPTION"):
+        assert_non_production_pilot_boundary(
+            "REPO-003", pilot_execution_authorized=True, production_authorized=True
+        )
+
+
+def test_unknown_machine_disposition_fails_closed_before_ws7():
+    with pytest.raises(FailClosedException, match="FAIL_CLOSED_EXCEPTION"):
+        _validate_executed_result(ContractBundle(ROOT), {"result_state": "UNKNOWN"})

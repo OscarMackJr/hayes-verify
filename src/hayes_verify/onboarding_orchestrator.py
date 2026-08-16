@@ -29,6 +29,30 @@ from hayes_verify.onboarding_summary import summarize
 
 FREEZE_SHA256 = "79adb6c003e9a61e2fd36131b1a37d3387973f72d206102985a78a3271bc5b35"
 
+class FailClosedException(RuntimeError):
+    """Raised when onboarding input or evaluator output is not safe to consume."""
+
+
+def assert_non_production_pilot_boundary(
+    repository_id: str, *, pilot_execution_authorized: bool, production_authorized: bool
+) -> None:
+    """Stop REPO-003 before WS1 unless its non-production pilot gate is explicit."""
+    if repository_id == "REPO-003" and not pilot_execution_authorized:
+        raise FailClosedException("FAIL_CLOSED_EXCEPTION: REPO-003 pilot execution is not authorized")
+    if repository_id == "REPO-003" and production_authorized:
+        raise FailClosedException("FAIL_CLOSED_EXCEPTION: REPO-003 non-production pilot cannot enable production")
+
+
+def _validate_executed_result(bundle: ContractBundle, result: dict[str, Any]) -> None:
+    """Reject malformed and unknown evaluator dispositions before WS7 consumes them."""
+    if result.get("result_state") not in {"PASS", "FAIL", "WARNING"}:
+        raise FailClosedException("FAIL_CLOSED_EXCEPTION: evaluator result has an unknown disposition")
+    try:
+        _validate_executed_result(bundle, result)
+    except Exception as exc:
+        raise FailClosedException("FAIL_CLOSED_EXCEPTION: evaluator result violates the result contract") from exc
+
+
 
 @dataclass(frozen=True)
 class AuthoritySource:
@@ -117,6 +141,7 @@ def run_synthetic_pilot(
     if not registry_path.is_file():
         raise ValueError("required published authority is unavailable")
     identity = RepositoryIdentity("REPO-9001", "hayes-synthetic-pilot", "synthetic", "github.com", "https://github.com/synthetic/hayes-synthetic-pilot", "ACTIVE", None)
+    assert_non_production_pilot_boundary(identity.repository_id, pilot_execution_authorized=True, production_authorized=False)
     ws1 = repository_snapshot(identity, captured_at=now, authority_reference="SYNTHETIC_TEST_IDENTITY_ONLY", authority_sha256=_sha_bytes(b"synthetic-test-identity"))
     # WS4 established binding uses sorted JSON with default separators.
     ws1_sha = _sha_bytes(json.dumps(ws1, sort_keys=True).encode())

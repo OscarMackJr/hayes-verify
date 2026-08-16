@@ -1,0 +1,6 @@
+{
+  "authority_source_type": "TEST_FIXTURE",
+  "non_production": true,
+  "purpose": "Portable onboarding orchestration authority fixture only",
+  "publication_state": "TEST_FIXTURE_NOT_CONTROLLED_EMS"
+}

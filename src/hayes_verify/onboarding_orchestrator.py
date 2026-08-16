@@ -9,6 +9,7 @@ import hashlib
 import json
 import subprocess
 import tempfile
+from dataclasses import dataclass
 from datetime import UTC, datetime
 from pathlib import Path
 from typing import Any
@@ -27,6 +28,48 @@ from hayes_verify.onboarding_review import build_queue, derive_current_state
 from hayes_verify.onboarding_summary import summarize
 
 FREEZE_SHA256 = "79adb6c003e9a61e2fd36131b1a37d3387973f72d206102985a78a3271bc5b35"
+
+
+@dataclass(frozen=True)
+class AuthoritySource:
+    """Explicit, location-agnostic input for published EMS authority.
+
+    ``root`` is an execution input only. It is never persisted in an
+    onboarding artifact; provenance records the caller-supplied identity and
+    hashes of consumed authority documents instead.
+    """
+
+    root: Path
+    source_identity: str
+    source_class: str = "PUBLISHED_EMS"
+
+    def load_test_quality(self) -> tuple[Path, Path, dict[str, Any]]:
+        if self.source_class not in {"PUBLISHED_EMS", "TEST_FIXTURE_NON_PRODUCTION"}:
+            raise ValueError("authority source class is unsupported")
+        root = Path(self.root)
+        requirements = root / "test_quality_control_requirements.json"
+        certification = root / "test_quality_publication_certification.json"
+        if not self.source_identity or not requirements.is_file() or not certification.is_file():
+            raise ValueError("required published authority is unavailable")
+        try:
+            requirements_value = json.loads(requirements.read_text(encoding="utf-8-sig"))
+            certification_value = json.loads(certification.read_text(encoding="utf-8-sig"))
+        except (OSError, json.JSONDecodeError) as exc:
+            raise ValueError("required published authority is malformed") from exc
+        fixture_markers = (
+            requirements_value.get("authority_source_type") == "TEST_FIXTURE",
+            certification_value.get("authority_source_type") == "TEST_FIXTURE",
+        )
+        if any(fixture_markers) and self.source_class != "TEST_FIXTURE_NON_PRODUCTION":
+            raise ValueError("test fixture authority cannot be used as published EMS authority")
+        if self.source_class == "TEST_FIXTURE_NON_PRODUCTION" and not all(fixture_markers):
+            raise ValueError("test fixture authority must be explicitly labeled")
+        return requirements, certification, {
+            "source_identity": self.source_identity,
+            "source_class": self.source_class,
+            "requirements_sha256": _sha_bytes(requirements.read_bytes()),
+            "certification_sha256": _sha_bytes(certification.read_bytes()),
+        }
 
 
 def _sha_bytes(value: bytes) -> str:
@@ -51,7 +94,15 @@ def _git(path: Path, *args: str) -> None:
     subprocess.run(["git", "-C", str(path), *args], check=True, capture_output=True)
 
 
-def run_synthetic_pilot(root: Path, output_root: Path, prior_run: Path, *, run_id: str = "SYNTHETIC_ONBOARDING_ORCHESTRATED", pilot: bool = False) -> dict[str, Any]:
+def run_synthetic_pilot(
+    root: Path,
+    output_root: Path,
+    prior_run: Path,
+    *,
+    authority_source: AuthoritySource | None = None,
+    run_id: str = "SYNTHETIC_ONBOARDING_ORCHESTRATED",
+    pilot: bool = False,
+) -> dict[str, Any]:
     """Create one new synthetic-only lineage and execute an existing evaluator."""
     root, output_root, prior_run = Path(root), Path(output_root), Path(prior_run)
     prior_inventory = inventory_tree(prior_run)
@@ -59,10 +110,11 @@ def run_synthetic_pilot(root: Path, output_root: Path, prior_run: Path, *, run_i
     if run_dir.exists():
         raise ValueError("synthetic run id already exists; historical runs are immutable")
     now = datetime.now(UTC).isoformat().replace("+00:00", "Z")
-    ems_req = Path("C:/temp/standars/ems/registry/test_quality_control_requirements.json")
-    ems_cert = Path("C:/temp/standars/ems/registry/test_quality_publication_certification.json")
+    if authority_source is None:
+        raise ValueError("explicit published authority source is required")
+    _requirements, _certification, authority_provenance = authority_source.load_test_quality()
     registry_path = root / "registry" / "wave2d_evaluator_registry_v1_10.json"
-    if not ems_req.is_file() or not ems_cert.is_file() or not registry_path.is_file():
+    if not registry_path.is_file():
         raise ValueError("required published authority is unavailable")
     identity = RepositoryIdentity("REPO-9001", "hayes-synthetic-pilot", "synthetic", "github.com", "https://github.com/synthetic/hayes-synthetic-pilot", "ACTIVE", None)
     ws1 = repository_snapshot(identity, captured_at=now, authority_reference="SYNTHETIC_TEST_IDENTITY_ONLY", authority_sha256=_sha_bytes(b"synthetic-test-identity"))
@@ -76,7 +128,7 @@ def run_synthetic_pilot(root: Path, output_root: Path, prior_run: Path, *, run_i
     registry = json.loads(registry_path.read_text(encoding="utf-8-sig"))
     ws3 = compile_effective_applicability(ws1, ws2, repository_snapshot_sha256=ws1_sha, classification_snapshot_sha256=ws2_sha, repository_snapshot_schema=str(root / "schemas" / "repository_snapshot.schema.json"), classification_snapshot_schema=str(root / "schemas" / "classification_snapshot.schema.json"), current_policy=policy, condition_evidence=[], captured_at=now, ems_authority_reference="SYNTHETIC_TEST_POLICY_NOT_EMS", ems_authority_sha256=policy["policy_sha256"], hayes_registry={"EMS-CTRL-025": "IMPLEMENTED", "EMS-CTRL-016": "PLANNED_AUTOMATED"}, historical_freeze_reference={"sha256": FREEZE_SHA256})
     ws3_sha = _sha_json(ws3)
-    authorities = {"requirements": {"reference": "EMS_TEST_QUALITY_REQUIREMENTS", "sha256": _sha_bytes(ems_req.read_bytes())}, "certification": {"reference": "EMS_TEST_QUALITY_CERTIFICATION", "sha256": _sha_bytes(ems_cert.read_bytes())}}
+    authorities = {"requirements": {"reference": authority_provenance["source_identity"] + ":test_quality_requirements", "sha256": authority_provenance["requirements_sha256"]}, "certification": {"reference": authority_provenance["source_identity"] + ":test_quality_certification", "sha256": authority_provenance["certification_sha256"]}}
     plan = create_frozen_assessment_plan(ws1, ws2, ws3, snapshot_references={"repository_snapshot": {"reference": "repository_snapshot", "sha256": ws1_sha}, "classification_snapshot": {"reference": "classification_snapshot", "sha256": ws2_sha}, "effective_applicability_snapshot": {"reference": "applicability_snapshot", "sha256": ws3_sha}}, ems_authorities=authorities, registry=registry, registry_reference="registry/wave2d_evaluator_registry_v1_10.json", registry_sha256=_sha_bytes(registry_path.read_bytes()), created_at=now, frozen_at=now)
     hashes = {"repository_snapshot": ws1_sha, "classification_snapshot": ws2_sha, "effective_applicability_snapshot": ws3_sha, "ems:requirements": authorities["requirements"]["sha256"], "ems:certification": authorities["certification"]["sha256"], "hayes_registry": plan["hayes"]["registry_sha256"]}
     composed = compose_requests(plan, current_hashes=hashes, evidence_candidates=[{"control_id": "EMS-CTRL-025", "authority_type": "REPOSITORY", "availability_state": "AVAILABLE", "freshness_state": "CURRENT", "observed_value": {"synthetic": True}, "source_reference": "synthetic-ci-evidence"}], requested_at_utc=now)
@@ -97,7 +149,7 @@ def run_synthetic_pilot(root: Path, output_root: Path, prior_run: Path, *, run_i
         _write(run_dir / name, value)
     executed = {"synthetic": True, "actual_evaluator_invocation_count": 1, "contract_valid_executed_result_count": 1, "hand_supplied_machine_result_count": 0, "results": [result], "evidence_ids": [x["evidence_id"] for x in evidence]}
     _write(run_dir / "results/executed_results.json", executed)
-    _write(run_dir / "orchestration_manifest.json", {"execution_mode": "SYNTHETIC_PILOT", "actual_evaluator_invocation_count": 1, "contract_valid_executed_result_count": 1, "hand_supplied_machine_result_count": 0})
+    _write(run_dir / "orchestration_manifest.json", {"execution_mode": "SYNTHETIC_PILOT", "authority_provenance": authority_provenance, "actual_evaluator_invocation_count": 1, "contract_valid_executed_result_count": 1, "hand_supplied_machine_result_count": 0})
     queue = build_queue(plan, composed["manifest"], readiness, source_hashes={"manifest": _sha_json(composed["manifest"])})
     review_states = derive_current_state(queue, [])
     _write(run_dir / "human_review/queue.json", queue); _write(run_dir / "human_review/decisions/events.json", [])

@@ -1,0 +1,55 @@
+{
+  "component": "Hayes Verify",
+  "phase": "P1B Hayes Onboarding Source Publication Certification",
+  "certified_at_utc": "2026-08-16T14:34:54Z",
+  "status": "PASS",
+  "certification_scope": "HAYES_ONBOARDING_SOURCE_PUBLICATION_ONLY",
+  "p0_v1_certification_sha256": "afaf4290dc80836b2ddeddcdb6d8b305184748d1cddaf258972fa5837f805d1c",
+  "p0_v2_certification_sha256": "eafcf6ec9382177a7140564fc2b42a8547ac9cc2adab668a6707ab4f415536bc",
+  "hayes_baseline_sha": "cbe7bb4734efea226df1009fc82a005e67fcfdcd",
+  "publication_commit_sha": "8311815771eb35b1925fa06d401ae86179fb0b5a",
+  "publication_manifest_path": "generated/external-review/publication/hayes_onboarding_external_review_publication_manifest.json",
+  "publication_manifest_sha256": "b9220a8ffb1cd608a0cffe38daad4d1bc0cef66e39bd2f7dce5adef58f582408",
+  "published_source_hash_count": 88,
+  "schema_count": 9,
+  "test_count": 11,
+  "orchestrator_published": true,
+  "validation_results": {
+    "contract_bundle": "PASS (5 contracts)",
+    "workflow_scoped_ruff": "PASS",
+    "onboarding_targeted_pytest": "73 passed",
+    "orchestrator_pytest": "1 passed",
+    "full_pytest": "159 passed",
+    "clean_reconstruction": "PASS (contract bundle PASS; 159 pytest passed)"
+  },
+  "excluded_external_evidence_count": 52,
+  "excluded_execution_artifacts": [
+    {
+      "path": "generated/onboarding/NEW_REPOSITORY_ONBOARDING_COMMAND_SPEC.md",
+      "reason": "Contains a hard-coded machine-local EMS path; excluded rather than sanitized."
+    },
+    {
+      "path": "scripts/assemble_synthetic_onboarding_lineage.py",
+      "reason": "Generates a synthetic execution run; not required for source-only reconstruction and excluded from the GitHub source publication."
+    }
+  ],
+  "ems_authority_publication_complete_claimed": false,
+  "external_evidence_retention_complete_claimed": false,
+  "hometown_execution_authorized": false,
+  "production_ready_claimed": false,
+  "repository_compliance_attested": false,
+  "negative_invariants": {
+    "HAYES_PUBLICATION_NOT_EMS_PUBLICATION": "PASS",
+    "SOURCE_CODE_NOT_EXECUTION_EVIDENCE": "PASS",
+    "GITHUB_NOT_FINAL_EVIDENCE_RETENTION_STORE": "PASS",
+    "ORCHESTRATOR_NOT_EMS_POLICY_AUTHORITY": "PASS",
+    "HAYES_NOT_REPOSITORY_ID_ALLOCATOR": "PASS",
+    "LOCAL_PATH_NOT_CONTROLLED_IDENTITY": "PASS",
+    "SYNTHETIC_RUN_NOT_SOURCE_PUBLICATION": "PASS",
+    "PILOT_EXECUTION_AUTHORIZED": false,
+    "PRODUCTION_AUTHORIZED": false,
+    "UNRELATED_EVALUATOR_SEMANTIC_CHANGES": 0,
+    "EMS_FILES_CHANGED": 0
+  },
+  "errors": []
+}

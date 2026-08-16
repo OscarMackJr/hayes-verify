@@ -1,0 +1,56 @@
+{
+  "component": "Hayes Verify",
+  "phase": "P1B Hayes Onboarding Source Publication Certification V2 \u2014 Portability Patch",
+  "certified_at_utc": "2026-08-16T15:31:59.379394Z",
+  "status": "PASS",
+  "certification_scope": "HAYES_ONBOARDING_SOURCE_PUBLICATION_ONLY",
+  "prior_publication_certification_path": "generated/external-review/publication/hayes_onboarding_external_review_publication_certification.json",
+  "prior_publication_certification_sha256": "bb1e164622f08955b315bde0fec57fc99b676d3a99ac06d7d7c8bb16dc5055c2",
+  "hayes_baseline_sha": "cbe7bb4734efea226df1009fc82a005e67fcfdcd",
+  "existing_p1b_commits": [
+    "8311815771eb35b1925fa06d401ae86179fb0b5a",
+    "21f7e3b358a876cc7d730100bb861905da8c714c"
+  ],
+  "portability_patch_commit_sha": "8e9a23e040bd28f3dcd8536538ee9c0dd2816d5d",
+  "p0_v1_certification_sha256": "afaf4290dc80836b2ddeddcdb6d8b305184748d1cddaf258972fa5837f805d1c",
+  "p0_schema_dependency_amendment_sha256": "8a2bb465d462f7633f91f11214fa078b8d253ee11d3fa12f77164e3705bec26a",
+  "p0_v2_certification_sha256": "eafcf6ec9382177a7140564fc2b42a8547ac9cc2adab668a6707ab4f415536bc",
+  "p0_v3_certification_sha256": "80db9388c31f9695903fccd35c0da7938f78b6b2c818640c673b692763200d45",
+  "p0_orchestrator_portability_amendment_sha256": "de341aae932073b053b7de017091ccf0d2df81ca17a8a46200a900e14c043031",
+  "publication_manifest_path": "generated/external-review/publication/hayes_onboarding_external_review_publication_manifest.json",
+  "publication_manifest_sha256": "7f64fd1808218a41ba4da5aa5c3d3f2a91ef415df4517c9b83a509025909c96c",
+  "portability_patch": {
+    "orchestrator_sha256": "8b5af3fbef34625a1e97e409ad931e4eee81357a38dbd4befa80a2b3895c5b65",
+    "test_sha256": "863185005759b98e37382abe59b36316f9d7771d17f07e564fe42ba767881e05",
+    "schema_sha256": "52387fa0667942267b9b6ccdb7853fd7c7bfe9ede1a41e0a4d1703b22b72caec",
+    "fixture_hashes": {
+      "tests/fixtures/onboarding_authority/test_quality_control_requirements.json": "d4320f8306061c52ff39546094c2fd7b333b71f804fd085f80d0f56f117b649a",
+      "tests/fixtures/onboarding_authority/test_quality_publication_certification.json": "9c3a2eab37f320a90133bed87f57b262ed051f198ac1c99ab38700a2165d93f0"
+    },
+    "hard_coded_authority_path_eliminated": true,
+    "missing_authority_fails_closed": true
+  },
+  "validation_results": {
+    "contract_bundle": "PASS (5 contracts)",
+    "workflow_scoped_ruff": "PASS",
+    "orchestrator_pytest": "9 passed",
+    "onboarding_targeted_pytest": "81 passed",
+    "full_pytest": "167 passed",
+    "clean_reconstruction": "PASS (contract bundle; 15 schemas; WS1\u2013WS10 imports; 9 orchestrator; 81 onboarding; 167 full pytest)"
+  },
+  "negative_invariants": {
+    "P0_V3_PATCH_NOT_NEW_P1B_SCOPE": "PASS",
+    "PORTABILITY_FIX_NOT_POLICY_CHANGE": "PASS",
+    "PORTABILITY_FIX_NOT_EVALUATOR_SEMANTIC_CHANGE": "PASS",
+    "TEST_FIXTURE_NOT_EMS_AUTHORITY": "PASS",
+    "GITHUB_CI_NOT_LOCAL_WINDOWS_FILESYSTEM": "PASS",
+    "CLEAN_RECONSTRUCTION_NOT_DEVELOPER_MACHINE_DEPENDENCY": "PASS",
+    "EMS_FILES_CHANGED": 0,
+    "HOMETOWN_EVALUATOR_EXECUTIONS": 0,
+    "PILOT_EXECUTION_AUTHORIZED": false,
+    "PRODUCTION_AUTHORIZED": false,
+    "REGISTRY_V1_11_CREATED": false,
+    "PR_MERGED": false
+  },
+  "errors": []
+}

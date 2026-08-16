@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Hayes Onboarding Repository Snapshot",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["repository_id", "repository_name", "repository_owner_or_org", "repository_host", "repository_url", "lifecycle_state", "captured_at", "authority_reference", "authority_sha256"],
+  "properties": {
+    "repository_id": {"type": "string", "pattern": "^REPO-(?:[1-9][0-9]*|EMS)$"},
+    "repository_name": {"type": "string", "minLength": 1},
+    "repository_owner_or_org": {"type": "string", "minLength": 1},
+    "repository_host": {"type": "string", "minLength": 1},
+    "repository_url": {"type": "string", "minLength": 1},
+    "lifecycle_state": {"enum": ["ACTIVE", "RENAMED", "TRANSFERRED", "ARCHIVED", "RETIRED", "DELETED", "REPLACED"]},
+    "default_branch": {"type": ["string", "null"]},
+    "captured_at": {"type": "string", "format": "date-time"},
+    "authority_reference": {"type": "string", "minLength": 1},
+    "authority_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"}
+  }
+}

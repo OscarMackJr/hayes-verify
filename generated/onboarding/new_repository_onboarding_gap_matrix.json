@@ -1,0 +1,52 @@
+[
+  {
+    "classification": "MISSING",
+    "complexity": "MEDIUM",
+    "capability": "Repository discovery and registration"
+  },
+  {
+    "classification": "PARTIAL",
+    "complexity": "MEDIUM",
+    "capability": "Classification with UNKNOWN"
+  },
+  {
+    "classification": "GOVERNANCE_BLOCKED",
+    "complexity": "LARGE",
+    "capability": "New-target effective applicability"
+  },
+  {
+    "classification": "EXISTS",
+    "complexity": "SMALL",
+    "capability": "Support matrix"
+  },
+  {
+    "classification": "PARTIAL",
+    "complexity": "MEDIUM",
+    "capability": "Evidence resolution plan"
+  },
+  {
+    "classification": "MISSING",
+    "complexity": "LARGE",
+    "capability": "Onboarding execution adapter"
+  },
+  {
+    "classification": "MISSING",
+    "complexity": "SMALL",
+    "capability": "Human review queue"
+  },
+  {
+    "classification": "PARTIAL",
+    "complexity": "MEDIUM",
+    "capability": "Immutable evidence bundle"
+  },
+  {
+    "classification": "MISSING",
+    "complexity": "MEDIUM",
+    "capability": "Auditor report/certification"
+  },
+  {
+    "classification": "MISSING",
+    "complexity": "MEDIUM",
+    "capability": "Re-run/change detection"
+  }
+]

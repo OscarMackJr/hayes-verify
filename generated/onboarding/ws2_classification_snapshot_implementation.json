@@ -1,0 +1,83 @@
+{
+  "component": "Hayes Verify",
+  "workstream": "WS2",
+  "title": "Classification Snapshot",
+  "implemented_at_utc": "2026-08-16T00:06:24Z",
+  "authority_hashes": {
+    "requirements": "265e1afc351ef7be3ad5c6c6ccd83764d947e25a0afe2dfbab2773eebb57cbbc",
+    "classification_authority": "044149664a8085668095ca9f837ce3275201f76dca231484c668458f17ba69ac",
+    "publication_certification": "44c82d83e9a46cab7e8d837b5b1a50dc564e1bdac932cb0c32ebeca65aa1495d"
+  },
+  "ws1_input_contract": {
+    "path": "schemas/repository_snapshot.schema.json",
+    "sha256": "e9d5c8841ccbef7a12033e841e88fe2a923c814596bc2df44b1b143cce5cd632",
+    "binding": "repository_snapshot_sha256"
+  },
+  "module_path": "src/hayes_verify/onboarding_classification.py",
+  "schema_path": "schemas/classification_snapshot.schema.json",
+  "schema_sha256": "7e93027dbe7d9938319ab14cc8a8271d5be85e5855c47017fd274862ae2cae29",
+  "classification_fields": [
+    "production",
+    "internet_exposed",
+    "contains_customer_data",
+    "ai_enabled",
+    "owner",
+    "tier",
+    "service_criticality",
+    "data_classification"
+  ],
+  "tri_state_model": {
+    "boolean": [
+      "KNOWN_TRUE",
+      "KNOWN_FALSE",
+      "UNKNOWN"
+    ],
+    "non_boolean": [
+      "KNOWN",
+      "UNKNOWN"
+    ]
+  },
+  "human_confirmation_model": [
+    "AUTO_DISCOVERED",
+    "HUMAN_CONFIRMED",
+    "UNKNOWN"
+  ],
+  "provenance_fields": [
+    "source_type",
+    "source_reference",
+    "observation_timestamp",
+    "confirmed_by",
+    "confirmed_at"
+  ],
+  "completeness_model": [
+    "COMPLETE",
+    "INCOMPLETE",
+    "BLOCKED_BY_UNKNOWN"
+  ],
+  "validation": {
+    "targeted_ws1_ws2": "24 passed",
+    "contract_bundle": "PASS",
+    "ruff": "PASS",
+    "full_pytest": "110 passed, 0 failed"
+  },
+  "negative_invariants": {
+    "UNKNOWN_NOT_FALSE": true,
+    "MISSING_NOT_KNOWN_FALSE": true,
+    "AUTO_DISCOVERED_NOT_HUMAN_CONFIRMED": true,
+    "CLASSIFICATION_UPDATE_NOT_MUTATE_OLD_SNAPSHOT": true,
+    "CLASSIFICATION_NOT_APPLICABILITY": true,
+    "LOCAL_PATH_NOT_CLASSIFICATION_AUTHORITY": true,
+    "WS2_CANNOT_MODIFY_REPOSITORY_IDENTITY": true,
+    "UNKNOWN_NOT_NOT_APPLICABLE": true,
+    "UNKNOWN_NOT_PASS": true
+  },
+  "known_limitations": [
+    "No WS3 applicability calculation or APPLICABLE/NOT_APPLICABLE output.",
+    "No plan, execution, review, outcome, bundle, certification, reassessment, wrapper, or real target."
+  ],
+  "ws3_handoff_requirements": [
+    "Consume classification_snapshot by hash with repository_snapshot hash.",
+    "Use UNKNOWN and completeness metadata only as inputs to controlled applicability; do not reinterpret them.",
+    "Keep historical Wave 2D freeze immutable."
+  ]
+}

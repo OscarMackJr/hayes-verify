@@ -1,0 +1,34 @@
+{
+  "workstream": "WS7",
+  "status": "COMPLETE",
+  "implemented_at_utc": "2026-08-16T00:59:33.805697+00:00",
+  "module": "src/hayes_verify/onboarding_review.py",
+  "schemas": [
+    "schemas/human_review_item.schema.json",
+    "schemas/human_review_resolution.schema.json",
+    "schemas/human_review_queue.schema.json"
+  ],
+  "lifecycle": [
+    "OPEN",
+    "IN_REVIEW",
+    "RESOLVED",
+    "EXCEPTION_APPROVED",
+    "SUPERSEDED"
+  ],
+  "model": "immutable machine queue plus append-only attributable review events; derived current state only",
+  "tests": {
+    "ruff": "PASS",
+    "targeted_ws7": "2 passed",
+    "full_pytest": "146 passed / 0 failed"
+  },
+  "historical_freeze_sha256": "79adb6c003e9a61e2fd36131b1a37d3387973f72d206102985a78a3271bc5b35",
+  "negative_invariants": "PASS",
+  "known_limitations": [
+    "No reviewer UI, evaluator execution, assessment outcome, or real repository onboarding."
+  ],
+  "ws8_prerequisites": [
+    "immutable review queue",
+    "append-only review history",
+    "derived review states"
+  ]
+}

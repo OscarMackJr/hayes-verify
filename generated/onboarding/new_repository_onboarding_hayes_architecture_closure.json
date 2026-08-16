@@ -1,0 +1,323 @@
+{
+  "component": "Hayes Verify",
+  "capability": "New Repository Onboarding MVP",
+  "closed_at_utc": "2026-08-15T23:46:50Z",
+  "architecture_state": "CLOSED",
+  "implementation_authorized": true,
+  "decisions": [
+    {
+      "id": "H-ARCH-01",
+      "status": "RESOLVED",
+      "selected_option": "Candidate A \u2014 Generic Hayes Applicability Compiler",
+      "rationale": "Consumes controlled EMS policy/scope input, classification snapshot, policy-condition evidence, and support registry to emit immutable current applicability; it is separate from historical Wave 2D freezes.",
+      "rejected_alternatives": [
+        "B: family-specific composition couples onboarding to incomplete family authorities.",
+        "C: historical scoped builder would risk treating freeze machinery as current policy authority."
+      ],
+      "interfaces": [
+        "policy/scope references and hashes",
+        "classification snapshot",
+        "policy-condition evidence",
+        "registry version/hash"
+      ],
+      "outputs": [
+        "effective_applicability_snapshot.json",
+        "APPLICABLE, NOT_APPLICABLE, or APPLICABILITY_UNRESOLVED"
+      ],
+      "negative_invariants": [
+        "UNKNOWN != FALSE",
+        "UNRESOLVED != NOT_APPLICABLE",
+        "no freeze mutation/insertion"
+      ],
+      "implementation_implications": [
+        "new onboarding applicability module and schema",
+        "snapshot freezes with assessment plan",
+        "missing/ambiguous inputs route to UNRESOLVED/HUMAN_REVIEW"
+      ]
+    },
+    {
+      "id": "H-ARCH-02",
+      "status": "RESOLVED",
+      "selected_option": "Candidate B \u2014 Standalone immutable assessment-plan plus separate bundle/certification contracts",
+      "rationale": "Keeps frozen evaluator request/result contracts unchanged while giving onboarding plan/bundle an auditable higher-level lineage.",
+      "rejected_alternatives": [
+        "A: monolith combines separate lifecycles.",
+        "C: evaluator contract extension causes unnecessary contract-bundle churn."
+      ],
+      "interfaces": [
+        "immutable assessment plan",
+        "existing request/result contracts",
+        "evidence manifest/summary/certification"
+      ],
+      "negative_invariants": [
+        "plan freezes before request generation",
+        "certification is integrity/completeness only"
+      ],
+      "implementation_implications": [
+        "no changes to contract_freeze, consumer_manifest, bundle history, or evaluator schemas",
+        "material changes create new run"
+      ]
+    },
+    {
+      "id": "H-ARCH-03",
+      "status": "RESOLVED",
+      "selected_option": "Candidate A \u2014 Append-only derived review artifacts in same onboarding run bundle",
+      "rationale": "Keeps review lineage with the machine run while preserving original result and queue hashes; current status is a projection from immutable transition artifacts.",
+      "rejected_alternatives": [
+        "B: separate review namespace adds unnecessary indirection.",
+        "C: mutable queue violates EMS non-mutation/immutability requirements."
+      ],
+      "interfaces": [
+        "immutable queue",
+        "append-only review transition/resolution artifacts",
+        "derived status projection"
+      ],
+      "negative_invariants": [
+        "review cannot mutate machine result",
+        "supersession is append-only"
+      ],
+      "implementation_implications": [
+        "OPEN is initial machine queue state; IN_REVIEW, RESOLVED, EXCEPTION_APPROVED, SUPERSEDED derive from immutable history"
+      ]
+    }
+  ],
+  "contract_set": [
+    {
+      "name": "repository_snapshot.schema.json",
+      "purpose": "Onboarding repository snapshot contract.",
+      "authoritative_source": "EMS identity authority",
+      "immutability": "IMMUTABLE_INPUT_SNAPSHOT",
+      "producer": "identity consumer",
+      "consumer": "plan/bundle",
+      "hash_binding": "repository identity hash",
+      "existing_contract_reused": "None"
+    },
+    {
+      "name": "classification_snapshot.schema.json",
+      "purpose": "Onboarding classification snapshot contract.",
+      "authoritative_source": "EMS classification authority",
+      "immutability": "IMMUTABLE_INPUT_SNAPSHOT",
+      "producer": "classification intake",
+      "consumer": "applicability compiler",
+      "hash_binding": "classification hash",
+      "existing_contract_reused": "None"
+    },
+    {
+      "name": "effective_applicability_snapshot.schema.json",
+      "purpose": "Onboarding effective applicability snapshot contract.",
+      "authoritative_source": "EMS applicability authority",
+      "immutability": "IMMUTABLE_INPUT_SNAPSHOT",
+      "producer": "onboarding applicability compiler",
+      "consumer": "plan/request composer",
+      "hash_binding": "policy/classification/evidence hashes",
+      "existing_contract_reused": "None"
+    },
+    {
+      "name": "assessment_plan.schema.json",
+      "purpose": "Onboarding assessment plan contract.",
+      "authoritative_source": "EMS plan authority",
+      "immutability": "IMMUTABLE_INPUT_SNAPSHOT",
+      "producer": "plan builder",
+      "consumer": "batch adapter/bundle",
+      "hash_binding": "all input hashes",
+      "existing_contract_reused": "Existing evaluator request schema unchanged"
+    },
+    {
+      "name": "human_review_item.schema.json",
+      "purpose": "Onboarding human review item contract.",
+      "authoritative_source": "EMS review authority",
+      "immutability": "IMMUTABLE_DERIVED_EVIDENCE",
+      "producer": "review producer",
+      "consumer": "review resolver",
+      "hash_binding": "machine-result and authority hashes",
+      "existing_contract_reused": "None"
+    },
+    {
+      "name": "human_review_resolution.schema.json",
+      "purpose": "Onboarding human review resolution contract.",
+      "authoritative_source": "EMS review authority",
+      "immutability": "IMMUTABLE_DERIVED_EVIDENCE",
+      "producer": "review resolver",
+      "consumer": "status projection/bundle",
+      "hash_binding": "review item/evidence hashes",
+      "existing_contract_reused": "None"
+    },
+    {
+      "name": "evidence_manifest.schema.json",
+      "purpose": "Onboarding evidence manifest contract.",
+      "authoritative_source": "EMS bundle authority",
+      "immutability": "IMMUTABLE_DERIVED_EVIDENCE",
+      "producer": "bundle builder",
+      "consumer": "certifier/auditor",
+      "hash_binding": "all bundle hashes",
+      "existing_contract_reused": "Existing batch manifests reused as inputs"
+    },
+    {
+      "name": "assessment_summary.schema.json",
+      "purpose": "Onboarding assessment summary contract.",
+      "authoritative_source": "EMS outcome authority",
+      "immutability": "IMMUTABLE_DERIVED_EVIDENCE",
+      "producer": "summary builder",
+      "consumer": "auditor/certifier",
+      "hash_binding": "plan/results/review hashes",
+      "existing_contract_reused": "Existing evaluation result schema unchanged"
+    },
+    {
+      "name": "onboarding_certification.schema.json",
+      "purpose": "Onboarding onboarding certification contract.",
+      "authoritative_source": "EMS bundle authority",
+      "immutability": "IMMUTABLE_DERIVED_EVIDENCE",
+      "producer": "certifier",
+      "consumer": "auditor",
+      "hash_binding": "manifest/summary hashes",
+      "existing_contract_reused": "Existing family certification pattern reused"
+    }
+  ],
+  "relationship_diagram": "identity -> classification snapshot -> effective applicability snapshot -> immutable assessment plan -> existing immutable batch runtime -> machine results -> immutable review queue/resolutions -> assessment summary -> evidence manifest -> certification/report",
+  "persistence_layout": {
+    "root": "generated/onboarding/runs/<RUN-ID>/",
+    "items": [
+      {
+        "path": "repository_snapshot.json",
+        "classification": "IMMUTABLE_INPUT_SNAPSHOT"
+      },
+      {
+        "path": "classification_snapshot.json",
+        "classification": "IMMUTABLE_INPUT_SNAPSHOT"
+      },
+      {
+        "path": "applicability_snapshot.json",
+        "classification": "IMMUTABLE_INPUT_SNAPSHOT"
+      },
+      {
+        "path": "assessment_plan.json",
+        "classification": "IMMUTABLE_INPUT_SNAPSHOT"
+      },
+      {
+        "path": "requests/",
+        "classification": "IMMUTABLE_MACHINE_EVIDENCE"
+      },
+      {
+        "path": "results/",
+        "classification": "IMMUTABLE_MACHINE_EVIDENCE"
+      },
+      {
+        "path": "human_review/queue.json",
+        "classification": "IMMUTABLE_DERIVED_EVIDENCE"
+      },
+      {
+        "path": "human_review/decisions/<REVIEW-ID>/*.json",
+        "classification": "IMMUTABLE_DERIVED_EVIDENCE"
+      },
+      {
+        "path": "evidence_manifest.json",
+        "classification": "IMMUTABLE_DERIVED_EVIDENCE"
+      },
+      {
+        "path": "assessment_summary.json",
+        "classification": "IMMUTABLE_DERIVED_EVIDENCE"
+      },
+      {
+        "path": "auditor_report.md",
+        "classification": "DERIVED_REPORT"
+      },
+      {
+        "path": "certification.json",
+        "classification": "IMMUTABLE_DERIVED_EVIDENCE"
+      },
+      {
+        "path": "local_execution_override.json",
+        "classification": "LOCAL_EXECUTION_ONLY_NOT_PERSISTED_IN_BUNDLE"
+      }
+    ]
+  },
+  "modules": [
+    {
+      "module": "onboarding_identity.py",
+      "workstreams": [
+        "WS1"
+      ]
+    },
+    {
+      "module": "onboarding_classification.py",
+      "workstreams": [
+        "WS2"
+      ]
+    },
+    {
+      "module": "onboarding_applicability.py",
+      "workstreams": [
+        "WS3"
+      ]
+    },
+    {
+      "module": "onboarding_plan.py",
+      "workstreams": [
+        "WS4",
+        "WS5"
+      ]
+    },
+    {
+      "module": "onboarding_execution.py",
+      "workstreams": [
+        "WS6"
+      ]
+    },
+    {
+      "module": "onboarding_review.py",
+      "workstreams": [
+        "WS7"
+      ]
+    },
+    {
+      "module": "onboarding_summary.py",
+      "workstreams": [
+        "WS8"
+      ]
+    },
+    {
+      "module": "onboarding_bundle.py",
+      "workstreams": [
+        "WS9",
+        "WS10"
+      ]
+    }
+  ],
+  "cross_decision_consistency": {
+    "plan_before_requests": true,
+    "review_non_mutating": true,
+    "applicability_in_lineage": true,
+    "support_separate_from_compliance": true,
+    "certification_integrity_only": true,
+    "reassessment_new_run": true
+  },
+  "synthetic_pilot_architecture": {
+    "target": "Synthetic repository fixture linked to preallocated controlled REPO identity",
+    "proofs": [
+      "tri-state UNKNOWN fail-safe",
+      "current applicability",
+      "plan freeze",
+      "checkout verification",
+      "support projection",
+      "batch composition",
+      "evidence authority",
+      "append-only review",
+      "bundle/certification/report",
+      "freeze unchanged"
+    ],
+    "execution_authorized": false
+  },
+  "negative_invariants": [
+    "UNKNOWN != FALSE",
+    "APPLICABILITY_UNRESOLVED != NOT_APPLICABLE",
+    "historical freeze is not current engine",
+    "new repository requires no freeze insertion",
+    "local path is not identity",
+    "wrong checkout fails safely",
+    "NOT_IMPLEMENTED is not PASS or FAIL",
+    "repository evidence cannot override service/organization authority",
+    "review does not mutate result",
+    "certification is not blanket compliance",
+    "reassessment preserves prior run"
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "certification_scope": "PILOT_EXECUTION_INTEGRITY_AND_END_TO_END_CAPABILITY",
+  "compliance_attestation": false,
+  "production_readiness_attestation": false,
+  "real_repository_pilot_authorization": false,
+  "pilot_manifest_sha256": "679d1739a30b9d68b04fe3ca4172b9ffbeb142748321c9a1431ab4c6ee6ae626"
+}

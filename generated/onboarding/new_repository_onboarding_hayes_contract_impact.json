@@ -1,0 +1,13 @@
+{
+  "component": "Hayes Verify",
+  "existing_contract_bundle": [
+    "contracts/contract_freeze.json",
+    "contracts/consumer_manifest.json",
+    "contracts/contract_bundle_history.json",
+    "contracts/schemas/wave2d_evaluation_request.schema.json",
+    "contracts/schemas/wave2d_evaluation_result.schema.json"
+  ],
+  "impact": "Existing evaluator request/result contracts remain stable. Use additive onboarding-specific plan, snapshot, review, bundle, and certification contracts outside the frozen request/result contract; only composed requests use the existing evaluator contract.",
+  "recommendation": "NEW_ONBOARDING_CONTRACTS_OUTSIDE_EXISTING_EVALUATOR_CONTRACT_PENDING_H_ARCH_02",
+  "backward_compatibility": "Required"
+}

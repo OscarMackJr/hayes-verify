@@ -1,0 +1,62 @@
+{
+  "supported_control_count": 46,
+  "component": "Hayes Verify + EMS",
+  "unsupported_control_count": 34,
+  "capabilities": [
+    {
+      "gap": "No new-repository registration or controlled ID allocator.",
+      "status": "PARTIAL",
+      "existing": "EMS repository_registry.yaml; Hayes wave2d_repository_map.json",
+      "capability": "Controlled repository identity"
+    },
+    {
+      "gap": "No discovery/confirmation flow; no safe UNKNOWN intake.",
+      "status": "PARTIAL",
+      "existing": "Classification guide and repository_overrides.yaml",
+      "capability": "Repository classification"
+    },
+    {
+      "gap": "No generic runtime new-target engine outside historical freezes.",
+      "status": "GOVERNANCE_BLOCKED",
+      "existing": "Policy applicability, scope rules, family authorities",
+      "capability": "Effective applicability"
+    },
+    {
+      "gap": "Needs onboarding projection artifact only.",
+      "status": "EXISTS",
+      "existing": "Versioned v1.10 evaluator registry",
+      "capability": "Evaluator support matrix"
+    },
+    {
+      "gap": "No per-control evidence plan or external-evidence intake.",
+      "status": "PARTIAL",
+      "existing": "Evidence contracts, file provider, local overrides",
+      "capability": "Evidence resolution"
+    },
+    {
+      "gap": "No dynamic onboarding adapter.",
+      "status": "PARTIAL",
+      "existing": "Immutable batch runtime and scoped requests",
+      "capability": "Immutable execution"
+    },
+    {
+      "gap": "No consolidated onboarding queue.",
+      "status": "PARTIAL",
+      "existing": "Applicability review artifacts",
+      "capability": "Human review"
+    },
+    {
+      "gap": "No onboarding bundle/report/certification.",
+      "status": "PARTIAL",
+      "existing": "Batch manifests and certifications",
+      "capability": "Evidence/report/certification"
+    },
+    {
+      "gap": "No snapshot comparison model.",
+      "status": "MISSING",
+      "existing": "None",
+      "capability": "Re-run/change detection"
+    }
+  ],
+  "baseline_registry_version": "1.10"
+}

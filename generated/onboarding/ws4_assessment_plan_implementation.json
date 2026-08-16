@@ -1,0 +1,73 @@
+{
+  "workstream": "WS4",
+  "status": "COMPLETE",
+  "implemented_at_utc": "2026-08-16T00:26:49.637499Z",
+  "module": "src/hayes_verify/onboarding_plan.py",
+  "schema": "schemas/assessment_plan.schema.json",
+  "ems_authorities": {
+    "requirements": {
+      "path": "C:\\temp\\standars\\ems\\registry\\new_repository_onboarding_requirements.json",
+      "sha256": "265e1afc351ef7be3ad5c6c6ccd83764d947e25a0afe2dfbab2773eebb57cbbc"
+    },
+    "publication_certification": {
+      "path": "C:\\temp\\standars\\ems\\registry\\new_repository_onboarding_publication_certification.json",
+      "sha256": "44c82d83e9a46cab7e8d837b5b1a50dc564e1bdac932cb0c32ebeca65aa1495d"
+    },
+    "assessment_plan_authority": {
+      "path": "C:\\temp\\standars\\ems\\registry\\new_repository_onboarding_assessment_plan_authority.json",
+      "sha256": "3742bdc22cad74cb60d98afa91a8b917898cca1bf37823405fa33bc2c766ae09"
+    }
+  },
+  "ws_input_bindings": {
+    "WS1": "repository snapshot SHA-256 recomputed and bound",
+    "WS2": "classification SHA-256 recomputed, WS1 binding checked",
+    "WS3": "effective applicability SHA-256 recomputed, WS2 binding checked"
+  },
+  "hayes_registry": {
+    "path": "registry/wave2d_evaluator_registry_v1_10.json",
+    "version": "1.10",
+    "sha256": "c69093e5068b5285bbfb551123cae933e92af71870c86f2868504c6017b692c2"
+  },
+  "plan_identity": "PLAN- plus first 16 hex characters of deterministic frozen plan body SHA-256; repository ID is not reused as plan identity.",
+  "freeze_model": "Plan is serialized as FROZEN before request generation. Inputs changing after freeze return PLAN_INPUT_CHANGED; no in-place repair or mutation occurs.",
+  "projections": {
+    "support": "SUPPORTED_AUTOMATED, SUPPORTED_HYBRID, HUMAN_EVIDENCE_REQUIRED, or NOT_IMPLEMENTED; never changes applicability.",
+    "evidence": "Scope-derived authoritative evidence requirements only; no evidence resolution.",
+    "targets": "REPOSITORY controls AUTHORITATIVE_EVALUATION; non-repository scopes PROJECTED without fabricated repository authority.",
+    "human_review": "anticipated requirements only, for unresolved applicability, human evidence, and unimplemented support."
+  },
+  "historical_freeze": {
+    "path": "C:\\temp\\standars\\ems\\registry\\wave2d\\applicability_decisions.csv",
+    "sha256_before": "79adb6c003e9a61e2fd36131b1a37d3387973f72d206102985a78a3271bc5b35",
+    "sha256_after": "79adb6c003e9a61e2fd36131b1a37d3387973f72d206102985a78a3271bc5b35",
+    "unchanged": true
+  },
+  "tests": {
+    "contract_bundle": "PASS",
+    "ruff": "PASS",
+    "targeted_ws1_ws2_ws3_ws4": "47 passed",
+    "full_pytest": "133 passed / 0 failed"
+  },
+  "negative_invariants": {
+    "PLAN_FREEZE_BEFORE_REQUEST_GENERATION": "PASS",
+    "FROZEN_PLAN_MUTABLE": "false",
+    "LOCAL_PATH_IN_PLAN": "false",
+    "NOT_IMPLEMENTED != NOT_APPLICABLE": "PASS",
+    "NOT_IMPLEMENTED != FAIL": "PASS",
+    "APPLICABILITY_UNRESOLVED != NOT_APPLICABLE": "PASS",
+    "SUPPORT_STATE != COMPLIANCE_RESULT": "PASS",
+    "EVIDENCE_REQUIREMENT != EVIDENCE_RESOLUTION": "PASS",
+    "HUMAN_REVIEW_REQUIREMENT != HUMAN_REVIEW_DECISION": "PASS",
+    "ORGANIZATION_AUTHORITY != REPOSITORY_AUTHORITY": "PASS",
+    "SERVICE_AUTHORITY != REPOSITORY_AUTHORITY": "PASS",
+    "INPUT_HASH_CHANGE != SILENT_PLAN_REWRITE": "PASS"
+  },
+  "known_limitations": [
+    "WS4 does not compose evaluator requests, resolve evidence, verify checkouts, execute evaluators, or make compliance/outcome decisions."
+  ],
+  "ws5_prerequisites": [
+    "validated frozen assessment plan",
+    "bound snapshot and policy/registry hashes",
+    "frozen control/evidence/target/review projections"
+  ]
+}

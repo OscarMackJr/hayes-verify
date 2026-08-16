@@ -1,0 +1,43 @@
+{
+  "workstream": "WS5",
+  "status": "COMPLETE",
+  "implemented_at_utc": "2026-08-16T00:35:30.706778Z",
+  "module": "src/hayes_verify/onboarding_execution.py",
+  "schemas": [
+    "schemas/evidence_resolution.schema.json",
+    "schemas/request_composition_manifest.schema.json"
+  ],
+  "ems_authority_hashes": {
+    "requirements": "265e1afc351ef7be3ad5c6c6ccd83764d947e25a0afe2dfbab2773eebb57cbbc",
+    "publication_certification": "44c82d83e9a46cab7e8d837b5b1a50dc564e1bdac932cb0c32ebeca65aa1495d"
+  },
+  "assessment_plan_binding": "Only a valid FROZEN WS4 plan is consumed; integrity is validated before composition and its hash is checked unchanged after composition.",
+  "historical_freeze": {
+    "sha256_before": "79adb6c003e9a61e2fd36131b1a37d3387973f72d206102985a78a3271bc5b35",
+    "sha256_after": "79adb6c003e9a61e2fd36131b1a37d3387973f72d206102985a78a3271bc5b35",
+    "unchanged": true
+  },
+  "tests": {
+    "contract_bundle": "PASS",
+    "ruff": "PASS",
+    "targeted_ws1_ws2_ws3_ws4_ws5": "53 passed",
+    "full_pytest": "139 passed / 0 failed"
+  },
+  "negative_invariants": {
+    "WS5_RECALCULATES_CLASSIFICATION": "false",
+    "WS5_RECALCULATES_APPLICABILITY": "false",
+    "WS5_CHANGES_SUPPORT_STATE": "false",
+    "FROZEN_PLAN_MUTATED": "false",
+    "MISSING_EVIDENCE != FAIL": "PASS",
+    "STALE_EVIDENCE != FAIL": "PASS",
+    "CONFLICTING_EVIDENCE != FAIL": "PASS",
+    "NOT_IMPLEMENTED != NOT_APPLICABLE": "PASS",
+    "NOT_IMPLEMENTED != FAIL": "PASS",
+    "REPOSITORY_EVIDENCE != SERVICE_AUTHORITY": "PASS",
+    "REPOSITORY_EVIDENCE != ORGANIZATION_AUTHORITY": "PASS",
+    "PROJECTION != AUTHORITATIVE_EVALUATION": "PASS",
+    "EVIDENCE_RESOLUTION != COMPLIANCE_RESULT": "PASS",
+    "REQUEST_COMPOSITION != EVALUATOR_EXECUTION": "PASS",
+    "LOCAL_PATH != EVIDENCE_AUTHORITY": "PASS"
+  }
+}

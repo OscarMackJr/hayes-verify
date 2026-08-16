@@ -1,0 +1,40 @@
+{
+  "workstream": "WS6",
+  "status": "COMPLETE",
+  "implemented_at_utc": "2026-08-16T00:44:50.073319Z",
+  "module": "src/hayes_verify/onboarding_checkout.py",
+  "schemas": [
+    "schemas/checkout_verification.schema.json",
+    "schemas/execution_readiness_manifest.schema.json"
+  ],
+  "ems_authority_hashes": {
+    "requirements": "265e1afc351ef7be3ad5c6c6ccd83764d947e25a0afe2dfbab2773eebb57cbbc",
+    "publication_certification": "44c82d83e9a46cab7e8d837b5b1a50dc564e1bdac932cb0c32ebeca65aa1495d"
+  },
+  "historical_freeze": {
+    "before": "79adb6c003e9a61e2fd36131b1a37d3387973f72d206102985a78a3271bc5b35",
+    "after": "79adb6c003e9a61e2fd36131b1a37d3387973f72d206102985a78a3271bc5b35",
+    "unchanged": true
+  },
+  "tests": {
+    "contract_bundle": "PASS",
+    "ruff": "PASS",
+    "targeted_ws1_ws2_ws3_ws4_ws5_ws6": "58 passed",
+    "full_pytest": "144 passed / 0 failed"
+  },
+  "negative_invariants": {
+    "LOCAL_PATH != CONTROLLED_IDENTITY": "PASS",
+    "LOCAL_DIRECTORY_NAME != REPOSITORY_IDENTITY": "PASS",
+    "WRONG_REMOTE != VERIFIED": "PASS",
+    "AMBIGUOUS_REMOTE != VERIFIED": "PASS",
+    "WRONG_BRANCH != VERIFIED": "PASS",
+    "WRONG_COMMIT != VERIFIED": "PASS",
+    "UNVERIFIABLE_CHECKOUT != EXECUTION_PERMITTED": "PASS",
+    "CHECKOUT_FAILURE != COMPLIANCE_FAIL": "PASS",
+    "WS6_MUTATES_FROZEN_PLAN": "false",
+    "WS6_MUTATES_REQUEST_MANIFEST": "false",
+    "REPOSITORY_REQUEST_WITH_UNVERIFIED_CHECKOUT != EXECUTION_READY": "PASS",
+    "ORGANIZATION_REQUEST != FORCED_REPOSITORY_CHECKOUT": "PASS",
+    "WS6_EXECUTES_EVALUATOR": "false"
+  }
+}

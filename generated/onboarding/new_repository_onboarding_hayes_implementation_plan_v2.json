@@ -1,0 +1,340 @@
+{
+  "architecture_state": "CLOSED",
+  "implementation_authorized": true,
+  "workstream_order": [
+    {
+      "id": "WS1",
+      "name": "Identity Consumption",
+      "required_contracts": [
+        "repository_snapshot.schema.json"
+      ],
+      "modules": [
+        "onboarding_identity.py"
+      ],
+      "inputs": "prior frozen artifacts or authority references",
+      "outputs": "immutable hash-bound artifact(s)",
+      "dependencies": [],
+      "tests": [
+        "schema validation",
+        "hash lineage",
+        "negative-invariant test"
+      ],
+      "negative_invariants": [
+        "UNKNOWN != FALSE",
+        "APPLICABILITY_UNRESOLVED != NOT_APPLICABLE",
+        "historical freeze is not current engine",
+        "new repository requires no freeze insertion",
+        "local path is not identity",
+        "wrong checkout fails safely",
+        "NOT_IMPLEMENTED is not PASS or FAIL",
+        "repository evidence cannot override service/organization authority",
+        "review does not mutate result",
+        "certification is not blanket compliance",
+        "reassessment preserves prior run"
+      ],
+      "definition_of_done": "Contract, focused tests, immutable lineage, and negative invariants pass."
+    },
+    {
+      "id": "WS2",
+      "name": "Classification Snapshot",
+      "required_contracts": [
+        "classification_snapshot.schema.json"
+      ],
+      "modules": [
+        "onboarding_classification.py"
+      ],
+      "inputs": "prior frozen artifacts or authority references",
+      "outputs": "immutable hash-bound artifact(s)",
+      "dependencies": [
+        "WS1"
+      ],
+      "tests": [
+        "schema validation",
+        "hash lineage",
+        "negative-invariant test"
+      ],
+      "negative_invariants": [
+        "UNKNOWN != FALSE",
+        "APPLICABILITY_UNRESOLVED != NOT_APPLICABLE",
+        "historical freeze is not current engine",
+        "new repository requires no freeze insertion",
+        "local path is not identity",
+        "wrong checkout fails safely",
+        "NOT_IMPLEMENTED is not PASS or FAIL",
+        "repository evidence cannot override service/organization authority",
+        "review does not mutate result",
+        "certification is not blanket compliance",
+        "reassessment preserves prior run"
+      ],
+      "definition_of_done": "Contract, focused tests, immutable lineage, and negative invariants pass."
+    },
+    {
+      "id": "WS3",
+      "name": "Effective Applicability",
+      "required_contracts": [
+        "effective_applicability_snapshot.schema.json"
+      ],
+      "modules": [
+        "onboarding_applicability.py"
+      ],
+      "inputs": "prior frozen artifacts or authority references",
+      "outputs": "immutable hash-bound artifact(s)",
+      "dependencies": [
+        "WS2"
+      ],
+      "tests": [
+        "schema validation",
+        "hash lineage",
+        "negative-invariant test"
+      ],
+      "negative_invariants": [
+        "UNKNOWN != FALSE",
+        "APPLICABILITY_UNRESOLVED != NOT_APPLICABLE",
+        "historical freeze is not current engine",
+        "new repository requires no freeze insertion",
+        "local path is not identity",
+        "wrong checkout fails safely",
+        "NOT_IMPLEMENTED is not PASS or FAIL",
+        "repository evidence cannot override service/organization authority",
+        "review does not mutate result",
+        "certification is not blanket compliance",
+        "reassessment preserves prior run"
+      ],
+      "definition_of_done": "Contract, focused tests, immutable lineage, and negative invariants pass."
+    },
+    {
+      "id": "WS4",
+      "name": "Immutable Assessment Plan",
+      "required_contracts": [
+        "assessment_plan.schema.json"
+      ],
+      "modules": [
+        "onboarding_plan.py"
+      ],
+      "inputs": "prior frozen artifacts or authority references",
+      "outputs": "immutable hash-bound artifact(s)",
+      "dependencies": [
+        "WS3"
+      ],
+      "tests": [
+        "schema validation",
+        "hash lineage",
+        "negative-invariant test"
+      ],
+      "negative_invariants": [
+        "UNKNOWN != FALSE",
+        "APPLICABILITY_UNRESOLVED != NOT_APPLICABLE",
+        "historical freeze is not current engine",
+        "new repository requires no freeze insertion",
+        "local path is not identity",
+        "wrong checkout fails safely",
+        "NOT_IMPLEMENTED is not PASS or FAIL",
+        "repository evidence cannot override service/organization authority",
+        "review does not mutate result",
+        "certification is not blanket compliance",
+        "reassessment preserves prior run"
+      ],
+      "definition_of_done": "Contract, focused tests, immutable lineage, and negative invariants pass."
+    },
+    {
+      "id": "WS5",
+      "name": "Evidence/Request Composition",
+      "required_contracts": [],
+      "modules": [
+        "onboarding_plan.py"
+      ],
+      "inputs": "prior frozen artifacts or authority references",
+      "outputs": "immutable hash-bound artifact(s)",
+      "dependencies": [
+        "WS4"
+      ],
+      "tests": [
+        "schema validation",
+        "hash lineage",
+        "negative-invariant test"
+      ],
+      "negative_invariants": [
+        "UNKNOWN != FALSE",
+        "APPLICABILITY_UNRESOLVED != NOT_APPLICABLE",
+        "historical freeze is not current engine",
+        "new repository requires no freeze insertion",
+        "local path is not identity",
+        "wrong checkout fails safely",
+        "NOT_IMPLEMENTED is not PASS or FAIL",
+        "repository evidence cannot override service/organization authority",
+        "review does not mutate result",
+        "certification is not blanket compliance",
+        "reassessment preserves prior run"
+      ],
+      "definition_of_done": "Contract, focused tests, immutable lineage, and negative invariants pass."
+    },
+    {
+      "id": "WS6",
+      "name": "Checkout Verification",
+      "required_contracts": [],
+      "modules": [
+        "onboarding_execution.py"
+      ],
+      "inputs": "prior frozen artifacts or authority references",
+      "outputs": "immutable hash-bound artifact(s)",
+      "dependencies": [
+        "WS5"
+      ],
+      "tests": [
+        "schema validation",
+        "hash lineage",
+        "negative-invariant test"
+      ],
+      "negative_invariants": [
+        "UNKNOWN != FALSE",
+        "APPLICABILITY_UNRESOLVED != NOT_APPLICABLE",
+        "historical freeze is not current engine",
+        "new repository requires no freeze insertion",
+        "local path is not identity",
+        "wrong checkout fails safely",
+        "NOT_IMPLEMENTED is not PASS or FAIL",
+        "repository evidence cannot override service/organization authority",
+        "review does not mutate result",
+        "certification is not blanket compliance",
+        "reassessment preserves prior run"
+      ],
+      "definition_of_done": "Contract, focused tests, immutable lineage, and negative invariants pass."
+    },
+    {
+      "id": "WS7",
+      "name": "Human Review",
+      "required_contracts": [
+        "human_review_item.schema.json",
+        "human_review_resolution.schema.json"
+      ],
+      "modules": [
+        "onboarding_review.py"
+      ],
+      "inputs": "prior frozen artifacts or authority references",
+      "outputs": "immutable hash-bound artifact(s)",
+      "dependencies": [
+        "WS6"
+      ],
+      "tests": [
+        "schema validation",
+        "hash lineage",
+        "negative-invariant test"
+      ],
+      "negative_invariants": [
+        "UNKNOWN != FALSE",
+        "APPLICABILITY_UNRESOLVED != NOT_APPLICABLE",
+        "historical freeze is not current engine",
+        "new repository requires no freeze insertion",
+        "local path is not identity",
+        "wrong checkout fails safely",
+        "NOT_IMPLEMENTED is not PASS or FAIL",
+        "repository evidence cannot override service/organization authority",
+        "review does not mutate result",
+        "certification is not blanket compliance",
+        "reassessment preserves prior run"
+      ],
+      "definition_of_done": "Contract, focused tests, immutable lineage, and negative invariants pass."
+    },
+    {
+      "id": "WS8",
+      "name": "Outcome/Completeness",
+      "required_contracts": [
+        "assessment_summary.schema.json"
+      ],
+      "modules": [
+        "onboarding_summary.py"
+      ],
+      "inputs": "prior frozen artifacts or authority references",
+      "outputs": "immutable hash-bound artifact(s)",
+      "dependencies": [
+        "WS7"
+      ],
+      "tests": [
+        "schema validation",
+        "hash lineage",
+        "negative-invariant test"
+      ],
+      "negative_invariants": [
+        "UNKNOWN != FALSE",
+        "APPLICABILITY_UNRESOLVED != NOT_APPLICABLE",
+        "historical freeze is not current engine",
+        "new repository requires no freeze insertion",
+        "local path is not identity",
+        "wrong checkout fails safely",
+        "NOT_IMPLEMENTED is not PASS or FAIL",
+        "repository evidence cannot override service/organization authority",
+        "review does not mutate result",
+        "certification is not blanket compliance",
+        "reassessment preserves prior run"
+      ],
+      "definition_of_done": "Contract, focused tests, immutable lineage, and negative invariants pass."
+    },
+    {
+      "id": "WS9",
+      "name": "Bundle/Certification/Report",
+      "required_contracts": [
+        "evidence_manifest.schema.json",
+        "onboarding_certification.schema.json"
+      ],
+      "modules": [
+        "onboarding_bundle.py"
+      ],
+      "inputs": "prior frozen artifacts or authority references",
+      "outputs": "immutable hash-bound artifact(s)",
+      "dependencies": [
+        "WS8"
+      ],
+      "tests": [
+        "schema validation",
+        "hash lineage",
+        "negative-invariant test"
+      ],
+      "negative_invariants": [
+        "UNKNOWN != FALSE",
+        "APPLICABILITY_UNRESOLVED != NOT_APPLICABLE",
+        "historical freeze is not current engine",
+        "new repository requires no freeze insertion",
+        "local path is not identity",
+        "wrong checkout fails safely",
+        "NOT_IMPLEMENTED is not PASS or FAIL",
+        "repository evidence cannot override service/organization authority",
+        "review does not mutate result",
+        "certification is not blanket compliance",
+        "reassessment preserves prior run"
+      ],
+      "definition_of_done": "Contract, focused tests, immutable lineage, and negative invariants pass."
+    },
+    {
+      "id": "WS10",
+      "name": "Reassessment",
+      "required_contracts": [],
+      "modules": [
+        "onboarding_bundle.py"
+      ],
+      "inputs": "prior frozen artifacts or authority references",
+      "outputs": "immutable hash-bound artifact(s)",
+      "dependencies": [
+        "WS9"
+      ],
+      "tests": [
+        "schema validation",
+        "hash lineage",
+        "negative-invariant test"
+      ],
+      "negative_invariants": [
+        "UNKNOWN != FALSE",
+        "APPLICABILITY_UNRESOLVED != NOT_APPLICABLE",
+        "historical freeze is not current engine",
+        "new repository requires no freeze insertion",
+        "local path is not identity",
+        "wrong checkout fails safely",
+        "NOT_IMPLEMENTED is not PASS or FAIL",
+        "repository evidence cannot override service/organization authority",
+        "review does not mutate result",
+        "certification is not blanket compliance",
+        "reassessment preserves prior run"
+      ],
+      "definition_of_done": "Contract, focused tests, immutable lineage, and negative invariants pass."
+    }
+  ]
+}

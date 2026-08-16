@@ -1,0 +1,19 @@
+{
+  "workstream": "WS9",
+  "status": "COMPLETE",
+  "implemented_at_utc": "2026-08-16T01:26:50.434347+00:00",
+  "module": "src/hayes_verify/onboarding_bundle.py",
+  "schema": "schemas/evidence_manifest.schema.json",
+  "bundle_layout": "generated/onboarding/runs/<RUN-ID>/ with manifest, certification, and auditor report; local execution configuration excluded.",
+  "certification_scope": "INTEGRITY_TRACEABILITY_EVIDENCE_COMPLETENESS_ONLY",
+  "compliance_attestation": false,
+  "tests": {
+    "ruff": "PASS",
+    "targeted_ws9": "1 passed",
+    "full_pytest": "149 passed / 0 failed"
+  },
+  "historical_freeze_sha256": "79adb6c003e9a61e2fd36131b1a37d3387973f72d206102985a78a3271bc5b35",
+  "known_limitations": [
+    "No real onboarding run, evaluator execution, or compliance certification was generated."
+  ]
+}

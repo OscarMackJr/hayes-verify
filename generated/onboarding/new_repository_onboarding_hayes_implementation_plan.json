@@ -1,0 +1,137 @@
+{
+  "component": "Hayes Verify",
+  "implementation_authorized": false,
+  "workstreams": [
+    {
+      "id": "WS1",
+      "name": "Repository Registration / Identity Consumption",
+      "purpose": "Consume EMS identity and validate immutable ID/lifecycle.",
+      "inputs": "identity authority",
+      "new_components": "identity snapshot adapter",
+      "schemas_tests": "repository map schema, identity tests",
+      "negative_invariants": [
+        "local path not identity"
+      ],
+      "dependency": "H-ARCH-04",
+      "risk": "MEDIUM"
+    },
+    {
+      "id": "WS2",
+      "name": "Classification Intake and Snapshot",
+      "purpose": "Represent known true/false/unknown with provenance.",
+      "inputs": "classification authority",
+      "new_components": "tri-state snapshot",
+      "schemas_tests": "classification schema/tests",
+      "negative_invariants": [
+        "UNKNOWN never false/NA"
+      ],
+      "dependency": "WS1",
+      "risk": "MEDIUM"
+    },
+    {
+      "id": "WS3",
+      "name": "Current Effective Applicability",
+      "purpose": "Derive and freeze new-target applicability.",
+      "inputs": "policy/classification/evidence snapshots",
+      "new_components": "new target snapshot producer",
+      "schemas_tests": "applicability contract/tests",
+      "negative_invariants": [
+        "unresolved not NA",
+        "historical freeze untouched"
+      ],
+      "dependency": "H-ARCH-01",
+      "risk": "HIGH"
+    },
+    {
+      "id": "WS4",
+      "name": "Immutable Assessment Plan",
+      "purpose": "Bind hashes/snapshots before requests.",
+      "inputs": "WS1-WS3, registry",
+      "new_components": "plan artifact",
+      "schemas_tests": "plan schema/tests",
+      "negative_invariants": [
+        "post-freeze no mutation"
+      ],
+      "dependency": "H-ARCH-02",
+      "risk": "HIGH"
+    },
+    {
+      "id": "WS5",
+      "name": "Evidence Resolution / Request Composition",
+      "purpose": "Resolve authority/provenance and generate requests.",
+      "inputs": "plan/evidence authority",
+      "new_components": "provider resolver extension",
+      "schemas_tests": "evidence metadata/tests",
+      "negative_invariants": [
+        "repository cannot override authority"
+      ],
+      "dependency": "WS4",
+      "risk": "MEDIUM"
+    },
+    {
+      "id": "WS6",
+      "name": "Execution Adapter / Checkout Verification",
+      "purpose": "Verify mapped checkout and invoke scoped runtime.",
+      "inputs": "local override, plan",
+      "new_components": "checkout verifier",
+      "schemas_tests": "checkout schema/tests",
+      "negative_invariants": [
+        "wrong checkout fails safely"
+      ],
+      "dependency": "WS5",
+      "risk": "MEDIUM"
+    },
+    {
+      "id": "WS7",
+      "name": "Human Review Queue",
+      "purpose": "Create immutable derived review artifacts.",
+      "inputs": "results/evidence gaps",
+      "new_components": "review queue/resolution artifacts",
+      "schemas_tests": "review schema/tests",
+      "negative_invariants": [
+        "review non-mutating"
+      ],
+      "dependency": "H-ARCH-03",
+      "risk": "HIGH"
+    },
+    {
+      "id": "WS8",
+      "name": "Assessment Outcome / Completeness",
+      "purpose": "Derive completeness separately from compliance.",
+      "inputs": "results/applicability/support",
+      "new_components": "outcome derivation",
+      "schemas_tests": "outcome tests",
+      "negative_invariants": [
+        "unsupported not pass/fail"
+      ],
+      "dependency": "WS7",
+      "risk": "MEDIUM"
+    },
+    {
+      "id": "WS9",
+      "name": "Evidence Bundle / Certification / Auditor Report",
+      "purpose": "Emit hash-linked immutable evidence bundle.",
+      "inputs": "all snapshots/results/reviews",
+      "new_components": "bundle/certifier/report",
+      "schemas_tests": "bundle schema/tests",
+      "negative_invariants": [
+        "certificate not compliance"
+      ],
+      "dependency": "WS8",
+      "risk": "HIGH"
+    },
+    {
+      "id": "WS10",
+      "name": "Reassessment / Change Detection",
+      "purpose": "Detect approved material change and create new lineage.",
+      "inputs": "prior bundle/current snapshots",
+      "new_components": "lineage comparator",
+      "schemas_tests": "retention metadata/tests",
+      "negative_invariants": [
+        "prior run immutable"
+      ],
+      "dependency": "WS9",
+      "risk": "MEDIUM"
+    }
+  ]
+}

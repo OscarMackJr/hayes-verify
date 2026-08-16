@@ -1,0 +1,23 @@
+{
+  "component": "Hayes Verify",
+  "workstream": "WS1",
+  "status": "COMPLETE",
+  "completed_at_utc": "2026-08-15T23:55:34Z",
+  "gates": {
+    "consumes_ems_controlled_ids": true,
+    "hayes_does_not_allocate_ids": true,
+    "format_validation": true,
+    "uniqueness_validation": true,
+    "lifecycle_continuity": true,
+    "snapshot_schema": true,
+    "snapshot_generation": true,
+    "local_path_excluded": true,
+    "provenance_recorded": true,
+    "negative_invariants_pass": true,
+    "full_pytest_pass": true
+  },
+  "implementation_artifact_sha256": "d52509f9ad9312b52748e1940cee85f6ec8d60ebae66f284bdeef8f0de4ca5aa",
+  "module_sha256": "7dbdbf2c1ebd67523996d9376cc85110a5608b8a1ae05736a95160b54259f22e",
+  "schema_sha256": "e9d5c8841ccbef7a12033e841e88fe2a923c814596bc2df44b1b143cce5cd632",
+  "tests": "12 targeted; 98 full; 0 failures"
+}

@@ -1,0 +1,43 @@
+{
+  "baseline_registry_version": "1.10",
+  "supported_controls": 46,
+  "remaining_families": {
+    "human_judgment": 5,
+    "management_operational": 10,
+    "infrastructure_cloud": 13,
+    "documentation_governance": 6
+  },
+  "human_review_readiness": "PARTIAL",
+  "implemented_controls": 46,
+  "invariants": [
+    "UNKNOWN != false",
+    "NOT_IMPLEMENTED != FAIL",
+    "HUMAN_REVIEW != FAIL",
+    "INSUFFICIENT != PASS",
+    "APPLICABILITY_UNRESOLVED != NOT_APPLICABLE",
+    "Local paths are execution-only",
+    "Repository projections cannot override organization/service authority"
+  ],
+  "phase": "New Repository Onboarding MVP Assessment",
+  "remaining_controls": 34,
+  "safe_for_pilot": "NO",
+  "evidence_persistence_readiness": "PARTIAL",
+  "unsupported_controls": 34,
+  "minimum_blockers": [
+    "Controlled new-repository identity registration",
+    "Safe UNKNOWN classification workflow",
+    "Approved generic new-target effective applicability engine",
+    "Immutable onboarding execution adapter",
+    "Human-review queue and audit bundle"
+  ],
+  "component": "Hayes Verify + EMS",
+  "effective_applicability_readiness": "GOVERNANCE_BLOCKED",
+  "mvp_ready_now": "NO",
+  "recommendation": "READY TO IMPLEMENT after governance/architecture blockers are resolved; do not start implementation in this assessment.",
+  "identity_readiness": "PARTIAL",
+  "production_ready": "NO",
+  "immutable_execution_readiness": "PARTIAL",
+  "classification_readiness": "PARTIAL",
+  "auditor_report_readiness": "MISSING",
+  "evidence_resolution_readiness": "PARTIAL"
+}

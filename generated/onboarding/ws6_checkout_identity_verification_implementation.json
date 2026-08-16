@@ -1,0 +1,67 @@
+{
+  "workstream": "WS6",
+  "status": "COMPLETE",
+  "implemented_at_utc": "2026-08-16T00:44:50.073319Z",
+  "module": "src/hayes_verify/onboarding_checkout.py",
+  "schemas": [
+    "schemas/checkout_verification.schema.json",
+    "schemas/execution_readiness_manifest.schema.json"
+  ],
+  "ems_authority_hashes": {
+    "requirements": "265e1afc351ef7be3ad5c6c6ccd83764d947e25a0afe2dfbab2773eebb57cbbc",
+    "publication_certification": "44c82d83e9a46cab7e8d837b5b1a50dc564e1bdac932cb0c32ebeca65aa1495d"
+  },
+  "bindings": "Consumes only frozen WS4 plan and bound WS5 manifest; produces derived checkout and readiness artifacts.",
+  "local_mapping": "Mapping is LOCAL_EXECUTION_ONLY and never controlled identity, EMS authority, or compliance evidence.",
+  "remote_normalization": "HTTPS and SSH remotes normalize to host/owner/repository. Origin is canonical when present; multiple non-origin conflicting remotes are ambiguous.",
+  "checkout_states": [
+    "VERIFIED",
+    "PATH_MISSING",
+    "NOT_GIT_REPOSITORY",
+    "REMOTE_MISMATCH",
+    "REMOTE_AMBIGUOUS",
+    "REMOTE_MISSING",
+    "REFERENCE_MISMATCH",
+    "COMMIT_MISMATCH",
+    "DIRTY_NOT_ALLOWED",
+    "DETACHED_HEAD_NOT_ALLOWED",
+    "IDENTITY_UNVERIFIABLE"
+  ],
+  "dirty_state": "CLEAN or DIRTY; dirty is not auto-cleaned and is disallowed unless supplied controlled policy permits it.",
+  "detached_head": "Permitted only for matching expected commit; otherwise rejected when a branch is required.",
+  "request_gating": "Repository authoritative REQUEST_READY entries require VERIFIED checkout. No evaluator is executed.",
+  "historical_freeze": {
+    "before": "79adb6c003e9a61e2fd36131b1a37d3387973f72d206102985a78a3271bc5b35",
+    "after": "79adb6c003e9a61e2fd36131b1a37d3387973f72d206102985a78a3271bc5b35",
+    "unchanged": true
+  },
+  "tests": {
+    "contract_bundle": "PASS",
+    "ruff": "PASS",
+    "targeted_ws1_ws2_ws3_ws4_ws5_ws6": "58 passed",
+    "full_pytest": "144 passed / 0 failed"
+  },
+  "negative_invariants": {
+    "LOCAL_PATH != CONTROLLED_IDENTITY": "PASS",
+    "LOCAL_DIRECTORY_NAME != REPOSITORY_IDENTITY": "PASS",
+    "WRONG_REMOTE != VERIFIED": "PASS",
+    "AMBIGUOUS_REMOTE != VERIFIED": "PASS",
+    "WRONG_BRANCH != VERIFIED": "PASS",
+    "WRONG_COMMIT != VERIFIED": "PASS",
+    "UNVERIFIABLE_CHECKOUT != EXECUTION_PERMITTED": "PASS",
+    "CHECKOUT_FAILURE != COMPLIANCE_FAIL": "PASS",
+    "WS6_MUTATES_FROZEN_PLAN": "false",
+    "WS6_MUTATES_REQUEST_MANIFEST": "false",
+    "REPOSITORY_REQUEST_WITH_UNVERIFIED_CHECKOUT != EXECUTION_READY": "PASS",
+    "ORGANIZATION_REQUEST != FORCED_REPOSITORY_CHECKOUT": "PASS",
+    "WS6_EXECUTES_EVALUATOR": "false"
+  },
+  "known_limitations": [
+    "WS6 verifies synthetic checkout identity/readiness only. It does not execute requests, collect runtime evidence, create review items, produce outcomes, or onboard a real repository."
+  ],
+  "ws7_prerequisites": [
+    "frozen plan",
+    "WS5 composition manifest",
+    "WS6 derived checkout verification and readiness artifacts"
+  ]
+}

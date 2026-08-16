@@ -113,3 +113,7 @@ def test_hometown_production_enablement_is_fail_closed():
 def test_unknown_machine_disposition_fails_closed_before_ws7():
     with pytest.raises(FailClosedException, match="FAIL_CLOSED_EXCEPTION"):
         _validate_executed_result(ContractBundle(ROOT), {"result_state": "UNKNOWN"})
+
+def test_malformed_machine_result_fails_closed_before_ws7():
+    with pytest.raises(FailClosedException, match="FAIL_CLOSED_EXCEPTION"):
+        _validate_executed_result(ContractBundle(ROOT), {"result_state": "PASS"})

@@ -1,0 +1,26 @@
+{
+  "synthetic_pilot": {
+    "state": "NOT_READY",
+    "criteria": [
+      "H-ARCH-01 through H-ARCH-03 resolved",
+      "identity/classification snapshots validated",
+      "effective applicability frozen",
+      "plan frozen",
+      "checkout verification passes",
+      "supported/unsupported state projection validated",
+      "review queue and immutable bundle generated",
+      "historical freeze hash unchanged"
+    ]
+  },
+  "real_repository_pilot": {
+    "state": "NOT_READY",
+    "criteria": [
+      "All synthetic criteria",
+      "controlled EMS repository identity allocated",
+      "human-confirmed material classification",
+      "authoritative evidence access resolved or review items generated",
+      "authorized local execution mapping",
+      "auditable certification and retention location confirmed"
+    ]
+  }
+}

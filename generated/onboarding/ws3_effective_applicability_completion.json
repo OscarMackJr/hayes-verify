@@ -1,0 +1,40 @@
+{
+  "workstream": "WS3",
+  "status": "COMPLETE",
+  "implemented_at_utc": "2026-08-16T00:16:12.919849Z",
+  "module": "src/hayes_verify/onboarding_applicability.py",
+  "schema": "schemas/effective_applicability_snapshot.schema.json",
+  "ems_authority": {
+    "requirements_path": "C:\\temp\\standars\\ems\\registry\\new_repository_onboarding_requirements.json",
+    "requirements_sha256": "265e1afc351ef7be3ad5c6c6ccd83764d947e25a0afe2dfbab2773eebb57cbbc",
+    "publication_certification_path": "C:\\temp\\standars\\ems\\registry\\new_repository_onboarding_publication_certification.json",
+    "publication_certification_sha256": "44c82d83e9a46cab7e8d837b5b1a50dc564e1bdac932cb0c32ebeca65aa1495d",
+    "effective_applicability_path": "C:\\temp\\standars\\ems\\registry\\new_repository_onboarding_effective_applicability.json"
+  },
+  "historical_freeze": {
+    "path": "C:\\temp\\standars\\ems\\registry\\wave2d\\applicability_decisions.csv",
+    "sha256_before": "79adb6c003e9a61e2fd36131b1a37d3387973f72d206102985a78a3271bc5b35",
+    "sha256_after": "79adb6c003e9a61e2fd36131b1a37d3387973f72d206102985a78a3271bc5b35",
+    "unchanged": true
+  },
+  "tests": {
+    "contract_bundle": "PASS",
+    "ruff": "PASS",
+    "targeted_ws1_ws2_ws3": "38 passed",
+    "full_pytest": "124 passed / 0 failed"
+  },
+  "negative_invariants": {
+    "UNKNOWN != FALSE": "PASS",
+    "UNKNOWN != NOT_APPLICABLE": "PASS",
+    "MISSING_CONDITION_EVIDENCE != NOT_APPLICABLE": "PASS",
+    "APPLICABILITY_UNRESOLVED != NOT_APPLICABLE": "PASS",
+    "NOT_IMPLEMENTED != NOT_APPLICABLE": "PASS",
+    "NOT_IMPLEMENTED != FAIL": "PASS",
+    "HISTORICAL_FREEZE != CURRENT_POLICY_ENGINE": "PASS",
+    "NEW_REPOSITORY != HISTORICAL_FREEZE_MUTATION": "PASS",
+    "SERVICE_AUTHORITY != REPOSITORY_AUTHORITY": "PASS",
+    "ORGANIZATION_AUTHORITY != REPOSITORY_AUTHORITY": "PASS",
+    "LOCAL_PATH != APPLICABILITY_AUTHORITY": "PASS",
+    "APPLICABILITY != COMPLIANCE_RESULT": "PASS"
+  }
+}

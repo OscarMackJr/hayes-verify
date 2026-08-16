@@ -1,0 +1,41 @@
+{
+  "generated_at_utc": "2026-08-15T23:41:26Z",
+  "decisions": [
+    {
+      "id": "H-ARCH-01",
+      "subject": "Generic new-target effective-applicability snapshot producer",
+      "classification": "REQUIRES_HUMAN_ARCHITECTURE_DECISION",
+      "reason": "EMS defines required inputs/outcomes, but Hayes has only frozen/scoped applicability consumers; choosing a generalized engine versus a thin onboarding adapter changes public architecture."
+    },
+    {
+      "id": "H-ARCH-02",
+      "subject": "Onboarding assessment-plan/bundle contract boundary",
+      "classification": "REQUIRES_HUMAN_ARCHITECTURE_DECISION",
+      "reason": "Existing evaluator request/result contract should remain stable; EMS requires additional immutable plan and bundle artifacts, but their standalone versus additive contract placement is not determined."
+    },
+    {
+      "id": "H-ARCH-03",
+      "subject": "Unified human-review derived-artifact persistence",
+      "classification": "REQUIRES_HUMAN_ARCHITECTURE_DECISION",
+      "reason": "EMS requires non-mutating review resolution, but current Hayes has applicability-only review artifacts and no canonical onboarding storage contract."
+    },
+    {
+      "id": "H-ARCH-04",
+      "subject": "Identity allocation boundary",
+      "classification": "ALREADY_DETERMINED_BY_EMS",
+      "reason": "EMS Governance allocates IDs; Hayes consumes an approved identity and must not allocate it."
+    },
+    {
+      "id": "H-ARCH-05",
+      "subject": "Local execution path boundary",
+      "classification": "ALREADY_DETERMINED_BY_EMS",
+      "reason": "Local paths are execution-only and non-authoritative."
+    },
+    {
+      "id": "H-ARCH-06",
+      "subject": "Batch runtime reuse after plan freeze",
+      "classification": "DETERMINISTIC_FROM_EXISTING_HAYES_ARCHITECTURE",
+      "reason": "create_wave2d_batch_run.py and scoped request builder can execute once onboarding inputs are frozen."
+    }
+  ]
+}

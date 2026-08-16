@@ -1,0 +1,38 @@
+[
+  {
+    "workstream": "Repository Registration",
+    "definition_of_done": "Human-approved stable ID proposal.",
+    "order": 1,
+    "reuse": "repository_registry.yaml; wave2d_repository_map.json"
+  },
+  {
+    "workstream": "Classification",
+    "definition_of_done": "Confirmed or unresolved security metadata.",
+    "order": 2,
+    "reuse": "Classification guide; overrides"
+  },
+  {
+    "workstream": "Effective Applicability",
+    "definition_of_done": "Separate new-target snapshot without historical-freeze mutation.",
+    "order": 3,
+    "reuse": "Policy/scope rules"
+  },
+  {
+    "workstream": "Assessment Plan/Evidence",
+    "definition_of_done": "Frozen plan with authority hashes.",
+    "order": 4,
+    "reuse": "v1.10 registry; evidence contracts"
+  },
+  {
+    "workstream": "Execution Adapter",
+    "definition_of_done": "Dynamic target executes only supported controls.",
+    "order": 5,
+    "reuse": "Immutable batch runtime"
+  },
+  {
+    "workstream": "Review/Persistence/Report",
+    "definition_of_done": "Queue, immutable bundle, auditor report.",
+    "order": 6,
+    "reuse": "Manifests/certifications"
+  }
+]

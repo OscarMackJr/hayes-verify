@@ -1,0 +1,52 @@
+{
+  "component": "Hayes Verify",
+  "workstream": "WS1",
+  "title": "Repository Registration / Identity Consumption",
+  "implemented_at_utc": "2026-08-15T23:55:34Z",
+  "authority_hashes": {
+    "requirements_sha256": "265e1afc351ef7be3ad5c6c6ccd83764d947e25a0afe2dfbab2773eebb57cbbc",
+    "identity_authority_sha256": "c44d4a3e2b667eeb995aebb45284c6331e826b0af384e3153609354b336c3ac9",
+    "publication_certification_sha256": "44c82d83e9a46cab7e8d837b5b1a50dc564e1bdac932cb0c32ebeca65aa1495d"
+  },
+  "module_path": "src/hayes_verify/onboarding_identity.py",
+  "schema_path": "schemas/repository_snapshot.schema.json",
+  "schema_sha256": "e9d5c8841ccbef7a12033e841e88fe2a923c814596bc2df44b1b143cce5cd632",
+  "canonical_identity_source": "EMS-controlled identity authority; existing registry/wave2d_repository_map.json conventions are consumed through a thin adapter, not replaced.",
+  "reused_components": [
+    "repository-map identity conventions",
+    "src/hayes_verify/provenance.py commit provenance pattern",
+    "jsonschema validation pattern"
+  ],
+  "new_components": [
+    "onboarding_identity.py",
+    "repository_snapshot.schema.json",
+    "synthetic identity tests"
+  ],
+  "validation": {
+    "targeted_tests": "12 passed",
+    "contract_bundle": "PASS",
+    "ruff": "PASS",
+    "full_pytest": "98 passed, 0 failed"
+  },
+  "negative_invariants": {
+    "HAYES_ALLOCATES_REPO_ID": false,
+    "REPOSITORY_NAME_EQUALS_CONTROLLED_ID": false,
+    "LOCAL_PATH_EQUALS_CONTROLLED_IDENTITY": false,
+    "RENAME_ALLOCATES_NEW_REPO_ID": false,
+    "TRANSFER_ALLOCATES_NEW_REPO_ID": false,
+    "ARCHIVE_DELETES_ID": false,
+    "RETIREMENT_LOSES_HISTORICAL_ID": false,
+    "DUPLICATE_REPO_ID_REJECTED": true
+  },
+  "known_limitations": [
+    "No EMS repository ID allocation in Hayes.",
+    "No classification snapshot (WS2).",
+    "No applicability, assessment plan, execution checkout verification, human review, outcome, bundle, or reassessment implementation.",
+    "No real repository identity was consumed."
+  ],
+  "ws2_handoff_requirements": [
+    "Consume repository_snapshot.json by hash.",
+    "Add only tri-state classification/provenance fields in a separate classification snapshot.",
+    "Do not alter repository identity or add local path."
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "component": "Hayes Verify",
+  "phase": "New Repository Onboarding MVP Authority Preflight",
+  "generated_at_utc": "2026-08-15T23:41:26Z",
+  "status": "BLOCKED",
+  "implementation_authorized": false,
+  "baseline": {
+    "head_sha": "cbe7bb4734efea226df1009fc82a005e67fcfdcd",
+    "registry_version": "1.10",
+    "registry_sha256": "c69093e5068b5285bbfb551123cae933e92af71870c86f2868504c6017b692c2",
+    "implemented_controls": 46,
+    "remaining_controls": 34,
+    "supported_controls": 46
+  },
+  "ems_hashes": {
+    "requirements": "265e1afc351ef7be3ad5c6c6ccd83764d947e25a0afe2dfbab2773eebb57cbbc",
+    "publication_certification": "44c82d83e9a46cab7e8d837b5b1a50dc564e1bdac932cb0c32ebeca65aa1495d",
+    "historical_freeze": "79adb6c003e9a61e2fd36131b1a37d3387973f72d206102985a78a3271bc5b35"
+  },
+  "ems_publication_readback": {
+    "expected_decisions": 24,
+    "published_decisions": 24,
+    "non_null": 24,
+    "missing": 0,
+    "orphaned": 0,
+    "negative_invariants": 13
+  },
+  "quality": {
+    "contract_bundle": "PASS",
+    "ruff": "PASS workflow scope src/tests/validate_contract_bundle.py",
+    "pytest": "86 passed, 0 failed"
+  },
+  "blockers": [
+    {
+      "id": "H-ARCH-01",
+      "subject": "Generic new-target effective-applicability snapshot producer",
+      "classification": "REQUIRES_HUMAN_ARCHITECTURE_DECISION",
+      "reason": "EMS defines required inputs/outcomes, but Hayes has only frozen/scoped applicability consumers; choosing a generalized engine versus a thin onboarding adapter changes public architecture."
+    },
+    {
+      "id": "H-ARCH-02",
+      "subject": "Onboarding assessment-plan/bundle contract boundary",
+      "classification": "REQUIRES_HUMAN_ARCHITECTURE_DECISION",
+      "reason": "Existing evaluator request/result contract should remain stable; EMS requires additional immutable plan and bundle artifacts, but their standalone versus additive contract placement is not determined."
+    },
+    {
+      "id": "H-ARCH-03",
+      "subject": "Unified human-review derived-artifact persistence",
+      "classification": "REQUIRES_HUMAN_ARCHITECTURE_DECISION",
+      "reason": "EMS requires non-mutating review resolution, but current Hayes has applicability-only review artifacts and no canonical onboarding storage contract."
+    }
+  ],
+  "recommendation": "Do not implement until H-ARCH-01, H-ARCH-02, and H-ARCH-03 are resolved; no EMS correction is requested."
+}

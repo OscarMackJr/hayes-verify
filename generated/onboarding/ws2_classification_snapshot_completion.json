@@ -1,0 +1,24 @@
+{
+  "component": "Hayes Verify",
+  "workstream": "WS2",
+  "status": "COMPLETE",
+  "completed_at_utc": "2026-08-16T00:06:24Z",
+  "gates": {
+    "ws1_snapshot_consumed_hash_bound": true,
+    "tri_state_classification": true,
+    "unknown_explicit": true,
+    "human_confirmation": true,
+    "provenance_retained": true,
+    "immutable_schema": true,
+    "snapshot_generation": true,
+    "completeness_metadata": true,
+    "no_applicability_calculated": true,
+    "local_paths_excluded": true,
+    "negative_invariants_pass": true,
+    "full_pytest_pass": true
+  },
+  "implementation_sha256": "c90b8ae9e26a2a7784abc7ab3a9794cb0a229c645642647cfaff1f80a9d4ec67",
+  "module_sha256": "46113774e00741acf7cb27a3a837203c14361ce275dec866c4e184693edd402c",
+  "schema_sha256": "7e93027dbe7d9938319ab14cc8a8271d5be85e5855c47017fd274862ae2cae29",
+  "tests": "24 targeted WS1/WS2; 110 full; 0 failures"
+}

@@ -1,0 +1,77 @@
+{
+  "workstream": "WS3",
+  "status": "COMPLETE",
+  "implemented_at_utc": "2026-08-16T00:16:12.919849Z",
+  "module": "src/hayes_verify/onboarding_applicability.py",
+  "schema": "schemas/effective_applicability_snapshot.schema.json",
+  "ems_authority": {
+    "requirements_path": "C:\\temp\\standars\\ems\\registry\\new_repository_onboarding_requirements.json",
+    "requirements_sha256": "265e1afc351ef7be3ad5c6c6ccd83764d947e25a0afe2dfbab2773eebb57cbbc",
+    "publication_certification_path": "C:\\temp\\standars\\ems\\registry\\new_repository_onboarding_publication_certification.json",
+    "publication_certification_sha256": "44c82d83e9a46cab7e8d837b5b1a50dc564e1bdac932cb0c32ebeca65aa1495d",
+    "effective_applicability_path": "C:\\temp\\standars\\ems\\registry\\new_repository_onboarding_effective_applicability.json"
+  },
+  "controlled_policy_sources": [
+    "registry/control_scope_registry.yaml",
+    "registry/policy_applicability.yaml",
+    "registry/policy_decisions.json",
+    "registry/control_catalog.yaml",
+    "registry/new_repository_onboarding_effective_applicability.json",
+    "registry/adjudication_rules.json"
+  ],
+  "ws2_input_binding": "classification_snapshot_sha256 is recomputed and must match the exact WS2 snapshot; repository identity and WS1 hash binding are validated.",
+  "states": [
+    "APPLICABLE",
+    "NOT_APPLICABLE",
+    "APPLICABILITY_UNRESOLVED"
+  ],
+  "condition_evidence_contract": [
+    "condition_id",
+    "control_id",
+    "source_type",
+    "source_reference",
+    "observed_value",
+    "observed_at",
+    "authority",
+    "provenance",
+    "integrity/hash where applicable"
+  ],
+  "scope_handling": "REPOSITORY can resolve from current policy/classification; SERVICE, ORGANIZATION, PLATFORM, and EMS controls without sufficient non-repository condition evidence resolve APPLICABILITY_UNRESOLVED.",
+  "support_state_separation": "Hayes support_state is optional projection only and never changes applicability.",
+  "historical_freeze": {
+    "path": "C:\\temp\\standars\\ems\\registry\\wave2d\\applicability_decisions.csv",
+    "sha256_before": "79adb6c003e9a61e2fd36131b1a37d3387973f72d206102985a78a3271bc5b35",
+    "sha256_after": "79adb6c003e9a61e2fd36131b1a37d3387973f72d206102985a78a3271bc5b35",
+    "unchanged": true
+  },
+  "tests": {
+    "contract_bundle": "PASS",
+    "ruff": "PASS",
+    "targeted_ws1_ws2_ws3": "38 passed",
+    "full_pytest": "124 passed / 0 failed"
+  },
+  "negative_invariants": {
+    "UNKNOWN != FALSE": "PASS",
+    "UNKNOWN != NOT_APPLICABLE": "PASS",
+    "MISSING_CONDITION_EVIDENCE != NOT_APPLICABLE": "PASS",
+    "APPLICABILITY_UNRESOLVED != NOT_APPLICABLE": "PASS",
+    "NOT_IMPLEMENTED != NOT_APPLICABLE": "PASS",
+    "NOT_IMPLEMENTED != FAIL": "PASS",
+    "HISTORICAL_FREEZE != CURRENT_POLICY_ENGINE": "PASS",
+    "NEW_REPOSITORY != HISTORICAL_FREEZE_MUTATION": "PASS",
+    "SERVICE_AUTHORITY != REPOSITORY_AUTHORITY": "PASS",
+    "ORGANIZATION_AUTHORITY != REPOSITORY_AUTHORITY": "PASS",
+    "LOCAL_PATH != APPLICABILITY_AUTHORITY": "PASS",
+    "APPLICABILITY != COMPLIANCE_RESULT": "PASS"
+  },
+  "known_limitations": [
+    "WS3 accepts controlled current-policy material as a supplied input; it does not create WS4 assessment plans, evaluator requests, execution outcomes, or a real onboarding run.",
+    "Historical freezes are optional reference metadata only and are never read as policy authority."
+  ],
+  "ws4_handoff_requirements": [
+    "validated effective applicability snapshot",
+    "snapshot hashes and policy provenance",
+    "control applicability decisions and unresolved reasons",
+    "support-state projection remains separate from applicability"
+  ]
+}

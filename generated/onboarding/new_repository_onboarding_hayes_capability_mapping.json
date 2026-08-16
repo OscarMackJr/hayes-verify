@@ -1,0 +1,111 @@
+{
+  "component": "Hayes Verify",
+  "analysis": "New Repository Onboarding MVP authority preflight",
+  "generated_at_utc": "2026-08-15T23:41:26Z",
+  "baseline": {
+    "head_sha": "cbe7bb4734efea226df1009fc82a005e67fcfdcd",
+    "registry_version": "1.10",
+    "registry_sha256": "c69093e5068b5285bbfb551123cae933e92af71870c86f2868504c6017b692c2",
+    "implemented_controls": 46,
+    "remaining_controls": 34,
+    "supported_controls": 46
+  },
+  "capabilities": [
+    {
+      "capability": "repository identities",
+      "classification": "EXISTS_NEEDS_EXTENSION",
+      "evidence": "registry/wave2d_repository_map.json; src/hayes_verify/wave2d_targets.py",
+      "finding": "Existing IDs are consumed; no EMS-governed new-ID registration consumer."
+    },
+    {
+      "capability": "classification metadata",
+      "classification": "EXISTS_NEEDS_EXTENSION",
+      "evidence": "registry/wave2d_repository_map.json; registry/wave2d_repository_path_overrides.example.json",
+      "finding": "Current fields are booleans/values; no tri-state UNKNOWN snapshot."
+    },
+    {
+      "capability": "repository/organization targets",
+      "classification": "EXISTS_REUSABLE",
+      "evidence": "src/hayes_verify/wave2d_targets.py; scripts/build_wave2d_batch_requests_scoped.py",
+      "finding": "Target roles and organization projection exist."
+    },
+    {
+      "capability": "local path overrides",
+      "classification": "EXISTS_NEEDS_EXTENSION",
+      "evidence": "registry/wave2d_repository_path_overrides.example.json; scripts/build_wave2d_batch_requests_scoped.py",
+      "finding": "Execution-local mapping exists; onboarding checkout binding needs extension."
+    },
+    {
+      "capability": "checkout identity validation",
+      "classification": "EXISTS_NEEDS_EXTENSION",
+      "evidence": "src/hayes_verify/provenance.py; scripts/Bootstrap-HayesVerifyGitHubRepository.ps1",
+      "finding": "Commit SHA exists; remote/branch/dirty contract is not generic."
+    },
+    {
+      "capability": "effective applicability",
+      "classification": "EXISTS_NEEDS_EXTENSION",
+      "evidence": "scripts/build_wave2d_batch_requests_scoped.py; contracts/schemas/wave2d_evaluation_request.schema.json",
+      "finding": "Consumes frozen/current scoped applicability but lacks generic new-target snapshot derivation."
+    },
+    {
+      "capability": "immutable batch identity/requests",
+      "classification": "EXISTS_REUSABLE",
+      "evidence": "scripts/create_wave2d_batch_run.py; scripts/build_wave2d_batch_requests_scoped.py",
+      "finding": "Reusable after a frozen onboarding plan supplies inputs."
+    },
+    {
+      "capability": "assessment plan",
+      "classification": "MISSING",
+      "evidence": "batch run identity and request builder only",
+      "finding": "No explicit artifact binds all EMS/Hayes hashes and snapshots pre-request."
+    },
+    {
+      "capability": "registry/support states",
+      "classification": "EXISTS_NEEDS_EXTENSION",
+      "evidence": "registry/wave2d_evaluator_registry_v1_10.json; src/hayes_verify/evaluator_registry.py",
+      "finding": "Registry represents IMPLEMENTED and unsupported states but not onboarding completeness projection."
+    },
+    {
+      "capability": "evidence providers",
+      "classification": "EXISTS_NEEDS_EXTENSION",
+      "evidence": "src/hayes_verify/wave2d_targets.py; evaluator family modules",
+      "finding": "File evidence exists; generic authority/freshness/conflict resolution is absent."
+    },
+    {
+      "capability": "service/organization evidence boundaries",
+      "classification": "EXISTS_REUSABLE",
+      "evidence": "src/hayes_verify/evaluator_families/test_quality.py; dependency_supply_chain.py",
+      "finding": "Family rules preserve authoritative service/organization evidence and warning/human-review paths."
+    },
+    {
+      "capability": "human review",
+      "classification": "EXISTS_NEEDS_EXTENSION",
+      "evidence": "scripts/Build-Wave2DApplicabilityReviewQueue.py; generated review artifacts",
+      "finding": "Applicability queue exists; no unified immutable onboarding review lifecycle."
+    },
+    {
+      "capability": "request/result contracts",
+      "classification": "EXISTS_REUSABLE",
+      "evidence": "contracts/schemas/wave2d_evaluation_request.schema.json; wave2d_evaluation_result.schema.json",
+      "finding": "Existing evaluator contracts remain intact; onboarding can use a separate plan/bundle contract."
+    },
+    {
+      "capability": "batch/verification manifests",
+      "classification": "EXISTS_REUSABLE",
+      "evidence": "scripts/run_wave2d_batch_registry_scoped.py; generated/wave2d/evaluator-expansion",
+      "finding": "Existing output lineage can compose an onboarding bundle."
+    },
+    {
+      "capability": "auditor reports/certification",
+      "classification": "EXISTS_NEEDS_EXTENSION",
+      "evidence": "generated/wave2d/evaluator-expansion/*certification*.json",
+      "finding": "Family certification exists; no onboarding completeness/report bundle."
+    },
+    {
+      "capability": "reassessment/retention",
+      "classification": "MISSING",
+      "evidence": "versioned registries and batch directories",
+      "finding": "No generic run lineage/change-detection or retention metadata model."
+    }
+  ]
+}

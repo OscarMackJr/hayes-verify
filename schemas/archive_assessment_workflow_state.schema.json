@@ -1,0 +1,72 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "workflow_id",
+    "archive_target_id",
+    "source_zip_sha256",
+    "assessment_run_id",
+    "workflow_status",
+    "current_stage",
+    "created_at",
+    "updated_at",
+    "non_production",
+    "output_root_identity",
+    "authority_context",
+    "completed_stages",
+    "predecessor_state_sha256",
+    "state_revision"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "workflow_id": {
+      "type": "string",
+      "pattern": "^ARCHIVE-ASSESS-"
+    },
+    "archive_target_id": {
+      "type": "string",
+      "pattern": "^ARCHIVE-[0-9A-F]{24}$"
+    },
+    "source_zip_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "assessment_run_id": {
+      "type": "string"
+    },
+    "workflow_status": {
+      "enum": [
+        "CREATED",
+        "RUNNING",
+        "AWAITING_HUMAN_INPUT",
+        "BLOCKED",
+        "FAILED",
+        "PARTIAL",
+        "COMPLETE"
+      ]
+    },
+    "current_stage": {
+      "enum": [
+        "INTAKE",
+        "CLASSIFICATION",
+        "APPLICABILITY",
+        "PLAN",
+        "AUTHORITY_PREFLIGHT",
+        "EXECUTION",
+        "REVIEW",
+        "PACKAGE"
+      ]
+    },
+    "completed_stages": {
+      "type": "array"
+    },
+    "state_revision": {
+      "type": "integer",
+      "minimum": 0
+    }
+  },
+  "additionalProperties": true
+}

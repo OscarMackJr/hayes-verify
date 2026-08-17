@@ -1,0 +1,20 @@
+{
+  "archive_onboarding_regression": "26 passed",
+  "changed_scope_ruff": "PASS",
+  "contract_bundle_validator": {
+    "contract_count": 5,
+    "hash_algorithm": "SHA256_CANONICAL_TEXT_V1",
+    "status": "PASS"
+  },
+  "focused_rp1a_tests": "9 passed",
+  "full_pytest": "189 passed",
+  "repository_wide_ruff": "Not run; RP1A scope Ruff passed and no unrelated legacy Ruff debt was modified.",
+  "runtime_binding_validator": {
+    "proven_supported_count": 26,
+    "runtime_binding_count": 26,
+    "status": "PASS",
+    "unproven_not_currently_published_count": 20
+  },
+  "status": "PASS",
+  "successor_registry_validator": "Not applicable: this clean main lineage has no v1.9 draft; the current v1.11 runtime authority validator passed."
+}

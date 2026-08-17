@@ -1,0 +1,91 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "workflow_id",
+    "revision",
+    "stage",
+    "workflow_status",
+    "timestamp",
+    "input_hashes",
+    "output_hashes",
+    "authority_hashes",
+    "predecessor_checkpoint_sha256",
+    "next_allowed_stages",
+    "resume_allowed",
+    "resume_requirements",
+    "event_type",
+    "state_sha256"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "revision": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "stage": {
+      "enum": [
+        "INTAKE",
+        "CLASSIFICATION",
+        "APPLICABILITY",
+        "PLAN",
+        "AUTHORITY_PREFLIGHT",
+        "EXECUTION",
+        "REVIEW",
+        "PACKAGE"
+      ]
+    },
+    "predecessor_checkpoint_sha256": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "state_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "workflow_id": {
+      "type": "string"
+    },
+    "workflow_status": {
+      "enum": [
+        "CREATED",
+        "RUNNING",
+        "AWAITING_HUMAN_INPUT",
+        "BLOCKED",
+        "FAILED",
+        "PARTIAL",
+        "COMPLETE"
+      ]
+    },
+    "timestamp": {
+      "type": "string"
+    },
+    "input_hashes": {
+      "type": "object"
+    },
+    "output_hashes": {
+      "type": "object"
+    },
+    "authority_hashes": {
+      "type": "object"
+    },
+    "next_allowed_stages": {
+      "type": "array"
+    },
+    "resume_allowed": {
+      "type": "boolean"
+    },
+    "resume_requirements": {
+      "type": "array"
+    },
+    "event_type": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,42 @@
+{
+  "allowed_normal_transitions": [
+    {
+      "from": "INTAKE",
+      "to": "CLASSIFICATION"
+    },
+    {
+      "from": "CLASSIFICATION",
+      "to": "APPLICABILITY"
+    },
+    {
+      "from": "APPLICABILITY",
+      "to": "PLAN"
+    },
+    {
+      "from": "PLAN",
+      "to": "AUTHORITY_PREFLIGHT"
+    },
+    {
+      "from": "AUTHORITY_PREFLIGHT",
+      "to": "EXECUTION"
+    },
+    {
+      "from": "EXECUTION",
+      "to": "REVIEW"
+    },
+    {
+      "from": "REVIEW",
+      "to": "PACKAGE"
+    }
+  ],
+  "invalid_transition_behavior": "ArchiveWorkflowError / fail closed",
+  "pause_behavior": "Current stage remains unchanged while workflow status becomes AWAITING_HUMAN_INPUT.",
+  "resume_behavior": "Resume validates immutable input and full checkpoint hash chain before restoring RUNNING at the incomplete stage.",
+  "terminal_statuses": [
+    "COMPLETE",
+    "PARTIAL",
+    "BLOCKED",
+    "FAILED",
+    "AWAITING_HUMAN_INPUT"
+  ]
+}

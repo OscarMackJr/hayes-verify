@@ -15,7 +15,8 @@
   "contracts": {
     "evaluation_request": {
       "path": "schemas/contracts/wave2d_evaluation_request.schema.json",
-      "sha256": "e26f9f0cca6cdaf42169135c8858f59e41d608cec8dc32e2b4ea782c514aea42"
+      "sha256": "6ac7d2869b6356f685490aae95949382a43da05984dd30c95a0786ef992d840a",
+      "hash_algorithm": "SHA256_CANONICAL_TEXT_V1"
     },
     "evidence_record": {
       "path": "schemas/contracts/wave2d_evidence_record.schema.json",
@@ -23,7 +24,8 @@
     },
     "evaluation_result": {
       "path": "schemas/contracts/wave2d_evaluation_result.schema.json",
-      "sha256": "c684db7e3ef6d2bcd76fc834b4aac5e94b9db07f51d43465508109b42bcd95b9"
+      "sha256": "3c4be6856d26d3678a04f45ddb2ce85261dc69f54ab6d6db960ebd139c2e6394",
+      "hash_algorithm": "SHA256_CANONICAL_TEXT_V1"
     },
     "provenance_envelope": {
       "path": "schemas/contracts/wave2d_provenance_envelope.schema.json",

@@ -6,12 +6,14 @@ import json
 from datetime import UTC, datetime
 from pathlib import Path
 
+from hayes_verify.contract_hashing import sha256_canonical_contract_file
+
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "generated/archive-assessment/ar3f"
 EXPECTED = {
     "registry/wave2d_evaluator_registry_v1_11.json": "f29699f3bfca3f994574919f335033777feb884e2985c237fbb4da2bbb2123c2",
-    "contracts/schemas/wave2d_evaluation_request.schema.json": "e26f9f0cca6cdaf42169135c8858f59e41d608cec8dc32e2b4ea782c514aea42",
-    "contracts/schemas/wave2d_evaluation_result.schema.json": "c684db7e3ef6d2bcd76fc834b4aac5e94b9db07f51d43465508109b42bcd95b9",
+    "contracts/schemas/wave2d_evaluation_request.schema.json": "6ac7d2869b6356f685490aae95949382a43da05984dd30c95a0786ef992d840a",
+    "contracts/schemas/wave2d_evaluation_result.schema.json": "3c4be6856d26d3678a04f45ddb2ce85261dc69f54ab6d6db960ebd139c2e6394",
 }
 ALLOWLIST = [
     "contracts/consumer_manifest.json",
@@ -25,6 +27,7 @@ ALLOWLIST = [
     "generated/archive-assessment/ar3f/ar3f_runtime_authority_publication_manifest.json",
     "generated/archive-assessment/ar3f/publication_audit.json",
     "generated/archive-assessment/ar3f/publication_audit_script_failure.json",
+    "generated/archive-assessment/ar3f/ci/contract_hash_ci_failure_analysis.json",
     "registry/wave2d_evaluator_registry_v1_11.json",
     "registry/wave2d_runtime_bindings_v1_0.json",
     "scripts/audit_ar3f_publication.py",
@@ -44,7 +47,7 @@ def write_json(path: Path, value: object) -> None:
 
 def main() -> None:
     for relative, expected in EXPECTED.items():
-        actual = sha256(ROOT / relative)
+        actual = sha256_canonical_contract_file(ROOT / relative) if relative.startswith("contracts/schemas/") else sha256(ROOT / relative)
         if actual != expected:
             raise SystemExit(f"frozen input hash mismatch: {relative}")
     registry = json.loads((ROOT / "registry/wave2d_evaluator_registry_v1_11.json").read_text(encoding="utf-8"))
@@ -59,7 +62,7 @@ def main() -> None:
     OUT.mkdir(parents=True, exist_ok=True)
     allowlist_path = OUT / "ar3f_publication_staging_allowlist.json"
     write_json(allowlist_path, {"allowlist": ALLOWLIST, "excluded": ["scripts/build_ar3f_runtime_authority.py", "registry/wave2d_evaluator_registry.json"], "purpose": "explicit AR3F publication staging allowlist"})
-    hashes = {relative: sha256(ROOT / relative) for relative in ALLOWLIST if not relative.startswith("generated/archive-assessment/ar3f/") and (ROOT / relative).is_file()}
+    hashes = {relative: (sha256_canonical_contract_file(ROOT / relative) if relative.startswith("contracts/schemas/") else sha256(ROOT / relative)) for relative in ALLOWLIST if not relative.startswith("generated/archive-assessment/ar3f/") and (ROOT / relative).is_file()}
     manifest = {
         "component": "Hayes Verify",
         "phase": "AR3F Archive Runtime Authority Reconciliation",

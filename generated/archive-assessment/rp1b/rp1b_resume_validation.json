@@ -1,0 +1,8 @@
+{
+  "checkpoint_chain": "PASS",
+  "conflicting_response": "fail closed successor required",
+  "resume_with_response": "consumes response/checkpoints/advances to APPLICABILITY",
+  "resume_without_response": "idempotent remains awaiting input",
+  "same_response": "idempotent after consumption",
+  "status": "PASS"
+}

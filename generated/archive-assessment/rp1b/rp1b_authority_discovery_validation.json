@@ -1,0 +1,7 @@
+{
+  "ems_authority_discovery": "controlled EMS registry artifact presence and hashes",
+  "hayes_authority_discovery": "support registry, runtime bindings, canonical request/result contracts",
+  "manual_hash_input_required": false,
+  "status": "PASS",
+  "wrong_root": "fail closed"
+}

@@ -1,0 +1,7 @@
+{
+  "authority_preflight_stage_complete": false,
+  "context_artifact": "workflow/archive_assessment_authority_context.json",
+  "new_workflow": "discover then freeze",
+  "resume": "reuse frozen authority; current root drift advisory/no silent replacement",
+  "status": "PASS"
+}

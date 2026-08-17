@@ -1,0 +1,11 @@
+{
+  "advance_boundary": "APPLICABILITY",
+  "applicability_executions": 0,
+  "attribution_required": true,
+  "raw_response_immutable": true,
+  "request_artifact": "classification/archive_classification_request.json",
+  "response_schema": "schemas/archive_assessment_classification_response.schema.json",
+  "snapshot_derived": true,
+  "status": "PASS",
+  "unknown_supported": true
+}

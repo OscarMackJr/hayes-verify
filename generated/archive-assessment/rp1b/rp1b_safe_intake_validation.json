@@ -1,0 +1,17 @@
+{
+  "duplicate_path_rejected": true,
+  "evaluator_executions": 0,
+  "extraction_integrity": true,
+  "path_traversal_rejected": true,
+  "resource_limits": {
+    "max_compression_ratio": 100,
+    "max_entries": 10000,
+    "max_expanded_bytes": 268435456,
+    "max_path_length": 240,
+    "max_single_file_bytes": 67108864
+  },
+  "safe_zip_validation": true,
+  "source_manifest": true,
+  "status": "PASS",
+  "symlink_rejected": true
+}

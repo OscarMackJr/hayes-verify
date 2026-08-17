@@ -1,0 +1,26 @@
+{
+  "authority_discovery_validation_sha256": "2f323700a9af4efbc4df108d7451acd4c1180035b258693ca61cc81cb8de5d51",
+  "authority_freeze_validation_sha256": "2c50850b19f89ba7210172c677879ea9d4b5e1731b74e5de8c72025a046033d2",
+  "certification_scope": "REPEATABLE_ARCHIVE_INTAKE_AUTHORITY_FREEZE_AND_CLASSIFICATION_GATE_ONLY",
+  "certified_at_utc": "2026-08-17T13:59:07Z",
+  "classification_gate_validation_sha256": "834d89c5d0b9988b7a9fd5411b19c9db0d05ff18036e17d7469870506c1a6aa8",
+  "classification_response_schema_sha256": "f0af1453d7a68f545ffc5c0c3b0a8504bf4cdc8be0cd9c8877d2ddcabdbc9768",
+  "component": "Hayes Verify",
+  "does_not_certify": [
+    "applicability execution",
+    "plan creation",
+    "machine evaluation",
+    "AR4 packaging",
+    "compliance",
+    "production readiness"
+  ],
+  "errors": [],
+  "implementation_manifest_sha256": "e4115d63971946dfcc3df34360844b9480f74076b3e28866ecbb20d2f7fc0d1c",
+  "phase": "RP1B \u2014 Safe Archive Intake & Authority Freeze Integration",
+  "resume_validation_sha256": "47a0652f97e42b177d612449419e65e2848df855bde74a0846858042d41f7613",
+  "rp1a_predecessor_commit": "7864c84",
+  "safe_intake_validation_sha256": "db3c849cd17920f650037bde8b772005691a7ef456b9c950482bc3208d69af29",
+  "status": "PASS",
+  "test_results_sha256": "df538887ba24a93544416dfacf3e7bc2dab227a3b14cb9290c315b7693eaa6f2",
+  "zero_evaluator_execution": true
+}

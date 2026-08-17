@@ -12,6 +12,8 @@ from datetime import UTC, datetime
 from pathlib import Path
 from typing import Any, Protocol
 
+from jsonschema import Draft202012Validator, FormatChecker
+
 WORKFLOW_FORMAT_VERSION = "1.0"
 STAGES = ("INTAKE", "CLASSIFICATION", "APPLICABILITY", "PLAN", "AUTHORITY_PREFLIGHT", "EXECUTION", "REVIEW", "PACKAGE")
 STATUSES = ("CREATED", "RUNNING", "AWAITING_HUMAN_INPUT", "BLOCKED", "FAILED", "PARTIAL", "COMPLETE")
@@ -278,30 +280,141 @@ def run_stage_handler(run_dir: Path, handler: StageHandler) -> dict[str, Any]:
     raise ArchiveWorkflowError("unsupported stage handler outcome")
 
 
+def _immutable(run_dir: Path, relative: str, value: Any) -> tuple[Path, str]:
+    path = run_dir / relative
+    _write_json_new(path, value)
+    return path, sha256_file(path)
+
+
+def _authority_path(run_dir: Path) -> Path:
+    return run_dir / "workflow" / "archive_assessment_authority_context.json"
+
+
+def initialize_intake_authority_and_classification(
+    run_dir: Path, *, hayes_authority_root: Path, ems_authority_root: Path
+) -> dict[str, Any]:
+    """Perform RP1B work only: safe intake, authority freeze, request, and pause."""
+    from .archive_assessment_authority import discover_authority
+    from .archive_assessment_intake import safe_intake
+
+    state = load_workflow(run_dir)
+    if state["current_stage"] != "INTAKE" or state["workflow_status"] != "CREATED":
+        raise ArchiveWorkflowError("RP1B initialization requires a newly created INTAKE workflow")
+    source_name = _read_json(_input_path(run_dir))["source_archive_filename"]
+    # The archive path is supplied only for local operation; it is never persisted as identity.
+    archive_path = Path(_read_json(run_dir / "logs" / "local_execution.json").get("archive_path", ""))
+    if not archive_path.is_file() or archive_path.name != source_name:
+        raise ArchiveWorkflowError("local archive execution input unavailable")
+    _event(run_dir, "ARCHIVE_INTAKE_STARTED", state)
+    try:
+        intake = safe_intake(
+            archive_path,
+            run_dir / "execution" / "archive-content",
+            workflow_id=state["workflow_id"],
+            archive_target_id=state["archive_target_id"],
+            source_zip_sha256=state["source_zip_sha256"],
+        )
+    except ArchiveWorkflowError:
+        state["workflow_status"] = "FAILED"; state["failure_reason"] = "ARCHIVE_INTAKE_FAILED"
+        _persist_transition(run_dir, state, "ARCHIVE_INTAKE_FAILED")
+        raise
+    _, source_sha = _immutable(run_dir, "inputs/archive_source_manifest.json", intake["source_manifest"])
+    _, content_sha = _immutable(run_dir, "inputs/archive_extracted_content_manifest.json", intake["content_manifest"])
+    state["intake"] = {"source_manifest_sha256": source_sha, "content_manifest_sha256": content_sha, "extraction_integrity_state": "PASS"}
+    _persist_transition(run_dir, state, "ARCHIVE_INTAKE_COMPLETE")
+    _event(run_dir, "AUTHORITY_DISCOVERY_STARTED", state)
+    try:
+        context = discover_authority(hayes_authority_root, ems_authority_root)
+    except ArchiveWorkflowError as exc:
+        state = load_workflow(run_dir); state["workflow_status"] = "BLOCKED"; state["blocked_reason"] = str(exc)
+        _persist_transition(run_dir, state, "AUTHORITY_BLOCKED")
+        raise
+    _, context_sha = _immutable(run_dir, "workflow/archive_assessment_authority_context.json", context)
+    state = load_workflow(run_dir); state["authority_context"] = context; state["authority_context_sha256"] = context_sha
+    _persist_transition(run_dir, state, "AUTHORITY_FROZEN")
+    _event(run_dir, "AUTHORITY_FROZEN", state)
+    advance_workflow(run_dir, "CLASSIFICATION")
+    state = load_workflow(run_dir)
+    request = {"schema_version": WORKFLOW_FORMAT_VERSION, "workflow_id": state["workflow_id"], "archive_target_id": state["archive_target_id"], "source_zip_sha256": state["source_zip_sha256"], "authority_context_sha256": context_sha, "request_version": "1.0", "created_at": _utc_now(), "required_fields": ["production", "internet_exposed", "contains_customer_data", "ai_enabled", "owner", "tier", "service_criticality", "data_classification"]}
+    _, request_sha = _immutable(run_dir, "classification/archive_classification_request.json", request)
+    markdown = "# Archive Classification Request\n\n" + "\n".join([f"- {field}: provide KNOWN value or UNKNOWN with confirmed_by, confirmed_at, and basis." for field in request["required_fields"]]) + f"\n\nWorkflow: `{state['workflow_id']}`\nArchive: `{state['archive_target_id']}`\nSource SHA: `{state['source_zip_sha256']}`\n"
+    text_path = run_dir / "classification" / "ARCHIVE_CLASSIFICATION_REQUEST.md"; text_path.parent.mkdir(parents=True, exist_ok=True); text_path.write_text(markdown, encoding="utf-8")
+    state = load_workflow(run_dir); state["classification_request_sha256"] = request_sha
+    pause_workflow(run_dir, input_type="ARCHIVE_CLASSIFICATION_RESPONSE", resume_requirements=["schema-valid attributable classification response bound to workflow and authority context"])
+    _event(run_dir, "CLASSIFICATION_REQUEST_CREATED", load_workflow(run_dir))
+    return get_status(run_dir)
+
+
+def _validate_response(response: dict[str, Any], state: dict[str, Any]) -> None:
+    schema_path = Path(__file__).resolve().parents[2] / "schemas" / "archive_assessment_classification_response.schema.json"
+    schema = _read_json(schema_path)
+    errors = sorted(Draft202012Validator(schema, format_checker=FormatChecker()).iter_errors(response), key=str)
+    if errors:
+        raise ArchiveWorkflowError("invalid classification response schema")
+    for key in ("workflow_id", "archive_target_id", "source_zip_sha256", "authority_context_sha256"):
+        expected = state["authority_context_sha256"] if key == "authority_context_sha256" else state[key]
+        if response[key] != expected:
+            raise ArchiveWorkflowError(f"classification response binding mismatch: {key}")
+    for field in response["fields"].values():
+        if field["state"] == "UNKNOWN" and field["value"] not in (None, "UNKNOWN"):
+            raise ArchiveWorkflowError("UNKNOWN classification must not carry a known value")
+
+
+def consume_classification_response(run_dir: Path, response_path: Path) -> dict[str, Any]:
+    state = load_workflow(run_dir)
+    if state["current_stage"] == "APPLICABILITY":
+        existing = run_dir / "classification" / "archive_classification_response.json"
+        if existing.is_file() and sha256_file(existing) == sha256_file(response_path):
+            return get_status(run_dir)
+        raise ArchiveWorkflowError("classification already consumed; successor workflow required for a conflicting response")
+    if state["current_stage"] != "CLASSIFICATION" or state["workflow_status"] != "AWAITING_HUMAN_INPUT":
+        raise ArchiveWorkflowError("workflow is not awaiting classification")
+    response = _read_json(response_path); _validate_response(response, state)
+    raw = response_path.read_bytes(); destination = run_dir / "classification" / "archive_classification_response.json"
+    if destination.exists():
+        if destination.read_bytes() == raw: return get_status(run_dir)
+        raise ArchiveWorkflowError("classification response overwrite refused")
+    destination.parent.mkdir(parents=True, exist_ok=True); destination.write_bytes(raw)
+    raw_sha = sha256_file(destination)
+    unknown_count = sum(item["state"] == "UNKNOWN" for item in response["fields"].values())
+    snapshot = {"schema_version": "1.0", "workflow_id": state["workflow_id"], "archive_target_id": state["archive_target_id"], "source_zip_sha256": state["source_zip_sha256"], "authority_context_sha256": state["authority_context_sha256"], "raw_response_sha256": raw_sha, "fields": response["fields"], "remaining_unknown_count": unknown_count, "created_at": _utc_now()}
+    _, snapshot_sha = _immutable(run_dir, "classification/archive_classification_snapshot.json", snapshot)
+    resume_workflow(run_dir)
+    state = load_workflow(run_dir); state["classification_response_sha256"] = raw_sha; state["classification_snapshot_sha256"] = snapshot_sha
+    _persist_transition(run_dir, state, "CLASSIFICATION_RESPONSE_ACCEPTED")
+    advance_workflow(run_dir, "APPLICABILITY")
+    _event(run_dir, "WORKFLOW_ADVANCED_TO_APPLICABILITY", load_workflow(run_dir))
+    return get_status(run_dir)
+
+
 def _print(value: Any, as_json: bool) -> None:
-    if as_json: print(json.dumps(value,sort_keys=True))
+    if as_json:
+        print(json.dumps(value, sort_keys=True))
     else:
-        for key, item in value.items(): print(f"{key}: {item}")
+        for key, item in value.items():
+            print(f"{key}: {item}")
 
 
 def main(argv: list[str] | None = None) -> int:
-    parser=argparse.ArgumentParser(prog="python -m hayes_verify.archive_assessment")
-    commands=parser.add_subparsers(dest="command",required=True)
-    assess=commands.add_parser("assess"); assess.add_argument("archive",type=Path); assess.add_argument("--output-root",type=Path,required=True); assess.add_argument("--hayes-authority-root",type=Path); assess.add_argument("--ems-authority-root",type=Path); assess.add_argument("--non-production",action="store_true"); assess.add_argument("--json",action="store_true")
-    status=commands.add_parser("status"); status.add_argument("run_dir",type=Path); status.add_argument("--json",action="store_true")
-    resume=commands.add_parser("resume"); resume.add_argument("run_dir",type=Path); resume.add_argument("--json",action="store_true")
-    args=parser.parse_args(argv)
+    parser = argparse.ArgumentParser(prog="python -m hayes_verify.archive_assessment")
+    commands = parser.add_subparsers(dest="command", required=True)
+    assess = commands.add_parser("assess"); assess.add_argument("archive", type=Path); assess.add_argument("--output-root", type=Path, required=True); assess.add_argument("--hayes-authority-root", type=Path, required=True); assess.add_argument("--ems-authority-root", type=Path, required=True); assess.add_argument("--non-production", action="store_true"); assess.add_argument("--json", action="store_true")
+    status = commands.add_parser("status"); status.add_argument("run_dir", type=Path); status.add_argument("--json", action="store_true")
+    resume = commands.add_parser("resume"); resume.add_argument("run_dir", type=Path); resume.add_argument("--classification-response", type=Path); resume.add_argument("--json", action="store_true")
+    args = parser.parse_args(argv)
     try:
-        if args.command=="assess":
-            context={"hayes_authority_identity":args.hayes_authority_root.name if args.hayes_authority_root else None,"ems_authority_identity":args.ems_authority_root.name if args.ems_authority_root else None}
-            run=create_workflow(args.archive,args.output_root,non_production=args.non_production,authority_context=context)
-            advance_workflow(run,"CLASSIFICATION")
-            pause_workflow(run,input_type="CLASSIFICATION_RESPONSE",resume_requirements=["archive classification workflow is implemented in RP1B"])
-            _print({"run_dir":str(run),**get_status(run)},args.json); return 0
-        if args.command=="status": _print(get_status(args.run_dir),args.json); return 0
-        if args.command=="resume": _print(get_status(args.run_dir),args.json); return 0
+        if args.command == "assess":
+            run = create_workflow(args.archive, args.output_root, non_production=args.non_production)
+            _write_json_pointer(run / "logs" / "local_execution.json", {"archive_path": str(args.archive.resolve()), "classification": "EXECUTION_LOCAL"})
+            result = initialize_intake_authority_and_classification(run, hayes_authority_root=args.hayes_authority_root, ems_authority_root=args.ems_authority_root)
+            result["run_dir"] = str(run)
+            _print(result, args.json); return 0
+        if args.command == "status": _print(get_status(args.run_dir), args.json); return 0
+        if args.command == "resume":
+            result = consume_classification_response(args.run_dir, args.classification_response) if args.classification_response else get_status(args.run_dir)
+            _print(result, args.json); return 0
     except ArchiveWorkflowError as exc:
-        print(f"archive-assessment error: {exc}",file=sys.stderr); return 3
+        print(f"archive-assessment error: {exc}", file=sys.stderr); return 3
     return 64
 
 if __name__ == "__main__":

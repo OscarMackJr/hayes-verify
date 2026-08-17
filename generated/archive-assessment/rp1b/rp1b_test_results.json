@@ -1,0 +1,10 @@
+{
+  "archive_evaluator_executions": 0,
+  "changed_scope_ruff": "PASS",
+  "contract_bundle_validator": "PASS",
+  "focused_rp1a_rp1b": "15 passed",
+  "full_pytest": "195 passed",
+  "runtime_binding_validator": "PASS",
+  "status": "PASS",
+  "successor_registry_validator": "Not applicable: v1.11 published runtime authority validator passed; no successor draft is part of this stacked branch."
+}

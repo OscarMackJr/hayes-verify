@@ -1,0 +1,43 @@
+{
+  "classification_schema_sha256": "f0af1453d7a68f545ffc5c0c3b0a8504bf4cdc8be0cd9c8877d2ddcabdbc9768",
+  "component": "Hayes Verify",
+  "created_at_utc": "2026-08-17T13:59:07Z",
+  "implementation_paths": {
+    "docs/RP1B_SAFE_ARCHIVE_INTAKE_AUTHORITY_FREEZE.md": "c083cfb5857ec55a48b0524a86d2b0f87a9598deb34dc6753e7f9f845773e707",
+    "schemas/archive_assessment_classification_response.schema.json": "f0af1453d7a68f545ffc5c0c3b0a8504bf4cdc8be0cd9c8877d2ddcabdbc9768",
+    "src/hayes_verify/archive_assessment.py": "86e548c230072624d455d3f1a514e30192e63ed4b4f0814722bee37d3d3334ba",
+    "src/hayes_verify/archive_assessment_authority.py": "e4319ace60e44890c500e0be8a17d3ed0ed4626a219464ad6c91bdca0e571511",
+    "src/hayes_verify/archive_assessment_intake.py": "5209a711f8b506a7ff2b854d65d1ecaedc2744d90c1f472c30121d9571ba5878",
+    "tests/test_archive_assessment_cli.py": "ee33873ab5b30b5d9d1857108b2af747ec126316b43eece0d44ec581ac36e35d",
+    "tests/test_archive_assessment_rp1b.py": "4c1ff53757393a99ab97aa83e3d8f4d17901245eb9a0aba843e4795fe7f92c0c"
+  },
+  "negative_invariants": {
+    "ABSOLUTE_LOCAL_PATH_USED_AS_AUTHORITY": false,
+    "AR3B_EVIDENCE_CHANGED": false,
+    "AR3I_NORMAL_WORKFLOW_REQUIRED": false,
+    "AR4_EVIDENCE_CHANGED": false,
+    "ARCHIVE_EVALUATOR_EXECUTIONS": 0,
+    "ARCHIVE_FILENAME_USED_AS_IDENTITY": false,
+    "CLASSIFICATION_RESPONSE_OVERWRITTEN": false,
+    "COMPLETED_CHECKPOINT_REWRITTEN": false,
+    "CONTRACT_SEMANTICS_CHANGED": false,
+    "EMS_CHANGED": false,
+    "FROZEN_AUTHORITY_SILENTLY_UPGRADED": false,
+    "HOMETOWN_EVALUATOR_EXECUTIONS": 0,
+    "MANUAL_ARCHIVE_ID_REQUIRED": false,
+    "MANUAL_AUTHORITY_HASH_REQUIRED": false,
+    "MANUAL_ZIP_SHA_REQUIRED": false,
+    "PILOT_EXECUTION_AUTHORIZED": false,
+    "PRODUCTION_AUTHORIZED": false,
+    "PRODUCTION_EVALUATOR_EXECUTIONS": 0,
+    "REAL_REPOSITORY_EVALUATOR_EXECUTIONS": 0,
+    "REPO_ID_ALLOCATIONS": 0,
+    "RETENTION_WRITE_AUTHORIZED": false,
+    "RUNTIME_BINDING_AUTHORITY_CHANGED": false,
+    "UNKNOWN_COERCED_TO_FALSE": false,
+    "V1_11_CHANGED": false,
+    "WAVE2D_FREEZE_CHANGED": false
+  },
+  "phase": "RP1B \u2014 Safe Archive Intake & Authority Freeze Integration",
+  "rp1a_predecessor_commit": "7864c84"
+}

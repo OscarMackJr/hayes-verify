@@ -5,7 +5,7 @@ import json
 from pathlib import Path
 from typing import Any
 
-TARGET_TYPES = {"REPOSITORY", "ORGANIZATION"}
+TARGET_TYPES = {"REPOSITORY", "ORGANIZATION", "ARCHIVED_REPOSITORY_SNAPSHOT"}
 ROLES = {"AUTHORITATIVE_EVALUATION", "PROJECTION"}
 
 
@@ -23,6 +23,11 @@ def validate_target(target: dict[str, Any]) -> None:
             raise ValueError("organization target requires organization_id")
     if target_type == "REPOSITORY" and not target.get("repository_path"):
         raise ValueError("repository target requires repository_path")
+    if target_type == "ARCHIVED_REPOSITORY_SNAPSHOT":
+        if not str(target.get("target_id", "")).startswith("ARCHIVE-") or not target.get("archive_source_sha256"):
+            raise ValueError("archive target requires ARCHIVE identity and source SHA-256")
+        if not target.get("repository_path"):
+            raise ValueError("archive target requires local execution root")
     if role == "PROJECTION" and target.get("authoritative_pass") is True:
         raise ValueError("projection cannot establish authoritative PASS")
 
@@ -70,6 +75,8 @@ def normalize_result_authority(request: dict[str, Any], result: dict[str, Any]) 
     """Attach target metadata and prevent projections from becoming authority."""
     result["target_type"] = request["target_type"]
     result["evaluation_role"] = request["evaluation_role"]
+    if request["target_type"] == "ARCHIVED_REPOSITORY_SNAPSHOT":
+        result["archive_source_sha256"] = request["archive_source_sha256"]
     if request["evaluation_role"] == "PROJECTION" and result.get("result_state") == "PASS":
         result["result_state"] = "WARNING"
         result["evidence_state"] = "INSUFFICIENT"

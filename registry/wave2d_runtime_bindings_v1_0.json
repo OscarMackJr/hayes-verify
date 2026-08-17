@@ -1,0 +1,403 @@
+{
+  "registry_type": "EVALUATOR_RUNTIME_BINDING_AUTHORITY",
+  "version": "1.0",
+  "wave": "2D",
+  "created_at_utc": "2026-08-17T00:22:19.915514+00:00",
+  "source_support_registry": "registry/wave2d_evaluator_registry_v1_11.json",
+  "source_support_registry_sha256": "f29699f3bfca3f994574919f335033777feb884e2985c237fbb4da2bbb2123c2",
+  "request_contract": "1.0",
+  "result_contract": "1.0",
+  "bindings": [
+    {
+      "binding_id": "W2D-RB-1.0-EMS-CTRL-002",
+      "control_id": "EMS-CTRL-002",
+      "family_id": "documentation_governance",
+      "module": "hayes_verify.evaluator_families.documentation_governance",
+      "evaluator": "run",
+      "collector": "documentation_governance",
+      "evidence_type": "EMS_DOCUMENT_CONTROL",
+      "request_contract": "1.0",
+      "result_contract": "1.0",
+      "supported_target_types": [
+        "REPOSITORY"
+      ],
+      "rule_registry": "registry/documentation_governance_rules.json"
+    },
+    {
+      "binding_id": "W2D-RB-1.0-EMS-CTRL-003",
+      "control_id": "EMS-CTRL-003",
+      "family_id": "dependency_supply_chain",
+      "module": "hayes_verify.evaluator_families.dependency_supply_chain",
+      "evaluator": "run",
+      "collector": "dependency_supply_chain",
+      "evidence_type": "DEPENDENCY_SCA_AUTOMATION",
+      "request_contract": "1.0",
+      "result_contract": "1.0",
+      "supported_target_types": [
+        "REPOSITORY"
+      ],
+      "rule_registry": "registry/dependency_supply_chain_rules.json"
+    },
+    {
+      "binding_id": "W2D-RB-1.0-EMS-CTRL-008",
+      "control_id": "EMS-CTRL-008",
+      "family_id": "documentation_governance",
+      "module": "hayes_verify.evaluator_families.documentation_governance",
+      "evaluator": "run",
+      "collector": "documentation_governance",
+      "evidence_type": "EMS_EVIDENCE_CONTROL",
+      "request_contract": "1.0",
+      "result_contract": "1.0",
+      "supported_target_types": [
+        "REPOSITORY"
+      ],
+      "rule_registry": "registry/documentation_governance_rules.json"
+    },
+    {
+      "binding_id": "W2D-RB-1.0-EMS-CTRL-019",
+      "control_id": "EMS-CTRL-019",
+      "family_id": "dependency_supply_chain",
+      "module": "hayes_verify.evaluator_families.dependency_supply_chain",
+      "evaluator": "run",
+      "collector": "dependency_supply_chain",
+      "evidence_type": "DEPENDENCY_SCA_AUTOMATION",
+      "request_contract": "1.0",
+      "result_contract": "1.0",
+      "supported_target_types": [
+        "REPOSITORY"
+      ],
+      "rule_registry": "registry/dependency_supply_chain_rules.json"
+    },
+    {
+      "binding_id": "W2D-RB-1.0-EMS-CTRL-023",
+      "control_id": "EMS-CTRL-023",
+      "family_id": "dependency_supply_chain",
+      "module": "hayes_verify.evaluator_families.dependency_supply_chain",
+      "evaluator": "run",
+      "collector": "dependency_supply_chain",
+      "evidence_type": "VULNERABILITY_REMEDIATION_ORGANIZATIONAL",
+      "request_contract": "1.0",
+      "result_contract": "1.0",
+      "supported_target_types": [
+        "ORGANIZATION"
+      ],
+      "rule_registry": "registry/dependency_supply_chain_rules.json"
+    },
+    {
+      "binding_id": "W2D-RB-1.0-EMS-CTRL-025",
+      "control_id": "EMS-CTRL-025",
+      "family_id": "test_quality",
+      "module": "hayes_verify.evaluator_families.test_quality",
+      "evaluator": "run",
+      "collector": "test_quality",
+      "evidence_type": "TEST_UNIT_COVERAGE",
+      "request_contract": "1.0",
+      "result_contract": "1.0",
+      "supported_target_types": [
+        "REPOSITORY"
+      ],
+      "rule_registry": "registry/test_quality_rules.json"
+    },
+    {
+      "binding_id": "W2D-RB-1.0-EMS-CTRL-026",
+      "control_id": "EMS-CTRL-026",
+      "family_id": "test_quality",
+      "module": "hayes_verify.evaluator_families.test_quality",
+      "evaluator": "run",
+      "collector": "test_quality",
+      "evidence_type": "TEST_INTEGRATION",
+      "request_contract": "1.0",
+      "result_contract": "1.0",
+      "supported_target_types": [
+        "REPOSITORY"
+      ],
+      "rule_registry": "registry/test_quality_rules.json"
+    },
+    {
+      "binding_id": "W2D-RB-1.0-EMS-CTRL-027",
+      "control_id": "EMS-CTRL-027",
+      "family_id": "test_quality",
+      "module": "hayes_verify.evaluator_families.test_quality",
+      "evaluator": "run",
+      "collector": "test_quality",
+      "evidence_type": "TEST_REGRESSION_CI",
+      "request_contract": "1.0",
+      "result_contract": "1.0",
+      "supported_target_types": [
+        "REPOSITORY"
+      ],
+      "rule_registry": "registry/test_quality_rules.json"
+    },
+    {
+      "binding_id": "W2D-RB-1.0-EMS-CTRL-028",
+      "control_id": "EMS-CTRL-028",
+      "family_id": "test_quality",
+      "module": "hayes_verify.evaluator_families.test_quality",
+      "evaluator": "run",
+      "collector": "test_quality",
+      "evidence_type": "TEST_CONTRACT_API_CI",
+      "request_contract": "1.0",
+      "result_contract": "1.0",
+      "supported_target_types": [
+        "REPOSITORY"
+      ],
+      "rule_registry": "registry/test_quality_rules.json"
+    },
+    {
+      "binding_id": "W2D-RB-1.0-EMS-CTRL-029",
+      "control_id": "EMS-CTRL-029",
+      "family_id": "test_quality",
+      "module": "hayes_verify.evaluator_families.test_quality",
+      "evaluator": "run",
+      "collector": "test_quality",
+      "evidence_type": "TEST_PERFORMANCE_SERVICE",
+      "request_contract": "1.0",
+      "result_contract": "1.0",
+      "supported_target_types": [
+        "REPOSITORY"
+      ],
+      "rule_registry": "registry/test_quality_rules.json"
+    },
+    {
+      "binding_id": "W2D-RB-1.0-EMS-CTRL-031",
+      "control_id": "EMS-CTRL-031",
+      "family_id": "test_quality",
+      "module": "hayes_verify.evaluator_families.test_quality",
+      "evaluator": "run",
+      "collector": "test_quality",
+      "evidence_type": "TEST_EVIDENCE_RETENTION_STORE",
+      "request_contract": "1.0",
+      "result_contract": "1.0",
+      "supported_target_types": [
+        "REPOSITORY"
+      ],
+      "rule_registry": "registry/test_quality_rules.json"
+    },
+    {
+      "binding_id": "W2D-RB-1.0-EMS-CTRL-032",
+      "control_id": "EMS-CTRL-032",
+      "family_id": "test_quality",
+      "module": "hayes_verify.evaluator_families.test_quality",
+      "evaluator": "run",
+      "collector": "test_quality",
+      "evidence_type": "TEST_ENVIRONMENT_ISOLATION",
+      "request_contract": "1.0",
+      "result_contract": "1.0",
+      "supported_target_types": [
+        "REPOSITORY"
+      ],
+      "rule_registry": "registry/test_quality_rules.json"
+    },
+    {
+      "binding_id": "W2D-RB-1.0-EMS-CTRL-034",
+      "control_id": "EMS-CTRL-034",
+      "family_id": "release_integrity",
+      "module": "hayes_verify.evaluator_families.release_integrity",
+      "evaluator": "run",
+      "collector": "release_integrity",
+      "evidence_type": "RELEASE_MANIFEST_EVIDENCE",
+      "request_contract": "1.0",
+      "result_contract": "1.0",
+      "supported_target_types": [
+        "REPOSITORY"
+      ],
+      "rule_registry": "registry/release_integrity_rules.json"
+    },
+    {
+      "binding_id": "W2D-RB-1.0-EMS-CTRL-035",
+      "control_id": "EMS-CTRL-035",
+      "family_id": "release_integrity",
+      "module": "hayes_verify.evaluator_families.release_integrity",
+      "evaluator": "run",
+      "collector": "release_integrity",
+      "evidence_type": "RELEASE_SHA256_EVIDENCE",
+      "request_contract": "1.0",
+      "result_contract": "1.0",
+      "supported_target_types": [
+        "REPOSITORY"
+      ],
+      "rule_registry": "registry/release_integrity_rules.json"
+    },
+    {
+      "binding_id": "W2D-RB-1.0-EMS-CTRL-036",
+      "control_id": "EMS-CTRL-036",
+      "family_id": "release_integrity",
+      "module": "hayes_verify.evaluator_families.release_integrity",
+      "evaluator": "run",
+      "collector": "release_integrity",
+      "evidence_type": "RELEASE_SIGNING_EVIDENCE",
+      "request_contract": "1.0",
+      "result_contract": "1.0",
+      "supported_target_types": [
+        "REPOSITORY"
+      ],
+      "rule_registry": "registry/release_integrity_rules.json"
+    },
+    {
+      "binding_id": "W2D-RB-1.0-EMS-CTRL-037",
+      "control_id": "EMS-CTRL-037",
+      "family_id": "release_integrity",
+      "module": "hayes_verify.evaluator_families.release_integrity",
+      "evaluator": "run",
+      "collector": "release_integrity",
+      "evidence_type": "RELEASE_RETENTION_EVIDENCE",
+      "request_contract": "1.0",
+      "result_contract": "1.0",
+      "supported_target_types": [
+        "REPOSITORY"
+      ],
+      "rule_registry": "registry/release_integrity_rules.json"
+    },
+    {
+      "binding_id": "W2D-RB-1.0-EMS-CTRL-038",
+      "control_id": "EMS-CTRL-038",
+      "family_id": "release_integrity",
+      "module": "hayes_verify.evaluator_families.release_integrity",
+      "evaluator": "run",
+      "collector": "release_integrity",
+      "evidence_type": "RELEASE_VERSION_GOVERNANCE_EVIDENCE",
+      "request_contract": "1.0",
+      "result_contract": "1.0",
+      "supported_target_types": [
+        "REPOSITORY"
+      ],
+      "rule_registry": "registry/release_integrity_rules.json"
+    },
+    {
+      "binding_id": "W2D-RB-1.0-EMS-CTRL-040",
+      "control_id": "EMS-CTRL-040",
+      "family_id": "release_integrity",
+      "module": "hayes_verify.evaluator_families.release_integrity",
+      "evaluator": "run",
+      "collector": "release_integrity",
+      "evidence_type": "SERVICE_ROLLBACK_EVIDENCE",
+      "request_contract": "1.0",
+      "result_contract": "1.0",
+      "supported_target_types": [
+        "REPOSITORY"
+      ],
+      "rule_registry": "registry/release_integrity_rules.json"
+    },
+    {
+      "binding_id": "W2D-RB-1.0-EMS-CTRL-042",
+      "control_id": "EMS-CTRL-042",
+      "family_id": "dependency_supply_chain",
+      "module": "hayes_verify.evaluator_families.dependency_supply_chain",
+      "evaluator": "run",
+      "collector": "dependency_supply_chain",
+      "evidence_type": "DEPENDENCY_SCA_AUTOMATION",
+      "request_contract": "1.0",
+      "result_contract": "1.0",
+      "supported_target_types": [
+        "REPOSITORY"
+      ],
+      "rule_registry": "registry/dependency_supply_chain_rules.json"
+    },
+    {
+      "binding_id": "W2D-RB-1.0-EMS-CTRL-060",
+      "control_id": "EMS-CTRL-060",
+      "family_id": "test_quality",
+      "module": "hayes_verify.evaluator_families.test_quality",
+      "evaluator": "run",
+      "collector": "test_quality",
+      "evidence_type": "TEST_ZERO_TRUST_INTEGRATION",
+      "request_contract": "1.0",
+      "result_contract": "1.0",
+      "supported_target_types": [
+        "REPOSITORY"
+      ],
+      "rule_registry": "registry/test_quality_rules.json"
+    },
+    {
+      "binding_id": "W2D-RB-1.0-EMS-CTRL-067",
+      "control_id": "EMS-CTRL-067",
+      "family_id": "documentation_governance",
+      "module": "hayes_verify.evaluator_families.documentation_governance",
+      "evaluator": "run",
+      "collector": "documentation_governance",
+      "evidence_type": "EMS_DOCUMENT_METADATA",
+      "request_contract": "1.0",
+      "result_contract": "1.0",
+      "supported_target_types": [
+        "REPOSITORY"
+      ],
+      "rule_registry": "registry/documentation_governance_rules.json"
+    },
+    {
+      "binding_id": "W2D-RB-1.0-EMS-CTRL-068",
+      "control_id": "EMS-CTRL-068",
+      "family_id": "documentation_governance",
+      "module": "hayes_verify.evaluator_families.documentation_governance",
+      "evaluator": "run",
+      "collector": "documentation_governance",
+      "evidence_type": "EMS_CROSS_REFERENCE",
+      "request_contract": "1.0",
+      "result_contract": "1.0",
+      "supported_target_types": [
+        "REPOSITORY"
+      ],
+      "rule_registry": "registry/documentation_governance_rules.json"
+    },
+    {
+      "binding_id": "W2D-RB-1.0-EMS-CTRL-069",
+      "control_id": "EMS-CTRL-069",
+      "family_id": "documentation_governance",
+      "module": "hayes_verify.evaluator_families.documentation_governance",
+      "evaluator": "run",
+      "collector": "documentation_governance",
+      "evidence_type": "EMS_REQUIREMENTS_TRACEABILITY",
+      "request_contract": "1.0",
+      "result_contract": "1.0",
+      "supported_target_types": [
+        "REPOSITORY"
+      ],
+      "rule_registry": "registry/documentation_governance_rules.json"
+    },
+    {
+      "binding_id": "W2D-RB-1.0-EMS-CTRL-070",
+      "control_id": "EMS-CTRL-070",
+      "family_id": "documentation_governance",
+      "module": "hayes_verify.evaluator_families.documentation_governance",
+      "evaluator": "run",
+      "collector": "documentation_governance",
+      "evidence_type": "EMS_REVISION_HISTORY",
+      "request_contract": "1.0",
+      "result_contract": "1.0",
+      "supported_target_types": [
+        "REPOSITORY"
+      ],
+      "rule_registry": "registry/documentation_governance_rules.json"
+    },
+    {
+      "binding_id": "W2D-RB-1.0-EMS-CTRL-072",
+      "control_id": "EMS-CTRL-072",
+      "family_id": "documentation_governance",
+      "module": "hayes_verify.evaluator_families.documentation_governance",
+      "evaluator": "run",
+      "collector": "documentation_governance",
+      "evidence_type": "EMS_DOCUMENT_GENERATION",
+      "request_contract": "1.0",
+      "result_contract": "1.0",
+      "supported_target_types": [
+        "REPOSITORY"
+      ],
+      "rule_registry": "registry/documentation_governance_rules.json"
+    },
+    {
+      "binding_id": "W2D-RB-1.0-EMS-CTRL-075",
+      "control_id": "EMS-CTRL-075",
+      "family_id": "dependency_supply_chain",
+      "module": "hayes_verify.evaluator_families.dependency_supply_chain",
+      "evaluator": "run",
+      "collector": "dependency_supply_chain",
+      "evidence_type": "DEPENDENCY_SCA_AUTOMATION",
+      "request_contract": "1.0",
+      "result_contract": "1.0",
+      "supported_target_types": [
+        "REPOSITORY"
+      ],
+      "rule_registry": "registry/dependency_supply_chain_rules.json"
+    }
+  ],
+  "untracked_root_runtime_registry_required": false
+}

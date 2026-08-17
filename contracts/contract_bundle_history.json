@@ -3,7 +3,7 @@
   "contract_bundle": "Wave 2D",
   "entries": [
     {
-      "recorded_at_utc": "2026-08-15T13:46:41.224820+00:00",
+      "recorded_at_utc": "2026-08-15T09:46:41.22482-04:00",
       "reason": "organization-target runtime contract extension",
       "contract_version": "1.0",
       "compatibility": "BACKWARD_COMPATIBLE_ADDITIVE_EXTENSION",
@@ -20,6 +20,27 @@
         }
       ],
       "ems_modified": false
+    },
+    {
+      "recorded_at_utc": "2026-08-17T00:21:24.0136578Z",
+      "reason": "archive-target contract extension",
+      "contract_version": "1.0",
+      "compatibility": "BACKWARD_COMPATIBLE_ADDITIVE_EXTENSION",
+      "changed_contracts": [
+        {
+          "name": "evaluation_request",
+          "previous_sha256": "6165cda1b37442015b3ba520edee2a0d083e621b211c6175432b82b6c6e37c5d",
+          "new_sha256": "e26f9f0cca6cdaf42169135c8858f59e41d608cec8dc32e2b4ea782c514aea42"
+        },
+        {
+          "name": "evaluation_result",
+          "previous_sha256": "09f5fff346a1ca3f2c3419aa0e6ab2adc7ce1d6c08ad1cc42c3b381f2db4be92",
+          "new_sha256": "c684db7e3ef6d2bcd76fc834b4aac5e94b9db07f51d43465508109b42bcd95b9"
+        }
+      ],
+      "ems_modified": false,
+      "change_class": "ADDITIVE_BACKWARD_COMPATIBLE",
+      "contract_version_treatment": "existing governance-approved 1.0 additive evolution"
     }
   ]
 }

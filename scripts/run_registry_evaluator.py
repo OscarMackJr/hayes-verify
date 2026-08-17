@@ -27,6 +27,7 @@ parser.add_argument("--target-type", default="REPOSITORY")
 parser.add_argument("--evaluation-role", default="AUTHORITATIVE_EVALUATION")
 parser.add_argument("--repository-path")
 parser.add_argument("--github-repo")
+parser.add_argument("--archive-source-sha256")
 parser.add_argument("--organization-id")
 parser.add_argument("--organization-name")
 parser.add_argument("--evidence-provider-type")
@@ -36,13 +37,15 @@ parser.add_argument("--evidence-timestamp")
 parser.add_argument("--output-root", required=True)
 args = parser.parse_args()
 root = Path(args.root).resolve()
-target = {"target_id": args.target_id, "target_type": args.target_type, "evaluation_role": args.evaluation_role, "repository_path": args.repository_path, "organization_id": args.organization_id}
+target = {"target_id": args.target_id, "target_type": args.target_type, "evaluation_role": args.evaluation_role, "repository_path": args.repository_path, "organization_id": args.organization_id, "archive_source_sha256": args.archive_source_sha256}
 validate_target(target)
 bundle = ContractBundle(root)
 binding, runner = EvaluatorRegistry(Path(args.registry)).load_callable(args.control_id)
 request = {"contract_version": "1.0", "wave": "2D", "request_id": f"BATCH-{args.control_id}-{args.target_id}", "control_id": args.control_id, "target_id": args.target_id, "target_type": args.target_type, "evaluation_role": args.evaluation_role, "applicability_state": "APPLICABLE", "requested_at_utc": datetime.now(UTC).isoformat(), "requested_evidence_types": [binding.evidence_type]}
 if args.target_type == "REPOSITORY":
     request["repository_name"] = (args.github_repo or args.target_id).rsplit("/", 1)[-1]
+elif args.target_type == "ARCHIVED_REPOSITORY_SNAPSHOT":
+    request.update({"archive_source_sha256": args.archive_source_sha256, "archive_evidence_source_class": "ARCHIVE_REPOSITORY_CONTENT"})
 else:
     request.update({"organization_id": args.organization_id, "organization_name": args.organization_name or args.organization_id})
 request.update({"evidence_provider_type": args.evidence_provider_type, "evidence_provider_reference": args.evidence_provider_reference, "evidence_authority": args.evidence_authority, "evidence_timestamp": args.evidence_timestamp})

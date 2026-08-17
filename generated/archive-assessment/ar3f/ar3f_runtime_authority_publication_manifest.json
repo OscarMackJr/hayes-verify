@@ -1,0 +1,33 @@
+{
+  "component": "Hayes Verify",
+  "phase": "AR3F Archive Runtime Authority Reconciliation",
+  "status": "PASS",
+  "generated_at_utc": "2026-08-17T01:02:50.811298+00:00",
+  "frozen_registry_path": "registry/wave2d_evaluator_registry_v1_11.json",
+  "frozen_registry_sha256": "f29699f3bfca3f994574919f335033777feb884e2985c237fbb4da2bbb2123c2",
+  "request_schema_sha256": "e26f9f0cca6cdaf42169135c8858f59e41d608cec8dc32e2b4ea782c514aea42",
+  "result_schema_sha256": "c684db7e3ef6d2bcd76fc834b4aac5e94b9db07f51d43465508109b42bcd95b9",
+  "proven_supported_control_count": 26,
+  "not_currently_published_control_count": 20,
+  "runtime_binding_count": 26,
+  "portable_ems_authority_reference_count": 6,
+  "publication_files": {
+    "contracts/consumer_manifest.json": "1f5406b2d986b8f2338a87bab61c4bc5f18901950915c7b6d79e5807571e1751",
+    "contracts/contract_bundle_history.json": "7d60d1306949939ecf089ec72140fee69a3932f5bab9f409eb11406de129d88c",
+    "contracts/contract_freeze.json": "800d9d51ba29923829855a86eef16931080c62d4e4529375e763c20ee6902dfb",
+    "contracts/schemas/wave2d_evaluation_request.schema.json": "e26f9f0cca6cdaf42169135c8858f59e41d608cec8dc32e2b4ea782c514aea42",
+    "contracts/schemas/wave2d_evaluation_result.schema.json": "c684db7e3ef6d2bcd76fc834b4aac5e94b9db07f51d43465508109b42bcd95b9",
+    "registry/wave2d_evaluator_registry_v1_11.json": "f29699f3bfca3f994574919f335033777feb884e2985c237fbb4da2bbb2123c2",
+    "registry/wave2d_runtime_bindings_v1_0.json": "4f36b317bb2dbfebfc5d80d793dd463b383da59e05db770757cea7af93345ef0",
+    "scripts/audit_ar3f_publication.py": "c0c3f231d620476f82f1bfdeb8e9099a283af101b1de8154614a483d0d1f1417",
+    "scripts/build_ar3f_publication_artifacts.py": "62f2595d72cd146597160bcd0cd439d65ee2695bb6995cc5d375a386219715fb",
+    "scripts/build_wave2d_active_runtime_registry.py": "1e2cca408e72bcf60b1d616ec5ef45954b3ac1b52a418a73a310ebf9dc660985",
+    "scripts/run_registry_evaluator.py": "593d6fea903a98cc569b87507001e8b1aab4fa8498e3919263f85138d764b114",
+    "scripts/validate_ar3f_runtime_authority.py": "9447eccb4841762cb3d34575a945c5dae3bc0cccc419ade2b3b36b1588ec121c",
+    "src/hayes_verify/wave2d_targets.py": "b1ad1d262d05b69a86e41931b8494e7937a8939ce6bf7733b236ef09cf5e1bbf",
+    "tests/test_archive_target_contract.py": "b8fa11680b78dd14b1b5917407a950fd39656fc91a1903c6dcccc507b3787224"
+  },
+  "untracked_evaluators_published": false,
+  "archive_evaluator_executions": 0,
+  "production_evaluator_executions": 0
+}

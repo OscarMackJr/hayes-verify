@@ -60,7 +60,8 @@
       "type": "string",
       "enum": [
         "REPOSITORY",
-        "ORGANIZATION"
+        "ORGANIZATION",
+        "ARCHIVED_REPOSITORY_SNAPSHOT"
       ]
     },
     "evaluation_role": {
@@ -95,7 +96,60 @@
     "evidence_timestamp": {
       "type": "string",
       "format": "date-time"
+    },
+    "archive_source_sha256": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{64}$"
+    },
+    "archive_evidence_source_class": {
+      "const": "ARCHIVE_REPOSITORY_CONTENT"
     }
   },
-  "additionalProperties": false
+  "additionalProperties": false,
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "target_type": {
+            "const": "ARCHIVED_REPOSITORY_SNAPSHOT"
+          }
+        },
+        "required": [
+          "target_type"
+        ]
+      },
+      "then": {
+        "required": [
+          "archive_source_sha256",
+          "archive_evidence_source_class"
+        ],
+        "properties": {
+          "target_id": {
+            "pattern": "^ARCHIVE-[A-F0-9]{24}$"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "target_type": {
+            "const": "REPOSITORY"
+          }
+        },
+        "required": [
+          "target_type"
+        ]
+      },
+      "then": {
+        "properties": {
+          "target_id": {
+            "not": {
+              "pattern": "^ARCHIVE-"
+            }
+          }
+        }
+      }
+    }
+  ]
 }

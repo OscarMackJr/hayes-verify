@@ -2,7 +2,7 @@
   "consumer": "Hayes Verify",
   "contract_version": "1.0",
   "source_wave": "2D",
-  "source_contract_freeze": "C:\\temp\\standars\\ems\\generated\\wave2d\\evaluation-contract\\contract_freeze.json",
+  "source_contract_freeze": "OscarMackJr/ems:generated/wave2d/evaluation-contract/contract_freeze.json",
   "source_contract_freeze_sha256": "ab2423e5b198b3edaa69352bd69f5ff45dc1f2b00d1c940df8c64d1ed17cc1fa",
   "authority": {
     "control_catalog": "EMS",
@@ -15,7 +15,8 @@
   "contracts": {
     "evaluation_request": {
       "path": "schemas/contracts/wave2d_evaluation_request.schema.json",
-      "sha256": "6165cda1b37442015b3ba520edee2a0d083e621b211c6175432b82b6c6e37c5d"
+      "sha256": "6ac7d2869b6356f685490aae95949382a43da05984dd30c95a0786ef992d840a",
+      "hash_algorithm": "SHA256_CANONICAL_TEXT_V1"
     },
     "evidence_record": {
       "path": "schemas/contracts/wave2d_evidence_record.schema.json",
@@ -23,7 +24,8 @@
     },
     "evaluation_result": {
       "path": "schemas/contracts/wave2d_evaluation_result.schema.json",
-      "sha256": "09f5fff346a1ca3f2c3419aa0e6ab2adc7ce1d6c08ad1cc42c3b381f2db4be92"
+      "sha256": "3c4be6856d26d3678a04f45ddb2ce85261dc69f54ab6d6db960ebd139c2e6394",
+      "hash_algorithm": "SHA256_CANONICAL_TEXT_V1"
     },
     "provenance_envelope": {
       "path": "schemas/contracts/wave2d_provenance_envelope.schema.json",
@@ -37,5 +39,5 @@
   "applicability_mutation_allowed": false,
   "evidence_promotion_allowed": false,
   "scaffold_state": "CONTRACT_CONSUMER_BOOTSTRAPPED",
-  "bundle_reconciled_at_utc": "2026-08-15T13:46:41.224820+00:00"
+  "bundle_reconciled_at_utc": "2026-08-17T00:21:23.9722824Z"
 }

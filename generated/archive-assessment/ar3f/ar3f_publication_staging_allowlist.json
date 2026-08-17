@@ -1,0 +1,30 @@
+{
+  "allowlist": [
+    "contracts/consumer_manifest.json",
+    "contracts/contract_bundle_history.json",
+    "contracts/contract_freeze.json",
+    "contracts/schemas/wave2d_evaluation_request.schema.json",
+    "contracts/schemas/wave2d_evaluation_result.schema.json",
+    "generated/archive-assessment/ar3f/AR3F_RUNTIME_AUTHORITY_PUBLICATION.md",
+    "generated/archive-assessment/ar3f/AR3F_RUNTIME_AUTHORITY_PUBLICATION_CERTIFICATION.json",
+    "generated/archive-assessment/ar3f/ar3f_publication_staging_allowlist.json",
+    "generated/archive-assessment/ar3f/ar3f_runtime_authority_publication_manifest.json",
+    "generated/archive-assessment/ar3f/publication_audit.json",
+    "generated/archive-assessment/ar3f/publication_audit_script_failure.json",
+    "generated/archive-assessment/ar3f/ci/contract_hash_ci_failure_analysis.json",
+    "registry/wave2d_evaluator_registry_v1_11.json",
+    "registry/wave2d_runtime_bindings_v1_0.json",
+    "scripts/audit_ar3f_publication.py",
+    "scripts/build_ar3f_publication_artifacts.py",
+    "scripts/build_wave2d_active_runtime_registry.py",
+    "scripts/run_registry_evaluator.py",
+    "scripts/validate_ar3f_runtime_authority.py",
+    "src/hayes_verify/wave2d_targets.py",
+    "tests/test_archive_target_contract.py"
+  ],
+  "excluded": [
+    "scripts/build_ar3f_runtime_authority.py",
+    "registry/wave2d_evaluator_registry.json"
+  ],
+  "purpose": "explicit AR3F publication staging allowlist"
+}

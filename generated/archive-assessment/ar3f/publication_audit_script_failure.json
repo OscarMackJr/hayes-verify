@@ -1,0 +1,14 @@
+{
+  "status": "RECORDED",
+  "failure_classification": "POWERSHELL_SYNTAX_ERROR",
+  "failed_operation": "final publication path-audit expression",
+  "exception_type": "ParserError",
+  "exception_message": "Variable reference is not valid because ':' was not followed by a valid variable-name character.",
+  "failing_expression": "\"$p:$($h.LineNumber)\"",
+  "affected_stage": "final audit validation only",
+  "candidate_generation_affected": false,
+  "manifest_generation_affected": false,
+  "certification_generation_affected": false,
+  "allowlist_generation_affected": false,
+  "repair": "Replaced fragile PowerShell expression with audited Python helper and explicit JSON output."
+}

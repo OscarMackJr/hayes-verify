@@ -1,0 +1,20 @@
+{
+  "component": "Hayes Verify",
+  "phase": "AR3F Archive Runtime Authority Controlled Publication",
+  "status": "PASS",
+  "certification_scope": [
+    "integrity",
+    "traceability",
+    "evidence_completeness"
+  ],
+  "compliance_attestation": false,
+  "frozen_registry_sha256": "f29699f3bfca3f994574919f335033777feb884e2985c237fbb4da2bbb2123c2",
+  "publication_manifest_path": "generated/archive-assessment/ar3f/ar3f_runtime_authority_publication_manifest.json",
+  "publication_manifest_sha256": "3315c041476ff8ee33dc97c922b9f9342a17f6282ecc6d3eb988f07aadc234c4",
+  "support_semantics": {
+    "proven": 26,
+    "not_currently_published_unproven": 20
+  },
+  "runtime_binding_count": 26,
+  "errors": []
+}

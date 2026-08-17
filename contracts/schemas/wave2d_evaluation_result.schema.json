@@ -103,7 +103,8 @@
       "type": "string",
       "enum": [
         "REPOSITORY",
-        "ORGANIZATION"
+        "ORGANIZATION",
+        "ARCHIVED_REPOSITORY_SNAPSHOT"
       ]
     },
     "evaluation_role": {
@@ -121,6 +122,10 @@
     },
     "organization_level": {
       "type": "boolean"
+    },
+    "archive_source_sha256": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{64}$"
     }
   },
   "additionalProperties": false

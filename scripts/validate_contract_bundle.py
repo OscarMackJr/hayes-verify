@@ -1,7 +1,11 @@
 import argparse
-import hashlib
 import json
 from pathlib import Path
+
+from hayes_verify.contract_hashing import (
+    CANONICAL_CONTRACT_HASH_ALGORITHM,
+    sha256_canonical_contract_file,
+)
 
 ap = argparse.ArgumentParser()
 ap.add_argument("--root", required=True)
@@ -10,13 +14,6 @@ root = Path(a.root).resolve()
 
 freeze = json.loads((root / "contracts" / "contract_freeze.json").read_text(encoding="utf-8-sig"))
 manifest = json.loads((root / "contracts" / "consumer_manifest.json").read_text(encoding="utf-8-sig"))
-
-def sha256(p: Path) -> str:
-    h = hashlib.sha256()
-    with p.open("rb") as f:
-        for chunk in iter(lambda: f.read(1024 * 1024), b""):
-            h.update(chunk)
-    return h.hexdigest()
 
 mapping = {
     "evaluation_request": root / "contracts" / "schemas" / "wave2d_evaluation_request.schema.json",
@@ -32,9 +29,9 @@ for name, path in mapping.items():
     if not path.exists():
         errors.append(f"missing {name}: {path}")
         continue
-    actual = sha256(path)
+    actual = sha256_canonical_contract_file(path)
     if actual != expected:
-        errors.append(f"hash mismatch for {name}: {actual} != {expected}")
+        errors.append(f"canonical hash mismatch for {name}: path={path} expected={expected} actual={actual} algorithm={CANONICAL_CONTRACT_HASH_ALGORITHM}")
 
 auth = manifest["authority"]
 if auth["applicability"] != "EMS":
@@ -51,6 +48,7 @@ if manifest.get("evidence_promotion_allowed") is not False:
 print(json.dumps({
     "status": "PASS" if not errors else "FAIL",
     "contract_count": len(mapping),
+    "hash_algorithm": CANONICAL_CONTRACT_HASH_ALGORITHM,
     "errors": errors
 }, indent=2))
 raise SystemExit(0 if not errors else 1)

@@ -1,0 +1,25 @@
+{
+  "artifact_id": "HAYES-AA4-D6-ONE-RUN-EXECUTION-AUTHORIZATION-1.0.0",
+  "status": "PREPARED_FOR_HUMAN_EXECUTION_AUTHORIZATION",
+  "scope": {
+    "repository_registry_identity": "REPO-001",
+    "repository_identity": "OscarMackJr/bluto",
+    "immutable_repository_revision": "7d3e12a2f7804041efd2840268f4d3d46f4266f9",
+    "scope": "CONTROLLED_NON_PRODUCTION",
+    "readiness_certification": "certifications/aa4/aa4_d5_final_execution_readiness_reconciliation.json"
+  },
+  "authorized_if_separately_approved": {
+    "run_id": "AA4-BLUTO-ONE-RUN-001",
+    "maximum_run_count": 1,
+    "automatic_retry_count": 0,
+    "permitted_operations": ["one read-only evidence-acquisition attempt using the published D5 sources", "one bounded assessment evaluation over the acquired schema-valid evidence", "persist evidence, result, and certification artifacts for this run only"],
+    "affected_controls": ["EMS-CTRL-009", "EMS-CTRL-010", "EMS-CTRL-011", "EMS-CTRL-012", "EMS-CTRL-013", "EMS-CTRL-014", "EMS-CTRL-015", "EMS-CTRL-017", "EMS-CTRL-018", "EMS-CTRL-020", "EMS-CTRL-021", "EMS-CTRL-033", "EMS-CTRL-039"],
+    "runtime": "hayes-aa4-real-evidence-runtime",
+    "environment": "aa4-controlled-release"
+  },
+  "preconditions": ["exact target tuple validation", "published D5 evidence and runtime/result contracts", "aa4-controlled-release retains jo2082 as the sole reviewer with self-review prevention and administrator bypass disabled", "fresh attributable D7 approval using GitHub identity jo2082", "single-use authorization record contains approval time and expiry time before runtime activation"],
+  "fail_closed": ["any unavailable, stale, mismatched, invalid, or unapproved source yields an evidence/result blocked or unresolved state", "any target, reviewer, authority, runtime, or authorization mismatch stops the run", "the run may not be retried automatically or manually under this authorization"],
+  "explicit_non_authorizations": ["approval of this preparation artifact alone", "continuous scanning", "a second run", "target or reviewer substitution", "production activity", "any operation after the D7 authorization expires"],
+  "D7_decision_required": "James O'Meara (jo2082) must approve or reject this exact candidate in GitHub. A separate attributable authorization record must then set the issuance timestamp, expiry timestamp, and one-run consumption state before activation.",
+  "next_gate": "AA4-D7 human execution authorization."
+}

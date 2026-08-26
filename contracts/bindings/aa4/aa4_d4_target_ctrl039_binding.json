@@ -1,0 +1,40 @@
+{
+  "artifact_id": "HAYES-AA4-D4-TARGET-CTRL-039-BINDING",
+  "status": "FROZEN",
+  "target": {
+    "repository_registry_identity": "REPO-001",
+    "repository_identity": "OscarMackJr/bluto",
+    "immutable_repository_revision": "7d3e12a2f7804041efd2840268f4d3d46f4266f9",
+    "subject_identity": "AA4-REPOSITORY-SUBJECT::REPO-001::OscarMackJr/bluto::7d3e12a2f7804041efd2840268f4d3d46f4266f9",
+    "scope": "CONTROLLED_NON_PRODUCTION"
+  },
+  "ctrl_039": {
+    "release_environment": "aa4-controlled-release",
+    "environment_id": 20656884777,
+    "required_reviewer": {
+      "github_login": "jo2082",
+      "github_node_id": "U_kgDOEylS3Q",
+      "github_user_id": 321475293
+    },
+    "required_reviewer_population": 1,
+    "prevent_self_review": true,
+    "can_admins_bypass": false,
+    "deployment_branch_policy": null,
+    "observed_via": "GET /repos/OscarMackJr/bluto/environments/aa4-controlled-release",
+    "observed_at": "2026-08-26T17:18:39Z"
+  },
+  "authority": {
+    "path": "contracts/authorities/aa4/ems_aa4_release_approver_authority_1.0.0.json",
+    "git_blob_oid": "815da8fa228f8e83ba4681c0cf5c13b3b862ef55",
+    "publication_pull_request": 16,
+    "publication_merge_commit": "18c699bfdcabbb5b90ec8c6ef24a28cc79dbf39d"
+  },
+  "invariants": {
+    "target_substitution": "REJECT",
+    "reviewer_substitution": "REJECT",
+    "operator_self_review": "REJECT",
+    "administrator_bypass": "REJECT",
+    "assessment_execution_authorized": false
+  },
+  "next_gate": "AA4-D5 real evidence acquisition and execution-readiness preparation"
+}

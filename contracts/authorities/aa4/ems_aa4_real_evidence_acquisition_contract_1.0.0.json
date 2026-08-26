@@ -1,0 +1,24 @@
+{
+  "artifact_id": "HAYES-AA4-D5-REAL-EVIDENCE-ACQUISITION-CONTRACT-1.0.0",
+  "status": "PUBLISHED",
+  "scope": {
+    "repository_registry_identity": "REPO-001",
+    "repository_identity": "OscarMackJr/bluto",
+    "immutable_repository_revision": "7d3e12a2f7804041efd2840268f4d3d46f4266f9",
+    "scope": "CONTROLLED_NON_PRODUCTION"
+  },
+  "approved_candidate": {
+    "path": "contracts/authority_candidates/aa4/aa4_d5_real_evidence_acquisition_contract.candidate.json",
+    "git_blob_oid": "ceb7cc0aefbcfd7e400c6d4f295e6bfb1c8d9323",
+    "approval_pull_request": 22,
+    "approval_commit": "e3fb84e8b8b7561e0ad3ca4dbf34b4fd1a2af692",
+    "approval_reviewer": "jo2082",
+    "approval_requirement": "The candidate's complete source, collector, payload, provenance, and fail-closed terms are authoritative without alteration."
+  },
+  "decisions_published": ["AA4-D5-REA-001", "AA4-D5-REA-002", "AA4-D5-REA-003"],
+  "publication_effect": {
+    "authorized": ["bounded collector implementation", "static collector validation", "AA4-D5 readiness reconciliation"],
+    "not_authorized": ["real-evidence acquisition", "evidence persistence", "runtime activation", "one-run execution authorization", "assessment execution", "target substitution", "reviewer substitution"]
+  },
+  "next_gate": "Implement and statically validate the bounded collector, then rerun AA4-D5 readiness."
+}

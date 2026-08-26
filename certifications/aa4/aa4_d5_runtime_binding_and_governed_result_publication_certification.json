@@ -1,0 +1,8 @@
+{
+  "artifact_id": "HAYES-AA4-D5-RUNTIME-BINDING-AND-GOVERNED-RESULT-PUBLICATION-CERTIFICATION",
+  "status": "CERTIFIED_PENDING_PROTECTED_BRANCH_MERGE",
+  "published_authority": "contracts/authorities/aa4/ems_aa4_runtime_binding_and_governed_result_contract_1.0.0.json",
+  "approved_candidate": {"path": "contracts/authority_candidates/aa4/aa4_d5_runtime_binding_and_governed_result_contract.candidate.json", "git_blob_oid": "b1e1fc03b08496d5865ca10bd29945b4f7fc840c", "approval_pull_request": 26, "approved_by": "jo2082"},
+  "execution_accounting": {"real_evidence_records_acquired": 0, "assessment_results_created": 0, "assessment_execution_performed": false},
+  "next_gate": "Static readiness reconciliation only."
+}

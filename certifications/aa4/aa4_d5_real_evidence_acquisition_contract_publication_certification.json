@@ -1,0 +1,20 @@
+{
+  "artifact_id": "HAYES-AA4-D5-REAL-EVIDENCE-ACQUISITION-CONTRACT-PUBLICATION-CERTIFICATION",
+  "status": "CERTIFIED_PENDING_PROTECTED_BRANCH_MERGE",
+  "publication_artifact": "contracts/authorities/aa4/ems_aa4_real_evidence_acquisition_contract_1.0.0.json",
+  "candidate_reconstruction": {
+    "candidate_path": "contracts/authority_candidates/aa4/aa4_d5_real_evidence_acquisition_contract.candidate.json",
+    "candidate_git_blob_oid": "ceb7cc0aefbcfd7e400c6d4f295e6bfb1c8d9323",
+    "approval_pull_request": 22,
+    "approval_commit": "e3fb84e8b8b7561e0ad3ca4dbf34b4fd1a2af692",
+    "approved_by": "jo2082",
+    "verification": "The published authority references the approved candidate by immutable Git blob and does not restate or modify any contract term."
+  },
+  "published_decisions": ["AA4-D5-REA-001", "AA4-D5-REA-002", "AA4-D5-REA-003"],
+  "execution_accounting": {
+    "real_evidence_records_acquired": 0,
+    "assessment_results_created": 0,
+    "assessment_execution_performed": false
+  },
+  "next_gate": "Bounded collector implementation and static validation only."
+}

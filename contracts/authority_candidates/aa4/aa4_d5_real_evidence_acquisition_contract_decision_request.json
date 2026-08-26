@@ -1,0 +1,46 @@
+{
+  "artifact_id": "HAYES-AA4-D5-REAL-EVIDENCE-ACQUISITION-CONTRACT-DECISION-REQUEST",
+  "status": "PREPARED_FOR_HUMAN_ADJUDICATION",
+  "scope": {
+    "repository_registry_identity": "REPO-001",
+    "repository_identity": "OscarMackJr/bluto",
+    "immutable_repository_revision": "7d3e12a2f7804041efd2840268f4d3d46f4266f9",
+    "scope": "CONTROLLED_NON_PRODUCTION"
+  },
+  "predecessors": {
+    "target_and_ctrl_039_binding": "contracts/bindings/aa4/aa4_d4_target_ctrl039_binding.json",
+    "d5_readiness_reconciliation": "certifications/aa4/aa4_d5_real_evidence_readiness_reconciliation.json"
+  },
+  "affected_controls": [
+    "EMS-CTRL-009", "EMS-CTRL-010", "EMS-CTRL-011", "EMS-CTRL-012", "EMS-CTRL-013", "EMS-CTRL-014", "EMS-CTRL-015", "EMS-CTRL-017", "EMS-CTRL-018", "EMS-CTRL-020", "EMS-CTRL-021", "EMS-CTRL-033", "EMS-CTRL-039"
+  ],
+  "required_human_decisions": [
+    {
+      "decision_id": "AA4-D5-REA-001",
+      "subject": "Authorized source(s) for each affected control",
+      "required_fields": ["control-to-source mapping", "API or repository endpoint", "permitted credential scope", "revision-binding rule", "source freshness rule"],
+      "current_state": "NOT_DEFINED"
+    },
+    {
+      "decision_id": "AA4-D5-REA-002",
+      "subject": "Collector and canonical evidence payload contract",
+      "required_fields": ["collector identity/version", "payload schema", "canonicalization", "content hash", "repository/revision/workflow/control traceability"],
+      "current_state": "NOT_DEFINED"
+    },
+    {
+      "decision_id": "AA4-D5-REA-003",
+      "subject": "Failure behavior and result binding",
+      "required_fields": ["missing access", "missing source data", "source mismatch", "schema validation failure", "result status mapping", "persistence boundary"],
+      "current_state": "NOT_DEFINED"
+    }
+  ],
+  "non_authorizations": {
+    "evidence_acquisition": false,
+    "implementation": false,
+    "runtime_activation": false,
+    "one_run_execution_authorization": false,
+    "assessment_execution": false
+  },
+  "adjudication_requirement": "A designated human evidence authority must approve exact candidate contracts bound to AA4-D5-REA-001 through AA4-D5-REA-003. James O'Meara's CTRL-039 reviewer authority does not by itself supply this evidence-contract authority.",
+  "next_gate_after_adjudication": "Publish the approved acquisition contract(s), implement and statically validate the bounded collector(s), then rerun AA4-D5 readiness."
+}

@@ -1,0 +1,33 @@
+{
+  "artifact_id": "EMS-AA4-REAL-EVIDENCE-AUTHORITY-1.0.0",
+  "status": "PROPOSED_FOR_IDENTITY_BOUND_ACKNOWLEDGEMENT",
+  "designated_authority": {
+    "name": "James O'Meara",
+    "email": "jomeara@twgglobal.com",
+    "github_login": "jo2082",
+    "github_node_id": "U_kgDOEylS3Q"
+  },
+  "scope": {
+    "repository_registry_identity": "REPO-001",
+    "repository_identity": "OscarMackJr/bluto",
+    "immutable_repository_revision": "7d3e12a2f7804041efd2840268f4d3d46f4266f9",
+    "scope": "CONTROLLED_NON_PRODUCTION",
+    "decision_ids": ["AA4-D5-REA-001", "AA4-D5-REA-002", "AA4-D5-REA-003"]
+  },
+  "delegated_decision_scope": [
+    "approve or reject exact real-evidence source-to-control mappings",
+    "approve or reject exact collector, payload-schema, canonicalization, and provenance contracts",
+    "approve or reject exact failure behavior and result-binding contracts"
+  ],
+  "non_authorizations": {
+    "collect_evidence": false,
+    "implement_collectors": false,
+    "activate_runtime": false,
+    "authorize_one_run_execution": false,
+    "execute_assessment": false,
+    "modify_ctrl_039_reviewer_authority": false
+  },
+  "identity_binding_basis": "User-supplied designation on 2026-08-26: designate James.",
+  "acknowledgement_required": "James O'Meara must approve or reject this exact designation using the jo2082 GitHub identity before it becomes published authority.",
+  "next_gate_after_acknowledgement": "Prepare exact AA4-D5 real-evidence acquisition contract candidates for James's adjudication."
+}

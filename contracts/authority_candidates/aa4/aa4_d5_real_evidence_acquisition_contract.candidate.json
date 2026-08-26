@@ -1,0 +1,81 @@
+{
+  "artifact_id": "HAYES-AA4-D5-REAL-EVIDENCE-ACQUISITION-CONTRACT-1.0.0",
+  "status": "PROPOSED_FOR_HUMAN_APPROVAL",
+  "approval_authority": {
+    "name": "James O'Meara",
+    "github_login": "jo2082",
+    "authority_artifact": "contracts/authority_candidates/aa4/aa4_d5_evidence_authority_designation.candidate.json",
+    "approved_designation_merge_commit": "202b40fc3b5e0212fa1f8f736898f98d2ad9d908"
+  },
+  "decisions_satisfied_if_approved": [
+    "AA4-D5-REA-001",
+    "AA4-D5-REA-002",
+    "AA4-D5-REA-003"
+  ],
+  "scope": {
+    "repository_registry_identity": "REPO-001",
+    "repository_identity": "OscarMackJr/bluto",
+    "immutable_repository_revision": "7d3e12a2f7804041efd2840268f4d3d46f4266f9",
+    "scope": "CONTROLLED_NON_PRODUCTION",
+    "target_binding": "contracts/bindings/aa4/aa4_d4_target_ctrl039_binding.json"
+  },
+  "source_contract": {
+    "transport": "GitHub REST API over HTTPS and Git object reads only",
+    "credential_scope": {
+      "required": "read-only repository metadata and contents access to OscarMackJr/bluto; read-only Actions metadata and security configuration access only where the selected endpoint requires it",
+      "prohibited": [
+        "write, administration, workflow dispatch, deployment, secret access, token creation, issue or pull-request mutation",
+        "any access outside OscarMackJr/bluto"
+      ]
+    },
+    "target_validation": {
+      "rule": "Before any source request, resolve the supplied repository and commit. The collector must stop without an evidence record unless both equal the scope repository and immutable_repository_revision exactly.",
+      "repository_content_rule": "Every repository-content source must be requested with ref=7d3e12a2f7804041efd2840268f4d3d46f4266f9. Returned object SHA values and the resolved commit identity must be retained in provenance.",
+      "live_configuration_rule": "Repository configuration endpoints describe the observation-time configuration, not historical commit state. Their provenance must include target revision, request URI, response ETag when supplied, and collected_at_utc; they are valid only when collected_at_utc is no more than 15 minutes before the evidence record is sealed."
+    },
+    "control_to_source_mapping": [
+      {"control_id": "EMS-CTRL-009", "control_name": "Branch Protection Required", "sources": ["GET /repos/OscarMackJr/bluto/branches/{default_branch}/protection"], "projection": ["required_status_checks", "enforce_admins", "required_pull_request_reviews", "restrictions"]},
+      {"control_id": "EMS-CTRL-010", "control_name": "Pull Request Review", "sources": ["GET /repos/OscarMackJr/bluto/branches/{default_branch}/protection"], "projection": ["required_pull_request_reviews.required_approving_review_count", "dismissal_restrictions", "require_code_owner_reviews"]},
+      {"control_id": "EMS-CTRL-011", "control_name": "CODEOWNERS Enforcement", "sources": ["GET /repos/OscarMackJr/bluto/contents/.github/CODEOWNERS?ref=7d3e12a2f7804041efd2840268f4d3d46f4266f9", "GET /repos/OscarMackJr/bluto/branches/{default_branch}/protection"], "projection": ["CODEOWNERS blob SHA and UTF-8 content", "required_pull_request_reviews.require_code_owner_reviews"]},
+      {"control_id": "EMS-CTRL-012", "control_name": "Signed Commits", "sources": ["GET /repos/OscarMackJr/bluto/branches/{default_branch}/protection/required_signatures"], "projection": ["enabled"]},
+      {"control_id": "EMS-CTRL-013", "control_name": "Protected Release Tags", "sources": ["GET /repos/OscarMackJr/bluto/rulesets"], "projection": ["active rulesets whose target includes tag refs", "enforcement", "conditions", "rules"]},
+      {"control_id": "EMS-CTRL-014", "control_name": "Mandatory Issue Linkage", "sources": ["GET /repos/OscarMackJr/bluto/contents/.github/workflows?ref=7d3e12a2f7804041efd2840268f4d3d46f4266f9", "GET /repos/OscarMackJr/bluto/branches/{default_branch}/protection"], "projection": ["workflow file blob SHA and UTF-8 content", "required status-check contexts"]},
+      {"control_id": "EMS-CTRL-015", "control_name": "Repository Template Compliance", "sources": ["GET /repos/OscarMackJr/bluto/git/trees/7d3e12a2f7804041efd2840268f4d3d46f4266f9?recursive=1", "GET /repos/OscarMackJr/bluto/contents/.github?ref=7d3e12a2f7804041efd2840268f4d3d46f4266f9"], "projection": ["tree entries under .github/ISSUE_TEMPLATE", "PULL_REQUEST_TEMPLATE paths", "template blob SHA and UTF-8 content"]},
+      {"control_id": "EMS-CTRL-017", "control_name": "Secure Coding Standard", "sources": ["GET /repos/OscarMackJr/bluto/git/trees/7d3e12a2f7804041efd2840268f4d3d46f4266f9?recursive=1", "GET /repos/OscarMackJr/bluto/contents/SECURITY.md?ref=7d3e12a2f7804041efd2840268f4d3d46f4266f9"], "projection": ["SECURITY.md blob SHA and UTF-8 content", "security-policy path inventory"]},
+      {"control_id": "EMS-CTRL-018", "control_name": "Secret Scanning", "sources": ["GET /repos/OscarMackJr/bluto"], "projection": ["security_and_analysis.secret_scanning.status", "security_and_analysis.secret_scanning_push_protection.status"]},
+      {"control_id": "EMS-CTRL-020", "control_name": "License Compliance", "sources": ["GET /repos/OscarMackJr/bluto/license?ref=7d3e12a2f7804041efd2840268f4d3d46f4266f9", "GET /repos/OscarMackJr/bluto/git/trees/7d3e12a2f7804041efd2840268f4d3d46f4266f9?recursive=1"], "projection": ["license SPDX identifier", "license file blob SHA and UTF-8 content", "license-related path inventory"]},
+      {"control_id": "EMS-CTRL-021", "control_name": "SBOM Generation", "sources": ["GET /repos/OscarMackJr/bluto/dependency-graph/sbom"], "projection": ["CycloneDX SBOM document", "metadata component and dependency entries"]},
+      {"control_id": "EMS-CTRL-033", "control_name": "Reproducible Builds", "sources": ["GET /repos/OscarMackJr/bluto/contents/.github/workflows?ref=7d3e12a2f7804041efd2840268f4d3d46f4266f9", "GET /repos/OscarMackJr/bluto/actions/workflows"], "projection": ["workflow file blob SHA and UTF-8 content", "workflow identifiers, state, and path"]},
+      {"control_id": "EMS-CTRL-039", "control_name": "Release Approval Workflow", "sources": ["GET /repos/OscarMackJr/bluto/environments/aa4-controlled-release", "contracts/bindings/aa4/aa4_d4_target_ctrl039_binding.json"], "projection": ["environment id", "required reviewers", "prevent_self_review", "can_admins_bypass", "frozen binding identity"]}
+    ]
+  },
+  "collector_and_payload_contract": {
+    "collector_identity": "hayes-aa4-real-evidence-collector",
+    "collector_version": "1.0.0-proposed",
+    "implementation_state": "NOT_IMPLEMENTED",
+    "record_schema": {
+      "required_fields": ["schema_version", "record_id", "control_id", "target", "collector", "collected_at_utc", "sources", "canonical_payload_sha256", "provenance", "collection_status"],
+      "target_fields": ["repository_registry_identity", "repository_identity", "immutable_repository_revision", "scope"],
+      "source_fields": ["request_method", "request_uri", "response_status", "response_etag", "source_object_sha", "captured_payload"],
+      "provenance_fields": ["collector_identity", "collector_version", "target_validation", "credential_scope_classification", "source_observation_time_utc"]
+    },
+    "canonicalization": "Serialize the evidence record excluding canonical_payload_sha256 as UTF-8 JSON using RFC 8785 JSON Canonicalization Scheme; canonical_payload_sha256 is the lowercase SHA-256 of those canonical bytes.",
+    "traceability_rule": "Each record contains exactly one control_id and target tuple. It must reference every source URI used, each source object SHA when content is repository-bound, and the collector version."
+  },
+  "failure_and_result_binding_contract": {
+    "fail_closed_conditions": {
+      "missing_access": "EVIDENCE_UNAVAILABLE_MISSING_ACCESS",
+      "missing_source_data": "EVIDENCE_UNAVAILABLE_MISSING_SOURCE",
+      "target_or_source_mismatch": "EVIDENCE_INVALID_TARGET_OR_SOURCE_MISMATCH",
+      "stale_live_configuration": "EVIDENCE_INVALID_STALE_CONFIGURATION",
+      "schema_or_hash_failure": "EVIDENCE_INVALID_SCHEMA_OR_HASH_FAILURE"
+    },
+    "result_mapping": "No fail-closed collection condition may be mapped to PASS or FAIL. Only a later, separately authorized evaluator may map a schema-valid evidence record to an assessment result.",
+    "persistence_boundary": "Evidence records may be persisted only after a separately approved contract publication and collector implementation/readiness gate. Until then this candidate permits neither collection nor persistence."
+  },
+  "approval_effect": {
+    "if_approved": ["authorizes publication of this exact D5 contract candidate after normal protected-branch checks", "authorizes subsequent bounded collector implementation and static readiness work only"],
+    "still_not_authorized": ["evidence acquisition", "evidence persistence", "runtime activation", "one-run execution authorization", "assessment execution", "target or reviewer substitution"]
+  },
+  "review_instructions": "James O'Meara (jo2082): review the exact source endpoints, read-only credential boundary, immutable-revision rules, payload/provenance fields, and fail-closed behavior. Approve this pull request only if this complete contract is acceptable; your GitHub approval binds your decision to these file contents."
+}

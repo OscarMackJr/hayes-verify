@@ -3,8 +3,13 @@ from pathlib import Path
 
 import pytest
 
-from hayes_verify.aa4_real_evidence import AA4EvidenceContractError, AA4_TARGET, build_static_candidate, canonical_json_bytes, load_published_contract
-
+from hayes_verify.aa4_real_evidence import (
+    AA4_TARGET,
+    AA4EvidenceContractError,
+    build_static_candidate,
+    canonical_json_bytes,
+    load_published_contract,
+)
 
 ROOT = Path(__file__).resolve().parents[1]
 

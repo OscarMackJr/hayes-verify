@@ -1,0 +1,29 @@
+{
+  "artifact_id": "HAYES-AA4-D2-RELEASE-APPROVER-AUTHORITY-PUBLICATION-CERTIFICATION",
+  "status": "PASS",
+  "authority": {
+    "path": "contracts/authorities/aa4/ems_aa4_release_approver_authority_1.0.0.json",
+    "git_blob_oid": "815da8fa228f8e83ba4681c0cf5c13b3b862ef55",
+    "artifact_id": "EMS-AA4-RELEASE-APPROVER-AUTHORITY-1.0.0",
+    "version": "1.0.0"
+  },
+  "approved_candidate": {
+    "pull_request": 15,
+    "review_commit": "bf8e273b43b6b2ec9c5c397e92f35fabab4e4442",
+    "merged_proposal_commit": "109042344f173e872f92834512705fc1b6647676",
+    "reviewer_github_login": "jo2082",
+    "review_state": "APPROVED",
+    "review_submitted_at": "2026-08-26T16:56:47Z"
+  },
+  "reconciliation": {
+    "target_tuple_preserved": true,
+    "sole_reviewer_preserved": true,
+    "reviewer": "jo2082",
+    "operator_self_review_prohibited": true,
+    "publication_transition": "PROPOSED_FOR_HUMAN_APPROVAL -> APPROVED_AND_PUBLISHED",
+    "environment_configuration_authorized": false,
+    "assessment_authorized": false,
+    "activation_authorized": false
+  },
+  "next_gate": "AA4-D3 controlled-release configuration; only jo2082 may be configured as the reviewer."
+}

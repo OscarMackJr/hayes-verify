@@ -1,0 +1,31 @@
+{
+  "artifact_id": "HAYES-AA4-D1-CTRL-039-REVIEWER-IDENTITY-AND-ACCESS-VERIFICATION",
+  "status": "VERIFIED_PENDING_AUTHORITY_APPROVAL",
+  "target": {
+    "repository_registry_identity": "REPO-001",
+    "repository_identity": "OscarMackJr/bluto",
+    "immutable_repository_revision": "7d3e12a2f7804041efd2840268f4d3d46f4266f9",
+    "scope": "CONTROLLED_NON_PRODUCTION"
+  },
+  "operator": { "github_login": "oscarmackjr-twg", "github_node_id": "U_kgDOCuXJTw" },
+  "candidate_reviewer": {
+    "email": "jomeara@twgglobal.com",
+    "github_login": "jo2082",
+    "github_node_id": "U_kgDOEylS3Q",
+    "repository_permission": "read",
+    "repository_role": "read",
+    "identity_binding_basis": "Direct human assertion supplied for AA4-D1: jo2082 is jomeara@twgglobal.com."
+  },
+  "read_only_observations": {
+    "repository_collaborators_endpoint": "GET /repos/OscarMackJr/bluto/collaborators",
+    "result": "jo2082 is a distinct collaborator with pull-only access; oscarmackjr-twg remains the operator/admin.",
+    "observed_on": "2026-08-26"
+  },
+  "ctrl_039_separation_of_duty": {
+    "operator_and_reviewer_are_distinct_github_identities": true,
+    "operator_self_review_prohibited": true,
+    "reviewer_authority_published": false,
+    "controlled_release_configured": false
+  },
+  "next_gate": "AA4-D2 human approval and publication of the exact reviewer authority candidate"
+}

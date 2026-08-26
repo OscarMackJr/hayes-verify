@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://hayes-verify.local/contracts/schemas/aa4_release_approver_authority.schema.json",
+  "title": "AA4 release approver authority",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["artifact_id", "version", "status", "target", "operator", "reviewer", "separation_of_duty", "approval", "operational_effect"],
+  "properties": {
+    "artifact_id": { "const": "EMS-AA4-RELEASE-APPROVER-AUTHORITY-1.0.0" },
+    "version": { "const": "1.0.0" },
+    "status": { "enum": ["PROPOSED_FOR_HUMAN_APPROVAL", "APPROVED_AND_PUBLISHED"] },
+    "target": { "type": "object" },
+    "operator": { "type": "object" },
+    "reviewer": { "type": "object" },
+    "separation_of_duty": { "type": "object" },
+    "approval": { "type": "object" },
+    "operational_effect": { "type": "object" }
+  }
+}

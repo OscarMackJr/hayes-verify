@@ -1,0 +1,39 @@
+{
+  "artifact_id": "EMS-AA4-RELEASE-APPROVER-AUTHORITY-1.0.0",
+  "version": "1.0.0",
+  "status": "PROPOSED_FOR_HUMAN_APPROVAL",
+  "target": {
+    "repository_registry_identity": "REPO-001",
+    "repository_identity": "OscarMackJr/bluto",
+    "immutable_repository_revision": "7d3e12a2f7804041efd2840268f4d3d46f4266f9",
+    "scope": "CONTROLLED_NON_PRODUCTION"
+  },
+  "operator": { "github_login": "oscarmackjr-twg", "github_node_id": "U_kgDOCuXJTw" },
+  "reviewer": {
+    "email": "jomeara@twgglobal.com",
+    "github_login": "jo2082",
+    "github_node_id": "U_kgDOEylS3Q",
+    "repository_permission": "read",
+    "identity_binding_basis": "Direct human assertion supplied for AA4-D1 and read-only repository collaborator verification on 2026-08-26."
+  },
+  "separation_of_duty": {
+    "control_id": "EMS-CTRL-039",
+    "operator_must_not_self_review": true,
+    "approved_reviewer_is_distinct_from_operator": true,
+    "authorized_reviewer_population": ["jo2082"],
+    "substitution_or_inferred_membership": "REJECT"
+  },
+  "approval": {
+    "required_approver": "jomeara@twgglobal.com",
+    "required_approver_github_login": "jo2082",
+    "decision_required": "Approve or reject this exact candidate, including the target tuple and sole reviewer identity.",
+    "approval_record": "NOT_YET_SUPPLIED"
+  },
+  "operational_effect": {
+    "published": false,
+    "environment_configuration_authorized": false,
+    "assessment_authorized": false,
+    "activation_authorized": false,
+    "permitted_next_action_after_approval": "Publish/certify this exact authority in AA4-D2; AA4-D3 remains separately gated."
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "artifact_id": "EMS-AA4-RELEASE-APPROVER-AUTHORITY-1.0.0",
+  "version": "1.0.0",
+  "status": "APPROVED_AND_PUBLISHED",
+  "target": {
+    "repository_registry_identity": "REPO-001",
+    "repository_identity": "OscarMackJr/bluto",
+    "immutable_repository_revision": "7d3e12a2f7804041efd2840268f4d3d46f4266f9",
+    "scope": "CONTROLLED_NON_PRODUCTION"
+  },
+  "operator": { "github_login": "oscarmackjr-twg", "github_node_id": "U_kgDOCuXJTw" },
+  "reviewer": {
+    "email": "jomeara@twgglobal.com",
+    "github_login": "jo2082",
+    "github_node_id": "U_kgDOEylS3Q",
+    "repository_permission": "read",
+    "identity_binding_basis": "Direct human assertion supplied for AA4-D1 and read-only repository collaborator verification on 2026-08-26."
+  },
+  "separation_of_duty": {
+    "control_id": "EMS-CTRL-039",
+    "operator_must_not_self_review": true,
+    "approved_reviewer_is_distinct_from_operator": true,
+    "authorized_reviewer_population": ["jo2082"],
+    "substitution_or_inferred_membership": "REJECT"
+  },
+  "approval": {
+    "required_approver": "jomeara@twgglobal.com",
+    "required_approver_github_login": "jo2082",
+    "decision": "APPROVED",
+    "review_pull_request": 15,
+    "review_url": "https://github.com/OscarMackJr/hayes-verify/pull/15#pullrequestreview-5032997468",
+    "review_commit": "bf8e273b43b6b2ec9c5c397e92f35fabab4e4442",
+    "submitted_at": "2026-08-26T16:56:47Z",
+    "merged_proposal_commit": "109042344f173e872f92834512705fc1b6647676"
+  },
+  "operational_effect": {
+    "published": true,
+    "environment_configuration_authorized": false,
+    "assessment_authorized": false,
+    "activation_authorized": false,
+    "next_permitted_action": "AA4-D3 controlled-release configuration with only jo2082 as the approved reviewer."
+  }
+}

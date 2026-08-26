@@ -1,0 +1,23 @@
+{
+  "artifact_id": "HAYES-AA4-D5-RUNTIME-BINDING-AND-GOVERNED-RESULT-CONTRACT-1.0.0",
+  "status": "PROPOSED_FOR_HUMAN_APPROVAL",
+  "approval_authority": {"name": "James O'Meara", "github_login": "jo2082", "authority_artifact": "contracts/authority_candidates/aa4/aa4_d5_evidence_authority_designation.candidate.json"},
+  "scope": {"repository_registry_identity": "REPO-001", "repository_identity": "OscarMackJr/bluto", "immutable_repository_revision": "7d3e12a2f7804041efd2840268f4d3d46f4266f9", "scope": "CONTROLLED_NON_PRODUCTION", "acquisition_contract": "contracts/authorities/aa4/ems_aa4_real_evidence_acquisition_contract_1.0.0.json"},
+  "runtime_binding": {
+    "runtime_identity": "hayes-aa4-real-evidence-runtime",
+    "implementation": "src/hayes_verify/aa4_real_evidence.py",
+    "activation_state": "DISABLED_PENDING_FRESH_ONE_RUN_AUTHORIZATION",
+    "permitted_transport": "GitHub REST API HTTPS GET only, as constrained by the published D5 acquisition contract",
+    "environment": "aa4-controlled-release",
+    "target_validation": "Reject unless the exact frozen AA4 target tuple is supplied before every request.",
+    "persistence": "Disabled. No record may be written until separately enabled by a fresh one-run authorization.",
+    "prohibited": ["workflow dispatch", "repository mutation", "deployment", "secret access", "automatic retry", "automatic assessment"]
+  },
+  "governed_result_contract": {
+    "result_schema": {"required_fields": ["result_id", "control_id", "target", "evidence_record_sha256", "evaluator_identity", "evaluator_version", "result_status", "result_reason", "created_at_utc", "authorization_reference"], "result_statuses": ["PASS", "FAIL", "UNRESOLVED", "EXECUTION_BLOCKED"]},
+    "binding_rules": ["A result must bind to exactly one schema-valid evidence record for the exact target tuple.", "Only a separately authorized evaluator may create PASS or FAIL.", "Missing access, source, target match, freshness, schema, hash, authorization, or runtime activation maps only to EXECUTION_BLOCKED or UNRESOLVED."],
+    "persistence": "Disabled pending a fresh attributable one-run authorization; no result is created by approval or publication of this candidate."
+  },
+  "approval_effect": {"if_approved": ["authorizes publication of this exact runtime/result contract", "authorizes static readiness reconciliation"], "still_not_authorized": ["runtime activation", "evidence acquisition", "evidence or result persistence", "one-run authorization", "assessment execution"]},
+  "review_instructions": "James: approve only if the disabled runtime boundary and fail-closed result rules are acceptable. Your jo2082 approval binds to this exact candidate and does not authorize a run."
+}

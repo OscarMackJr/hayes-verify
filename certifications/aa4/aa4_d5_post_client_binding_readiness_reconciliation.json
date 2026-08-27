@@ -1,0 +1,55 @@
+{
+  "artifact_id": "HAYES-AA4-D5-POST-CLIENT-BINDING-READINESS-RECONCILIATION",
+  "status": "READY_FOR_FRESH_ONE_RUN_AUTHORIZATION_PREPARATION",
+  "scope": {
+    "repository_registry_identity": "REPO-001",
+    "repository_identity": "OscarMackJr/bluto",
+    "immutable_repository_revision": "7d3e12a2f7804041efd2840268f4d3d46f4266f9",
+    "scope": "CONTROLLED_NON_PRODUCTION"
+  },
+  "reconciles": {
+    "superseded_blocker_record": "certifications/aa4/aa4_d5_d8_post_recovery_readiness_reconciliation.json",
+    "superseded_blocker": "BLOCKED_MISSING_PUBLISHED_LEAST_PRIVILEGE_CLIENT_BINDING",
+    "published_client_binding": "contracts/bindings/aa4/aa4_d5_github_read_only_client_binding.json",
+    "client_binding_governing_contract": "contracts/authority_candidates/aa4/aa4_d5_github_read_only_client_binding.candidate.json",
+    "client_binding_review": {
+      "pull_request": "https://github.com/OscarMackJr/hayes-verify/pull/38",
+      "reviewer": "jo2082",
+      "review_state": "APPROVED",
+      "merge_commit": "5eb7e9d5419cd9ee8aff430e73fbea33119f9a90"
+    }
+  },
+  "static_prerequisites": {
+    "client_binding_active_and_least_privilege_verified": true,
+    "client_binding_permissions": [
+      "metadata: read",
+      "contents: read",
+      "actions: read",
+      "administration: read",
+      "security_events: read"
+    ],
+    "live_runtime_collector": "src/hayes_verify/aa4_live_runtime.py",
+    "live_evaluator": "src/hayes_verify/aa4_live_evaluator.py",
+    "single_use_orchestration": "src/hayes_verify/aa4_run_orchestration.py",
+    "prior_static_verification": "199 tests passed",
+    "binding_record_validation": "19 AA4 fixture tests passed; ruff check src tests passed; JSON syntax and diff hygiene passed"
+  },
+  "execution_accounting": {
+    "expired_AA4_BLUTO_ONE_RUN_001_reused": false,
+    "installation_tokens_issued_for_AA4": 0,
+    "repository_content_accessed": false,
+    "real_evidence_records_acquired": 0,
+    "assessment_results_created": 0,
+    "assessment_execution_performed": false
+  },
+  "readiness": {
+    "fresh_one_run_authorization_preparation_permitted": true,
+    "fresh_one_run_authorization_issued": false,
+    "runtime_activation_permitted": false,
+    "installation_token_issuance_permitted": false,
+    "real_evidence_acquisition_permitted": false,
+    "assessment_execution_permitted": false,
+    "result_certification_permitted": false
+  },
+  "next_gate": "AA4-D6: prepare an exact, attributable, single-use authorization candidate for one controlled evidence-acquisition and assessment run. A fresh human approval is required before any token issuance or execution."
+}

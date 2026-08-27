@@ -1,0 +1,12 @@
+{
+  "artifact_id": "HAYES-AA4-D5-GITHUB-READ-ONLY-CLIENT-BINDING-1.0.0",
+  "status": "PROPOSED_FOR_HUMAN_APPROVAL",
+  "approval_authority": {"name": "James O'Meara", "github_login": "jo2082"},
+  "scope": {"repository_identity": "OscarMackJr/bluto", "immutable_repository_revision": "7d3e12a2f7804041efd2840268f4d3d46f4266f9", "scope": "CONTROLLED_NON_PRODUCTION", "runtime": "hayes-aa4-real-evidence-runtime"},
+  "client_identity": {"type": "GitHub App installation token", "installation_scope": "OscarMackJr/bluto only", "token_lifetime": "GitHub-issued short-lived installation token", "storage": "runtime-injected secret; never persist token bytes in source, evidence, results, logs, or certification artifacts"},
+  "required_read_permissions": ["metadata: read", "contents: read", "actions: read", "administration: read", "security_events: read"],
+  "prohibited_permissions": ["contents: write", "actions: write", "administration: write", "pull_requests: write", "issues: write", "deployments: write", "secrets: read or write", "organization access", "installation access to any repository other than OscarMackJr/bluto"],
+  "runtime_binding": {"launcher": "A dedicated AA4 launcher may obtain one installation token only after a fresh one-run authorization validates the exact target and unexpired window.", "transport": "HTTPS GET only to the published D5 endpoint templates; reject redirect, non-200 response, endpoint expansion outside the contract, or any non-GET method.", "audit": "Record client identity class and token issuance time only; never record a token or authorization header."},
+  "approval_effect": {"if_approved": ["authorizes GitHub App creation/installation and static client-binding implementation", "authorizes a corrected readiness reconciliation after read-only access is verified"], "not_authorized": ["token issuance outside a fresh run window", "live evidence acquisition", "assessment execution", "reuse of expired AA4-BLUTO-ONE-RUN-001 authorization"]},
+  "review_instructions": "James: approve only if the GitHub App is limited to Bluto and the stated read-only permissions. Approval does not configure the App, issue a token, or run AA4."
+}

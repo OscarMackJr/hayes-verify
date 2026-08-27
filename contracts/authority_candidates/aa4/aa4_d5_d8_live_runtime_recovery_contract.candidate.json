@@ -1,0 +1,30 @@
+{
+  "artifact_id": "HAYES-AA4-D5-D8-LIVE-RUNTIME-RECOVERY-CONTRACT-1.0.0",
+  "status": "PROPOSED_FOR_HUMAN_APPROVAL",
+  "approval_authority": {"name": "James O'Meara", "github_login": "jo2082"},
+  "scope": {"repository_registry_identity": "REPO-001", "repository_identity": "OscarMackJr/bluto", "immutable_repository_revision": "7d3e12a2f7804041efd2840268f4d3d46f4266f9", "scope": "CONTROLLED_NON_PRODUCTION", "predecessor": "certifications/aa4/aa4_d8_pre_execution_capability_gap_reconciliation.json"},
+  "recovery_implementation": {
+    "collector": "A dependency-injected HTTPS GET client may invoke only the D5 published source URIs. No write endpoint, workflow dispatch, retry, or source outside OscarMackJr/bluto is permitted.",
+    "persistence": "During a fresh authorized run only, write one canonical evidence record per control beneath generated/aa4/runs/{run_id}/evidence/. Before authorization or after expiry, writing must fail closed.",
+    "orchestration": "Validate the issued one-run authorization before the first request; atomically mark it consumed before persistence; make exactly one pass over the 13 controls; never retry automatically.",
+    "result_persistence": "During that same run only, write one governed result per control beneath generated/aa4/runs/{run_id}/results/, binding its evidence SHA-256 and authorization reference."
+  },
+  "evaluator_rules": [
+    {"control_id":"EMS-CTRL-009","pass":"default-branch protection response is present and required_status_checks, enforce_admins, required_pull_request_reviews, and restrictions are all configured","fail":"a required protection element is absent"},
+    {"control_id":"EMS-CTRL-010","pass":"required_approving_review_count is at least 1","fail":"count is absent or less than 1"},
+    {"control_id":"EMS-CTRL-011","pass":"frozen CODEOWNERS content exists and branch protection requires code-owner reviews","fail":"either condition is absent"},
+    {"control_id":"EMS-CTRL-012","pass":"required-signatures enabled is true","fail":"enabled is false"},
+    {"control_id":"EMS-CTRL-013","pass":"at least one active ruleset applies to tag refs","fail":"no active tag-ref ruleset exists"},
+    {"control_id":"EMS-CTRL-014","pass":"a frozen workflow contains an issue-linkage token (issue, ticket, or jira) and its named check is required by branch protection","fail":"the workflow/check linkage is absent"},
+    {"control_id":"EMS-CTRL-015","pass":"the frozen tree contains at least one issue-template path or pull-request-template path","fail":"neither template type exists"},
+    {"control_id":"EMS-CTRL-017","pass":"frozen SECURITY.md exists and is non-empty","fail":"SECURITY.md is absent or empty"},
+    {"control_id":"EMS-CTRL-018","pass":"secret_scanning.status and secret_scanning_push_protection.status are enabled","fail":"either status is not enabled"},
+    {"control_id":"EMS-CTRL-020","pass":"a non-empty SPDX identifier and a repository license file are present","fail":"either is absent"},
+    {"control_id":"EMS-CTRL-021","pass":"the dependency-graph SBOM response is a non-empty CycloneDX document","fail":"the document is missing, malformed, or empty"},
+    {"control_id":"EMS-CTRL-033","pass":"at least one frozen workflow exists and GitHub reports a corresponding active workflow identifier","fail":"the frozen workflow/active identifier linkage is absent"},
+    {"control_id":"EMS-CTRL-039","pass":"the environment exactly matches the D4 binding: aa4-controlled-release, sole reviewer jo2082, self-review prevention true, administrator bypass false","fail":"any D4 field differs"}
+  ],
+  "result_rules": {"pass_or_fail":"Only schema-valid evidence satisfying an exact rule may produce PASS or FAIL.","unresolved":"Ambiguous source projection or missing rule input yields UNRESOLVED.","blocked":"Access, target, hash, schema, authorization, expiry, or runtime mismatch yields EXECUTION_BLOCKED."},
+  "approval_effect": {"if_approved": ["authorizes implementation and static validation of the exact recovery runtime", "authorizes a corrected D5 readiness reconciliation"], "not_authorized": ["live source invocation", "evidence/result persistence", "runtime activation", "assessment execution", "reuse of the expired AA4-BLUTO-ONE-RUN-001 authorization"]},
+  "review_instructions": "James: approve only if the exact collector boundary, persistence boundary, one-run semantics, and thirteen evaluator rules are acceptable. This approval authorizes implementation and static validation only; it cannot execute AA4."
+}

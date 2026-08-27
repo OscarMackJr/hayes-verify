@@ -1,0 +1,14 @@
+{
+  "artifact_id": "HAYES-AA4-D7-ONE-RUN-AUTHORIZATION-ISSUANCE-RECORD-1.0.0",
+  "status": "PREPARED_NOT_ISSUED",
+  "authorization_candidate": {
+    "path": "contracts/authority_candidates/aa4/aa4_d6_one_run_execution_authorization.candidate.json",
+    "publication_merge_commit": "617d42fac5c1451f7faaae45c0004aac1502dffe",
+    "human_approval": {"github_login": "jo2082", "approval_pull_request": 29, "approval_commit": "5b4c4fd38a2aef22ffa31a792bf3ff7a666265ce"}
+  },
+  "scope": {"repository_registry_identity": "REPO-001", "repository_identity": "OscarMackJr/bluto", "immutable_repository_revision": "7d3e12a2f7804041efd2840268f4d3d46f4266f9", "scope": "CONTROLLED_NON_PRODUCTION", "run_id": "AA4-BLUTO-ONE-RUN-001", "maximum_run_count": 1, "automatic_retry_count": 0},
+  "issuance": {"issued_at_utc": null, "expires_at_utc": null, "consumption_state": "NOT_CONSUMED", "runtime_activation": false},
+  "issuance_requirements": ["A human issuer must set a fresh UTC issuance time and finite UTC expiry time immediately before activation.", "The issuer must confirm the target, reviewer environment, and published contracts remain exact.", "Expiry or consumption permanently invalidates this record for another run."],
+  "prohibited_until_issued": ["runtime activation", "evidence acquisition", "evidence or result persistence", "assessment execution"],
+  "next_gate": "Issue this record with explicit times, then execute exactly one authorized AA4 run."
+}

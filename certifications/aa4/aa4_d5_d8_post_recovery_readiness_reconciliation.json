@@ -1,0 +1,9 @@
+{
+  "artifact_id": "HAYES-AA4-D5-D8-POST-RECOVERY-READINESS-RECONCILIATION",
+  "status": "BLOCKED_MISSING_PUBLISHED_LEAST_PRIVILEGE_CLIENT_BINDING",
+  "scope": {"repository_registry_identity": "REPO-001", "repository_identity": "OscarMackJr/bluto", "immutable_repository_revision": "7d3e12a2f7804041efd2840268f4d3d46f4266f9", "scope": "CONTROLLED_NON_PRODUCTION"},
+  "complete": {"published_live_runtime_recovery_contract": "contracts/authority_candidates/aa4/aa4_d5_d8_live_runtime_recovery_contract.candidate.json", "collector_primitive": "src/hayes_verify/aa4_live_runtime.py", "evaluator_primitive": "src/hayes_verify/aa4_live_evaluator.py", "single_use_orchestration": "src/hayes_verify/aa4_run_orchestration.py", "static_verification": "199 tests passed"},
+  "missing": {"credential_identity": "No dedicated GitHub App or fine-grained token identity is published for the AA4 runtime.", "permission_contract": "No immutable grant proves the exact read-only contents, actions, and security permissions required by the D5 endpoint set.", "runtime_client_binding": "No approved launcher binds the credential identity to hayes-aa4-real-evidence-runtime."},
+  "execution_accounting": {"expired_authorization_consumed": false, "real_evidence_records_acquired": 0, "assessment_results_created": 0, "assessment_execution_performed": false},
+  "next_gate": "Prepare and approve an exact least-privilege GitHub client-binding contract, then configure it and rerun readiness before any fresh one-run authorization."
+}

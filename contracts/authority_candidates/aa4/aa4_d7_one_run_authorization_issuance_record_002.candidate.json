@@ -1,0 +1,46 @@
+{
+  "artifact_id": "HAYES-AA4-D7-ONE-RUN-AUTHORIZATION-ISSUANCE-RECORD-1.1.0",
+  "status": "PREPARED_NOT_ISSUED",
+  "authorization_candidate": {
+    "path": "contracts/authority_candidates/aa4/aa4_d6_one_run_execution_authorization_002.candidate.json",
+    "publication_merge_commit": "88b582d0e4f8fa3444b487b3ead12ce782829739",
+    "human_approval": {
+      "github_login": "jo2082",
+      "approval_pull_request": 40,
+      "approval_commit": "6ad64332b9f04284cec6b57f3e503a7c6d15ba73"
+    }
+  },
+  "scope": {
+    "repository_registry_identity": "REPO-001",
+    "repository_identity": "OscarMackJr/bluto",
+    "immutable_repository_revision": "7d3e12a2f7804041efd2840268f4d3d46f4266f9",
+    "scope": "CONTROLLED_NON_PRODUCTION",
+    "run_id": "AA4-BLUTO-ONE-RUN-002",
+    "maximum_run_count": 1,
+    "automatic_retry_count": 0,
+    "runtime": "hayes-aa4-real-evidence-runtime",
+    "environment": "aa4-controlled-release"
+  },
+  "issuance": {
+    "issued_at_utc": null,
+    "expires_at_utc": null,
+    "consumption_state": "NOT_CONSUMED",
+    "runtime_activation": false
+  },
+  "issuance_requirements": [
+    "A human issuer must explicitly direct issuance and set a fresh UTC issuance time and finite UTC expiry time immediately before activation.",
+    "The issuer must confirm the target, the aa4-controlled-release reviewer environment, the client binding, and all published contracts remain exact.",
+    "The dedicated runtime must validate this record before obtaining an installation token.",
+    "Expiry or consumption permanently invalidates this record for another run."
+  ],
+  "prohibited_until_issued": [
+    "runtime activation",
+    "installation-token issuance",
+    "repository content access",
+    "evidence acquisition",
+    "evidence or result persistence",
+    "assessment execution",
+    "result certification"
+  ],
+  "next_gate": "Obtain review of this prepared record. Thereafter, an explicit human issuance directive may create one distinct D7 authorization with bounded times for AA4-BLUTO-ONE-RUN-002."
+}

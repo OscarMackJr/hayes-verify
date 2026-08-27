@@ -1,0 +1,16 @@
+{
+  "artifact_id": "HAYES-AA4-D8-PRE-EXECUTION-CAPABILITY-GAP-RECONCILIATION",
+  "status": "BLOCKED_RUNTIME_AND_EVALUATOR_CAPABILITY_MISSING",
+  "observed_at_utc": "2026-08-27T12:33:22Z",
+  "scope": {"repository_registry_identity": "REPO-001", "repository_identity": "OscarMackJr/bluto", "immutable_repository_revision": "7d3e12a2f7804041efd2840268f4d3d46f4266f9", "scope": "CONTROLLED_NON_PRODUCTION", "run_id": "AA4-BLUTO-ONE-RUN-001"},
+  "supersedes_readiness_for_execution": "certifications/aa4/aa4_d5_final_execution_readiness_reconciliation.json",
+  "verified_gaps": {
+    "live_read_only_collector": "MISSING: src/hayes_verify/aa4_real_evidence.py has no HTTP client or source invocation path.",
+    "evidence_persistence": "MISSING: the implementation creates only in-memory STATIC_VALIDATED_ONLY records.",
+    "bounded_control_evaluators": "MISSING: no evaluator maps the thirteen AA4 evidence projections to governed PASS, FAIL, UNRESOLVED, or EXECUTION_BLOCKED results.",
+    "run_orchestration": "MISSING: no runtime invokes the collector/evaluator once under the issued authorization."
+  },
+  "execution_accounting": {"authorization_consumed": false, "real_evidence_records_acquired": 0, "assessment_results_created": 0, "assessment_execution_performed": false},
+  "effect": {"D8_execution_permitted": false, "issued_authorization_must_not_be_consumed": true, "future_execution_requires": ["approved live collector and persistence implementation", "approved bounded evaluator semantics", "new readiness certification", "fresh one-run authorization"]},
+  "next_gate": "Prepare exact recovery candidates for the live collector, evaluator semantics, and single-run orchestration; obtain human approval before implementation or execution."
+}

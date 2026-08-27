@@ -1,0 +1,64 @@
+{
+  "artifact_id": "HAYES-AA4-D5-GITHUB-READ-ONLY-CLIENT-BINDING-IMPLEMENTATION-1.0.0",
+  "status": "PROPOSED_FOR_HUMAN_CONFIGURATION_APPROVAL",
+  "governing_contract": "contracts/authority_candidates/aa4/aa4_d5_github_read_only_client_binding.candidate.json",
+  "approval_authority": {
+    "name": "James O'Meara",
+    "github_login": "jo2082"
+  },
+  "scope": {
+    "repository_registry_identity": "REPO-001",
+    "repository_identity": "OscarMackJr/bluto",
+    "immutable_repository_revision": "7d3e12a2f7804041efd2840268f4d3d46f4266f9",
+    "scope": "CONTROLLED_NON_PRODUCTION",
+    "runtime": "hayes-aa4-real-evidence-runtime"
+  },
+  "client_binding": {
+    "client_type": "GitHub App installation token",
+    "github_app_id": "4738698",
+    "github_app_client_id": "Iv23libKsYNQl5ZK66Pt",
+    "github_installation_id": "157004879",
+    "private_key_storage": "WINDOWS_PROTECTED_LOCAL_PRIVATE_KEY_REFERENCE; key bytes and filesystem path are intentionally excluded",
+    "token_lifecycle": "A GitHub-issued short-lived installation token may be obtained only by the dedicated AA4 launcher after a fresh, unexpired one-run authorization validates this exact target."
+  },
+  "token_free_configuration_verification": {
+    "method": "GitHub App JWT GET /app/installations/157004879",
+    "verified_on": "2026-08-27",
+    "installation_active": true,
+    "repository_selection_mode": "selected",
+    "granted_read_permissions": [
+      "metadata: read",
+      "contents: read",
+      "actions: read",
+      "administration: read",
+      "security_events: read"
+    ],
+    "extra_permissions_observed": [],
+    "token_issued": false,
+    "repository_content_accessed": false,
+    "evidence_acquired": false,
+    "assessment_executed": false
+  },
+  "required_human_configuration_confirmation": {
+    "confirmation": "The selected-repository installation includes OscarMackJr/bluto and no other repository.",
+    "reason": "The token-free installation metadata endpoint reports selected-repository mode but does not enumerate selected repositories. Enumerating them would require an installation token, which remains prohibited outside a fresh authorized run."
+  },
+  "prohibitions": [
+    "Do not issue an installation token before a fresh one-run authorization.",
+    "Do not persist a private key, JWT, installation token, or authorization header in the repository, evidence, results, logs, or certification artifacts.",
+    "Do not acquire live evidence, execute an assessment, or reuse expired AA4-BLUTO-ONE-RUN-001 authority."
+  ],
+  "approval_effect": {
+    "if_approved_and_merged": [
+      "Publishes the static GitHub App client binding for the AA4 runtime.",
+      "Allows a corrected static readiness reconciliation without token issuance."
+    ],
+    "not_authorized": [
+      "installation-token issuance outside a fresh one-run authorization",
+      "live evidence acquisition",
+      "assessment execution",
+      "result certification"
+    ]
+  },
+  "review_instructions": "James: verify in GitHub App settings that this installation is selected-repository access for OscarMackJr/bluto only, and verify the five listed permissions are read-only with no extras. Approving this artifact does not issue a token or authorize evidence collection or assessment execution."
+}

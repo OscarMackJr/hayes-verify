@@ -1,0 +1,70 @@
+{
+  "artifact_id": "HAYES-AA4-D6-ONE-RUN-EXECUTION-AUTHORIZATION-1.1.0",
+  "status": "PREPARED_FOR_HUMAN_EXECUTION_AUTHORIZATION",
+  "supersedes_for_execution": {
+    "prior_run_id": "AA4-BLUTO-ONE-RUN-001",
+    "prior_authorization": "contracts/authorities/aa4/aa4_d7_one_run_execution_authorization_issued.json",
+    "prior_state": "EXPIRED_NOT_REUSABLE",
+    "reuse_permitted": false
+  },
+  "scope": {
+    "repository_registry_identity": "REPO-001",
+    "repository_identity": "OscarMackJr/bluto",
+    "immutable_repository_revision": "7d3e12a2f7804041efd2840268f4d3d46f4266f9",
+    "scope": "CONTROLLED_NON_PRODUCTION",
+    "readiness_certification": "certifications/aa4/aa4_d5_post_client_binding_readiness_reconciliation.json",
+    "client_binding": "contracts/bindings/aa4/aa4_d5_github_read_only_client_binding.json"
+  },
+  "authorized_if_separately_approved": {
+    "run_id": "AA4-BLUTO-ONE-RUN-002",
+    "maximum_run_count": 1,
+    "automatic_retry_count": 0,
+    "permitted_operations": [
+      "obtain one GitHub-issued short-lived installation token only after a fresh D7 record is issued and its window is unexpired",
+      "make one read-only evidence-acquisition attempt using only the published D5 HTTPS GET endpoint templates",
+      "perform one bounded evaluation over exactly the schema-valid evidence acquired by this run",
+      "persist the evidence, result, and certification artifacts attributable only to this run"
+    ],
+    "affected_controls": [
+      "EMS-CTRL-009",
+      "EMS-CTRL-010",
+      "EMS-CTRL-011",
+      "EMS-CTRL-012",
+      "EMS-CTRL-013",
+      "EMS-CTRL-014",
+      "EMS-CTRL-015",
+      "EMS-CTRL-017",
+      "EMS-CTRL-018",
+      "EMS-CTRL-020",
+      "EMS-CTRL-021",
+      "EMS-CTRL-033",
+      "EMS-CTRL-039"
+    ],
+    "runtime": "hayes-aa4-real-evidence-runtime",
+    "environment": "aa4-controlled-release"
+  },
+  "preconditions": [
+    "exact target tuple validation",
+    "published D5 evidence and runtime/result contracts",
+    "published least-privilege GitHub App client binding remains active with the exact approved read permissions",
+    "aa4-controlled-release retains jo2082 as the sole reviewer with self-review prevention and administrator bypass disabled",
+    "fresh attributable D7 approval using GitHub identity jo2082",
+    "a distinct single-use D7 authorization record contains issuance time, expiry time, and NOT_CONSUMED state before runtime activation"
+  ],
+  "fail_closed": [
+    "Any unavailable, stale, mismatched, invalid, or unapproved source yields an evidence/result BLOCKED or UNRESOLVED state.",
+    "Any target, reviewer, authority, runtime, client-binding, authorization, or expiry mismatch stops the run before source access.",
+    "The run may not be retried automatically or manually under this authorization.",
+    "The runtime must never persist private-key bytes, JWTs, installation tokens, or authorization headers."
+  ],
+  "explicit_non_authorizations": [
+    "approval of this preparation artifact alone",
+    "continuous scanning",
+    "a second run",
+    "target, reviewer, client, or control-set substitution",
+    "production activity",
+    "any operation after the D7 authorization expires"
+  ],
+  "D7_decision_required": "James O'Meara (jo2082) must approve or reject this exact candidate in GitHub. After approval and merge, a separate attributable D7 authorization record must set a new issuance timestamp, expiry timestamp, and one-run consumption state before activation.",
+  "next_gate": "AA4-D7 human execution authorization for AA4-BLUTO-ONE-RUN-002."
+}

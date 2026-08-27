@@ -1,0 +1,19 @@
+{
+  "artifact_id": "HAYES-AA4-D5-D8-LAUNCHER-TYPED-SOURCE-SCOPE-CORRECTION-1.0.0",
+  "status": "PROPOSED_FOR_HUMAN_APPROVAL",
+  "corrects": "contracts/authority_candidates/aa4/aa4_d5_d8_launcher_and_typed_source_recovery_contract.candidate.json",
+  "approval_authority": {"name": "James O'Meara", "github_login": "jo2082"},
+  "scope_additions": [
+    {"path": "src/hayes_verify/aa4_real_evidence.py", "purpose": "Permit schema-valid typed FROZEN_LOCAL_GIT_OBJECT sources while retaining exact source mapping, immutable object identity, and fail-closed validation."},
+    {"path": "tests/test_aa4_real_evidence.py", "purpose": "Fixture-only coverage proving typed local objects are accepted only for approved mapped sources and malformed, substituted, or missing identities fail closed."}
+  ],
+  "invariants": [
+    "No local Git object may be represented as an HTTPS request.",
+    "A typed local object must retain path, Git blob identity, and captured payload.",
+    "Existing target, control-to-source, canonical-hash, and missing-payload fail-closed behavior remains enforced.",
+    "No network client, token minting, evidence collection, persistence, assessment execution, or authorization reuse is authorized."
+  ],
+  "not_authorized": ["GitHub App token issuance", "live evidence acquisition", "assessment execution", "reuse of run 001 or run 002", "production activity"],
+  "review_instructions": "James: approve only if this adds the necessary local-object validator and fixture coverage without expanding live authority. Approval amends implementation scope only.",
+  "next_gate": "Implement the original recovery contract plus these two approved paths, validate statically, and prepare corrected readiness."
+}

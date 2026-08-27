@@ -1,0 +1,40 @@
+{
+  "artifact_id": "HAYES-AA4-D7-ONE-RUN-EXECUTION-AUTHORIZATION-1.1.0",
+  "status": "ISSUED_ACTIVE_NOT_CONSUMED",
+  "issuance_basis": {
+    "human_issuer": "oscarmackjr-twg",
+    "human_directive": "Issue a 60 minute window now",
+    "issued_at_utc": "2026-08-27T16:29:37Z"
+  },
+  "authorization_record": "contracts/authority_candidates/aa4/aa4_d7_one_run_authorization_issuance_record_002.candidate.json",
+  "authorization_candidate": "contracts/authority_candidates/aa4/aa4_d6_one_run_execution_authorization_002.candidate.json",
+  "scope": {
+    "repository_registry_identity": "REPO-001",
+    "repository_identity": "OscarMackJr/bluto",
+    "immutable_repository_revision": "7d3e12a2f7804041efd2840268f4d3d46f4266f9",
+    "scope": "CONTROLLED_NON_PRODUCTION",
+    "run_id": "AA4-BLUTO-ONE-RUN-002",
+    "maximum_run_count": 1,
+    "automatic_retry_count": 0,
+    "runtime": "hayes-aa4-real-evidence-runtime",
+    "environment": "aa4-controlled-release"
+  },
+  "window": {
+    "issued_at_utc": "2026-08-27T16:29:37Z",
+    "expires_at_utc": "2026-08-27T17:29:37Z",
+    "duration_minutes": 60
+  },
+  "consumption": {
+    "state": "NOT_CONSUMED",
+    "consumed_at_utc": null
+  },
+  "permitted_operation": "One controlled, read-only evidence-acquisition and bounded AA4 assessment run using the exact published D5 contracts and the approved GitHub App client binding.",
+  "prohibited": [
+    "automatic or manual retry",
+    "second run",
+    "target, reviewer, client, or control-set substitution",
+    "production activity",
+    "execution after expiry"
+  ],
+  "post_expiry_effect": "EXPIRED_NOT_REUSABLE; a new attributable human authorization is required."
+}

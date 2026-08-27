@@ -1,0 +1,82 @@
+{
+  "artifact_id": "HAYES-AA4-D5-D8-LAUNCHER-AND-TYPED-SOURCE-RECOVERY-CONTRACT-1.0.0",
+  "status": "PROPOSED_FOR_HUMAN_APPROVAL",
+  "approval_authority": {
+    "name": "James O'Meara",
+    "github_login": "jo2082"
+  },
+  "scope": {
+    "repository_registry_identity": "REPO-001",
+    "repository_identity": "OscarMackJr/bluto",
+    "immutable_repository_revision": "7d3e12a2f7804041efd2840268f4d3d46f4266f9",
+    "scope": "CONTROLLED_NON_PRODUCTION",
+    "predecessor": "certifications/aa4/aa4_d8_run_002_pre_execution_capability_reconciliation.json"
+  },
+  "authorized_if_approved": {
+    "implementation": [
+      {
+        "path": "src/hayes_verify/aa4_github_app_launcher.py",
+        "purpose": "Dedicated GitHub App launcher that validates a fresh D7 authorization, target tuple, binding identity, and unexpired window before minting one short-lived installation token in memory."
+      },
+      {
+        "path": "src/hayes_verify/aa4_live_runtime.py",
+        "purpose": "Extend collection to represent typed GitHub HTTPS GET and frozen local Git-object sources without source substitution."
+      },
+      {
+        "path": "src/hayes_verify/aa4_run_orchestration.py",
+        "purpose": "Persist exactly thirteen evidence/result pairs for either a complete success path or a complete fail-closed blocked path, consuming the run only once."
+      },
+      {
+        "path": "tests/test_aa4_github_app_launcher.py",
+        "purpose": "Fixture-only tests proving authorization validation precedes token minting and secrets are never serialized."
+      },
+      {
+        "path": "tests/test_aa4_live_runtime.py",
+        "purpose": "Fixture-only tests for typed sources and CTRL-039 frozen-binding reconstruction."
+      },
+      {
+        "path": "tests/test_aa4_run_orchestration.py",
+        "purpose": "Fixture-only tests for complete blocked-run persistence and no-retry enforcement."
+      }
+    ],
+    "permitted_preflight_requests": [
+      "GET /repos/OscarMackJr/bluto",
+      "GET /repos/OscarMackJr/bluto/commits/7d3e12a2f7804041efd2840268f4d3d46f4266f9"
+    ],
+    "source_types": {
+      "GITHUB_HTTPS_GET": "One of the exact D5 endpoint templates, with redirects rejected and only HTTP 200 accepted for an available source.",
+      "FROZEN_LOCAL_GIT_OBJECT": "A read of the committed Hayes binding contracts/bindings/aa4/aa4_d4_target_ctrl039_binding.json, retaining its path, Git blob identity, and captured object payload."
+    },
+    "blocked_run_semantics": "For an unavailable or invalid approved source, form an explicit evidence record with collection_status BLOCKED and the D5 fail-closed reason; form the paired result with result_status EXECUTION_BLOCKED. A blocked record is never PASS or FAIL."
+  },
+  "launcher_invariants": [
+    "Validate status ISSUED_ACTIVE_NOT_CONSUMED, exact run target, exact client binding, NOT_CONSUMED state, and current time not later than expiry before signing an App JWT or calling the installation-token endpoint.",
+    "Use the App private key only in process memory. Never write key bytes, JWTs, installation tokens, or authorization headers to source, evidence, results, manifests, logs, exceptions, or certification artifacts.",
+    "Call POST /app/installations/157004879/access_tokens at most once per authorized run and only after the validations pass.",
+    "After token minting, allow HTTPS GET only to the two listed preflight endpoints and the exact D5 GitHub endpoint templates; reject redirects, unexpected methods, endpoint expansion, and non-200 available-source responses.",
+    "The launcher performs no write, dispatch, deployment, issue, pull-request, secret, organization, or production operation."
+  ],
+  "typed_source_invariants": [
+    "CTRL-039 retains both required sources: the live aa4-controlled-release environment HTTPS GET and the frozen local binding Git-object read.",
+    "A source record declares source_kind, request_method, immutable source identity where applicable, response status where applicable, and captured payload; local Git-object reads are never represented as HTTPS requests.",
+    "Repository-content requests retain the exact frozen revision in their URI and returned object SHA where supplied.",
+    "A live configuration observation is sealed no more than fifteen minutes after collection."
+  ],
+  "acceptance_tests": [
+    "Expired, consumed, target-mismatched, binding-mismatched, or otherwise invalid authorization causes zero token minting and zero HTTP requests.",
+    "The launcher rejects a redirect, non-GET method, non-whitelisted endpoint, and non-200 available-source response.",
+    "A CTRL-039 record reconstructs from one live environment source plus the exact frozen binding Git object.",
+    "An unavailable source yields thirteen persisted evidence/result pairs only when all pairs are explicitly blocked or unresolved as required; no pair is PASS or FAIL solely from unavailability.",
+    "A second persistence attempt for the same run ID fails before any output mutation.",
+    "Fixture tests, lint, and static compilation pass without GitHub network access."
+  ],
+  "not_authorized": [
+    "GitHub App token issuance before a new fresh D7 authorization after implementation and readiness approval",
+    "live evidence acquisition or assessment execution under AA4-BLUTO-ONE-RUN-002",
+    "reuse of AA4-BLUTO-ONE-RUN-001 or AA4-BLUTO-ONE-RUN-002 after expiry",
+    "source, target, reviewer, client, or control-set substitution",
+    "production activity or any write operation against GitHub"
+  ],
+  "review_instructions": "James: approve only if the listed implementation paths, exact App-token guard, typed CTRL-039 source treatment, blocked-run semantics, and no-secret/no-write boundaries are acceptable. Approval authorizes implementation and static validation only; it does not authorize token issuance, evidence collection, assessment execution, or reuse of run 002.",
+  "next_gate": "Implement and statically validate the exact approved recovery scope, publish a corrected readiness reconciliation, then obtain a new D6/D7 authorization before any live run."
+}

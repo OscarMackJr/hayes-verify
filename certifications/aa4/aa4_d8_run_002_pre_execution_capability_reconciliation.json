@@ -1,0 +1,53 @@
+{
+  "artifact_id": "HAYES-AA4-D8-RUN-002-PRE-EXECUTION-CAPABILITY-RECONCILIATION",
+  "status": "BLOCKED_RUNTIME_LAUNCHER_AND_SOURCE_KIND_MISMATCH",
+  "scope": {
+    "repository_registry_identity": "REPO-001",
+    "repository_identity": "OscarMackJr/bluto",
+    "immutable_repository_revision": "7d3e12a2f7804041efd2840268f4d3d46f4266f9",
+    "scope": "CONTROLLED_NON_PRODUCTION",
+    "run_id": "AA4-BLUTO-ONE-RUN-002"
+  },
+  "authorization_state_at_preflight": {
+    "authorization": "contracts/authorities/aa4/aa4_d7_one_run_execution_authorization_issued_002.json",
+    "status": "ISSUED_ACTIVE_NOT_CONSUMED",
+    "consumption_state": "NOT_CONSUMED",
+    "preflight_at_utc": "2026-08-27T16:33:54Z"
+  },
+  "verified_capability_gaps": [
+    {
+      "id": "AA4-D8-GAP-001",
+      "finding": "No dedicated GitHub App launcher is published.",
+      "evidence": "The approved client binding requires a dedicated launcher to validate the authorization before obtaining an installation token; merged AA4 code contains only an injected getter primitive and no App-JWT/token-exchange launcher.",
+      "fail_closed_effect": "Do not issue an installation token."
+    },
+    {
+      "id": "AA4-D8-GAP-002",
+      "finding": "The live collector cannot represent the mixed source kinds in the approved CTRL-039 mapping.",
+      "evidence": "The D5 mapping contains an HTTPS environment GET source plus contracts/bindings/aa4/aa4_d4_target_ctrl039_binding.json. collect_with_getter requires every source to be HTTP GET and routes each through the injected getter, so it cannot create the exact required CTRL-039 record without changing the approved behavior.",
+      "fail_closed_effect": "Do not substitute, omit, or mislabel the frozen binding source."
+    },
+    {
+      "id": "AA4-D8-GAP-003",
+      "finding": "The persistence guard cannot seal a complete blocked run when a contract source is unavailable.",
+      "evidence": "persist_authorized_run requires exactly thirteen evidence records and results, while build_static_candidate rejects a missing payload before an unavailable-evidence record can be formed.",
+      "fail_closed_effect": "Do not convert an incomplete collection into a PASS, FAIL, or falsely complete run."
+    }
+  ],
+  "non_events": {
+    "installation_token_issued": false,
+    "repository_content_accessed": false,
+    "real_evidence_records_acquired": 0,
+    "assessment_results_created": 0,
+    "assessment_execution_performed": false,
+    "authorization_consumed": false
+  },
+  "prohibited_remediation": [
+    "ad hoc token issuance",
+    "direct ungoverned HTTP collection",
+    "source substitution or omission",
+    "manual mutation of run accounting",
+    "reuse of run 002 after expiry"
+  ],
+  "next_gate": "Prepare an exact D5/D8 runtime-recovery candidate that adds a dedicated authorization-validating GitHub App launcher, typed HTTPS and frozen-Git-object sources, and complete fail-closed blocked-run persistence. Obtain James O'Meara's approval before implementation."
+}

@@ -1,0 +1,11 @@
+{
+  "checkpoint_chain": "SHA-256 linked append-only JSON checkpoints",
+  "completed_stage_replay_prevention": "PASS: advance only permits immediate successor and resume retains stage/completed prefix",
+  "evaluator_execution_count": 0,
+  "initial_checkpoint": true,
+  "input_manifest_tamper_detection": "PASS via focused test",
+  "same_zip_two_runs": "PASS via focused test",
+  "status": "PASS",
+  "tamper_detection": "PASS via focused test",
+  "transition_checkpoint": true
+}

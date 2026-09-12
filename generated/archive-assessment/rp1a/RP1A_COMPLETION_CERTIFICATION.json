@@ -1,0 +1,63 @@
+{
+  "certification_scope": "REPEATABLE_ARCHIVE_WORKFLOW_FOUNDATION_ONLY",
+  "certified_at_utc": "2026-08-17T12:45:54Z",
+  "certifies": [
+    "workflow/state implementation",
+    "checkpoint lineage",
+    "resume behavior",
+    "CLI skeleton",
+    "identity semantics",
+    "tests"
+  ],
+  "checkpoint_validation_sha256": "3dda3fb9b3b064cc599ca9a629cbded17d8d2c8bf24c1d3e08e41bb7cbe8b4a4",
+  "component": "Hayes Verify",
+  "does_not_certify": [
+    "full repeatable archive assessment",
+    "AR4-equivalent second run",
+    "production readiness",
+    "human classification completion",
+    "machine evaluation completion"
+  ],
+  "errors": [],
+  "historical_evidence_anchors": {
+    "AR3B_CERTIFICATION": "4071d7d0bebc89fd58a94c7fb95aa658bea33d188ecc2e5a2088f8cee4c15e1b",
+    "AR4_CERTIFICATION": "a698c4bece388ec476078734ea780239682b7772bdbce7a7345e67bad95ba1f2"
+  },
+  "implementation_manifest_sha256": "d9dcc68123e76940a79b1e0275f6b76a5632ee26a549f8efa6a2443278249f60",
+  "negative_invariants": {
+    "ABSOLUTE_LOCAL_PATH_USED_AS_AUTHORITY": false,
+    "AR3B_EVIDENCE_CHANGED": false,
+    "AR3I_MADE_NORMAL_WORKFLOW_STAGE": false,
+    "AR4_EVIDENCE_CHANGED": false,
+    "ARCHIVE_EVALUATOR_EXECUTIONS": 0,
+    "ARCHIVE_FILENAME_USED_AS_IDENTITY": false,
+    "COMPLETED_CHECKPOINT_REWRITTEN": false,
+    "CONTRACT_SEMANTICS_CHANGED": false,
+    "EMS_CHANGED": false,
+    "EXISTING_RUN_OVERWRITTEN": false,
+    "HOMETOWN_EVALUATOR_EXECUTIONS": 0,
+    "MANUAL_HASH_INPUT_REQUIRED_BY_CLI": false,
+    "PARTIAL_CONFLATED_WITH_FAILED": false,
+    "PILOT_EXECUTION_AUTHORIZED": false,
+    "PRODUCTION_AUTHORIZED": false,
+    "PRODUCTION_EVALUATOR_EXECUTIONS": 0,
+    "REAL_REPOSITORY_EVALUATOR_EXECUTIONS": 0,
+    "REPO_ID_ALLOCATIONS": 0,
+    "RETENTION_WRITE_AUTHORIZED": false,
+    "RUNTIME_BINDING_AUTHORITY_CHANGED": false,
+    "V1_11_CHANGED": false,
+    "WAVE2D_FREEZE_CHANGED": false,
+    "WORKFLOW_FAIL_CONFLATED_WITH_CONTROL_FAIL": false
+  },
+  "phase": "RP1A \u2014 Repeatable Archive Assessment Orchestrator & Durable State Foundation",
+  "schema_sha256": {
+    "schemas/archive_assessment_checkpoint.schema.json": "13f771c71733b585cb896dd01735b3bb25d1da4b7df5ab2738df19f0067e83f1",
+    "schemas/archive_assessment_input_manifest.schema.json": "a3e5323f342b6d4494811a05dff36a5d1368f7eb7628d173f9361017cbc47277",
+    "schemas/archive_assessment_workflow_state.schema.json": "a11621de9b9e0eeedf4b3d081e8d2fa0c63c9917b6e59dcea3c3e85f1816d1d0"
+  },
+  "status": "PASS",
+  "test_results_sha256": "5e2797fafd47555827c4cf1edde9123fd66b85555d6a7dc57d1a1989d82b9254",
+  "transition_matrix_sha256": "58f114aa8af4c590b4086a1d3939f781a3ba8512b1012755f46aff24654b2eb8",
+  "workflow_format_version": "1.0",
+  "workflow_state_model_sha256": "a13a0173c39c8a6bfc919e18eefcae6d39c5aca04b71872503448cd31bc41390"
+}

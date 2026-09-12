@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "workflow_id",
+    "archive_target_id",
+    "source_archive_filename",
+    "source_zip_sha256",
+    "archive_size_bytes",
+    "non_production",
+    "created_at",
+    "workflow_format_version"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "source_zip_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "archive_target_id": {
+      "type": "string",
+      "pattern": "^ARCHIVE-[0-9A-F]{24}$"
+    },
+    "non_production": {
+      "const": true
+    },
+    "workflow_id": {
+      "type": "string"
+    },
+    "source_archive_filename": {
+      "type": "string"
+    },
+    "archive_size_bytes": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "created_at": {
+      "type": "string"
+    },
+    "workflow_format_version": {
+      "const": "1.0"
+    }
+  },
+  "additionalProperties": false
+}

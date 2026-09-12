@@ -1,0 +1,41 @@
+{
+  "authority_freeze_semantics": {
+    "new_workflow": "Later RP1 phases resolve and freeze current controlled authority.",
+    "resumed_workflow": "Resumes retain the original frozen authority; no silent upgrade.",
+    "successor_workflow": "New authority requires a new workflow/run."
+  },
+  "immutability_classes": {
+    "EXECUTION_LOCAL": [
+      "logs/workflow_events.jsonl"
+    ],
+    "IMMUTABLE": [
+      "workflow/archive_assessment_input_manifest.json",
+      "workflow/archive_assessment_workflow_manifest.json",
+      "checkpoints/*.json"
+    ],
+    "MUTABLE_CURRENT_POINTER": [
+      "workflow/archive_assessment_workflow_state.json"
+    ]
+  },
+  "separation_rule": "Control finding states are not workflow failure states. PARTIAL is not FAILED.",
+  "stages": [
+    "INTAKE",
+    "CLASSIFICATION",
+    "APPLICABILITY",
+    "PLAN",
+    "AUTHORITY_PREFLIGHT",
+    "EXECUTION",
+    "REVIEW",
+    "PACKAGE"
+  ],
+  "workflow_format_version": "1.0",
+  "workflow_statuses": [
+    "CREATED",
+    "RUNNING",
+    "AWAITING_HUMAN_INPUT",
+    "BLOCKED",
+    "FAILED",
+    "PARTIAL",
+    "COMPLETE"
+  ]
+}
